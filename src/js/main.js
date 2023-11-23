@@ -2,8 +2,6 @@
 import * as bootstrap from "bootstrap";
 import * as aos from "aos";
 
-console.log("Hello");
-
 if (module.hot) {
   module.hot.dispose(function (data) {
     // module is about to be replaced.
