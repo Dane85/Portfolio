@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Personal Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dane85/Portfolio-2.0.git"
+  },
+  "keywords": [
+    "Portolio",
+    "Wedsites",
+    "Webdesign"
+  ],
+  "author": "Dane Watts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dane85/Portfolio-2.0/issues"
+  },
+  "homepage": "https://github.com/Dane85/Portfolio-2.0#readme"
+}
