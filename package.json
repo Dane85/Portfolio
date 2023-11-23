@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/Dane85/Portfolio.0#readme",
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.2",
     "parcel": "^2.10.3"
   }
 }
