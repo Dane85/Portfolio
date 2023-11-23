@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/Dane85/Portfolio/issues"
   },
-  "homepage": "https://github.com/Dane85/Portfolio.0#readme"
+  "homepage": "https://github.com/Dane85/Portfolio.0#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "parcel": "^2.10.3"
+  }
 }
