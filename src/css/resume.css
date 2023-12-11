@@ -1,3 +1,12 @@
+.topProfileBox {
+  text-align: center;
+}
+.profileImage {
+  min-width: 300px;
+  max-width: 350px;
+  border-radius: 50% 0;
+}
+
 .resume {
   background: white;
   padding: 30px;
@@ -23,4 +32,10 @@
 
 .progressTitles {
   color: white;
+}
+
+.resumeHeader {
+  background-image: url(/src/images/nasa-1lfI7wkGWZ4-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
