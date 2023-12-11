@@ -1,6 +1,6 @@
 .parallax {
   /* The image used */
-  background-image: url("/src/images/riccardo-annandale-7e2pe9wjL9M-unsplash.jpg");
+  background-image: url("/src/images/riccardo-annandale-7e2pe9wjL9M-unsplash-min.jpg");
 
   /* Set a specific height */
   min-height: 500px;
@@ -14,7 +14,7 @@
 
 .parallax1 {
   /* The image used */
-  background-image: url("/src/images/tim-mossholder-sxb8StmTfaw-unsplash.jpg");
+  background-image: url("/src/images/tim-mossholder-sxb8StmTfaw-unsplash-min.jpg");
 
   /* Set a specific height */
   min-height: 500px;
@@ -28,7 +28,7 @@
 
 .parallax2 {
   /* The image used */
-  background-image: url("/src/images/manny-becerra-0sihmMSmnoE-unsplash.jpg");
+  background-image: url("/src/images/manny-becerra-0sihmMSmnoE-unsplash-min.jpg");
 
   /* Set a specific height */
   min-height: 500px;
@@ -42,7 +42,7 @@
 
 .parallax3 {
   /* The image used */
-  background-image: url("/src/images/razvan-chisu-Ua-agENjmI4-unsplash.jpg");
+  background-image: url("/src/images/razvan-chisu-Ua-agENjmI4-unsplash-min.jpg");
 
   /* Set a specific height */
   min-height: 500px;
