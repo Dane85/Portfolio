@@ -1,6 +1,7 @@
 // Import all of Bootstrap's JS
 import * as bootstrap from "bootstrap";
 import * as aos from "aos";
+import * as lottie from "lottie-web";
 
 if (module.hot) {
   module.hot.dispose(function (data) {
