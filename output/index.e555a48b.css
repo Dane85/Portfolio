@@ -1,0 +1,78 @@
+@import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css";
+body {
+  font-size: 16px;
+}
+
+#loader {
+  z-index: 1;
+  border: 16px solid #f3f3f3;
+  border-top-color: #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  animation: 2s linear infinite spin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-bottom {
+  animation-name: animatebottom;
+  animation-duration: 1s;
+  position: relative;
+}
+
+@keyframes animatebottom {
+  from {
+    opacity: 0;
+    bottom: -100px;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.menuSocialIcons {
+  text-align: center;
+}
+
+.menuSocialIconsRow {
+  width: 100%;
+}
+
+header a.nav-link {
+  font-size: 2rem;
+}
+
+footer li a, footer p {
+  color: #fff !important;
+}
+
+/*# sourceMappingURL=index.e555a48b.css.map */
