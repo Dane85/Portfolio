@@ -1,11 +1,13 @@
 {
   "name": "portfolio",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "version": "1.0.0",
   "description": "Personal Portfolio",
-  "source": "src/index.html",
-  "main": "dist/main.js",
+  "source": "src/index.js",
+  "module": "dist/module.js",
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel src/*.html",
+    "build": "parcel build src/index.html && src/*.html"
   },
   "repository": {
     "type": "git",
@@ -22,13 +24,18 @@
     "url": "https://github.com/Dane85/Portfolio/issues"
   },
   "homepage": "https://github.com/Dane85/Portfolio.0#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.3",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.2",
+    "lottie-web": "^5.12.2",
+    "parcel": "^2.10.3"
+  },
   "dependencies": {
     "aos": "^2.3.4",
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.2",
     "parcel": "^2.10.3"
-  },
-  "devDependencies": {
-    "@parcel/transformer-sass": "^2.10.3"
   }
 }
