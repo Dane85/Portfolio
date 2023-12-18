@@ -1,0 +1,101 @@
+.main-timeline-2 {
+  position: relative;
+}
+
+.main-timeline-2:after {
+  content: "";
+  background-color: #26c6da;
+  width: 3px;
+  margin-left: -3px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+
+.timeline-2 {
+  background-color: inherit;
+  width: 50%;
+  position: relative;
+}
+
+.timeline-2:after {
+  content: "";
+  z-index: 1;
+  background-color: #26c6da;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 15px;
+  right: -11px;
+}
+
+.left-2 {
+  padding: 0 40px 20px 0;
+  left: 0;
+}
+
+.right-2 {
+  padding: 0 0 20px 40px;
+  left: 50%;
+}
+
+.left-2:before {
+  content: " ";
+  z-index: 1;
+  border: 10px solid #0000;
+  border-left-color: #fff;
+  border-right-width: 0;
+  position: absolute;
+  top: 18px;
+  right: 30px;
+}
+
+.right-2:before {
+  content: " ";
+  z-index: 1;
+  border: 10px solid #0000;
+  border-left-width: 0;
+  border-right-color: #fff;
+  position: absolute;
+  top: 18px;
+  left: 30px;
+}
+
+.right-2:after {
+  left: -14px;
+}
+
+@media screen and (width <= 600px) {
+  .main-timeline-2:after {
+    left: 31px;
+  }
+
+  .timeline-2 {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-2:before {
+    border: 10px solid #0000;
+    border-left-width: 0;
+    border-right-color: #fff;
+    left: 60px;
+  }
+
+  .left-2:after, .right-2:after {
+    left: 18px;
+  }
+
+  .left-2:before {
+    right: auto;
+  }
+
+  .right-2 {
+    left: 0%;
+  }
+}
+
+/*# sourceMappingURL=about.276c42e7.css.map */
