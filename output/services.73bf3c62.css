@@ -1,0 +1,37 @@
+.parallax {
+  background-image: url("riccardo-annandale-7e2pe9wjL9M-unsplash-min.959645ae.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 500px;
+}
+
+.parallax1 {
+  background-image: url("tim-mossholder-sxb8StmTfaw-unsplash-min.7f695fe8.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 500px;
+}
+
+.parallax2 {
+  background-image: url("manny-becerra-0sihmMSmnoE-unsplash-min.d541364b.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 500px;
+}
+
+.parallax3 {
+  background-image: url("razvan-chisu-Ua-agENjmI4-unsplash-min.f7e3b5a4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 500px;
+}
+
+/*# sourceMappingURL=services.73bf3c62.css.map */

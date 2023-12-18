@@ -1,0 +1,38 @@
+.topProfileBox {
+  text-align: center;
+}
+
+.profileImage {
+  border-radius: 50% 0;
+  min-width: 300px;
+  max-width: 350px;
+}
+
+.resume, .resume .lead {
+  background: #fff;
+  padding: 30px;
+  font-weight: 500;
+}
+
+.personalInformation {
+  border-right: 1px solid #000;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.progress {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.progressTitles {
+  color: #fff;
+}
+
+.resumeHeader {
+  background-image: url("nasa-1lfI7wkGWZ4-unsplash.0b9b4f81.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=resume.0ac7ca2c.css.map */

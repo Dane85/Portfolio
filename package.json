@@ -5,8 +5,8 @@
   "source": "src/index.html",
   "main": "dist/main.js",
   "scripts": {
-    "start": "parcel src/index.html --port 8080",
-    "build": "parcel build src/index.html && src/*.html"
+    "start": "parcel src/index.html --dist-dir output  --port 8080",
+    
   },
   "repository": {
     "type": "git",
