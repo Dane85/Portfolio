@@ -6,7 +6,7 @@
   "source": "src/index.js",
   "module": "dist/module.js",
   "scripts": {
-    "start": "parcel src/index.html --dist-dir output  --port 8080",
+    "start": "parcel src/index.html --port 8080",
     "build": "parcel build src/index.html -d build"
   },
   "repository": {
