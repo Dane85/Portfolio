@@ -1,0 +1,237 @@
+@media (max-width: 576px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+  h2 {
+    font-size: 2.5rem !important;
+  }
+  h3 {
+    font-size: 2.4rem !important;
+  }
+  h4 {
+    font-size: 2.3rem !important;
+  }
+  h5 {
+    font-size: 2.2rem !important;
+  }
+  h6 {
+    font-size: 2.1rem !important;
+  }
+  p {
+    font-size: 1.5rem !important;
+    text-align: justify;
+  }
+
+  .firstBrand {
+    display: none;
+  }
+
+  .secondBrand {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .heroMain {
+    padding: 30px;
+  }
+
+  .heroMain dotlottie-player {
+    width: 100% !important;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    width: 80%;
+    height: 450px;
+  }
+
+  dotlottie-player {
+    width: 80% !important;
+    height: 80% !important;
+  }
+
+  .back-content strong {
+    font-size: 1.7rem;
+  }
+
+  .skillsLogo {
+    margin: 15px;
+  }
+
+  .navbar-toggler-icon {
+    width: 1.8em;
+    height: 1.8em;
+  }
+  .menuSocialIcons a,
+  .menuSocialIcons svg {
+    font-size: 1.5rem !important;
+    height: 3.5rem;
+  }
+  footer a.nav-link.px-2 {
+    font-size: 1.17rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+  h2 {
+    font-size: 2.5rem !important;
+  }
+  h3 {
+    font-size: 2.4rem !important;
+  }
+  h4 {
+    font-size: 2.3rem !important;
+  }
+  h5 {
+    font-size: 2.2rem !important;
+  }
+  h6 {
+    font-size: 2.1rem !important;
+  }
+  p {
+    font-size: 1.5rem !important;
+    text-align: justify;
+  }
+
+  .firstBrand {
+    display: none;
+  }
+
+  .secondBrand {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .heroMain {
+    padding: 30px;
+  }
+
+  .heroMain dotlottie-player {
+    width: 100% !important;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    width: 80%;
+    height: 450px;
+  }
+
+  dotlottie-player {
+    width: 80% !important;
+    height: 80% !important;
+  }
+
+  .back-content strong {
+    font-size: 1.7rem;
+  }
+
+  .skillsLogo {
+    margin: 15px;
+  }
+
+  .navbar-toggler-icon {
+    width: 1.8em;
+    height: 1.8em;
+  }
+  .menuSocialIcons a,
+  .menuSocialIcons svg {
+    font-size: 1.5rem !important;
+    height: 3.5rem;
+  }
+  footer a.nav-link.px-2 {
+    font-size: 1.17rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+  h2 {
+    font-size: 2.5rem !important;
+  }
+  h3 {
+    font-size: 2.4rem !important;
+  }
+  h4 {
+    font-size: 2.3rem !important;
+  }
+  h5 {
+    font-size: 2.2rem !important;
+  }
+  h6 {
+    font-size: 2.1rem !important;
+  }
+  p {
+    font-size: 1.5rem !important;
+    text-align: justify;
+  }
+
+  .firstBrand {
+    display: none;
+  }
+
+  .secondBrand {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .heroMain {
+    padding: 30px;
+  }
+
+  .heroMain dotlottie-player {
+    width: 100% !important;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    width: 80%;
+    height: 450px;
+  }
+
+  .timeLineCard {
+    width: 80%;
+    height: fit-content;
+  }
+
+  dotlottie-player {
+    width: 80% !important;
+    height: 80% !important;
+  }
+
+  .back-content strong {
+    font-size: 1.7rem;
+  }
+
+  .skillsLogo {
+    margin: 15px;
+  }
+
+  .navbar-toggler-icon {
+    width: 1.8em;
+    height: 1.8em;
+  }
+  .menuSocialIcons a,
+  .menuSocialIcons svg {
+    font-size: 1.5rem !important;
+    height: 3.5rem;
+  }
+  footer a.nav-link.px-2 {
+    font-size: 1.17rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  .firstBrand {
+    display: block;
+  }
+
+  .secondBrand {
+    display: none;
+    font-size: 2rem;
+  }
+}
