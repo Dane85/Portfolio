@@ -42,8 +42,6 @@
 
   .card {
     width: 80%;
-    contain: strict;
-    height: fit-content;
   }
 
   dotlottie-player {
@@ -121,8 +119,6 @@
 
   .card {
     width: 80%;
-    contain: strict;
-    height: fit-content;
   }
 
   dotlottie-player {
