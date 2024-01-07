@@ -5,13 +5,15 @@
   background-color: darkcyan;
   border: 1px solid black;
   height: 300px;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
 }
 
 .card a {
   color: white;
 }
 
-.card-text{
+.card-text {
   text-transform: uppercase;
   text-align: center;
 }
