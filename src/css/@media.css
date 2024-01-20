@@ -1,25 +1,31 @@
 @media (max-width: 576px) {
   h1 {
     font-size: 3rem !important;
+    text-align: center;
   }
   h2 {
-    font-size: 2.5rem !important;
+    font-size: 2.5rem;
+    text-align: center;
   }
   h3 {
-    font-size: 2.4rem !important;
+    font-size: 2.4rem;
+    text-align: center;
   }
   h4 {
-    font-size: 2.3rem !important;
+    font-size: 1.8rem;
+    text-align: center;
   }
   h5 {
-    font-size: 2.2rem !important;
+    font-size: 2.2rem;
+    text-align: center;
   }
   h6 {
-    font-size: 2.1rem !important;
+    font-size: 2.1rem;
+    text-align: center;
   }
   p {
-    font-size: 1.5rem !important;
-    text-align: justify;
+    font-size: 1.5rem;
+    text-align: center;
   }
 
   .firstBrand {
@@ -76,37 +82,7 @@
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 3rem !important;
-  }
-  h2 {
-    font-size: 2.5rem !important;
-  }
-  h3 {
-    font-size: 2.4rem !important;
-  }
-  h4 {
-    font-size: 2.3rem !important;
-  }
-  h5 {
-    font-size: 2.2rem !important;
-  }
-  h6 {
-    font-size: 2.1rem !important;
-  }
-  p {
-    font-size: 1.5rem !important;
-    text-align: justify;
-  }
 
-  .firstBrand {
-    display: none;
-  }
-
-  .secondBrand {
-    display: block;
-    font-size: 2rem;
-  }
 
   .heroMain {
     padding: 30px;
@@ -152,30 +128,14 @@
   }
 }
 
-@media (max-width: 1200px) {
-  h1 {
-    font-size: 3rem !important;
+@media (max-width: 992px) {
+  .personalInformation {
+    border-left: none;
+    padding-left: 5px;
   }
-  h2 {
-    font-size: 2.5rem !important;
-  }
-  h3 {
-    font-size: 2.4rem !important;
-  }
-  h4 {
-    font-size: 2.3rem !important;
-  }
-  h5 {
-    font-size: 2.2rem !important;
-  }
-  h6 {
-    font-size: 2.1rem !important;
-  }
-  p {
-    font-size: 1.5rem !important;
-    text-align: justify;
-  }
+}
 
+@media (max-width: 1026px) {
   .firstBrand {
     display: none;
   }
@@ -186,7 +146,7 @@
   }
 
   .heroMain {
-    padding: 30px;
+    padding: 10px;
   }
 
   .heroMain dotlottie-player {
@@ -231,7 +191,7 @@
   }
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1027px) {
   .firstBrand {
     display: block;
   }

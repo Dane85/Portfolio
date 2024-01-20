@@ -7,6 +7,7 @@ html {
 
 body {
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 a {
@@ -16,6 +17,9 @@ a {
 .btn {
   -webkit-box-shadow: 5px 5px 15px 5px #000000;
   box-shadow: 5px 5px 15px 5px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Menu */
