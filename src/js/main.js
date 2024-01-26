@@ -2,6 +2,7 @@
 import * as bootstrap from "bootstrap";
 import * as aos from "aos";
 import * as lottie from "lottie-web";
+import * as fontawesome from "@fortawesome/fontawesome-free";
 
 if (module.hot) {
   module.hot.dispose(function (data) {
@@ -20,6 +21,3 @@ if (module.hot) {
 const d = new Date();
 let year = d.getFullYear();
 document.getElementById("year").innerHTML = year;
-
-
-
