@@ -1,483 +1,932 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Dane Watts</title>
-		<link rel="icon" type="image/x-icon" href="src/images/favicon.ico" />
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Epic Expressions" />
+    <meta
+      name="description"
+      content="Transform your online presence with cutting-edge web design solutions. Our team of expert designers crafts visually stunning websites tailored to your brand, ensuring seamless user experience and optimal engagement. Explore our portfolio and unlock the potential of your digital presence today."
+    />
+    <meta
+      name="keywords"
+      content="web design, website development, responsive design, UX/UI design, graphic design, branding, digital marketing, SEO optimization, mobile-friendly design, custom websites"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Dane Watts" />
+    <title>Dane Watts</title>
+    <link rel="icon" type="image/x-icon" href="src/images/favicon.ico" />
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-		<link rel="stylesheet" href="./scss/main.scss" />
-		<link rel="stylesheet" href="css/main.css" />
-		<link rel="stylesheet" href="css/index.css" />
-		<link rel="stylesheet" href="css/@media.css" />
-	</head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-S7WLB6CC8S"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag("js", new Date());
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./scss/main.scss" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/@media.css" />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-S7WLB6CC8S"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-		gtag("config", "G-S7WLB6CC8S");
-	</script>
-	<body class="bg-dark">
-		<!-- Messenger Chat Plugin Code -->
-		<div id="fb-root"></div>
+    gtag("config", "G-S7WLB6CC8S");
+  </script>
+  <body class="bg-dark">
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
 
-		<!-- Your Chat Plugin code -->
-		<div id="fb-customer-chat" class="fb-customerchat"></div>
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
 
-		<script>
-			var chatbox = document.getElementById("fb-customer-chat");
-			chatbox.setAttribute("page_id", "198796009977210");
-			chatbox.setAttribute("attribution", "biz_inbox");
-		</script>
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "198796009977210");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
 
-		<!-- Your SDK code -->
-		<script>
-			window.fbAsyncInit = function () {
-				FB.init({
-					xfbml: true,
-					version: "v18.0",
-				});
-			};
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v18.0",
+        });
+      };
 
-			(function (d, s, id) {
-				var js,
-					fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s);
-				js.id = id;
-				js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			})(document, "script", "facebook-jssdk");
-		</script>
-		<header class="d-flex justify-content-center py-3 mt-3">
-			<nav id="nav" class="navbar navbar-dark bg-dark fixed-top"></nav>
-		</header>
-		<main>
-			<section>
-				<div class="container col-xxl-8 gx-0 py-5 heroMain">
-					<div class="row flex-lg-row-reverse align-items-center py-5 justify-content-center">
-						<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in">
-							<dotlottie-player src="https://lottie.host/2d1a9d2b-8efa-4264-8b02-3a5281055425/3T1jP4jbwo.json" background="transparent" speed="1" style="width: 100%; height: 100%" direction="1" mode="normal" loop autoplay></dotlottie-player>
-						</div>
-						<div class="col-lg-6" data-aos="fade-down">
-							<h1 class="display-5 fw-bold lh-1 mb-3 text-light">Dane Watts</h1>
-							<h2 class="display-8 fw-bold lh-1 mb-3 text-light">Epic Expressions</h2>
-							<p class="lead text-light">Welcome to my portfolio! I'm Dane, an avid web development enthusiast committed to shaping extraordinary digital encounters. I thrive on the art of crafting websites that are not only visually captivating but also offer unparalleled functionality. Possessing a sharp sense of design aesthetics and a profound grasp of user-centric philosophies, my mission is to construct user-friendly online platforms that effortlessly harmonize style and utility. I aspire to make a lasting impact with my web development projects, ensuring that users enjoy a seamless and engaging journey when engaging with the digital solutions I bring to life.</p>
-							<div class="d-grid gap-2 d-md-flex justify-content-md-start">
-								<a href="/src/about.html" class="btn btn-primary btn-lg px-4 me-sm-2">Learn More</a>
-								<a href="/src/services.html" class="btn btn-primary btn-lg px-4 me-sm-2">Services</a>
-								<a href="/src/contact_form.html" class="btn btn-primary btn-lg px-4 me-sm-2">Contact Me</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div class="container mb-5">
-					<div class="row row-cols-1 row-cols-md-3 justify-content-around productCardRow">
-						<div class="card bg-dark border-0" data-aos="fade-up" data-aos-anchor="#example-anchor" data-aos-duration="600">
-							>
-							<div class="content">
-								<div class="back">
-									<div class="back-content">
-										<dotlottie-player src="https://lottie.host/dd9082f4-acd1-4f6b-8286-b0588dfe2466/EezyrOqQur.json" background="transparent" speed="1" style="width: 200px; height: 200px" direction="1" mode="normal" loop autoplay></dotlottie-player>
-										<strong>Frame It</strong>
-									</div>
-								</div>
-								<div class="front">
-									<div class="img">
-										<div class="circle"></div>
-										<div class="circle" id="right"></div>
-										<div class="circle" id="bottom"></div>
-									</div>
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+    <header class="d-flex justify-content-center py-3 mt-3">
+      <nav id="nav" class="navbar navbar-dark bg-dark fixed-top"></nav>
+    </header>
+    <main>
+      <section>
+        <div class="container col-xxl-8 gx-0 py-5 heroMain">
+          <div
+            class="row flex-lg-row-reverse align-items-center py-5 justify-content-center"
+          >
+            <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in">
+              <dotlottie-player
+                src="https://lottie.host/2d1a9d2b-8efa-4264-8b02-3a5281055425/3T1jP4jbwo.json"
+                background="transparent"
+                speed="1"
+                style="width: 100%; height: 100%"
+                direction="1"
+                mode="normal"
+                loop
+                autoplay
+              ></dotlottie-player>
+            </div>
+            <div class="col-lg-6" data-aos="fade-down">
+              <h1 class="display-5 fw-bold lh-1 mb-3 text-light">Dane Watts</h1>
+              <h2 class="display-8 fw-bold lh-1 mb-3 text-light">
+                Epic Expressions
+              </h2>
+              <p class="lead text-light">
+                Welcome to my portfolio! I'm Dane, an avid web development
+                enthusiast committed to shaping extraordinary digital
+                encounters. I thrive on the art of crafting websites that are
+                not only visually captivating but also offer unparalleled
+                functionality. Possessing a sharp sense of design aesthetics and
+                a profound grasp of user-centric philosophies, my mission is to
+                construct user-friendly online platforms that effortlessly
+                harmonize style and utility. I aspire to make a lasting impact
+                with my web development projects, ensuring that users enjoy a
+                seamless and engaging journey when engaging with the digital
+                solutions I bring to life.
+              </p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a
+                  href="/src/about.html"
+                  class="btn btn-primary btn-lg px-4 me-sm-2"
+                  >Learn More</a
+                >
+                <a
+                  href="/src/services.html"
+                  class="btn btn-primary btn-lg px-4 me-sm-2"
+                  >Services</a
+                >
+                <a
+                  href="/src/contact_form.html"
+                  class="btn btn-primary btn-lg px-4 me-sm-2"
+                  >Contact Me</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container mb-5">
+          <div
+            class="row row-cols-1 row-cols-md-3 justify-content-around productCardRow"
+          >
+            <div
+              class="card bg-dark border-0"
+              data-aos="fade-up"
+              data-aos-anchor="#example-anchor"
+              data-aos-duration="600"
+            >
+              >
+              <div class="content">
+                <div class="back">
+                  <div class="back-content">
+                    <dotlottie-player
+                      src="https://lottie.host/dd9082f4-acd1-4f6b-8286-b0588dfe2466/EezyrOqQur.json"
+                      background="transparent"
+                      speed="1"
+                      style="width: 200px; height: 200px"
+                      direction="1"
+                      mode="normal"
+                      loop
+                      autoplay
+                    ></dotlottie-player>
+                    <strong>Frame It</strong>
+                  </div>
+                </div>
+                <div class="front">
+                  <div class="img">
+                    <div class="circle"></div>
+                    <div class="circle" id="right"></div>
+                    <div class="circle" id="bottom"></div>
+                  </div>
 
-									<div class="front-content">
-										<small class="badge">Framing</small>
-										<div class="description">
-											<div class="title">
-												<p class="title">
-													<strong>Website WireFraming</strong>
-												</p>
-												<svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-													<g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
-														<g transform="scale(8,8)">
-															<path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
-														</g>
-													</g>
-												</svg>
-											</div>
-											<ol type="1">
-												<li>Define Goals and Requirements</li>
-												<li>Research and Gather Information</li>
-												<li>Create a Basic Sketch/Layout</li>
-												<li>Define Navigation</li>
-												<li>Place Key Elements</li>
-												<li>Consider Responsiveness</li>
-												<li>Annotations and Notes</li>
-												<li>Iterate and Revise</li>
-											</ol>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="card bg-dark border-0" data-aos="fade-up" data-aos-anchor="#example-anchor" data-aos-duration="1200">
-							>
-							<div class="content">
-								<div class="back">
-									<div class="back-content">
-										<dotlottie-player src="https://lottie.host/da0f1a46-9dab-408b-b1f8-f7f18d931fb2/edFoF2cJz3.json" background="transparent" speed="1" style="width: 200px; height: 200px" direction="1" mode="normal" loop autoplay></dotlottie-player>
-										<strong>Design It</strong>
-									</div>
-								</div>
-								<div class="front">
-									<div class="img">
-										<div class="circle"></div>
-										<div class="circle" id="right"></div>
-										<div class="circle" id="bottom"></div>
-									</div>
+                  <div class="front-content">
+                    <small class="badge">Framing</small>
+                    <div class="description">
+                      <div class="title">
+                        <p class="title">
+                          <strong>Website WireFraming</strong>
+                        </p>
+                        <svg
+                          fill-rule="nonzero"
+                          height="15px"
+                          width="15px"
+                          viewBox="0,0,256,256"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g
+                            style="mix-blend-mode: normal"
+                            text-anchor="none"
+                            font-size="none"
+                            font-weight="none"
+                            font-family="none"
+                            stroke-dashoffset="0"
+                            stroke-dasharray=""
+                            stroke-miterlimit="10"
+                            stroke-linejoin="miter"
+                            stroke-linecap="butt"
+                            stroke-width="1"
+                            stroke="none"
+                            fill-rule="nonzero"
+                            fill="#20c997"
+                          >
+                            <g transform="scale(8,8)">
+                              <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <ol type="1">
+                        <li>Define Goals and Requirements</li>
+                        <li>Research and Gather Information</li>
+                        <li>Create a Basic Sketch/Layout</li>
+                        <li>Define Navigation</li>
+                        <li>Place Key Elements</li>
+                        <li>Consider Responsiveness</li>
+                        <li>Annotations and Notes</li>
+                        <li>Iterate and Revise</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card bg-dark border-0"
+              data-aos="fade-up"
+              data-aos-anchor="#example-anchor"
+              data-aos-duration="1200"
+            >
+              >
+              <div class="content">
+                <div class="back">
+                  <div class="back-content">
+                    <dotlottie-player
+                      src="https://lottie.host/da0f1a46-9dab-408b-b1f8-f7f18d931fb2/edFoF2cJz3.json"
+                      background="transparent"
+                      speed="1"
+                      style="width: 200px; height: 200px"
+                      direction="1"
+                      mode="normal"
+                      loop
+                      autoplay
+                    ></dotlottie-player>
+                    <strong>Design It</strong>
+                  </div>
+                </div>
+                <div class="front">
+                  <div class="img">
+                    <div class="circle"></div>
+                    <div class="circle" id="right"></div>
+                    <div class="circle" id="bottom"></div>
+                  </div>
 
-									<div class="front-content">
-										<small class="badge">Designing</small>
-										<div class="description">
-											<div class="title">
-												<p class="title">
-													<strong>Website Design</strong>
-												</p>
-												<svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-													<g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
-														<g transform="scale(8,8)">
-															<path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
-														</g>
-													</g>
-												</svg>
-											</div>
-											<ol type="1">
-												<li>Gather Requirements and Assets</li>
-												<li>Moodboards and Inspiration</li>
-												<li>Visual Design</li>
-												<li>Typography and Imagery</li>
-												<li>User Interface (UI) Elements</li>
-												<li>Responsive Design</li>
-												<li>Prototyping</li>
-												<li>Feedback and Iteration</li>
-											</ol>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="card bg-dark border-0" data-aos="fade-up" data-aos-anchor="#example-anchor" data-aos-duration="1800">
-							>
-							<div class="content">
-								<div class="back">
-									<div class="back-content">
-										<dotlottie-player src="https://lottie.host/a7069036-ad2a-4dd2-8290-e1dd2ca9ef59/d86dz7Jse6.json" background="transparent" speed="1" style="width: 200px; height: 200px" direction="1" mode="normal" loop autoplay></dotlottie-player>
-										<strong>Add Functionality</strong>
-									</div>
-								</div>
-								<div class="front">
-									<div class="img">
-										<div class="circle"></div>
-										<div class="circle" id="right"></div>
-										<div class="circle" id="bottom"></div>
-									</div>
+                  <div class="front-content">
+                    <small class="badge">Designing</small>
+                    <div class="description">
+                      <div class="title">
+                        <p class="title">
+                          <strong>Website Design</strong>
+                        </p>
+                        <svg
+                          fill-rule="nonzero"
+                          height="15px"
+                          width="15px"
+                          viewBox="0,0,256,256"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g
+                            style="mix-blend-mode: normal"
+                            text-anchor="none"
+                            font-size="none"
+                            font-weight="none"
+                            font-family="none"
+                            stroke-dashoffset="0"
+                            stroke-dasharray=""
+                            stroke-miterlimit="10"
+                            stroke-linejoin="miter"
+                            stroke-linecap="butt"
+                            stroke-width="1"
+                            stroke="none"
+                            fill-rule="nonzero"
+                            fill="#20c997"
+                          >
+                            <g transform="scale(8,8)">
+                              <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <ol type="1">
+                        <li>Gather Requirements and Assets</li>
+                        <li>Moodboards and Inspiration</li>
+                        <li>Visual Design</li>
+                        <li>Typography and Imagery</li>
+                        <li>User Interface (UI) Elements</li>
+                        <li>Responsive Design</li>
+                        <li>Prototyping</li>
+                        <li>Feedback and Iteration</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card bg-dark border-0"
+              data-aos="fade-up"
+              data-aos-anchor="#example-anchor"
+              data-aos-duration="1800"
+            >
+              >
+              <div class="content">
+                <div class="back">
+                  <div class="back-content">
+                    <dotlottie-player
+                      src="https://lottie.host/a7069036-ad2a-4dd2-8290-e1dd2ca9ef59/d86dz7Jse6.json"
+                      background="transparent"
+                      speed="1"
+                      style="width: 200px; height: 200px"
+                      direction="1"
+                      mode="normal"
+                      loop
+                      autoplay
+                    ></dotlottie-player>
+                    <strong>Add Functionality</strong>
+                  </div>
+                </div>
+                <div class="front">
+                  <div class="img">
+                    <div class="circle"></div>
+                    <div class="circle" id="right"></div>
+                    <div class="circle" id="bottom"></div>
+                  </div>
 
-									<div class="front-content">
-										<small class="badge">Functionality</small>
-										<div class="description">
-											<div class="title">
-												<p class="title">
-													<strong>Bringing the site to life</strong>
-												</p>
-												<svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-													<g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
-														<g transform="scale(8,8)">
-															<path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
-														</g>
-													</g>
-												</svg>
-											</div>
-											<ol type="1">
-												<li>Define Functional Requirements</li>
-												<li>User Flow and User Stories</li>
-												<li>Information Architecture</li>
-												<li>Database Design</li>
-												<li>Functional Prototypes</li>
-												<li>Backend Development</li>
-												<li>Testing and Debugging</li>
-												<li>User Feedback and Iteration</li>
-											</ol>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+                  <div class="front-content">
+                    <small class="badge">Functionality</small>
+                    <div class="description">
+                      <div class="title">
+                        <p class="title">
+                          <strong>Bringing the site to life</strong>
+                        </p>
+                        <svg
+                          fill-rule="nonzero"
+                          height="15px"
+                          width="15px"
+                          viewBox="0,0,256,256"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g
+                            style="mix-blend-mode: normal"
+                            text-anchor="none"
+                            font-size="none"
+                            font-weight="none"
+                            font-family="none"
+                            stroke-dashoffset="0"
+                            stroke-dasharray=""
+                            stroke-miterlimit="10"
+                            stroke-linejoin="miter"
+                            stroke-linecap="butt"
+                            stroke-width="1"
+                            stroke="none"
+                            fill-rule="nonzero"
+                            fill="#20c997"
+                          >
+                            <g transform="scale(8,8)">
+                              <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <ol type="1">
+                        <li>Define Functional Requirements</li>
+                        <li>User Flow and User Stories</li>
+                        <li>Information Architecture</li>
+                        <li>Database Design</li>
+                        <li>Functional Prototypes</li>
+                        <li>Backend Development</li>
+                        <li>Testing and Debugging</li>
+                        <li>User Feedback and Iteration</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-			<section>
-				<div class="container my-5">
-					<div class="table">
-						<table class="table-responsive text-center">
-							<thead class="bg-dark">
-								<tr>
-									<th style="width: 17%" class="text-light"></th>
-									<th style="width: 17%" class="text-light">Simple <br />4 Pages</th>
-									<th style="width: 17%" class="text-light">Business <br />6 Pages</th>
-									<th style="width: 17%" class="text-light">The Works <br />8 Pages</th>
-									<th style="width: 17%" class="text-light">Custom <br />Varies</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row" class="text-start text-light">Server, SSL, and Domain Setup</th>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row" class="text-start text-light">Sitemap, Mockup, Design</th>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-								</tr>
-							</tbody>
+      <section>
+        <div class="container my-5">
+          <div class="table">
+            <table class="table-responsive text-center">
+              <thead class="bg-dark">
+                <tr>
+                  <th style="width: 17%" class="text-light"></th>
+                  <th style="width: 17%" class="text-light">
+                    Simple <br />4 Pages
+                  </th>
+                  <th style="width: 17%" class="text-light">
+                    Business <br />6 Pages
+                  </th>
+                  <th style="width: 17%" class="text-light">
+                    The Works <br />8 Pages
+                  </th>
+                  <th style="width: 17%" class="text-light">
+                    Custom <br />Varies
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="text-start text-light">
+                    Server, SSL, and Domain Setup
+                  </th>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start text-light">
+                    Sitemap, Mockup, Design
+                  </th>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                </tr>
+              </tbody>
 
-							<tbody>
-								<tr>
-									<th scope="row" class="text-start text-light">Database, Security, 2FA</th>
-									<td></td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row" class="text-start text-light">Blog, Products, Social</th>
-									<td></td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row" class="text-start text-light">SEO, Updates, Backups</th>
-									<td></td>
-									<td></td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row" class="text-start text-light">Changes, Maintenance, Training</th>
-									<td></td>
-									<td></td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-									<td>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check-lg" viewBox="0 0 16 16">
-											<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-										</svg>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div class="container my-5">
-					<div class="row mb-5">
-						<div class="d-flex flex-row flex-wrap justify-content-around" data-aos="fade-up" data-aos-duration="800">
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/html-5-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/css-3-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/bootstrap-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/js-official-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/sass-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/npm-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-						</div>
-					</div>
-					<div class="row mb-5">
-						<div class="d-flex flex-row flex-wrap justify-content-around" data-aos="fade-up" data-aos-duration="800">
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/linux-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/python-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/sql-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/github-color-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/git-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/vs-code-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-						</div>
-					</div>
-					<div class="row mb-5">
-						<div class="d-flex flex-row flex-wrap justify-content-around" data-aos="fade-up" data-aos-duration="800">
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/wordpress-color-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/kentico-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/miro-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/godaddy-v2-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/jquery-1-logo-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-							<div class="skillsLogo">
-								<img src="/src/images/SVG/Icons/figma-svgrepo-com.svg" alt="HTML5" height="100" width="100" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-		<div class="container-fluid footer bg-dark">
-			<footer class="py-3 my-4">
-				<ul class="nav justify-content-center border-bottom pb-3 mb-3">
-					<li class="nav-item">
-						<a href="/" class="nav-link px-2">Home</a>
-					</li>
-					<li class="nav-item">
-						<a href="/src/about.html" class="nav-link px-2">About Me</a>
-					</li>
-					<li class="nav-item">
-						<a href="/src/services.html" class="nav-link px-2">Services</a>
-					</li>
-					<li class="nav-item">
-						<a href="/src/resume.html" class="nav-link px-2">Resume</a>
-					</li>
-					<li class="nav-item">
-						<a href="/src/projects.html" class="nav-link px-2">Projects</a>
-					</li>
-				</ul>
-				<p class="text-center">© <span id="year"></span> Epic Expressions</p>
-			</footer>
-		</div>
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+              <tbody>
+                <tr>
+                  <th scope="row" class="text-start text-light">
+                    Database, Security, 2FA
+                  </th>
+                  <td></td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start text-light">
+                    Blog, Products, Social
+                  </th>
+                  <td></td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start text-light">
+                    SEO, Updates, Backups
+                  </th>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start text-light">
+                    Changes, Maintenance, Training
+                  </th>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                  <td>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="white"
+                      class="bi bi-check-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
+                      />
+                    </svg>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container my-5">
+          <div class="row mb-5">
+            <div
+              class="d-flex flex-row flex-wrap justify-content-around"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/html-5-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/css-3-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/bootstrap-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/js-official-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/sass-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/npm-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div
+              class="d-flex flex-row flex-wrap justify-content-around"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/linux-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/python-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/sql-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/github-color-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/git-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/vs-code-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div
+              class="d-flex flex-row flex-wrap justify-content-around"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/wordpress-color-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/kentico-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/miro-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/godaddy-v2-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/jquery-1-logo-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+              <div class="skillsLogo">
+                <img
+                  src="/src/images/SVG/Icons/figma-svgrepo-com.svg"
+                  alt="HTML5"
+                  height="100"
+                  width="100"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="container-fluid footer bg-dark">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="/" class="nav-link px-2">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/about.html" class="nav-link px-2">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/services.html" class="nav-link px-2">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/resume.html" class="nav-link px-2">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/projects.html" class="nav-link px-2">Projects</a>
+          </li>
+        </ul>
+        <p class="text-center">© <span id="year"></span> Epic Expressions</p>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-		<script>
-			AOS.init({
-				// Global settings:
-				disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-				startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-				initClassName: "aos-init", // class applied after initialization
-				animatedClassName: "aos-animate", // class applied on animation
-				useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-				disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-				debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-				throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+    <script>
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: "aos-init", // class applied after initialization
+        animatedClassName: "aos-animate", // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
-				// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-				offset: 120, // offset (in px) from the original trigger point
-				delay: 0, // values from 0 to 3000, with step 50ms
-				duration: 1400, // values from 0 to 3000, with step 50ms
-				easing: "ease", // default easing for AOS animations
-				once: false, // whether animation should happen only once - while scrolling down
-				mirror: false, // whether elements should animate out while scrolling past them
-				anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
-			});
-		</script>
-		<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
-		<script type="module" src="js/main.js"></script>
-	</body>
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 1400, // values from 0 to 3000, with step 50ms
+        easing: "ease", // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+      });
+    </script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
 </html>

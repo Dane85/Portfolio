@@ -1,265 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Epic Expressions" />
+    <meta
+      name="description"
+      content="Transform your online presence with cutting-edge web design solutions. Our team of expert designers crafts visually stunning websites tailored to your brand, ensuring seamless user experience and optimal engagement. Explore our portfolio and unlock the potential of your digital presence today."
+    />
+    <meta
+      name="keywords"
+      content="web design, website development, responsive design, UX/UI design, graphic design, branding, digital marketing, SEO optimization, mobile-friendly design, custom websites"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Dane Watts" />
+    <title>Dane Watts || Projects</title>
+    <link rel="icon" type="image/x-icon" href="src/images/favicon.ico" />
 
-		<title>Dane Watts</title>
-		<link rel="icon" type="image/x-icon" href="src/images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./scss/main.scss" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/@media.css" />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-S7WLB6CC8S"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-		<link rel="stylesheet" href="./scss/main.scss" />
-		<link rel="stylesheet" href="css/main.css" />
-		<link rel="stylesheet" href="css/projects.css" />
-		<link rel="stylesheet" href="css/@media.css" />
-	</head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-S7WLB6CC8S"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag("js", new Date());
+    gtag("config", "G-S7WLB6CC8S");
+  </script>
+  <body class="bg-dark">
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
 
-		gtag("config", "G-S7WLB6CC8S");
-	</script>
-	<body class="bg-dark">
-		<!-- Messenger Chat Plugin Code -->
-		<div id="fb-root"></div>
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
 
-		<!-- Your Chat Plugin code -->
-		<div id="fb-customer-chat" class="fb-customerchat"></div>
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "198796009977210");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
 
-		<script>
-			var chatbox = document.getElementById("fb-customer-chat");
-			chatbox.setAttribute("page_id", "198796009977210");
-			chatbox.setAttribute("attribution", "biz_inbox");
-		</script>
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v18.0",
+        });
+      };
 
-		<!-- Your SDK code -->
-		<script>
-			window.fbAsyncInit = function () {
-				FB.init({
-					xfbml: true,
-					version: "v18.0",
-				});
-			};
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+    <header class="d-flex justify-content-center py-3 mt-3">
+      <nav id="nav" class="navbar navbar-dark bg-dark fixed-top"></nav>
+    </header>
+    <main>
+      <div
+        class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center projectHeaderBG"
+      >
+        <div class="col-md-6 p-lg-5 mx-auto my-5">
+          <h1 class="display-3 fw-bold text-light">
+            Bring Your Vision To Life
+          </h1>
+          <h3 class="fw-normal mb-3 text-light lead">
+            Building Online Visions Globally
+          </h3>
+          <div class="d-flex gap-3 justify-content-center lead fw-normal">
+            <div class="d-grid gap-2 d-md-flex justify-content-center mt-3">
+              <a
+                href="/src/contact_form.html"
+                class="btn btn-primary btn-lg px-4 me-md-2"
+                >Contact Me</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
 
-			(function (d, s, id) {
-				var js,
-					fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s);
-				js.id = id;
-				js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			})(document, "script", "facebook-jssdk");
-		</script>
-		<header class="d-flex justify-content-center py-3 mt-3">
-			<nav id="nav" class="navbar navbar-dark bg-dark fixed-top"></nav>
-		</header>
-		<main>
-			<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center projectHeaderBG">
-				<div class="col-md-6 p-lg-5 mx-auto my-5">
-					<h1 class="display-3 fw-bold text-light">Bring Your Vision To Life</h1>
-					<h3 class="fw-normal mb-3 text-light lead">Building Online Visions Globally</h3>
-					<div class="d-flex gap-3 justify-content-center lead fw-normal">
-						<div class="d-grid gap-2 d-md-flex justify-content-center mt-3">
-							<a href="/src/contact_form.html" class="btn btn-primary btn-lg px-4 me-md-2">Contact Me</a>
-						</div>
-					</div>
-				</div>
-			</div>
+      <div class="container mt-3">
+        <div class="row d-flex flex-wrap align-items-center">
+          <div class="col-md-4">
+            <div
+              class="card"
+              style="width: 100%"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <img
+                src="/src/images/compressjpeg/Projects/Capture.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Global Leadership Initiatives</h5>
+                <p class="card-text">
+                  DEVELOPING EXCELLENCE IN LEADERSHIP GLOBALLY
+                </p>
+              </div>
+              <div class="card-body">
+                <a
+                  href="https://globalleader.ca/"
+                  class="card-link btn btn-primary btn-lg px-4 me-md-2"
+                  >View Site</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="card"
+              style="width: 100%"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <img
+                src="/src/images/compressjpeg/Projects/BlueLakesCC.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Blue Lakes Country Club</h5>
+                <p class="card-text">
+                  Whether you are looking for a place to get away!
+                </p>
+              </div>
 
-			<div class="container mt-3">
-				<div class="row d-flex flex-wrap align-items-center">
-					<div class="col-md-4">
-						<div class="card" style="width: 100%" data-aos="fade-up" data-aos-duration="800">
-							<img src="/src/images/compressjpeg/Projects/Capture.png" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Global Leadership Initiatives</h5>
-								<p class="card-text">DEVELOPING EXCELLENCE IN LEADERSHIP GLOBALLY</p>
-							</div>
-							<div class="card-body">
-								<a href="https://globalleader.ca/" class="card-link btn btn-primary btn-lg px-4 me-md-2">View Site</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card" style="width: 100%" data-aos="fade-up" data-aos-duration="800">
-							<img src="/src/images/compressjpeg/Projects/BlueLakesCC.png" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Blue Lakes Country Club</h5>
-								<p class="card-text">Whether you are looking for a place to get away!</p>
-							</div>
+              <div class="card-body">
+                <a
+                  href="https://www.bluelakescc.com/"
+                  class="card-link btn btn-primary btn-lg px-4 me-md-2"
+                  >View Site</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="card"
+              style="width: 100%"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <img
+                src="/src/images/compressjpeg/Projects/ANC.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">The Army and Navy Club</h5>
+                <p class="card-text">WHERE TRADITIONS AND CAMARADERIE REIGN</p>
+              </div>
+              <div class="card-body">
+                <a
+                  href="https://www.armynavyclub.org/"
+                  class="card-link btn btn-primary btn-lg px-4 me-md-2"
+                  >View Site</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex flex-wrap align-items-center">
+          <div class="col-md-4">
+            <div
+              class="card"
+              style="width: 100%"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <img
+                src="/src/images/compressjpeg/Projects/LeadingEdge.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Leading Edge Building Engineers Inc.</h5>
+                <p class="card-text">
+                  Your Trusted Toronto Engineering Consultant
+                </p>
+              </div>
+              <div class="card-body">
+                <a
+                  href="https://lebengineers.com/"
+                  class="card-link btn btn-primary btn-lg px-4 me-md-2"
+                  >View Site</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="card"
+              style="width: 100%"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <img
+                src="/src/images/compressjpeg/Projects/FYC.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Florida Yacht Club</h5>
+                <p class="card-text">
+                  EXPERIENCE FLORIDA'S PREMIER DESTINATION FOR SOCIAL ENJOYMENT
+                  SINCE 1876
+                </p>
+              </div>
+              <div class="card-body">
+                <a
+                  href="https://www.thefloridayachtclub.org/"
+                  class="card-link btn btn-primary btn-lg px-4 me-md-2"
+                  >View Site</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="card"
+              style="width: 100%"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <img
+                src="/src/images/compressjpeg/Projects/ELM.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Elody's Little Melodies</h5>
+                <p class="card-text">
+                  Elody’s Little Melodies (ELM) exceptional childcare services.
+                </p>
+              </div>
 
-							<div class="card-body">
-								<a href="https://www.bluelakescc.com/" class="card-link btn btn-primary btn-lg px-4 me-md-2">View Site</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card" style="width: 100%" data-aos="fade-up" data-aos-duration="800">
-							<img src="/src/images/compressjpeg/Projects/ANC.png" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">The Army and Navy Club</h5>
-								<p class="card-text">WHERE TRADITIONS AND CAMARADERIE REIGN</p>
-							</div>
-							<div class="card-body">
-								<a href="https://www.armynavyclub.org/" class="card-link btn btn-primary btn-lg px-4 me-md-2">View Site</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row d-flex flex-wrap align-items-center">
-					<div class="col-md-4">
-						<div class="card" style="width: 100%" data-aos="fade-up" data-aos-duration="800">
-							<img src="/src/images/compressjpeg/Projects/LeadingEdge.png" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Leading Edge Building Engineers Inc.</h5>
-								<p class="card-text">Your Trusted Toronto Engineering Consultant</p>
-							</div>
-							<div class="card-body">
-								<a href="https://lebengineers.com/" class="card-link btn btn-primary btn-lg px-4 me-md-2">View Site</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card" style="width: 100%" data-aos="fade-up" data-aos-duration="800">
-							<img src="/src/images/compressjpeg/Projects/FYC.png" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Florida Yacht Club</h5>
-								<p class="card-text">EXPERIENCE FLORIDA'S PREMIER DESTINATION FOR SOCIAL ENJOYMENT SINCE 1876</p>
-							</div>
-							<div class="card-body">
-								<a href="https://www.thefloridayachtclub.org/" class="card-link btn btn-primary btn-lg px-4 me-md-2">View Site</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card" style="width: 100%" data-aos="fade-up" data-aos-duration="800">
-							<img src="/src/images/compressjpeg/Projects/ELM.png" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Elody's Little Melodies</h5>
-								<p class="card-text">Elody’s Little Melodies (ELM) exceptional childcare services.</p>
-							</div>
+              <div class="card-body">
+                <a
+                  href="https://elodyslittlemelodies.ca/"
+                  class="card-link btn btn-primary btn-lg px-4 me-md-2"
+                  >View Site</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex flex-wrap align-items-center">
+          <div class="col-md-4">
+            <div
+              class="card"
+              style="width: 100%"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <img
+                src="/src/images/compressjpeg/Projects/HSCC.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Highland Springs Country Club</h5>
+                <p class="card-text">
+                  THE HIGHLAND SPRINGS LIFESTYLE HAS BEEN WAITING FOR YOU...
+                </p>
+              </div>
 
-							<div class="card-body">
-								<a href="https://elodyslittlemelodies.ca/" class="card-link btn btn-primary btn-lg px-4 me-md-2">View Site</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row d-flex flex-wrap align-items-center">
-					<div class="col-md-4">
-						<div class="card" style="width: 100%" data-aos="fade-up" data-aos-duration="800">
-							<img src="/src/images/compressjpeg/Projects/HSCC.png" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Highland Springs Country Club</h5>
-								<p class="card-text">THE HIGHLAND SPRINGS LIFESTYLE HAS BEEN WAITING FOR YOU...</p>
-							</div>
+              <div class="card-body">
+                <a
+                  href="https://www.highlandsprings.com/"
+                  class="card-link btn btn-primary btn-lg px-4 me-md-2"
+                  >View Site</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="card"
+              style="width: 100%"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <img
+                src="/src/images/compressjpeg/Projects/JHCC.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Juniper Hills Country Club</h5>
+                <p class="card-text">Where beauty is par for the course...</p>
+              </div>
+              <div class="card-body">
+                <a
+                  href="https://www.jhcc.us/"
+                  class="card-link btn btn-primary btn-lg px-4 me-md-2"
+                  >View Site</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="card"
+              style="width: 100%"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <img
+                src="/src/images/compressjpeg/Projects/CRYCC.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Chester River Yacht & Country Club</h5>
+                <p class="card-text">
+                  GETTING TO KNOW WHAT MAKES THIS PLACE SO SPECIAL
+                </p>
+              </div>
 
-							<div class="card-body">
-								<a href="https://www.highlandsprings.com/" class="card-link btn btn-primary btn-lg px-4 me-md-2">View Site</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card" style="width: 100%" data-aos="fade-up" data-aos-duration="800">
-							<img src="/src/images/compressjpeg/Projects/JHCC.png" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Juniper Hills Country Club</h5>
-								<p class="card-text">Where beauty is par for the course...</p>
-							</div>
-							<div class="card-body">
-								<a href="https://www.jhcc.us/" class="card-link btn btn-primary btn-lg px-4 me-md-2">View Site</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card" style="width: 100%" data-aos="fade-up" data-aos-duration="800">
-							<img src="/src/images/compressjpeg/Projects/CRYCC.png" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Chester River Yacht & Country Club</h5>
-								<p class="card-text">GETTING TO KNOW WHAT MAKES THIS PLACE SO SPECIAL</p>
-							</div>
+              <div class="card-body">
+                <a
+                  href="https://www.crycc.org/"
+                  class="card-link btn btn-primary btn-lg px-4 me-md-2"
+                  >View Site</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-3">
+        <hr />
+        <div class="row d-flex flex-wrap align-items-center">
+          <div class="d-flex justify-content-center">
+            <div
+              class="card"
+              style="width: 100%; max-width: 400px"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <img
+                src="/src/images/compressjpeg/Projects/DBTS.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Duty Bound Training Systems</h5>
+                <p class="card-text">
+                  Personal Training / Self Defense / Tactical Defense
+                </p>
+              </div>
+              <div class="card-body">
+                <h3>COMING SOON</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-grid gap-2 d-md-flex justify-content-center mt-3">
+        <a
+          href="/src/contact_form.html"
+          class="btn btn-primary btn-lg px-4 me-md-2"
+          >Contact Me</a
+        >
+      </div>
+    </main>
+    <div class="container-fluid footer bg-dark">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="/" class="nav-link px-2">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/about.html" class="nav-link px-2">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/services.html" class="nav-link px-2">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/resume.html" class="nav-link px-2">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/projects.html" class="nav-link px-2">Projects</a>
+          </li>
+        </ul>
+        <p class="text-center">© <span id="year"></span> Epic Expressions</p>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: "aos-init", // class applied after initialization
+        animatedClassName: "aos-animate", // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
-							<div class="card-body">
-								<a href="https://www.crycc.org/" class="card-link btn btn-primary btn-lg px-4 me-md-2">View Site</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container mt-3">
-				<hr />
-				<div class="row d-flex flex-wrap align-items-center">
-					<div class="d-flex justify-content-center">
-						<div class="card" style="width: 100%; max-width: 400px" data-aos="fade-up" data-aos-duration="800">
-							<img src="/src/images/compressjpeg/Projects/DBTS.png" class="card-img-top" alt="..." />
-							<div class="card-body">
-								<h5 class="card-title">Duty Bound Training Systems</h5>
-								<p class="card-text">Personal Training / Self Defense / Tactical Defense</p>
-							</div>
-							<div class="card-body">
-								<h3>COMING SOON</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="d-grid gap-2 d-md-flex justify-content-center mt-3">
-				<a href="/src/contact_form.html" class="btn btn-primary btn-lg px-4 me-md-2">Contact Me</a>
-			</div>
-		</main>
-		<div class="container-fluid footer bg-dark">
-			<footer class="py-3 my-4">
-				<ul class="nav justify-content-center border-bottom pb-3 mb-3">
-					<li class="nav-item">
-						<a href="/" class="nav-link px-2">Home</a>
-					</li>
-					<li class="nav-item">
-						<a href="/src/about.html" class="nav-link px-2">About Me</a>
-					</li>
-					<li class="nav-item">
-						<a href="/src/services.html" class="nav-link px-2">Services</a>
-					</li>
-					<li class="nav-item">
-						<a href="/src/resume.html" class="nav-link px-2">Resume</a>
-					</li>
-					<li class="nav-item">
-						<a href="/src/projects.html" class="nav-link px-2">Projects</a>
-					</li>
-				</ul>
-				<p class="text-center">© <span id="year"></span> Epic Expressions</p>
-			</footer>
-		</div>
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script>
-			AOS.init({
-				// Global settings:
-				disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-				startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-				initClassName: "aos-init", // class applied after initialization
-				animatedClassName: "aos-animate", // class applied on animation
-				useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-				disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-				debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-				throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-				// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-				offset: 120, // offset (in px) from the original trigger point
-				delay: 0, // values from 0 to 3000, with step 50ms
-				duration: 1400, // values from 0 to 3000, with step 50ms
-				easing: "ease", // default easing for AOS animations
-				once: false, // whether animation should happen only once - while scrolling down
-				mirror: false, // whether elements should animate out while scrolling past them
-				anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
-			});
-		</script>
-		<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
-		<script type="module" src="js/main.js"></script>
-	</body>
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 1400, // values from 0 to 3000, with step 50ms
+        easing: "ease", // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+      });
+    </script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
 </html>

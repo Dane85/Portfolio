@@ -1,268 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Epic Expressions" />
+    <meta
+      name="description"
+      content="Transform your online presence with cutting-edge web design solutions. Our team of expert designers crafts visually stunning websites tailored to your brand, ensuring seamless user experience and optimal engagement. Explore our portfolio and unlock the potential of your digital presence today."
+    />
+    <meta
+      name="keywords"
+      content="web design, website development, responsive design, UX/UI design, graphic design, branding, digital marketing, SEO optimization, mobile-friendly design, custom websites"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Dane Watts" />
+    <title>Dane Watts || About</title>
+    <link rel="icon" type="image/x-icon" href="src/images/favicon.ico" />
 
-		<title>Dane Watts || About</title>
-		<link rel="icon" type="image/x-icon" href="src/images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./scss/main.scss" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/@media.css" />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-S7WLB6CC8S"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-		<link rel="stylesheet" href="./scss/main.scss" />
-		<link rel="stylesheet" href="css/main.css" />
-		<link rel="stylesheet" href="css/about.css" />
-		<link rel="stylesheet" href="css/@media.css" />
-	</head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-S7WLB6CC8S"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag("js", new Date());
+    gtag("config", "G-S7WLB6CC8S");
+  </script>
+  <body class="bg-dark">
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
 
-		gtag("config", "G-S7WLB6CC8S");
-	</script>
-	<body class="bg-dark">
-		<!-- Messenger Chat Plugin Code -->
-		<div id="fb-root"></div>
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
 
-		<!-- Your Chat Plugin code -->
-		<div id="fb-customer-chat" class="fb-customerchat"></div>
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "198796009977210");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
 
-		<script>
-			var chatbox = document.getElementById("fb-customer-chat");
-			chatbox.setAttribute("page_id", "198796009977210");
-			chatbox.setAttribute("attribution", "biz_inbox");
-		</script>
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v18.0",
+        });
+      };
 
-		<!-- Your SDK code -->
-		<script>
-			window.fbAsyncInit = function () {
-				FB.init({
-					xfbml: true,
-					version: "v18.0",
-				});
-			};
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+    <header class="d-flex justify-content-center py-3 mt-3">
+      <nav id="nav" class="navbar navbar-dark bg-dark fixed-top"></nav>
+    </header>
+    <main>
+      <section>
+        <div class="container-fluid pt-5">
+          <div class="row mb-4 mb-lg-5 justify-content-lg-between">
+            <div
+              class="col-3 col-md-1 col-lg-2 d-none d-md-flex align-items-center"
+              data-aos="fade-right"
+            >
+              <div
+                class="lc-block bg-secondary ratio ratio-1x1"
+                style="opacity: 0.4"
+              ></div>
+              <!-- /lc-block -->
+            </div>
+            <!-- /col -->
+            <div
+              class="col-4 col-md-3 col-lg-2 d-flex flex-column justify-content-between"
+            >
+              <div
+                class="lc-block bg-primary ratio ratio-1x1"
+                style="opacity: 0.4"
+                data-aos="fade-down"
+              ></div>
+              <!-- /lc-block -->
+              <div class="lc-block mt-2">
+                <img
+                  class="img-fluid"
+                  data-aos="fade-up"
+                  src="/src/images/sigmund-psXNymQI7Pk-unsplash-min.jpg?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Njd8fGJ1aWxkaW5nfGVufDB8Mnx8fDE2MzQ1NTE3NDg&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080"
+                  alt="Photo by Sigmund"
+                />
+              </div>
+              <!-- /lc-block -->
+            </div>
+            <!-- /col -->
+            <div class="col-4 col-md-4 col-lg-3 d-flex align-content-center">
+              <img
+                class="img-fluid align-content-center"
+                data-aos="fade-in"
+                src="/src/images/ben-kolde-bs2Ba7t69mM-unsplash-min.jpg?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDJ8fGJ1aWxkaW5nfGVufDB8Mnx8fDE2MzQ1NTE3NDE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080"
+                style="object-fit: cover; flex: auto !important"
+                alt="Photo by Ben Kolde"
+              />
+            </div>
+            <!-- /col -->
+            <div
+              class="col-4 col-md-3 col-lg-2 d-flex flex-column justify-content-between"
+            >
+              <div class="lc-block">
+                <img
+                  class="img-fluid"
+                  data-aos="fade-down"
+                  src="/src/images/safar-safarov-koOdUvfGr4c-unsplash-min.jpg?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDJ8fGJ1aWxkaW5nfGVufDB8Mnx8fDE2MzQ1NTE3NDE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080"
+                  alt="Photo by Safar Safarov"
+                />
+              </div>
+              <!-- /lc-block -->
+              <div
+                class="lc-block bg-primary ratio ratio-1x1"
+                style="opacity: 0.4"
+                data-aos="fade-up"
+              ></div>
+              <!-- /lc-block -->
+            </div>
+            <!-- /col -->
+            <div
+              class="col-3 col-md-1 col-lg-2 d-none d-md-flex align-items-center"
+            >
+              <div
+                class="lc-block bg-secondary ratio ratio-1x1"
+                style="opacity: 0.4"
+                data-aos="fade-left"
+              ></div>
+              <!-- /lc-block -->
+            </div>
+            <!-- /col -->
+          </div>
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="lc-block text-center col-md-8">
+              <div editable="rich">
+                <h1 class="rfs-25 fw-bold text-light" data-aos="fade-in">
+                  Dane Watts <br />
+                  <span>
+                    <h3>
+                      Proprietor Of <br />Epic Expressions <br />Digital
+                      Marketing Solutions
+                    </h3>
+                  </span>
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="lc-block text-center col-xxl-6 col-md-8">
+              <div editable="rich">
+                <p class="lead text-light" data-aos="fade-up">
+                  Greetings! I'm Dane Watts, the creative force behind Epic
+                  Expressions Digital Marketing Solutions. As a fervent web
+                  development enthusiast, my mission is to craft extraordinary
+                  digital experiences that seamlessly blend creativity with
+                  functionality. I'm driven by the belief that well-designed
+                  websites not only captivate users but also deliver positive
+                  outcomes.
+                </p>
+              </div>
+            </div>
+            <!-- /lc-block -->
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container py-5">
+          <div class="main-timeline-2">
+            <div class="timeline-2 left-2">
+              <div class="card timeLineCard" div data-aos="zoom-in-right">
+                <img
+                  src="/src/images/julian-hochgesang-aG8iIT9_iqM-unsplash-min.jpg"
+                  class="card-img-top"
+                  alt="Rail image"
+                />
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-4">The Railway</h4>
+                  <p class="text-muted mb-4">
+                    <i class="far fa-clock" aria-hidden="true"></i> 2020
+                  </p>
+                  <p class="mb-0">
+                    In 2020, I left the railway after being a rail car mechanic
+                    for 8 years. During this time, I had a lot of
+                    decision-making to do. Finally, after some research and
+                    interest in technology, I bought my first boot camp in web
+                    development.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-2 right-2">
+              <div class="card timeLineCard" div data-aos="zoom-in-left">
+                <img
+                  src="/src/images/Angela Yu Boot Camp-min.jpg"
+                  class="card-img-top"
+                  alt="Responsive image"
+                />
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-4">Web Development Boot Camp</h4>
+                  <p class="text-muted mb-4">
+                    <i class="far fa-clock" aria-hidden="true"></i> 2020
+                  </p>
+                  <p class="mb-0">
+                    In the realm of web development, I am dedicated to shaping
+                    exceptional digital encounters. Armed with a keen sense of
+                    design aesthetics and a profound understanding of
+                    user-centric philosophies, I embark on a mission to
+                    construct user-friendly online platforms that effortlessly
+                    blend style and utility. My goal is to leave a lasting
+                    impact, ensuring users enjoy a seamless and engaging journey
+                    with the digital solutions I bring to life.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-2 left-2">
+              <div class="card timeLineCard" div data-aos="zoom-in-right">
+                <img
+                  src="/src/images/Screenshot 2023-11-23 234606.png"
+                  class="card-img-top"
+                  alt="Responsive image"
+                />
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-4">Athabasca University</h4>
+                  <p class="text-muted mb-4">
+                    <i class="far fa-clock" aria-hidden="true"></i> 2020
+                  </p>
+                  <p class="mb-0">
+                    As I step into the realm of computer science, my academic
+                    journey takes a deliberate focus on cybersecurity—a
+                    strategic exploration of the digital frontier. I begin with
+                    the essentials of programming and logic, laying the
+                    groundwork for a deeper understanding of computer systems,
+                    algorithms, and data management.
+                    <br />
+                    <br />
+                    As the journey unfolds, my focus sharpens on the critical
+                    domain of cybersecurity. I delve into courses on network
+                    security, cryptography, and ethical hacking, equipping
+                    myself with the tools to safeguard digital landscapes.
+                    Understanding the intricacies of cyber threats becomes
+                    paramount, and I learn to fortify systems against potential
+                    vulnerabilities. Specialization avenues open up, offering
+                    opportunities in penetration testing, digital forensics, and
+                    security engineering. Electives provide the flexibility to
+                    tailor my academic route to personal interests, whether it's
+                    in threat intelligence or secure software development.
+                    <br />
+                    <br />
+                    In this personal odyssey, each course and challenge met
+                    serves as a stepping stone toward my ultimate end
+                    game—becoming a cybersecurity expert. My pursuit is not
+                    merely about obtaining degrees; it's a dedicated quest to
+                    comprehend, innovate, and stand at the forefront of securing
+                    the digital future.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-2 right-2">
+              <div class="card timeLineCard" div data-aos="zoom-in-left">
+                <img
+                  src="/src/images/2.png"
+                  class="card-img-top"
+                  alt="Responsive image"
+                />
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-4">Epic Expressions</h4>
+                  <p class="text-muted mb-4">
+                    <i class="far fa-clock" aria-hidden="true"></i> 2021
+                  </p>
+                  <p class="mb-0">
+                    In 2021, I decided to start my own journey on the internet.
+                    I created Epic Expressions Multimedia Solutions, a company
+                    aimed at not only enhancing my skills with IoT but also
+                    assisting others, including small businesses, in achieving
+                    their goals. This venture provided me with excellent
+                    exposure, enabling me to learn not only a plethora of new
+                    technologies but also the soft skills required when working
+                    with clients.
+                    <br /><br />
+                    I gained experience in various areas, from network setups
+                    and DNS to building and maintaining large-scale projects
+                    with companies that have a global reach. I delved into
+                    aspects such as security and database management, allowing
+                    me to maintain and update my skills despite not working
+                    directly in the IT field. Pursuing my dreams in technology
+                    also opened avenues for exploring other passions, such as
+                    photography and videography.
+                    <br /><br />
+                    While consistently maintaining this position, I work
+                    diligently to ensure that every client who chooses to work
+                    with Epic Expressions not only receives what they are
+                    seeking in their online video but also experiences
+                    exceptional satisfaction with the process.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-2 left-2">
+              <div class="card timeLineCard" div data-aos="zoom-in-right">
+                <img
+                  src="/src/images/jonas-club-software-880x496-1-min.jpg"
+                  class="card-img-top"
+                  alt="Responsive image"
+                />
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-4">Jonas Club Software</h4>
+                  <p class="text-muted mb-4">
+                    <i class="far fa-clock" aria-hidden="true"></i> 2022
+                  </p>
+                  <p class="mb-0">
+                    My focus revolves around designing, developing, and
+                    debugging front-end websites and architectural layouts using
+                    Kentico systems. My toolkit includes HTML, CSS, JS,
+                    Bootstrap, jQuery, WordPress, Python, and SQL. My
+                    Professional Experience at Jonas Club Software: I take pride
+                    in collaborating with a talented team, working hand-in-hand
+                    with designers and team leaders to address client issues and
+                    deliver top-notch solutions. Juggling multiple projects
+                    simultaneously, I've honed my skills in improving processes
+                    and productivity through the strategic use of Salesforce and
+                    Excel spreadsheets along with so many other tools.
+                    <br /><br />
+                    I firmly believe in a client-centric approach. Beyond coding
+                    excellence, I prioritize client satisfaction by meticulously
+                    booking meetings and organizing files and folders to enhance
+                    usability. What Sets Me Apart: Versatility is a cornerstone
+                    of my approach. I've cultivated a proficiency in various
+                    technologies, ensuring adaptability to the ever-evolving
+                    landscape of front-end development. I tackle challenges with
+                    an innovative mindset, consistently exceeding client
+                    expectations.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-2 right-2">
+              <div class="card timeLineCard" div data-aos="zoom-in-left">
+                <img
+                  src="/src/images/ian-battaglia-9drS5E_Rguc-unsplash-min.jpg"
+                  class="card-img-top"
+                  alt="Responsive image"
+                />
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-4">The Future</h4>
+                  <p class="text-muted mb-4">
+                    <i class="far fa-clock" aria-hidden="true"></i> 2023
+                  </p>
+                  <p class="mb-0">
+                    I am currently immersed in the dynamic field of networks and
+                    ethical hacking, actively learning the intricacies of
+                    cybersecurity. My educational background has equipped me
+                    with a solid foundation in computer architecture, processes,
+                    networks, and the Internet of Things (IoT). With a passion
+                    for securing digital landscapes, my ultimate goal is to work
+                    as a cybersecurity engineer, specializing in ethical
+                    hacking.
+                    <br /><br />
+                    In my journey towards this goal, I am exploring the role of
+                    a 'Red Team.' A Red Team is essentially a group of
+                    cybersecurity professionals who simulate cyberattacks to
+                    assess and fortify the defenses of systems, networks, or
+                    organizations. As ethical hackers, their mission is to
+                    identify vulnerabilities, weaknesses, and potential entry
+                    points that malicious hackers might exploit. This proactive
+                    approach allows them to address and mitigate these issues
+                    before real attackers can take advantage.
+                    <br /><br />
+                    By delving into the realm of ethical hacking, I aim to not
+                    only understand the various technologies involved but also
+                    actively contribute to enhancing the security posture of
+                    systems. The constant pursuit of knowledge in this field
+                    aligns with my commitment to staying ahead of emerging
+                    threats and implementing robust cybersecurity measures. I am
+                    excited about the prospect of contributing to the
+                    cybersecurity landscape and ensuring the protection of
+                    digital assets in the role of a cybersecurity engineer.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <p class="text-light d-flex justify-content-around">
+            Let's collaborate to transform your digital landscape and enhance
+            engagement and satisfaction for your audience. Contact me for online
+            success!
+          </p>
+        </div>
+      </section>
+    </main>
+    <div class="container-fluid footer bg-dark">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="/" class="nav-link px-2">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/about.html" class="nav-link px-2">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/services.html" class="nav-link px-2">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/resume.html" class="nav-link px-2">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a href="/src/projects.html" class="nav-link px-2">Projects</a>
+          </li>
+        </ul>
+        <p class="text-center">© <span id="year"></span> Epic Expressions</p>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: "aos-init", // class applied after initialization
+        animatedClassName: "aos-animate", // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
-			(function (d, s, id) {
-				var js,
-					fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s);
-				js.id = id;
-				js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			})(document, "script", "facebook-jssdk");
-		</script>
-		<header class="d-flex justify-content-center py-3 mt-3">
-			<nav id="nav" class="navbar navbar-dark bg-dark fixed-top"></nav>
-		</header>
-		<main>
-			<section>
-				<div class="container-fluid pt-5">
-					<div class="row mb-4 mb-lg-5 justify-content-lg-between">
-						<div class="col-3 col-md-1 col-lg-2 d-none d-md-flex align-items-center" data-aos="fade-right">
-							<div class="lc-block bg-secondary ratio ratio-1x1" style="opacity: 0.4"></div>
-							<!-- /lc-block -->
-						</div>
-						<!-- /col -->
-						<div class="col-4 col-md-3 col-lg-2 d-flex flex-column justify-content-between">
-							<div class="lc-block bg-primary ratio ratio-1x1" style="opacity: 0.4" data-aos="fade-down"></div>
-							<!-- /lc-block -->
-							<div class="lc-block mt-2">
-								<img class="img-fluid" data-aos="fade-up" src="/src/images/sigmund-psXNymQI7Pk-unsplash-min.jpg?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Njd8fGJ1aWxkaW5nfGVufDB8Mnx8fDE2MzQ1NTE3NDg&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" alt="Photo by Sigmund" />
-							</div>
-							<!-- /lc-block -->
-						</div>
-						<!-- /col -->
-						<div class="col-4 col-md-4 col-lg-3 d-flex align-content-center">
-							<img class="img-fluid align-content-center" data-aos="fade-in" src="/src/images/ben-kolde-bs2Ba7t69mM-unsplash-min.jpg?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDJ8fGJ1aWxkaW5nfGVufDB8Mnx8fDE2MzQ1NTE3NDE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" style="object-fit: cover; flex: auto !important" alt="Photo by Ben Kolde" />
-						</div>
-						<!-- /col -->
-						<div class="col-4 col-md-3 col-lg-2 d-flex flex-column justify-content-between">
-							<div class="lc-block">
-								<img class="img-fluid" data-aos="fade-down" src="/src/images/safar-safarov-koOdUvfGr4c-unsplash-min.jpg?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDJ8fGJ1aWxkaW5nfGVufDB8Mnx8fDE2MzQ1NTE3NDE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" alt="Photo by Safar Safarov" />
-							</div>
-							<!-- /lc-block -->
-							<div class="lc-block bg-primary ratio ratio-1x1" style="opacity: 0.4" data-aos="fade-up"></div>
-							<!-- /lc-block -->
-						</div>
-						<!-- /col -->
-						<div class="col-3 col-md-1 col-lg-2 d-none d-md-flex align-items-center">
-							<div class="lc-block bg-secondary ratio ratio-1x1" style="opacity: 0.4" data-aos="fade-left"></div>
-							<!-- /lc-block -->
-						</div>
-						<!-- /col -->
-					</div>
-				</div>
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="lc-block text-center col-md-8">
-							<div editable="rich">
-								<h1 class="rfs-25 fw-bold text-light" data-aos="fade-in">
-									Dane Watts <br />
-									<span>
-										<h3>Proprietor Of <br />Epic Expressions <br />Digital Marketing Solutions</h3>
-									</span>
-								</h1>
-							</div>
-						</div>
-					</div>
-					<div class="row justify-content-center">
-						<div class="lc-block text-center col-xxl-6 col-md-8">
-							<div editable="rich">
-								<p class="lead text-light" data-aos="fade-up">Greetings! I'm Dane Watts, the creative force behind Epic Expressions Digital Marketing Solutions. As a fervent web development enthusiast, my mission is to craft extraordinary digital experiences that seamlessly blend creativity with functionality. I'm driven by the belief that well-designed websites not only captivate users but also deliver positive outcomes.</p>
-							</div>
-						</div>
-						<!-- /lc-block -->
-					</div>
-				</div>
-			</section>
-			<section>
-				<div class="container py-5">
-					<div class="main-timeline-2">
-						<div class="timeline-2 left-2">
-							<div class="card timeLineCard" div data-aos="zoom-in-right">
-								<img src="/src/images/julian-hochgesang-aG8iIT9_iqM-unsplash-min.jpg" class="card-img-top" alt="Rail image" />
-								<div class="card-body p-4">
-									<h4 class="fw-bold mb-4">The Railway</h4>
-									<p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2020</p>
-									<p class="mb-0">In 2020, I left the railway after being a rail car mechanic for 8 years. During this time, I had a lot of decision-making to do. Finally, after some research and interest in technology, I bought my first boot camp in web development.</p>
-								</div>
-							</div>
-						</div>
-						<div class="timeline-2 right-2">
-							<div class="card timeLineCard" div data-aos="zoom-in-left">
-								<img src="/src/images/Angela Yu Boot Camp-min.jpg" class="card-img-top" alt="Responsive image" />
-								<div class="card-body p-4">
-									<h4 class="fw-bold mb-4">Web Development Boot Camp</h4>
-									<p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2020</p>
-									<p class="mb-0">In the realm of web development, I am dedicated to shaping exceptional digital encounters. Armed with a keen sense of design aesthetics and a profound understanding of user-centric philosophies, I embark on a mission to construct user-friendly online platforms that effortlessly blend style and utility. My goal is to leave a lasting impact, ensuring users enjoy a seamless and engaging journey with the digital solutions I bring to life.</p>
-								</div>
-							</div>
-						</div>
-						<div class="timeline-2 left-2">
-							<div class="card timeLineCard" div data-aos="zoom-in-right">
-								<img src="/src/images/Screenshot 2023-11-23 234606.png" class="card-img-top" alt="Responsive image" />
-								<div class="card-body p-4">
-									<h4 class="fw-bold mb-4">Athabasca University</h4>
-									<p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2020</p>
-									<p class="mb-0">
-										As I step into the realm of computer science, my academic journey takes a deliberate focus on cybersecurity—a strategic exploration of the digital frontier. I begin with the essentials of programming and logic, laying the groundwork for a deeper understanding of computer systems, algorithms, and data management.
-										<br />
-										<br />
-										As the journey unfolds, my focus sharpens on the critical domain of cybersecurity. I delve into courses on network security, cryptography, and ethical hacking, equipping myself with the tools to safeguard digital landscapes. Understanding the intricacies of cyber threats becomes paramount, and I learn to fortify systems against potential vulnerabilities. Specialization avenues open up, offering opportunities in penetration testing, digital forensics, and security engineering. Electives provide the flexibility to tailor my academic route to personal interests, whether it's in threat intelligence or secure software development.
-										<br />
-										<br />
-										In this personal odyssey, each course and challenge met serves as a stepping stone toward my ultimate end game—becoming a cybersecurity expert. My pursuit is not merely about obtaining degrees; it's a dedicated quest to comprehend, innovate, and stand at the forefront of securing the digital future.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="timeline-2 right-2">
-							<div class="card timeLineCard" div data-aos="zoom-in-left">
-								<img src="/src/images/2.png" class="card-img-top" alt="Responsive image" />
-								<div class="card-body p-4">
-									<h4 class="fw-bold mb-4">Epic Expressions</h4>
-									<p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2021</p>
-									<p class="mb-0">
-										In 2021, I decided to start my own journey on the internet. I created Epic Expressions Multimedia Solutions, a company aimed at not only enhancing my skills with IoT but also assisting others, including small businesses, in achieving their goals. This venture provided me with excellent exposure, enabling me to learn not only a plethora of new technologies but also the soft skills required when working with clients.
-										<br /><br />
-										I gained experience in various areas, from network setups and DNS to building and maintaining large-scale projects with companies that have a global reach. I delved into aspects such as security and database management, allowing me to maintain and update my skills despite not working directly in the IT field. Pursuing my dreams in technology also opened avenues for exploring other passions, such as photography and videography.
-										<br /><br />
-										While consistently maintaining this position, I work diligently to ensure that every client who chooses to work with Epic Expressions not only receives what they are seeking in their online video but also experiences exceptional satisfaction with the process.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="timeline-2 left-2">
-							<div class="card timeLineCard" div data-aos="zoom-in-right">
-								<img src="/src/images/jonas-club-software-880x496-1-min.jpg" class="card-img-top" alt="Responsive image" />
-								<div class="card-body p-4">
-									<h4 class="fw-bold mb-4">Jonas Club Software</h4>
-									<p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2022</p>
-									<p class="mb-0">
-										My focus revolves around designing, developing, and debugging front-end websites and architectural layouts using Kentico systems. My toolkit includes HTML, CSS, JS, Bootstrap, jQuery, WordPress, Python, and SQL. My Professional Experience at Jonas Club Software: I take pride in collaborating with a talented team, working hand-in-hand with designers and team leaders to address client issues and deliver top-notch solutions. Juggling multiple projects simultaneously, I've honed my skills in improving processes and productivity through the strategic use of Salesforce and Excel spreadsheets along with so many other tools.
-										<br /><br />
-										I firmly believe in a client-centric approach. Beyond coding excellence, I prioritize client satisfaction by meticulously booking meetings and organizing files and folders to enhance usability. What Sets Me Apart: Versatility is a cornerstone of my approach. I've cultivated a proficiency in various technologies, ensuring adaptability to the ever-evolving landscape of front-end development. I tackle challenges with an innovative mindset, consistently exceeding client expectations.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="timeline-2 right-2">
-							<div class="card timeLineCard" div data-aos="zoom-in-left">
-								<img src="/src/images/ian-battaglia-9drS5E_Rguc-unsplash-min.jpg" class="card-img-top" alt="Responsive image" />
-								<div class="card-body p-4">
-									<h4 class="fw-bold mb-4">The Future</h4>
-									<p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2023</p>
-									<p class="mb-0">
-										I am currently immersed in the dynamic field of networks and ethical hacking, actively learning the intricacies of cybersecurity. My educational background has equipped me with a solid foundation in computer architecture, processes, networks, and the Internet of Things (IoT). With a passion for securing digital landscapes, my ultimate goal is to work as a cybersecurity engineer, specializing in ethical hacking.
-										<br /><br />
-										In my journey towards this goal, I am exploring the role of a 'Red Team.' A Red Team is essentially a group of cybersecurity professionals who simulate cyberattacks to assess and fortify the defenses of systems, networks, or organizations. As ethical hackers, their mission is to identify vulnerabilities, weaknesses, and potential entry points that malicious hackers might exploit. This proactive approach allows them to address and mitigate these issues before real attackers can take advantage.
-										<br /><br />
-										By delving into the realm of ethical hacking, I aim to not only understand the various technologies involved but also actively contribute to enhancing the security posture of systems. The constant pursuit of knowledge in this field aligns with my commitment to staying ahead of emerging threats and implementing robust cybersecurity measures. I am excited about the prospect of contributing to the cybersecurity landscape and ensuring the protection of digital assets in the role of a cybersecurity engineer.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div class="container">
-					<p class="text-light d-flex justify-content-around">Let's collaborate to transform your digital landscape and enhance engagement and satisfaction for your audience. Contact me for online success!</p>
-				</div>
-			</section>
-		</main>
-		<div class="container-fluid footer bg-dark">
-			<footer class="py-3 my-4">
-				<ul class="nav justify-content-center border-bottom pb-3 mb-3">
-					<li class="nav-item">
-						<a href="/" class="nav-link px-2">Home</a>
-					</li>
-					<li class="nav-item">
-						<a href="/src/about.html" class="nav-link px-2">About Me</a>
-					</li>
-					<li class="nav-item">
-						<a href="/src/services.html" class="nav-link px-2">Services</a>
-					</li>
-					<li class="nav-item">
-						<a href="/src/resume.html" class="nav-link px-2">Resume</a>
-					</li>
-					<li class="nav-item">
-						<a href="/src/projects.html" class="nav-link px-2">Projects</a>
-					</li>
-				</ul>
-				<p class="text-center">© <span id="year"></span> Epic Expressions</p>
-			</footer>
-		</div>
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script>
-			AOS.init({
-				// Global settings:
-				disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-				startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-				initClassName: "aos-init", // class applied after initialization
-				animatedClassName: "aos-animate", // class applied on animation
-				useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-				disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-				debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-				throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-				// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-				offset: 120, // offset (in px) from the original trigger point
-				delay: 0, // values from 0 to 3000, with step 50ms
-				duration: 1400, // values from 0 to 3000, with step 50ms
-				easing: "ease", // default easing for AOS animations
-				once: false, // whether animation should happen only once - while scrolling down
-				mirror: false, // whether elements should animate out while scrolling past them
-				anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
-			});
-		</script>
-		<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
-		<script type="module" src="js/main.js"></script>
-	</body>
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 1400, // values from 0 to 3000, with step 50ms
+        easing: "ease", // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+      });
+    </script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
 </html>
