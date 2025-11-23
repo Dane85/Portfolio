@@ -1,246 +1,697 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tailwind CSS + Elements Example</title>
-		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-		<style type="text/tailwindcss">
-			@theme {
-				--color-clifford: #da373d;
+		<title>Dane Watts | Cybersecurity Specialist</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<script src="https://unpkg.com/lucide@latest"></script>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap");
+
+			:root {
+				--bg-dark: #0f172a;
+				--bg-card: #1e293b;
+				--accent: #38bdf8;
+				--text-primary: #f1f5f9;
+				--text-secondary: #94a3b8;
+			}
+
+			body {
+				font-family: "Inter", sans-serif;
+				background-color: var(--bg-dark);
+				color: var(--text-primary);
+			}
+
+			.font-mono {
+				font-family: "JetBrains Mono", monospace;
+			}
+
+			/* Glitch effect for name */
+			.glitch {
+				position: relative;
+			}
+
+			.glass-panel {
+				background: rgba(30, 41, 59, 0.7);
+				backdrop-filter: blur(12px);
+				-webkit-backdrop-filter: blur(12px);
+				border: 1px solid rgba(255, 255, 255, 0.05);
+			}
+
+			/* Custom Scrollbar */
+			::-webkit-scrollbar {
+				width: 8px;
+			}
+			::-webkit-scrollbar-track {
+				background: var(--bg-dark);
+			}
+			::-webkit-scrollbar-thumb {
+				background: #334155;
+				border-radius: 4px;
+			}
+			::-webkit-scrollbar-thumb:hover {
+				background: var(--accent);
+			}
+
+			.terminal-cursor::after {
+				content: "_";
+				animation: blink 1s step-end infinite;
+			}
+
+			@keyframes blink {
+				0%,
+				100% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 0;
+				}
+			}
+
+			/* Glitch Text Animation for 404 */
+			.glitch-text {
+				position: relative;
+			}
+			.glitch-text::before,
+			.glitch-text::after {
+				content: attr(data-text);
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: var(--bg-dark);
+			}
+			.glitch-text::before {
+				left: 2px;
+				text-shadow: -1px 0 #ff00c1;
+				clip: rect(44px, 450px, 56px, 0);
+				animation: glitch-anim 5s infinite linear alternate-reverse;
+			}
+			.glitch-text::after {
+				left: -2px;
+				text-shadow: -1px 0 #00fff9;
+				clip: rect(44px, 450px, 56px, 0);
+				animation: glitch-anim2 5s infinite linear alternate-reverse;
+			}
+			@keyframes glitch-anim {
+				0% {
+					clip: rect(31px, 9999px, 94px, 0);
+				}
+				4.166666667% {
+					clip: rect(70px, 9999px, 24px, 0);
+				}
+				8.333333333% {
+					clip: rect(27px, 9999px, 14px, 0);
+				}
+				12.5% {
+					clip: rect(50px, 9999px, 86px, 0);
+				}
+				16.66666667% {
+					clip: rect(7px, 9999px, 53px, 0);
+				}
+				20.83333333% {
+					clip: rect(56px, 9999px, 86px, 0);
+				}
+				25% {
+					clip: rect(44px, 9999px, 95px, 0);
+				}
+				29.16666667% {
+					clip: rect(96px, 9999px, 34px, 0);
+				}
+				33.33333333% {
+					clip: rect(81px, 9999px, 33px, 0);
+				}
+				37.5% {
+					clip: rect(55px, 9999px, 29px, 0);
+				}
+				41.66666667% {
+					clip: rect(43px, 9999px, 3px, 0);
+				}
+				45.83333333% {
+					clip: rect(25px, 9999px, 20px, 0);
+				}
+				50% {
+					clip: rect(38px, 9999px, 49px, 0);
+				}
+				54.16666667% {
+					clip: rect(62px, 9999px, 3px, 0);
+				}
+				58.33333333% {
+					clip: rect(72px, 9999px, 13px, 0);
+				}
+				62.5% {
+					clip: rect(42px, 9999px, 21px, 0);
+				}
+				66.66666667% {
+					clip: rect(46px, 9999px, 5px, 0);
+				}
+				70.83333333% {
+					clip: rect(2px, 9999px, 8px, 0);
+				}
+				75% {
+					clip: rect(40px, 9999px, 30px, 0);
+				}
+				79.16666667% {
+					clip: rect(81px, 9999px, 8px, 0);
+				}
+				83.33333333% {
+					clip: rect(98px, 9999px, 8px, 0);
+				}
+				87.5% {
+					clip: rect(78px, 9999px, 45px, 0);
+				}
+				91.66666667% {
+					clip: rect(10px, 9999px, 11px, 0);
+				}
+				95.83333333% {
+					clip: rect(6px, 9999px, 78px, 0);
+				}
+				100% {
+					clip: rect(38px, 9999px, 87px, 0);
+				}
+			}
+			@keyframes glitch-anim2 {
+				0% {
+					clip: rect(65px, 9999px, 100px, 0);
+				}
+				100% {
+					clip: rect(89px, 9999px, 60px, 0);
+				}
 			}
 		</style>
 	</head>
-	<body>
-		<!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-		<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
-		<div class="bg-gray-900">
-			<header class="absolute inset-x-0 top-0 z-50">
-				<nav
-					aria-label="Global"
-					class="flex items-center justify-between p-6 lg:px-8"
+	<body class="antialiased selection:bg-cyan-500 selection:text-white relative">
+		<!-- 404 Overlay System -->
+		<div
+			id="not-found"
+			class="fixed inset-0 z-[100] bg-slate-900 flex flex-col items-center justify-center hidden"
+		>
+			<div
+				class="text-red-500 font-mono text-6xl md:text-9xl font-bold mb-4 relative glitch-text"
+				data-text="404"
+			>
+				404
+			</div>
+			<div class="text-cyan-400 font-mono text-xl md:text-2xl mb-8">
+				&lt; ERR_TARGET_NOT_FOUND /&gt;
+			</div>
+
+			<div
+				class="bg-slate-800 p-6 rounded-lg border border-slate-700 max-w-md w-full font-mono text-sm text-slate-400 mb-8 shadow-2xl mx-4"
+			>
+				<div
+					class="flex items-center gap-2 mb-4 border-b border-slate-700 pb-2"
 				>
-					<div class="flex lg:flex-1">
-						<a href="#" class="-m-1.5 p-1.5">
-							<span class="sr-only">Your Company</span>
-							<img
-								src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-								alt=""
-								class="h-8 w-auto"
-							/>
+					<div class="w-3 h-3 rounded-full bg-red-500"></div>
+					<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+					<div class="w-3 h-3 rounded-full bg-green-500"></div>
+					<span class="text-xs text-slate-500">system_diagnostic.exe</span>
+				</div>
+				<p class="mb-2">> initiate_search_protocol(current_location)</p>
+				<p class="mb-2 text-yellow-500">> WARNING: Coordinates invalid.</p>
+				<p class="mb-2">> tracing_route...</p>
+				<p class="text-red-500 mb-2">> FATAL: Host unreachable.</p>
+				<p class="mb-0">> _<span class="terminal-cursor"></span></p>
+			</div>
+
+			<button
+				id="reconnect-btn"
+				class="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-slate-900 font-bold rounded font-mono transition-all hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] flex items-center gap-2"
+			>
+				<i class="fas fa-satellite-dish"></i> RECONNECT_HOME
+			</button>
+		</div>
+
+		<!-- Main Content Wrapper -->
+		<div id="main-content">
+			<!-- Navigation -->
+			<nav class="fixed w-full z-50 glass-panel border-b border-slate-700/50">
+				<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="flex items-center justify-between h-16">
+						<div
+							class="flex-shrink-0 font-mono text-cyan-400 font-bold text-lg"
+						>
+							&lt;DW /&gt;
+						</div>
+
+						<!-- Desktop Menu -->
+						<div class="hidden md:block">
+							<div class="ml-10 flex items-baseline space-x-8">
+								<a
+									href="#about"
+									class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium"
+									>01. About</a
+								>
+								<a
+									href="#experience"
+									class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium"
+									>02. Experience</a
+								>
+								<a
+									href="#skills"
+									class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium"
+									>03. Arsenal</a
+								>
+								<a
+									href="#contact"
+									class="text-cyan-400 border border-cyan-400 hover:bg-cyan-400/10 px-4 py-2 rounded-md text-sm font-medium transition-all"
+									>Resume.pdf</a
+								>
+							</div>
+						</div>
+
+						<!-- Mobile Menu Button -->
+						<div class="-mr-2 flex md:hidden">
+							<button
+								type="button"
+								id="mobile-menu-btn"
+								class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-cyan-400 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-white"
+								aria-controls="mobile-menu"
+								aria-expanded="false"
+							>
+								<span class="sr-only">Open main menu</span>
+								<i class="fas fa-bars text-xl"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Mobile Menu Panel -->
+				<div
+					class="hidden md:hidden glass-panel border-b border-slate-700/50 transition-all duration-300 ease-in-out"
+					id="mobile-menu"
+				>
+					<div
+						class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center"
+					>
+						<a
+							href="#about"
+							class="text-slate-300 hover:text-cyan-400 hover:bg-slate-800 block px-3 py-2 rounded-md text-base font-medium w-full text-center"
+							>01. About</a
+						>
+						<a
+							href="#experience"
+							class="text-slate-300 hover:text-cyan-400 hover:bg-slate-800 block px-3 py-2 rounded-md text-base font-medium w-full text-center"
+							>02. Experience</a
+						>
+						<a
+							href="#skills"
+							class="text-slate-300 hover:text-cyan-400 hover:bg-slate-800 block px-3 py-2 rounded-md text-base font-medium w-full text-center"
+							>03. Arsenal</a
+						>
+						<a
+							href="#contact"
+							class="text-cyan-400 hover:bg-slate-800 block px-3 py-2 rounded-md text-base font-medium w-full text-center font-bold"
+							>Resume.pdf</a
+						>
+					</div>
+				</div>
+			</nav>
+
+			<!-- Hero Section -->
+			<section
+				id="about"
+				class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
+			>
+				<!-- Background decorative elements -->
+				<div
+					class="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"
+				></div>
+				<div
+					class="absolute bottom-20 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"
+				></div>
+
+				<div
+					class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full"
+				>
+					<div class="font-mono text-cyan-400 mb-4">Hi, my name is</div>
+					<h1
+						class="text-5xl md:text-7xl font-bold text-slate-100 mb-4 tracking-tight"
+					>
+						Dane Watts.
+					</h1>
+					<h2 class="text-4xl md:text-6xl font-bold text-slate-400 mb-8">
+						I build and secure digital infrastructure.
+					</h2>
+					<p class="max-w-xl text-slate-400 text-lg mb-10 leading-relaxed">
+						Software Developer transitioning into
+						<span class="text-cyan-400">Cybersecurity</span>. I bridge the gap
+						between reliable hardware operations and secure cloud architecture.
+					</p>
+
+					<div class="flex flex-wrap gap-4">
+						<a
+							href="#experience"
+							class="px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-slate-900 font-bold rounded hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] transition-all"
+						>
+							Check My Work
+						</a>
+						<a
+							href="https://github.com"
+							target="_blank"
+							class="px-8 py-4 border border-slate-600 hover:border-cyan-400 text-slate-300 hover:text-cyan-400 rounded transition-all font-mono flex items-center gap-2"
+						>
+							<i class="fab fa-github"></i> github/wattsd1985
 						</a>
 					</div>
-					<div class="flex lg:hidden">
-						<button
-							type="button"
-							command="show-modal"
-							commandfor="mobile-menu"
-							class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
-						>
-							<span class="sr-only">Open main menu</span>
-							<svg
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="1.5"
-								data-slot="icon"
-								aria-hidden="true"
-								class="size-6"
-							>
-								<path
-									d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
-						</button>
-					</div>
-					<div class="hidden lg:flex lg:gap-x-12">
-						<a href="#" class="text-sm/6 font-semibold text-white">Product</a>
-						<a href="#" class="text-sm/6 font-semibold text-white">Features</a>
-						<a href="#" class="text-sm/6 font-semibold text-white"
-							>Marketplace</a
-						>
-						<a href="#" class="text-sm/6 font-semibold text-white">Company</a>
-					</div>
-					<div class="hidden lg:flex lg:flex-1 lg:justify-end">
-						<a href="#" class="text-sm/6 font-semibold text-white"
-							>Log in <span aria-hidden="true">&rarr;</span></a
-						>
-					</div>
-				</nav>
-				<el-dialog>
-					<dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
-						<div tabindex="0" class="fixed inset-0 focus:outline-none">
-							<el-dialog-panel
-								class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10"
-							>
-								<div class="flex items-center justify-between">
-									<a href="#" class="-m-1.5 p-1.5">
-										<span class="sr-only">Your Company</span>
-										<img
-											src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-											alt=""
-											class="h-8 w-auto"
-										/>
-									</a>
-									<button
-										type="button"
-										command="close"
-										commandfor="mobile-menu"
-										class="-m-2.5 rounded-md p-2.5 text-gray-200"
-									>
-										<span class="sr-only">Close menu</span>
-										<svg
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="1.5"
-											data-slot="icon"
-											aria-hidden="true"
-											class="size-6"
-										>
-											<path
-												d="M6 18 18 6M6 6l12 12"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-											/>
-										</svg>
-									</button>
-								</div>
-								<div class="mt-6 flow-root">
-									<div class="-my-6 divide-y divide-white/10">
-										<div class="space-y-2 py-6">
-											<a
-												href="#"
-												class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-												>Product</a
-											>
-											<a
-												href="#"
-												class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-												>Features</a
-											>
-											<a
-												href="#"
-												class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-												>Marketplace</a
-											>
-											<a
-												href="#"
-												class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-												>Company</a
-											>
-										</div>
-										<div class="py-6">
-											<a
-												href="#"
-												class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
-												>Log in</a
-											>
-										</div>
-									</div>
-								</div>
-							</el-dialog-panel>
-						</div>
-					</dialog>
-				</el-dialog>
-			</header>
 
-			<div class="relative isolate px-6 pt-14 lg:px-8">
-				<div
-					aria-hidden="true"
-					class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-				>
+					<!-- Terminal Widget -->
 					<div
-						style="
-							clip-path: polygon(
-								74.1% 44.1%,
-								100% 61.6%,
-								97.5% 26.9%,
-								85.5% 0.1%,
-								80.7% 2%,
-								72.5% 32.5%,
-								60.2% 62.4%,
-								52.4% 68.1%,
-								47.5% 58.3%,
-								45.2% 34.5%,
-								27.5% 76.7%,
-								0.1% 64.9%,
-								17.9% 100%,
-								27.6% 76.8%,
-								76.1% 97.7%,
-								74.1% 44.1%
-							);
-						"
-						class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
-					></div>
-				</div>
-				<div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-					<div class="hidden sm:mb-8 sm:flex sm:justify-center">
+						class="mt-16 w-full max-w-2xl glass-panel rounded-lg border border-slate-700/50 shadow-2xl overflow-hidden hidden md:block opacity-90 hover:opacity-100 transition-opacity"
+					>
 						<div
-							class="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20"
+							class="bg-slate-800 px-4 py-2 flex items-center gap-2 border-b border-slate-700"
 						>
-							Announcing our next round of funding.
-							<a href="#" class="font-semibold text-indigo-400"
-								><span aria-hidden="true" class="absolute inset-0"></span>Read
-								more <span aria-hidden="true">&rarr;</span></a
-							>
+							<div class="w-3 h-3 rounded-full bg-red-500"></div>
+							<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+							<div class="w-3 h-3 rounded-full bg-green-500"></div>
+							<div class="ml-2 font-mono text-xs text-slate-400">
+								bash — dane@azure-lab
+							</div>
 						</div>
-					</div>
-					<div class="text-center">
-						<h1
-							class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl"
-						>
-							Data to enrich your online business
-						</h1>
-						<p
-							class="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8"
-						>
-							Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-							lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.
-						</p>
-						<div class="mt-10 flex items-center justify-center gap-x-6">
-							<a
-								href="#"
-								class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-								>Get started</a
-							>
-							<a href="#" class="text-sm/6 font-semibold text-white"
-								>Learn more <span aria-hidden="true">→</span></a
-							>
+						<div class="p-6 font-mono text-sm">
+							<div class="mb-2">
+								<span class="text-green-400">dane@lab:~$</span>
+								<span class="text-slate-100">whoami</span>
+							</div>
+							<div class="mb-4 text-slate-300">
+								> Results-driven Developer<br />
+								> Cybersecurity Aspirant<br />
+								> BJJ Black Belt
+							</div>
+							<div class="mb-2">
+								<span class="text-green-400">dane@lab:~$</span>
+								<span class="text-slate-100">cat current_focus.txt</span>
+							</div>
+							<div class="mb-4 text-slate-300">
+								["CompTIA Security+", "Network Hardening", "Azure Key Vault",
+								"Python Automation"]
+							</div>
+							<div>
+								<span class="text-green-400">dane@lab:~$</span>
+								<span class="terminal-cursor"></span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div
-					aria-hidden="true"
-					class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-				>
-					<div
-						style="
-							clip-path: polygon(
-								74.1% 44.1%,
-								100% 61.6%,
-								97.5% 26.9%,
-								85.5% 0.1%,
-								80.7% 2%,
-								72.5% 32.5%,
-								60.2% 62.4%,
-								52.4% 68.1%,
-								47.5% 58.3%,
-								45.2% 34.5%,
-								27.5% 76.7%,
-								0.1% 64.9%,
-								17.9% 100%,
-								27.6% 76.8%,
-								76.1% 97.7%,
-								74.1% 44.1%
-							);
-						"
-						class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"
-					></div>
+			</section>
+
+			<!-- Experience Section -->
+			<section id="experience" class="py-24 bg-slate-900/50">
+				<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+					<h2
+						class="flex items-center text-2xl md:text-3xl font-bold text-slate-100 mb-12"
+					>
+						<span class="font-mono text-cyan-400 mr-4 text-xl">02.</span> Where
+						I've Worked
+						<span class="ml-4 h-px bg-slate-700 flex-grow max-w-xs"></span>
+					</h2>
+
+					<div class="space-y-12">
+						<!-- Job 1 -->
+						<div
+							class="relative pl-8 border-l-2 border-slate-700 hover:border-cyan-400 transition-colors group"
+						>
+							<div
+								class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-700 group-hover:bg-cyan-400 transition-colors"
+							></div>
+
+							<h3 class="text-xl font-bold text-slate-100">
+								Frontend Web Developer
+							</h3>
+							<div class="text-cyan-400 font-mono mb-2">
+								Jonas Club Software
+								<span class="text-slate-500 mx-2">|</span> 2022 - Present
+							</div>
+
+							<ul class="list-none space-y-3 text-slate-400 mt-4">
+								<li class="flex items-start">
+									<i class="fas fa-caret-right text-cyan-400 mt-1.5 mr-3"></i>
+									<span
+										>Developed 15+ secure SaaS applications on Azure,
+										implementing
+										<span class="text-slate-200">SSL encryption</span> and
+										<span class="text-slate-200">Key Vault</span>
+										integration.</span
+									>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-caret-right text-cyan-400 mt-1.5 mr-3"></i>
+									<span
+										>Automated vulnerability checks with
+										<span class="text-slate-200">Python</span>, reducing QA time
+										by 40%.</span
+									>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-caret-right text-cyan-400 mt-1.5 mr-3"></i>
+									<span
+										>Implemented token-based authentication (OAuth2.0) and RBAC
+										for secure API data handling.</span
+									>
+								</li>
+							</ul>
+						</div>
+
+						<!-- Job 2 -->
+						<div
+							class="relative pl-8 border-l-2 border-slate-700 hover:border-cyan-400 transition-colors group"
+						>
+							<div
+								class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-700 group-hover:bg-cyan-400 transition-colors"
+							></div>
+
+							<h3 class="text-xl font-bold text-slate-100">
+								Mechanical Supervisor
+							</h3>
+							<div class="text-cyan-400 font-mono mb-2">
+								CN Rail <span class="text-slate-500 mx-2">|</span> 2013 - 2021
+							</div>
+
+							<ul class="list-none space-y-3 text-slate-400 mt-4">
+								<li class="flex items-start">
+									<i class="fas fa-caret-right text-cyan-400 mt-1.5 mr-3"></i>
+									<span
+										>Supervised a technical team of 8 in high-availability,
+										mission-critical environments.</span
+									>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-caret-right text-cyan-400 mt-1.5 mr-3"></i>
+									<span
+										>Reduced system downtime by 20% using PLC-based monitoring
+										and SAP analytics.</span
+									>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-caret-right text-cyan-400 mt-1.5 mr-3"></i>
+									<span
+										>Built SQL reporting tools to visualize maintenance
+										KPIs.</span
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-			</div>
+			</section>
+
+			<!-- Skills Grid -->
+			<section id="skills" class="py-24">
+				<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+					<h2
+						class="flex items-center text-2xl md:text-3xl font-bold text-slate-100 mb-12"
+					>
+						<span class="font-mono text-cyan-400 mr-4 text-xl">03.</span>
+						Technical Arsenal
+						<span class="ml-4 h-px bg-slate-700 flex-grow max-w-xs"></span>
+					</h2>
+
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+						<!-- Card 1 -->
+						<div
+							class="glass-panel p-6 rounded-lg hover:-translate-y-2 transition-transform duration-300"
+						>
+							<div class="text-cyan-400 text-3xl mb-4">
+								<i class="fas fa-shield-alt"></i>
+							</div>
+							<h3 class="text-lg font-bold text-slate-100 mb-4">
+								Security & Cloud
+							</h3>
+							<ul class="font-mono text-sm text-slate-400 space-y-2">
+								<li>Azure AD / IAM</li>
+								<li>OAuth2.0 & JWT</li>
+								<li>SSL/TLS Encryption</li>
+								<li>Network Hardening</li>
+								<li>Threat Modeling</li>
+							</ul>
+						</div>
+
+						<!-- Card 2 -->
+						<div
+							class="glass-panel p-6 rounded-lg hover:-translate-y-2 transition-transform duration-300"
+						>
+							<div class="text-cyan-400 text-3xl mb-4">
+								<i class="fas fa-code"></i>
+							</div>
+							<h3 class="text-lg font-bold text-slate-100 mb-4">Development</h3>
+							<ul class="font-mono text-sm text-slate-400 space-y-2">
+								<li>Python (Scripting)</li>
+								<li>JavaScript / React</li>
+								<li>C# / .NET</li>
+								<li>SQL & PostgreSQL</li>
+								<li>HTML5 / CSS3</li>
+							</ul>
+						</div>
+
+						<!-- Card 3 -->
+						<div
+							class="glass-panel p-6 rounded-lg hover:-translate-y-2 transition-transform duration-300"
+						>
+							<div class="text-cyan-400 text-3xl mb-4">
+								<i class="fas fa-server"></i>
+							</div>
+							<h3 class="text-lg font-bold text-slate-100 mb-4">
+								Infrastructure
+							</h3>
+							<ul class="font-mono text-sm text-slate-400 space-y-2">
+								<li>Home Labs</li>
+								<li>Docker / Virtualization</li>
+								<li>DNS Configuration</li>
+								<li>Router/Switch Config</li>
+								<li>Linux Admin</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<footer
+				id="contact"
+				class="py-8 text-center text-slate-400 text-sm font-mono"
+			>
+				<p class="mb-2">Designed & Built by Dane Watts</p>
+				<div class="flex justify-center space-x-6 text-xl mt-4">
+					<a
+						href="mailto:wattsd1985@gmail.com"
+						class="hover:text-cyan-400 transition-colors"
+						><i class="fas fa-envelope"></i
+					></a>
+					<a
+						href="https://www.linkedin.com/in/dane-w-69a42313a/"
+						class="hover:text-cyan-400 transition-colors"
+						><i class="fab fa-linkedin"></i
+					></a>
+					<a
+						href="https://github.com/Dane85"
+						class="hover:text-cyan-400 transition-colors"
+						><i class="fab fa-github"></i
+					></a>
+				</div>
+			</footer>
 		</div>
+
+		<script>
+			// --- 404 & Routing Logic ---
+			function checkRoute() {
+				const hash = window.location.hash;
+				const notFoundEl = document.getElementById("not-found");
+				const mainContentEl = document.getElementById("main-content");
+
+				// List of valid IDs on the page
+				const validIds = ["#about", "#experience", "#skills", "#contact"];
+
+				// If hash exists AND it's not empty AND it's NOT in our list of valid IDs
+				if (hash && hash !== "#" && !validIds.includes(hash)) {
+					// Show 404, Hide Main
+					notFoundEl.classList.remove("hidden");
+					mainContentEl.classList.add("hidden");
+					document.body.style.overflow = "hidden"; // Stop scrolling
+				} else {
+					// Show Main, Hide 404
+					notFoundEl.classList.add("hidden");
+					mainContentEl.classList.remove("hidden");
+					document.body.style.overflow = "auto"; // Allow scrolling
+
+					// If valid hash, scroll to it (fix for re-showing content)
+					if (hash) {
+						const target = document.querySelector(hash);
+						if (target) target.scrollIntoView({ behavior: "smooth" });
+					}
+				}
+			}
+
+			// Listen for load and hash changes
+			window.addEventListener("load", checkRoute);
+			window.addEventListener("hashchange", checkRoute);
+
+			// Reconnect Button Logic
+			document
+				.getElementById("reconnect-btn")
+				.addEventListener("click", (e) => {
+					e.preventDefault();
+					// Clear hash without reload, then re-check route
+					history.pushState(
+						"",
+						document.title,
+						window.location.pathname + window.location.search
+					);
+					checkRoute();
+				});
+
+			// --- Smooth Scroll Script ---
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener("click", function (e) {
+					e.preventDefault();
+					const targetId = this.getAttribute("href");
+					const targetElement = document.querySelector(targetId);
+
+					if (targetElement) {
+						// Update URL hash manually so 404 logic doesn't break
+						history.pushState(null, null, targetId);
+
+						targetElement.scrollIntoView({
+							behavior: "smooth",
+						});
+					} else {
+						console.warn(`Target element ${targetId} not found.`);
+					}
+				});
+			});
+
+			// --- Mobile Menu Script ---
+			const btn = document.getElementById("mobile-menu-btn");
+			const menu = document.getElementById("mobile-menu");
+			const icon = btn.querySelector("i");
+
+			// Toggle menu on button click
+			btn.addEventListener("click", () => {
+				menu.classList.toggle("hidden");
+				// Toggle icon
+				if (menu.classList.contains("hidden")) {
+					icon.classList.remove("fa-times");
+					icon.classList.add("fa-bars");
+				} else {
+					icon.classList.remove("fa-bars");
+					icon.classList.add("fa-times");
+				}
+			});
+
+			// Close menu when a link inside it is clicked
+			menu.querySelectorAll("a").forEach((link) => {
+				link.addEventListener("click", () => {
+					menu.classList.add("hidden");
+					icon.classList.remove("fa-times");
+					icon.classList.add("fa-bars");
+				});
+			});
+		</script>
 	</body>
 </html>
