@@ -239,8 +239,8 @@
                 <div class="text-slate-400 text-xs mt-0.5">Athabasca BSc CIS</div>
               </div>
               <div class="glass-panel p-3 rounded-lg border border-slate-800">
-                <div class="text-amber-400 font-mono font-bold text-xl sm:text-2xl">Sec+</div>
-                <div class="text-slate-400 text-xs mt-0.5">CompTIA In Progress</div>
+                <div class="text-amber-400 font-mono font-bold text-xl sm:text-2xl">120 Cr</div>
+                <div class="text-slate-400 text-xs mt-0.5">BSc CIS Program</div>
               </div>
               <div class="glass-panel p-3 rounded-lg border border-slate-800">
                 <div class="text-cyan-400 font-mono font-bold text-xl sm:text-2xl">8+ Yrs</div>
@@ -298,7 +298,7 @@
                 <div>
                   <span class="text-cyan-400 font-bold">dane@sec-ops:~$</span> <span class="text-white">cat credentials.json</span>
                   <div class="text-emerald-400 mt-1 pl-2 border-l-2 border-emerald-500/40">
-                    { "degree": "BSc Computing & Info Systems", "gpa": 3.4, "cert": "CompTIA Security+ (In Progress)", "status": "Active" }
+                    { "degree": "BSc Computing &amp; Info Systems", "faculty": "Science &amp; Technology", "credits": 120, "gpa": 3.4, "status": "Active" }
                   </div>
                 </div>
 
@@ -551,157 +551,171 @@
           <span class="h-px bg-slate-800 flex-grow max-w-sm"></span>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="space-y-8">
           
-          <!-- Athabasca University Card (Span 7 cols) -->
-          <div class="lg:col-span-7 glass-panel p-8 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition-all relative overflow-hidden group">
-            <div class="absolute -top-12 -right-12 w-48 h-48 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all"></div>
+          <!-- Athabasca University Primary Credential Card -->
+          <div class="glass-panel p-8 sm:p-10 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition-all relative overflow-hidden group">
+            <div class="absolute -top-16 -right-16 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl group-hover:bg-cyan-500/20 transition-all"></div>
             
-            <div class="flex items-start justify-between gap-4 mb-4">
-              <div class="w-12 h-12 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-2xl">
-                <i class="fas fa-graduation-cap"></i>
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-3xl shadow-lg">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-mono text-cyan-400 font-semibold mb-0.5">Faculty of Science &amp; Technology</div>
+                  <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Bachelor of Science &bull; Computing &amp; Information Systems</h3>
+                  <div class="text-slate-400 text-sm mt-0.5">
+                    <strong>Athabasca University</strong> &bull; 2021 &ndash; Present (Expected Graduation: 2027)
+                  </div>
+                </div>
               </div>
-              <div class="flex items-center gap-2">
-                <span class="cyber-badge px-3 py-1 rounded-full text-xs font-mono font-bold">
+
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="cyber-badge px-3.5 py-1.5 rounded-full text-xs font-mono font-bold">
                   GPA 3.4 / 4.0
                 </span>
-                <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700 text-cyan-300 text-xs font-mono">
-                  120 Credits
+                <span class="px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-cyan-300 text-xs font-mono font-semibold">
+                  120 Credits Total
+                </span>
+                <span class="px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-emerald-400 text-xs font-mono font-semibold">
+                  4-Year Degree
                 </span>
               </div>
             </div>
 
-            <div class="text-xs font-mono text-cyan-400 font-semibold mb-1">Bachelor of Science Degree</div>
-            <h3 class="text-2xl font-bold text-white mb-1">Computing &amp; Information Systems</h3>
-            <div class="text-slate-400 text-sm mb-4">
-              <strong>Athabasca University</strong> &bull; Faculty of Science &amp; Technology &bull; 2021 &ndash; Present (Expected 2027)
+            <!-- Pathway Highlight Banner -->
+            <div class="p-4 rounded-lg bg-slate-800/60 border border-cyan-500/20 text-xs sm:text-sm text-slate-300 font-mono mb-6 flex items-center gap-3">
+              <i class="fas fa-route text-cyan-400 text-base flex-shrink-0"></i>
+              <div>
+                <strong>Academic Milestone &amp; Bridge:</strong> Successfully completed the <strong>University Certificate in Computing &amp; Information Systems</strong> (30 credits) and seamlessly transitioned directly into the full 120-credit Bachelor of Science degree program.
+              </div>
             </div>
 
-            <!-- Pathway Highlight -->
-            <div class="p-3.5 rounded-lg bg-slate-800/60 border border-cyan-500/20 text-xs text-slate-300 font-mono mb-5 flex items-center gap-2.5">
-              <i class="fas fa-route text-cyan-400 text-sm flex-shrink-0"></i>
-              <span>Academic Pathway: Successfully bridged from the <strong>University Certificate in Computing &amp; Information Systems</strong> directly into the full 4-year Bachelor of Science degree.</span>
-            </div>
-
-            <p class="text-slate-300 text-sm leading-relaxed mb-6">
-              A comprehensive 120-credit curriculum designed to bridge computational science theory with practical enterprise information architecture. Synthesizes software engineering principles, complex algorithms, systems-level computing, and scalable database systems.
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+              A comprehensive curriculum balancing the rigorous mathematical and theoretical foundations of <strong>Computer Science</strong> with the practical, architectonic principles of enterprise <strong>Information Systems</strong>. Designed to produce software engineers capable of mastering algorithmic complexity, operating systems internals, scalable relational database modeling, and distributed cloud computing systems.
             </p>
 
-            <!-- Dual-Pillar Framework Grid -->
-            <div class="space-y-4 mb-6">
-              <div class="text-xs font-mono uppercase tracking-wider text-slate-400 font-semibold flex items-center gap-2">
-                <i class="fas fa-layer-group text-cyan-400"></i> Dual-Pillar Curriculum Framework
+            <!-- Dual-Pillar Framework Grid (2 Large Cards) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              
+              <!-- Pillar 1: Computer Science & Systems Engineering -->
+              <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-cyan-500/40 transition-all">
+                <div class="flex items-center gap-2.5 text-cyan-400 font-mono font-bold text-base mb-4 pb-2 border-b border-slate-800">
+                  <i class="fas fa-microchip"></i>
+                  <span>Pillar 1: Computer Science Core</span>
+                </div>
+                <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+                  <li class="flex items-start gap-2.5">
+                    <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs flex-shrink-0"></i>
+                    <div>
+                      <strong class="text-white">Data Structures &amp; Algorithmic Analysis:</strong>
+                      <span class="text-slate-400 block text-xs mt-0.5">Computational complexity (Big-O), balanced search trees, graph algorithms, hash indexing, and recursive design.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs flex-shrink-0"></i>
+                    <div>
+                      <strong class="text-white">Operating Systems Principles:</strong>
+                      <span class="text-slate-400 block text-xs mt-0.5">Process scheduling, threads &amp; concurrency synchronization, virtual memory management, page replacement, and POSIX file systems.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs flex-shrink-0"></i>
+                    <div>
+                      <strong class="text-white">Computer Networks &amp; Protocols:</strong>
+                      <span class="text-slate-400 block text-xs mt-0.5">TCP/IP network stack, OSI 7-layer model, socket programming, routing algorithms, and network transmission security.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs flex-shrink-0"></i>
+                    <div>
+                      <strong class="text-white">Object-Oriented Software Design:</strong>
+                      <span class="text-slate-400 block text-xs mt-0.5">Polymorphism, abstraction, design patterns, and memory safety in Java, C++, and Python.</span>
+                    </div>
+                  </li>
+                </ul>
               </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
-                <!-- Pillar 1: Computer Science -->
-                <div class="p-3.5 rounded-lg bg-slate-900/70 border border-slate-800">
-                  <div class="text-cyan-300 font-bold mb-2 flex items-center gap-1.5">
-                    <i class="fas fa-microchip text-[11px]"></i> Computer Science Core
-                  </div>
-                  <ul class="space-y-1.5 text-slate-400">
-                    <li>&bull; <strong class="text-slate-200">Data Structures &amp; Algorithms:</strong> Complexity, trees, search &amp; graph analysis</li>
-                    <li>&bull; <strong class="text-slate-200">Operating Systems:</strong> Kernel mechanisms, concurrency, memory &amp; POSIX</li>
-                    <li>&bull; <strong class="text-slate-200">Computer Networks:</strong> TCP/IP, OSI model, packet routing &amp; sockets</li>
-                    <li>&bull; <strong class="text-slate-200">Software Programming:</strong> Object-oriented design in Java, C++, and Python</li>
-                  </ul>
+              <!-- Pillar 2: Enterprise Information Systems & Architecture -->
+              <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/40 transition-all">
+                <div class="flex items-center gap-2.5 text-emerald-400 font-mono font-bold text-base mb-4 pb-2 border-b border-slate-800">
+                  <i class="fas fa-network-wired"></i>
+                  <span>Pillar 2: Information Systems &amp; Arch</span>
                 </div>
-
-                <!-- Pillar 2: Information Systems -->
-                <div class="p-3.5 rounded-lg bg-slate-900/70 border border-slate-800">
-                  <div class="text-emerald-300 font-bold mb-2 flex items-center gap-1.5">
-                    <i class="fas fa-network-wired text-[11px]"></i> Information Systems &amp; Arch
-                  </div>
-                  <ul class="space-y-1.5 text-slate-400">
-                    <li>&bull; <strong class="text-slate-200">Database Systems:</strong> Relational modeling, normalization &amp; SQL tuning</li>
-                    <li>&bull; <strong class="text-slate-200">Systems Analysis &amp; Design:</strong> Requirements engineering, UML &amp; SDLC</li>
-                    <li>&bull; <strong class="text-slate-200">Enterprise Computing:</strong> Cloud architecture, web services &amp; APIs</li>
-                    <li>&bull; <strong class="text-slate-200">Human-Computer Interaction:</strong> Usability metrics &amp; UI engineering</li>
-                  </ul>
-                </div>
+                <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+                  <li class="flex items-start gap-2.5">
+                    <i class="fas fa-check-circle text-emerald-400 mt-1 text-xs flex-shrink-0"></i>
+                    <div>
+                      <strong class="text-white">Relational Database Management Systems:</strong>
+                      <span class="text-slate-400 block text-xs mt-0.5">Entity-Relationship modeling, 3NF/BCNF normalization, complex SQL joins, stored procedures, index tuning, and ACID transactions.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fas fa-check-circle text-emerald-400 mt-1 text-xs flex-shrink-0"></i>
+                    <div>
+                      <strong class="text-white">Systems Analysis &amp; Software Design:</strong>
+                      <span class="text-slate-400 block text-xs mt-0.5">Requirements engineering, UML diagrams (sequence, use case, component), agile delivery methodologies, and software quality assurance.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fas fa-check-circle text-emerald-400 mt-1 text-xs flex-shrink-0"></i>
+                    <div>
+                      <strong class="text-white">Enterprise Cloud &amp; Distributed Systems:</strong>
+                      <span class="text-slate-400 block text-xs mt-0.5">Multi-tier client-server architectures, RESTful microservices, containerization, and cloud infrastructure management.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fas fa-check-circle text-emerald-400 mt-1 text-xs flex-shrink-0"></i>
+                    <div>
+                      <strong class="text-white">Human-Computer Interaction (HCI):</strong>
+                      <span class="text-slate-400 block text-xs mt-0.5">User-centered UI engineering, accessibility compliance (WCAG 2.1 AA), usability testing, and interaction models.</span>
+                    </div>
+                  </li>
+                </ul>
               </div>
+
             </div>
 
-            <!-- Key Coursework Tags -->
-            <div class="pt-4 border-t border-slate-800/80">
-              <div class="text-[11px] font-mono text-slate-400 mb-2">Representative University Coursework:</div>
-              <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
-                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">COMP 272 Data Structures</span>
-                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">COMP 308 Operating Systems</span>
-                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">COMP 347 Computer Networks</span>
-                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">COMP 378 Database Systems</span>
-                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">COMP 361 Systems Analysis</span>
-                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">COMP 268 OOP (Java)</span>
-                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">COMP 306 C++</span>
+            <!-- Key Representative Coursework Tag Directory -->
+            <div class="pt-6 border-t border-slate-800 font-mono">
+              <div class="text-xs text-slate-400 uppercase tracking-wider mb-3 font-semibold flex items-center justify-between">
+                <span>Representative Curriculum Coursework:</span>
+                <span class="text-cyan-400 text-[11px] lowercase">Athabasca University &bull; School of CIS</span>
               </div>
-            </div>
-          </div>
-
-          <!-- Certifications & Defensive Cybersecurity Card (Span 5 cols) -->
-          <div class="lg:col-span-5 glass-panel p-8 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition-all relative overflow-hidden group flex flex-col justify-between">
-            <div class="absolute -top-12 -right-12 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-all"></div>
-
-            <div>
-              <div class="flex items-start justify-between gap-4 mb-4">
-                <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl">
-                  <i class="fas fa-shield-halved"></i>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
+                  <div class="text-cyan-400 font-bold">COMP 272</div>
+                  <div class="text-[11px] text-slate-400">Data Structures &amp; Algorithms</div>
                 </div>
-                <span class="cyber-badge-emerald px-3 py-1 rounded-full text-xs font-mono font-bold">
-                  ACTIVE CANDIDATE
-                </span>
-              </div>
-
-              <div class="text-xs font-mono text-emerald-400 font-semibold mb-1">Industry Professional Credential</div>
-              <h3 class="text-2xl font-bold text-white mb-1">CompTIA Security+</h3>
-              <div class="text-slate-400 text-sm mb-4">
-                <strong>CompTIA</strong> &bull; Global Cybersecurity Certification Track
-              </div>
-
-              <div class="p-3.5 rounded-lg bg-slate-800/60 border border-emerald-500/20 text-xs text-slate-300 font-mono mb-5">
-                &bull; Enterprise baseline validation for threat intelligence, cryptographic controls, zero-trust architectures, and network defense.
-              </div>
-
-              <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                Active examination preparation complementing formal university computing theory with industry-standard operational cybersecurity controls and vulnerability response procedures.
-              </p>
-
-              <div class="space-y-2.5 text-xs text-slate-300 font-mono mb-6">
-                <div class="text-slate-200 font-semibold flex items-center gap-1.5">
-                  <i class="fas fa-bullseye text-emerald-400"></i> Core Examination Domains &amp; Labs:
+                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
+                  <div class="text-cyan-400 font-bold">COMP 308</div>
+                  <div class="text-[11px] text-slate-400">Operating Systems Principles</div>
                 </div>
-                <div class="space-y-1.5 pl-2 text-slate-300">
-                  <div class="flex items-start gap-2">
-                    <span class="text-emerald-400">&bull;</span>
-                    <span><strong>Threats &amp; Vulnerabilities:</strong> Attack vectors, threat actors, social engineering &amp; CVE analysis.</span>
-                  </div>
-                  <div class="flex items-start gap-2">
-                    <span class="text-emerald-400">&bull;</span>
-                    <span><strong>Architecture &amp; Design:</strong> Zero-trust network segmentation, secure cloud infra &amp; firewalling.</span>
-                  </div>
-                  <div class="flex items-start gap-2">
-                    <span class="text-emerald-400">&bull;</span>
-                    <span><strong>Implementation &amp; IAM:</strong> OAuth 2.0, PKI, MFA, RBAC &amp; cryptographic protocols.</span>
-                  </div>
-                  <div class="flex items-start gap-2">
-                    <span class="text-emerald-400">&bull;</span>
-                    <span><strong>Operations &amp; Forensics:</strong> Threat hunting, logging telemetry, incident triage &amp; BC/DR.</span>
-                  </div>
-                  <div class="flex items-start gap-2">
-                    <span class="text-emerald-400">&bull;</span>
-                    <span><strong>Governance &amp; Risk:</strong> Regulatory compliance, risk assessments &amp; privacy policies.</span>
-                  </div>
+                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
+                  <div class="text-cyan-400 font-bold">COMP 347</div>
+                  <div class="text-[11px] text-slate-400">Computer Networks &amp; Protocols</div>
                 </div>
-              </div>
-            </div>
-
-            <!-- Practical Lab Footprint -->
-            <div class="pt-4 border-t border-slate-800/80 font-mono text-xs">
-              <div class="text-slate-400 mb-2">Hands-on Lab &amp; System Application:</div>
-              <div class="flex flex-wrap gap-1.5 text-[11px]">
-                <span class="px-2 py-0.5 rounded bg-slate-800 text-emerald-300">Linux Node Hardening</span>
-                <span class="px-2 py-0.5 rounded bg-slate-800 text-emerald-300">UFW &amp; Fail2ban</span>
-                <span class="px-2 py-0.5 rounded bg-slate-800 text-emerald-300">OAuth 2.0 / JWT</span>
-                <span class="px-2 py-0.5 rounded bg-slate-800 text-emerald-300">Ed25519 &amp; ECDSA TLS</span>
+                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
+                  <div class="text-emerald-400 font-bold">COMP 378</div>
+                  <div class="text-[11px] text-slate-400">Database Management Systems</div>
+                </div>
+                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
+                  <div class="text-emerald-400 font-bold">COMP 361</div>
+                  <div class="text-[11px] text-slate-400">Systems Analysis &amp; Design</div>
+                </div>
+                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
+                  <div class="text-cyan-400 font-bold">COMP 268</div>
+                  <div class="text-[11px] text-slate-400">OOP with Java</div>
+                </div>
+                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
+                  <div class="text-cyan-400 font-bold">COMP 306</div>
+                  <div class="text-[11px] text-slate-400">C++ for Programmers</div>
+                </div>
+                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
+                  <div class="text-emerald-400 font-bold">COMP 482</div>
+                  <div class="text-[11px] text-slate-400">Human-Computer Interaction</div>
+                </div>
               </div>
             </div>
 
@@ -1092,7 +1106,7 @@
         Designed &amp; Engineered by <span class="text-white font-bold">Dane Watts</span> &bull; Hosted on GitHub Pages Edge CDN
       </div>
       <div class="text-[11px] text-slate-500">
-        Athabasca University (BSc CIS &bull; GPA: 3.4) &bull; CompTIA Security+ Candidate &bull; Oshawa, ON
+        Athabasca University (BSc Computing &amp; Information Systems &bull; GPA: 3.4) &bull; Oshawa, ON
       </div>
     </div>
   </footer>
@@ -1167,9 +1181,9 @@
         <div class="text-slate-300">
           Available commands:<br>
           &bull; <span class="text-cyan-400">whoami</span> - Identity, current role &amp; brief bio<br>
-          &bull; <span class="text-cyan-400">education</span> (or <span class="text-cyan-400">edu</span>) - Athabasca University &amp; CompTIA Security+<br>
+          &bull; <span class="text-cyan-400">education</span> (or <span class="text-cyan-400">edu</span>) - Athabasca University BSc CIS (120 Credits)<br>
           &bull; <span class="text-cyan-400">experience</span> (or <span class="text-cyan-400">exp</span>) - Employment history (NSSL, Jonas Club, CN Rail)<br>
-          &bull; <span class="text-cyan-400">projects</span> (or <span class="text-cyan-400">proj</span>) - Production systems &amp; security radar<br>
+          &bull; <span class="text-cyan-400">projects</span> (or <span class="text-cyan-400">proj</span>) - Production systems &amp; security suites<br>
           &bull; <span class="text-cyan-400">skills</span> - Technical arsenal and tools<br>
           &bull; <span class="text-cyan-400">contact</span> - Phone, email, socials<br>
           &bull; <span class="text-cyan-400">clear</span> - Clear terminal output
@@ -1186,11 +1200,9 @@
         <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
           <div class="text-cyan-400 font-bold">🎓 Athabasca University (2021 - Present)</div>
           <div>&bull; Bachelor of Science in Computing &amp; Information Systems (BSc CIS &bull; 120 Credits)</div>
-          <div>&bull; GPA: <span class="text-emerald-400 font-bold">3.4 / 4.0</span> (Graduating 2027)</div>
-          <div>&bull; Curriculum: Computer Science Core (OS, Networks, Algorithms) &amp; Information Systems Architecture</div>
-          <div>&bull; Bridged from University Certificate in Computing &amp; Information Systems</div>
-          <div class="text-amber-400 font-bold mt-2">🛡️ CompTIA Security+ (In Progress)</div>
-          <div>&bull; Active certification track: Threat intelligence, IAM, PKI, Network Defense, Security Operations</div>
+          <div>&bull; Faculty of Science &amp; Technology &bull; GPA: <span class="text-emerald-400 font-bold">3.4 / 4.0</span> (Graduating 2027)</div>
+          <div>&bull; Academic Pathway: Bridged from University Certificate in Computing &amp; Information Systems</div>
+          <div>&bull; Dual-Pillar Framework: Computer Science Core (Data Structures, OS, Networks) &amp; Enterprise Information Systems (Databases, Systems Analysis, Cloud)</div>
         </div>
       `,
       'edu': () => commands['education'](),
