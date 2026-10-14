@@ -1,0 +1,38 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor & IDE Directories
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Credentials, Keys & Secrets (GitGuardian Hardening)
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.cert
+*.crt
+*.id_rsa
+*.id_ed25519
+secrets/
+config.live.*
+*-live.php
+credentials.json
+token.json
+*.secret
+
+# Logs, Databases & Temporary Files
+*.log
+*.sqlite
+*.db
+scratch/
+dashboard/data/
+data/
+node_modules/
