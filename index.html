@@ -1,688 +1,1197 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="robots" content="noindex, nofollow" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dane Watts — Software Developer & Cybersecurity Specialist based in Oshawa, Ontario. Expertise in Azure Cloud, Python automation, defensive systems, and full-stack software engineering." />
+  <meta name="keywords" content="Dane Watts, Software Developer, Cybersecurity Specialist, Athabasca University, Azure, Python, NSSL, Jonas Club Software, Oshawa, Cloud Infrastructure" />
+  <meta name="author" content="Dane Watts" />
+  <title>Dane Watts | Software Developer &amp; Cybersecurity Specialist</title>
 
-		<title>Dane Watts | Cybersecurity Specialist</title>
-		<script src="https://cdn.tailwindcss.com"></script>
-		<link
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-			rel="stylesheet" />
-		<script src="https://unpkg.com/lucide@latest"></script>
-		<style>
-			@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap");
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cyber: {
+              dark: '#080c14',
+              card: '#0f172a',
+              cardHover: '#131e36',
+              cyan: '#00e5ff',
+              emerald: '#10b981',
+              amber: '#f59e0b',
+              violet: '#8b5cf6',
+              border: 'rgba(255, 255, 255, 0.08)',
+              borderActive: 'rgba(0, 229, 255, 0.4)'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
 
-			:root {
-				--bg-dark: #0f172a;
-				--bg-card: #1e293b;
-				--accent: #38bdf8;
-				--text-primary: #f1f5f9;
-				--text-secondary: #94a3b8;
-			}
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
 
-			body {
-				font-family: "Inter", sans-serif;
-				background-color: var(--bg-dark);
-				color: var(--text-primary);
-			}
+  <style>
+    :root {
+      --bg-dark: #080c14;
+      --accent-cyan: #00e5ff;
+      --accent-emerald: #10b981;
+    }
+    body {
+      background-color: var(--bg-dark);
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .glass-panel:hover {
+      border-color: rgba(0, 229, 255, 0.25);
+    }
+    .glass-nav {
+      background: rgba(8, 12, 20, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .terminal-window {
+      background: #090e18;
+      border: 1px solid rgba(0, 229, 255, 0.2);
+      box-shadow: 0 20px 50px -10px rgba(0, 229, 255, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    }
+    .glow-cyan {
+      text-shadow: 0 0 20px rgba(0, 229, 255, 0.45);
+    }
+    .glow-emerald {
+      text-shadow: 0 0 20px rgba(16, 185, 129, 0.45);
+    }
+    .terminal-cursor::after {
+      content: "█";
+      animation: blink 1s step-end infinite;
+      color: #00e5ff;
+      margin-left: 2px;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .cyber-badge {
+      background: rgba(0, 229, 255, 0.08);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      color: #00e5ff;
+    }
+    .cyber-badge-emerald {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      color: #10b981;
+    }
+    .cyber-badge-amber {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: #f59e0b;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080c14;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00e5ff;
+    }
+  </style>
+</head>
+<body class="selection:bg-cyan-500 selection:text-slate-900">
 
-			.font-mono {
-				font-family: "JetBrains Mono", monospace;
-			}
+  <!-- Glow Background Accents -->
+  <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-1/4 right-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+  <div class="fixed top-1/2 right-10 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
 
-			/* Glitch effect for name */
-			.glitch {
-				position: relative;
-			}
+  <!-- ====================================================================
+       STICKY TOP NAVIGATION
+       ==================================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
 
-			.glass-panel {
-				background: rgba(30, 41, 59, 0.7);
-				backdrop-filter: blur(12px);
-				-webkit-backdrop-filter: blur(12px);
-				border: 1px solid rgba(255, 255, 255, 0.05);
-			}
+        <!-- Logo & Brand -->
+        <a href="#about" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-lg bg-slate-900 border border-cyan-500/40 flex items-center justify-center font-mono font-bold text-cyan-400 group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all">
+            DW<span class="text-xs text-emerald-400">_</span>
+          </div>
+          <div>
+            <div class="font-bold text-white tracking-tight group-hover:text-cyan-400 transition-colors">Dane Watts</div>
+            <div class="text-[11px] font-mono text-slate-400 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              NSSL &bull; Software Deployment Engineer
+            </div>
+          </div>
+        </a>
 
-			/* Custom Scrollbar */
-			::-webkit-scrollbar {
-				width: 8px;
-			}
-			::-webkit-scrollbar-track {
-				background: var(--bg-dark);
-			}
-			::-webkit-scrollbar-thumb {
-				background: #334155;
-				border-radius: 4px;
-			}
-			::-webkit-scrollbar-thumb:hover {
-				background: var(--accent);
-			}
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 font-mono text-xs text-slate-300">
+          <a href="#about" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">01.</span> About</a>
+          <a href="#experience" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">02.</span> Experience</a>
+          <a href="#education" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">03.</span> Education</a>
+          <a href="#projects" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">04.</span> Systems</a>
+          <a href="#skills" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">05.</span> Arsenal</a>
+          <a href="#contact" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">06.</span> Contact</a>
+        </nav>
 
-			.terminal-cursor::after {
-				content: "_";
-				animation: blink 1s step-end infinite;
-			}
+        <!-- Action Buttons -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="/Dane Watts Resume 2025.pdf" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 hover:border-cyan-400 text-xs font-mono font-semibold transition-all flex items-center gap-2 hover:shadow-[0_0_15px_rgba(0,229,255,0.25)]">
+            <i class="fas fa-file-pdf"></i>
+            <span>Resume.pdf</span>
+          </a>
+          <a href="#contact" class="px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-bold transition-all shadow-[0_0_20px_rgba(0,229,255,0.3)]">
+            Get In Touch
+          </a>
+        </div>
 
-			@keyframes blink {
-				0%,
-				100% {
-					opacity: 1;
-				}
-				50% {
-					opacity: 0;
-				}
-			}
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 focus:outline-none">
+          <i id="mobileMenuIcon" class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
 
-			/* Glitch Text Animation for 404 */
-			.glitch-text {
-				position: relative;
-			}
-			.glitch-text::before,
-			.glitch-text::after {
-				content: attr(data-text);
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: var(--bg-dark);
-			}
-			.glitch-text::before {
-				left: 2px;
-				text-shadow: -1px 0 #ff00c1;
-				clip: rect(44px, 450px, 56px, 0);
-				animation: glitch-anim 5s infinite linear alternate-reverse;
-			}
-			.glitch-text::after {
-				left: -2px;
-				text-shadow: -1px 0 #00fff9;
-				clip: rect(44px, 450px, 56px, 0);
-				animation: glitch-anim2 5s infinite linear alternate-reverse;
-			}
-			@keyframes glitch-anim {
-				0% {
-					clip: rect(31px, 9999px, 94px, 0);
-				}
-				4.166666667% {
-					clip: rect(70px, 9999px, 24px, 0);
-				}
-				8.333333333% {
-					clip: rect(27px, 9999px, 14px, 0);
-				}
-				12.5% {
-					clip: rect(50px, 9999px, 86px, 0);
-				}
-				16.66666667% {
-					clip: rect(7px, 9999px, 53px, 0);
-				}
-				20.83333333% {
-					clip: rect(56px, 9999px, 86px, 0);
-				}
-				25% {
-					clip: rect(44px, 9999px, 95px, 0);
-				}
-				29.16666667% {
-					clip: rect(96px, 9999px, 34px, 0);
-				}
-				33.33333333% {
-					clip: rect(81px, 9999px, 33px, 0);
-				}
-				37.5% {
-					clip: rect(55px, 9999px, 29px, 0);
-				}
-				41.66666667% {
-					clip: rect(43px, 9999px, 3px, 0);
-				}
-				45.83333333% {
-					clip: rect(25px, 9999px, 20px, 0);
-				}
-				50% {
-					clip: rect(38px, 9999px, 49px, 0);
-				}
-				54.16666667% {
-					clip: rect(62px, 9999px, 3px, 0);
-				}
-				58.33333333% {
-					clip: rect(72px, 9999px, 13px, 0);
-				}
-				62.5% {
-					clip: rect(42px, 9999px, 21px, 0);
-				}
-				66.66666667% {
-					clip: rect(46px, 9999px, 5px, 0);
-				}
-				70.83333333% {
-					clip: rect(2px, 9999px, 8px, 0);
-				}
-				75% {
-					clip: rect(40px, 9999px, 30px, 0);
-				}
-				79.16666667% {
-					clip: rect(81px, 9999px, 8px, 0);
-				}
-				83.33333333% {
-					clip: rect(98px, 9999px, 8px, 0);
-				}
-				87.5% {
-					clip: rect(78px, 9999px, 45px, 0);
-				}
-				91.66666667% {
-					clip: rect(10px, 9999px, 11px, 0);
-				}
-				95.83333333% {
-					clip: rect(6px, 9999px, 78px, 0);
-				}
-				100% {
-					clip: rect(38px, 9999px, 87px, 0);
-				}
-			}
-			@keyframes glitch-anim2 {
-				0% {
-					clip: rect(65px, 9999px, 100px, 0);
-				}
-				100% {
-					clip: rect(89px, 9999px, 60px, 0);
-				}
-			}
-		</style>
-	</head>
-	<body class="antialiased selection:bg-cyan-500 selection:text-white relative">
-		<!-- 404 Overlay System -->
-		<div
-			id="not-found"
-			class="fixed inset-0 z-[100] bg-slate-900 flex flex-col items-center justify-center hidden">
-			<div
-				class="text-red-500 font-mono text-6xl md:text-9xl font-bold mb-4 relative glitch-text"
-				data-text="404">
-				404
-			</div>
-			<div class="text-cyan-400 font-mono text-xl md:text-2xl mb-8">
-				&lt; ERR_TARGET_NOT_FOUND /&gt;
-			</div>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-800 bg-[#080c14]/98 px-6 py-6 space-y-4 font-mono text-sm">
+      <a href="#about" class="mobile-link block text-slate-300 hover:text-cyan-400 py-2"><span class="text-cyan-400 mr-2">01.</span> About</a>
+      <a href="#experience" class="mobile-link block text-slate-300 hover:text-cyan-400 py-2"><span class="text-cyan-400 mr-2">02.</span> Experience</a>
+      <a href="#education" class="mobile-link block text-slate-300 hover:text-cyan-400 py-2"><span class="text-cyan-400 mr-2">03.</span> Education &amp; Studies</a>
+      <a href="#projects" class="mobile-link block text-slate-300 hover:text-cyan-400 py-2"><span class="text-cyan-400 mr-2">04.</span> Featured Systems</a>
+      <a href="#skills" class="mobile-link block text-slate-300 hover:text-cyan-400 py-2"><span class="text-cyan-400 mr-2">05.</span> Technical Arsenal</a>
+      <a href="#contact" class="mobile-link block text-slate-300 hover:text-cyan-400 py-2"><span class="text-cyan-400 mr-2">06.</span> Direct Contact</a>
+      <div class="pt-4 border-t border-slate-800 flex flex-col gap-2.5">
+        <a href="/Dane Watts Resume 2025.pdf" target="_blank" class="w-full text-center px-4 py-2.5 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-bold">
+          <i class="fas fa-file-pdf mr-2"></i>Download Resume (PDF)
+        </a>
+      </div>
+    </div>
+  </header>
 
-			<div
-				class="bg-slate-800 p-6 rounded-lg border border-slate-700 max-w-md w-full font-mono text-sm text-slate-400 mb-8 shadow-2xl mx-4">
-				<div
-					class="flex items-center gap-2 mb-4 border-b border-slate-700 pb-2">
-					<div class="w-3 h-3 rounded-full bg-red-500"></div>
-					<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-					<div class="w-3 h-3 rounded-full bg-green-500"></div>
-					<span class="text-xs text-slate-500">system_diagnostic.exe</span>
-				</div>
-				<p class="mb-2">> initiate_search_protocol(current_location)</p>
-				<p class="mb-2 text-yellow-500">> WARNING: Coordinates invalid.</p>
-				<p class="mb-2">> tracing_route...</p>
-				<p class="text-red-500 mb-2">> FATAL: Host unreachable.</p>
-				<p class="mb-0">> _<span class="terminal-cursor"></span></p>
-			</div>
+  <!-- ====================================================================
+       HERO / INTRO SECTION
+       ==================================================================== -->
+  <main id="main-content">
+    <section id="about" class="min-h-screen flex items-center justify-center pt-28 pb-16 relative">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-			<button
-				id="reconnect-btn"
-				class="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-slate-900 font-bold rounded font-mono transition-all hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] flex items-center gap-2">
-				<i class="fas fa-satellite-dish"></i> RECONNECT_HOME
-			</button>
-		</div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Left Column: Bio & Title -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full cyber-badge text-xs font-mono tracking-wide">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+              <span>DEFENSIVE SECURITY &bull; DEPLOYMENT &bull; FULL-STACK</span>
+            </div>
 
-		<!-- Main Content Wrapper -->
-		<div id="main-content">
-			<!-- Navigation -->
-			<nav class="fixed w-full z-50 glass-panel border-b border-slate-700/50">
-				<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div class="flex items-center justify-between h-16">
-						<div
-							class="flex-shrink-0 font-mono text-cyan-400 font-bold text-lg">
-							&lt;DW /&gt;
-						</div>
+            <div class="space-y-2">
+              <div class="font-mono text-cyan-400 text-sm tracking-wider">Hello, my name is</div>
+              <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight glow-cyan">
+                Dane Watts.
+              </h1>
+              <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-slate-400">
+                I build, deploy &amp; defend digital infrastructure.
+              </h2>
+            </div>
 
-						<!-- Desktop Menu -->
-						<div class="hidden md:block">
-							<div class="ml-10 flex items-baseline space-x-8">
-								<a
-									href="#about"
-									class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium"
-									>01. About</a
-								>
-								<a
-									href="#experience"
-									class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium"
-									>02. Experience</a
-								>
-								<a
-									href="#skills"
-									class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium"
-									>03. Arsenal</a
-								>
-								<a
-									href="https://www.durhamweb.design"
-									class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium"
-									>04. Check out my side gig</a
-								>
-								<a
-									href="/Dane Watts Resume 2025.pdf"
-									class="text-cyan-400 border border-cyan-400 hover:bg-cyan-400/10 px-4 py-2 rounded-md text-sm font-medium transition-all"
-									>Resume.pdf</a
-								>
-							</div>
-						</div>
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+              Software Developer transitioning into <span class="text-cyan-400 font-semibold">Cybersecurity</span> with over 2 years of experience developing secure SaaS applications on Microsoft Azure, automated vulnerability testing, and 8 years of technical leadership in high-availability, mission-critical operations.
+            </p>
 
-						<!-- Mobile Menu Button -->
-						<div class="-mr-2 flex md:hidden">
-							<button
-								type="button"
-								id="mobile-menu-btn"
-								class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-cyan-400 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-white"
-								aria-controls="mobile-menu"
-								aria-expanded="false">
-								<span class="sr-only">Open main menu</span>
-								<i class="fas fa-bars text-xl"></i>
-							</button>
-						</div>
-					</div>
-				</div>
+            <!-- Quick Stat Badges -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+              <div class="glass-panel p-3 rounded-lg border border-slate-800">
+                <div class="text-cyan-400 font-mono font-bold text-xl sm:text-2xl">NSSL</div>
+                <div class="text-slate-400 text-xs mt-0.5">Deployment Engineer</div>
+              </div>
+              <div class="glass-panel p-3 rounded-lg border border-slate-800">
+                <div class="text-emerald-400 font-mono font-bold text-xl sm:text-2xl">3.4 GPA</div>
+                <div class="text-slate-400 text-xs mt-0.5">Athabasca BSc CIS</div>
+              </div>
+              <div class="glass-panel p-3 rounded-lg border border-slate-800">
+                <div class="text-amber-400 font-mono font-bold text-xl sm:text-2xl">Sec+</div>
+                <div class="text-slate-400 text-xs mt-0.5">CompTIA In Progress</div>
+              </div>
+              <div class="glass-panel p-3 rounded-lg border border-slate-800">
+                <div class="text-cyan-400 font-mono font-bold text-xl sm:text-2xl">8+ Yrs</div>
+                <div class="text-slate-400 text-xs mt-0.5">Leadership &amp; Systems</div>
+              </div>
+            </div>
 
-				<!-- Mobile Menu Panel -->
-				<div
-					class="hidden md:hidden glass-panel border-b border-slate-700/50 transition-all duration-300 ease-in-out"
-					id="mobile-menu">
-					<div
-						class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
-						<a
-							href="#about"
-							class="text-slate-300 hover:text-cyan-400 hover:bg-slate-800 block px-3 py-2 rounded-md text-base font-medium w-full text-center"
-							>01. About</a
-						>
-						<a
-							href="#experience"
-							class="text-slate-300 hover:text-cyan-400 hover:bg-slate-800 block px-3 py-2 rounded-md text-base font-medium w-full text-center"
-							>02. Experience</a
-						>
-						<a
-							href="#skills"
-							class="text-slate-300 hover:text-cyan-400 hover:bg-slate-800 block px-3 py-2 rounded-md text-base font-medium w-full text-center"
-							>03. Arsenal</a
-						>
-						<a
-							href="/Dane Watts Resume 2025.pdf"
-							class="text-cyan-400 hover:bg-slate-800 block px-3 py-2 rounded-md text-base font-medium w-full text-center font-bold"
-							>Resume.pdf</a
-						>
-					</div>
-				</div>
-			</nav>
+            <!-- CTA Button Group -->
+            <div class="flex flex-wrap items-center gap-4 pt-3">
+              <a href="#projects" class="px-6 py-3.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono font-bold text-sm transition-all shadow-[0_0_25px_rgba(0,229,255,0.35)] flex items-center gap-2">
+                <span>Inspect Systems</span>
+                <i class="fas fa-arrow-down text-xs"></i>
+              </a>
+              <a href="/Dane Watts Resume 2025.pdf" target="_blank" class="px-6 py-3.5 rounded-lg glass-panel hover:border-cyan-400 text-slate-200 hover:text-cyan-400 font-mono text-sm transition-all flex items-center gap-2">
+                <i class="fas fa-file-download text-cyan-400"></i>
+                <span>Download Resume (PDF)</span>
+              </a>
+              <a href="https://github.com/Dane85" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-lg glass-panel text-slate-300 hover:text-cyan-400 hover:border-cyan-400 transition-all text-sm" title="GitHub Profile">
+                <i class="fab fa-github text-lg"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/dane-w-69a42313a/" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-lg glass-panel text-slate-300 hover:text-cyan-400 hover:border-cyan-400 transition-all text-sm" title="LinkedIn Profile">
+                <i class="fab fa-linkedin-in text-lg"></i>
+              </a>
+            </div>
+          </div>
 
-			<!-- Hero Section -->
-			<section
-				id="about"
-				class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-				<!-- Background decorative elements -->
-				<div
-					class="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
-				<div
-					class="absolute bottom-20 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
+          <!-- Right Column: Interactive Terminal Widget -->
+          <div class="lg:col-span-5">
+            <div class="terminal-window rounded-xl overflow-hidden font-mono shadow-2xl">
+              <!-- Window Header -->
+              <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
+                  <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                  <span class="ml-2 text-xs text-slate-400">dane@sec-ops:~ (bash)</span>
+                </div>
+                <div class="text-[10px] text-cyan-400 uppercase tracking-widest px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-800/40">
+                  Interactive
+                </div>
+              </div>
 
-				<div
-					class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-					<div class="font-mono text-cyan-400 mb-4">Hi, my name is</div>
-					<h1
-						class="text-5xl md:text-7xl font-bold text-slate-100 mb-4 tracking-tight">
-						Dane Watts.
-					</h1>
-					<h2 class="text-4xl md:text-6xl font-bold text-slate-400 mb-8">
-						I build and secure digital infrastructure.
-					</h2>
-					<p class="max-w-xl text-slate-400 text-lg mb-10 leading-relaxed">
-						Software Developer transitioning into
-						<span class="text-cyan-400">Cybersecurity</span>. I bridge the gap
-						between reliable hardware operations and secure cloud architecture.
-					</p>
+              <!-- Terminal Body / Interactive Console -->
+              <div id="terminalBody" class="p-5 text-xs text-slate-300 space-y-3 min-h-[320px] max-h-[420px] overflow-y-auto">
+                <div>
+                  <span class="text-cyan-400 font-bold">dane@sec-ops:~$</span> <span class="text-white">whoami</span>
+                  <div class="text-slate-300 mt-1 pl-2 border-l-2 border-cyan-500/40">
+                    <div>&bull; Name: Dane Watts</div>
+                    <div>&bull; Current: Software Deployment Engineer @ NSSL</div>
+                    <div>&bull; Education: BSc CIS @ Athabasca University (GPA: 3.4)</div>
+                    <div>&bull; Focus: Defensive Cybersecurity &bull; Cloud Infrastructure &bull; Azure &bull; Linux</div>
+                  </div>
+                </div>
 
-					<div class="flex flex-wrap gap-4">
-						<a
-							href="#experience"
-							class="px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-slate-900 font-bold rounded hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] transition-all">
-							Check My Work
-						</a>
-						<a
-							href="https://github.com/Dane85"
-							target="_blank"
-							class="px-8 py-4 border border-slate-600 hover:border-cyan-400 text-slate-300 hover:text-cyan-400 rounded transition-all font-mono flex items-center gap-2">
-							<i class="fab fa-github"></i> github/Dane85
-						</a>
-					</div>
+                <div>
+                  <span class="text-cyan-400 font-bold">dane@sec-ops:~$</span> <span class="text-white">cat credentials.json</span>
+                  <div class="text-emerald-400 mt-1 pl-2 border-l-2 border-emerald-500/40">
+                    { "degree": "BSc Computing & Info Systems", "gpa": 3.4, "cert": "CompTIA Security+ (In Progress)", "status": "Active" }
+                  </div>
+                </div>
 
-					<!-- Terminal Widget -->
-					<div
-						class="mt-16 w-full max-w-2xl glass-panel rounded-lg border border-slate-700/50 shadow-2xl overflow-hidden hidden md:block opacity-90 hover:opacity-100 transition-opacity">
-						<div
-							class="bg-slate-800 px-4 py-2 flex items-center gap-2 border-b border-slate-700">
-							<div class="w-3 h-3 rounded-full bg-red-500"></div>
-							<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-							<div class="w-3 h-3 rounded-full bg-green-500"></div>
-							<div class="ml-2 font-mono text-xs text-slate-400">
-								bash — dane@azure-lab
-							</div>
-						</div>
-						<div class="p-6 font-mono text-sm">
-							<div class="mb-2">
-								<span class="text-green-400">dane@lab:~$</span>
-								<span class="text-slate-100">whoami</span>
-							</div>
-							<div class="mb-4 text-slate-300">
-								> Results-driven Developer<br />
-								> Cybersecurity Aspirant<br />
-								> BJJ Black Belt
-							</div>
-							<div class="mb-2">
-								<span class="text-green-400">dane@lab:~$</span>
-								<span class="text-slate-100">cat current_focus.txt</span>
-							</div>
-							<div class="mb-4 text-slate-300">
-								["CompTIA Security+", "Network Hardening", "Azure Key Vault",
-								"Python Automation"]
-							</div>
-							<div>
-								<span class="text-green-400">dane@lab:~$</span>
-								<span class="terminal-cursor"></span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+                <div id="terminalOutput"></div>
 
-			<!-- Experience Section -->
-			<section id="experience" class="py-24 bg-slate-900/50">
-				<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-					<h2
-						class="flex items-center text-2xl md:text-3xl font-bold text-slate-100 mb-12">
-						<span class="font-mono text-cyan-400 mr-4 text-xl">02.</span> Where
-						I've Worked
-						<span class="ml-4 h-px bg-slate-700 flex-grow max-w-xs"></span>
-					</h2>
+                <!-- Input Prompt Line -->
+                <div class="flex items-center gap-2 pt-2">
+                  <span class="text-cyan-400 font-bold">dane@sec-ops:~$</span>
+                  <input type="text" id="terminalInput" autocomplete="off" spellcheck="false" placeholder="Type: help, edu, exp, proj, skills, clear" class="bg-transparent border-none outline-none text-white w-full text-xs font-mono focus:ring-0 p-0 placeholder-slate-600" />
+                </div>
+              </div>
 
-					<div class="space-y-12">
-						<!-- Job 1 -->
-						<div
-							class="relative pl-8 border-l-2 border-slate-700 hover:border-cyan-400 transition-colors group">
-							<div
-								class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-700 group-hover:bg-cyan-400 transition-colors"></div>
+              <!-- Terminal Quick Command Chips -->
+              <div class="bg-slate-900/60 px-4 py-2.5 border-t border-slate-800/80 flex flex-wrap gap-1.5 text-[11px]">
+                <span class="text-slate-500 self-center mr-1">Quick:</span>
+                <button onclick="runCommand('education')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-cyan-950 hover:text-cyan-400 text-slate-300 transition-colors">education</button>
+                <button onclick="runCommand('experience')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-cyan-950 hover:text-cyan-400 text-slate-300 transition-colors">experience</button>
+                <button onclick="runCommand('projects')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-cyan-950 hover:text-cyan-400 text-slate-300 transition-colors">projects</button>
+                <button onclick="runCommand('skills')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-cyan-950 hover:text-cyan-400 text-slate-300 transition-colors">skills</button>
+                <button onclick="runCommand('clear')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-rose-950 hover:text-rose-400 text-slate-400 transition-colors">clear</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-							<h3 class="text-xl font-bold text-slate-100">
-								Software Deployment Engineer
-							</h3>
-							<div class="text-cyan-400 font-mono mb-2">
-								NSSL
-								<span class="text-slate-500 mx-2">|</span> 2026 - Present
-							</div>
-						</div>
-						<div
-							class="relative pl-8 border-l-2 border-slate-700 hover:border-cyan-400 transition-colors group">
-							<div
-								class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-700 group-hover:bg-cyan-400 transition-colors"></div>
+      </div>
+    </section>
 
-							<h3 class="text-xl font-bold text-slate-100">
-								Frontend Web Developer
-							</h3>
-							<div class="text-cyan-400 font-mono mb-2">
-								Jonas Club Software
-								<span class="text-slate-500 mx-2">|</span> 2022 - 2026
-							</div>
+    <!-- ====================================================================
+         SECTION 1: PROFESSIONAL EXPERIENCE
+         ==================================================================== -->
+    <section id="experience" class="py-24 relative">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex items-center gap-4 mb-16">
+          <span class="font-mono text-cyan-400 text-xl font-bold">02.</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Work Experience</h2>
+          <span class="h-px bg-slate-800 flex-grow max-w-sm"></span>
+        </div>
 
-							<ul class="list-none space-y-3 text-slate-400 mt-4">
-								<li class="flex items-start">
-									<i class="fas fa-caret-right text-cyan-400 mt-1.5 mr-3"></i>
-									<span
-										>Developed 15+ secure SaaS applications on Azure,
-										implementing
-										<span class="text-slate-200">SSL encryption</span> and
-										<span class="text-slate-200">Key Vault</span>
-										integration.</span
-									>
-								</li>
-								<li class="flex items-start">
-									<i class="fas fa-caret-right text-cyan-400 mt-1.5 mr-3"></i>
-									<span
-										>Automated vulnerability checks with
-										<span class="text-slate-200">Python</span>, reducing QA time
-										by 40%.</span
-									>
-								</li>
-								<li class="flex items-start">
-									<i class="fas fa-caret-right text-cyan-400 mt-1.5 mr-3"></i>
-									<span
-										>Implemented token-based authentication (OAuth2.0) and RBAC
-										for secure API data handling.</span
-									>
-								</li>
-							</ul>
-						</div>
+        <div class="space-y-12 relative before:absolute before:inset-0 before:left-4 sm:before:left-6 before:w-0.5 before:bg-gradient-to-b before:from-cyan-500 before:via-slate-700 before:to-transparent">
 
-						<!-- Job 2 -->
-						<div
-							class="relative pl-8 border-l-2 border-slate-700 hover:border-cyan-400 transition-colors group">
-							<div
-								class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-700 group-hover:bg-cyan-400 transition-colors"></div>
+          <!-- Role 1: NSSL (Primary Current Role) -->
+          <div class="relative pl-12 sm:pl-16 group">
+            <div class="absolute left-2.5 sm:left-4.5 -top-1 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_12px_#00e5ff] ring-4 ring-slate-900 transition-all"></div>
+            
+            <div class="glass-panel p-6 sm:p-8 rounded-xl border border-cyan-500/30 hover:border-cyan-400 transition-all shadow-lg">
+              <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                <div>
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full cyber-badge text-xs font-mono font-semibold mb-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span> CURRENT PRIMARY ROLE
+                  </span>
+                  <h3 class="text-xl sm:text-2xl font-bold text-white">Software Deployment Engineer</h3>
+                  <div class="text-cyan-400 font-mono text-sm font-semibold">NSSL &bull; High-Availability Cloud &amp; Releases</div>
+                </div>
+                <div class="text-xs font-mono text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
+                  2026 &ndash; Present
+                </div>
+              </div>
 
-							<h3 class="text-xl font-bold text-slate-100">
-								Mechanical Supervisor
-							</h3>
-							<div class="text-cyan-400 font-mono mb-2">
-								CN Rail <span class="text-slate-500 mx-2">|</span> 2013 - 2021
-							</div>
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Spearheading software deployment strategies, continuous integration, production rollouts, and infrastructure reliability across high-availability environments.
+              </p>
 
-							<ul class="list-none space-y-3 text-slate-400 mt-4">
-								<li class="flex items-start">
-									<i class="fas fa-caret-right text-cyan-400 mt-1.5 mr-3"></i>
-									<span
-										>Supervised a technical team of 8 in high-availability,
-										mission-critical environments.</span
-									>
-								</li>
-								<li class="flex items-start">
-									<i class="fas fa-caret-right text-cyan-400 mt-1.5 mr-3"></i>
-									<span
-										>Reduced system downtime by 20% using PLC-based monitoring
-										and SAP analytics.</span
-									>
-								</li>
-								<li class="flex items-start">
-									<i class="fas fa-caret-right text-cyan-400 mt-1.5 mr-3"></i>
-									<span
-										>Built SQL reporting tools to visualize maintenance
-										KPIs.</span
-									>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
+              <ul class="space-y-2.5 text-slate-300 text-sm">
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
+                  <span>Orchestrating automated deployment pipelines, verifying release integrity, and enforcing zero-downtime cutover protocols.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
+                  <span>Monitoring distributed production services, identifying runtime bottlenecks, and optimizing deployment velocity and resilience.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
+                  <span>Collaborating across cross-functional engineering teams to automate staging verification, rollbacks, and environment configuration management.</span>
+                </li>
+              </ul>
 
-			<!-- Skills Grid -->
-			<section id="skills" class="py-24">
-				<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-					<h2
-						class="flex items-center text-2xl md:text-3xl font-bold text-slate-100 mb-12">
-						<span class="font-mono text-cyan-400 mr-4 text-xl">03.</span>
-						Technical Arsenal
-						<span class="ml-4 h-px bg-slate-700 flex-grow max-w-xs"></span>
-					</h2>
+              <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-slate-800/80 font-mono text-xs">
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Software Deployment</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">CI/CD Pipelines</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Release Engineering</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Environment Config</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Production Reliability</span>
+              </div>
+            </div>
+          </div>
 
-					<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-						<!-- Card 1 -->
-						<div
-							class="glass-panel p-6 rounded-lg hover:-translate-y-2 transition-transform duration-300">
-							<div class="text-cyan-400 text-3xl mb-4">
-								<i class="fas fa-shield-alt"></i>
-							</div>
-							<h3 class="text-lg font-bold text-slate-100 mb-4">
-								Security & Cloud
-							</h3>
-							<ul class="font-mono text-sm text-slate-400 space-y-2">
-								<li>Azure AD / IAM</li>
-								<li>OAuth2.0 & JWT</li>
-								<li>SSL/TLS Encryption</li>
-								<li>Network Hardening</li>
-								<li>Threat Modeling</li>
-							</ul>
-						</div>
+          <!-- Role 2: Jonas Club Software (Past Frontend SaaS Role) -->
+          <div class="relative pl-12 sm:pl-16 group">
+            <div class="absolute left-2.5 sm:left-4.5 -top-1 w-4 h-4 rounded-full bg-slate-600 group-hover:bg-cyan-400 ring-4 ring-slate-900 transition-all"></div>
+            
+            <div class="glass-panel p-6 sm:p-8 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
+              <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-bold text-white">Frontend Web Developer</h3>
+                  <div class="text-cyan-400 font-mono text-sm font-semibold">Jonas Club Software &bull; Markham, ON</div>
+                </div>
+                <div class="text-xs font-mono text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
+                  2022 &ndash; 2026
+                </div>
+              </div>
 
-						<!-- Card 2 -->
-						<div
-							class="glass-panel p-6 rounded-lg hover:-translate-y-2 transition-transform duration-300">
-							<div class="text-cyan-400 text-3xl mb-4">
-								<i class="fas fa-code"></i>
-							</div>
-							<h3 class="text-lg font-bold text-slate-100 mb-4">Development</h3>
-							<ul class="font-mono text-sm text-slate-400 space-y-2">
-								<li>Python (Scripting)</li>
-								<li>JavaScript / React</li>
-								<li>C# / .NET</li>
-								<li>SQL & PostgreSQL</li>
-								<li>HTML5 / CSS3</li>
-							</ul>
-						</div>
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Engineered secure, high-traffic SaaS applications on Microsoft Azure serving global hospitality and private club enterprise clients.
+              </p>
 
-						<!-- Card 3 -->
-						<div
-							class="glass-panel p-6 rounded-lg hover:-translate-y-2 transition-transform duration-300">
-							<div class="text-cyan-400 text-3xl mb-4">
-								<i class="fas fa-server"></i>
-							</div>
-							<h3 class="text-lg font-bold text-slate-100 mb-4">
-								Infrastructure
-							</h3>
-							<ul class="font-mono text-sm text-slate-400 space-y-2">
-								<li>Home Labs</li>
-								<li>Docker / Virtualization</li>
-								<li>DNS Configuration</li>
-								<li>Router/Switch Config</li>
-								<li>Linux Admin</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
+              <ul class="space-y-2.5 text-slate-300 text-sm">
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
+                  <span>Developed and maintained <strong>15+ secure SaaS web applications</strong> hosted on Microsoft Azure, implementing SSL/TLS encryption, Azure Key Vault secret management, and secure API endpoints to safeguard sensitive client data.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
+                  <span>Created <strong>Python automation scripts</strong> to run vulnerability checks and automated API endpoint testing, slashing manual QA time by <strong>40%</strong>.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
+                  <span>Integrated third-party APIs (Stripe payments, HubSpot CRM, internal RESTful services) using token-based authentication (OAuth2.0, JWT) and Role-Based Access Control (RBAC).</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
+                  <span>Designed and tuned complex SQL queries and stored procedures for analytics dashboards, improving query performance by <strong>25%</strong>.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
+                  <span>Led team initiative to refactor legacy front-end codebases in React with secure configuration management, improving application security posture and reliability.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
+                  <span>Collaborated with cybersecurity and DevOps teams to execute <strong>penetration test remediation</strong> and apply <strong>OWASP Top 10</strong> secure coding best practices in production pipelines.</span>
+                </li>
+              </ul>
 
-			<!-- Footer -->
-			<footer
-				id="contact"
-				class="py-8 text-center text-slate-400 text-sm font-mono">
-				<p class="mb-2">Designed & Built by Dane Watts</p>
-				<div class="flex justify-center space-x-6 text-xl mt-4">
-					<a
-						href="mailto:wattsd1985@gmail.com"
-						class="hover:text-cyan-400 transition-colors"
-						><i class="fas fa-envelope"></i
-					></a>
-					<a
-						href="https://www.linkedin.com/in/dane-w-69a42313a/"
-						class="hover:text-cyan-400 transition-colors"
-						><i class="fab fa-linkedin"></i
-					></a>
-					<a
-						href="https://github.com/Dane85"
-						class="hover:text-cyan-400 transition-colors"
-						><i class="fab fa-github"></i
-					></a>
-				</div>
-			</footer>
-		</div>
+              <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-slate-800/80 font-mono text-xs">
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Microsoft Azure</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Azure Key Vault</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Python Automation</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">React</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">SQL Server</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">OAuth 2.0 / JWT</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">OWASP Remediation</span>
+              </div>
+            </div>
+          </div>
 
-		<script>
-			// --- 404 & Routing Logic ---
-			function checkRoute() {
-				const hash = window.location.hash;
-				const notFoundEl = document.getElementById("not-found");
-				const mainContentEl = document.getElementById("main-content");
+          <!-- Role 3: Epic Expressions / Durham Web Design (Founder) -->
+          <div class="relative pl-12 sm:pl-16 group">
+            <div class="absolute left-2.5 sm:left-4.5 -top-1 w-4 h-4 rounded-full bg-slate-600 group-hover:bg-cyan-400 ring-4 ring-slate-900 transition-all"></div>
+            
+            <div class="glass-panel p-6 sm:p-8 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
+              <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-bold text-white">Founder &amp; Principal Systems Engineer</h3>
+                  <div class="text-cyan-400 font-mono text-sm font-semibold">Epic Expressions &bull; Durham Web Design &bull; Oshawa, ON</div>
+                </div>
+                <div class="text-xs font-mono text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
+                  2024 &ndash; Present
+                </div>
+              </div>
 
-				// List of valid IDs on the page
-				const validIds = ["#about", "#experience", "#skills", "#contact"];
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Designed, hardened, and deployed full-stack cloud infrastructure, client websites, and automated operations telemetry for regional businesses and community non-profits.
+              </p>
 
-				// If hash exists AND it's not empty AND it's NOT in our list of valid IDs
-				if (hash && hash !== "#" && !validIds.includes(hash)) {
-					// Show 404, Hide Main
-					notFoundEl.classList.remove("hidden");
-					mainContentEl.classList.add("hidden");
-					document.body.style.overflow = "hidden"; // Stop scrolling
-				} else {
-					// Show Main, Hide 404
-					notFoundEl.classList.add("hidden");
-					mainContentEl.classList.remove("hidden");
-					document.body.style.overflow = "auto"; // Allow scrolling
+              <ul class="space-y-2.5 text-slate-300 text-sm">
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
+                  <span>Engineered production Linux node architecture (Ubuntu 24.04, Nginx 1.24, PHP 8.3-FPM, MariaDB 10.11) with UFW default-deny firewall and automated Let's Encrypt ECDSA TLS.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
+                  <span>Built senior-accessible, zero-dependency WordPress platform for <strong>GMSRA (General Motors Salaried Retirees Association)</strong> serving 1,000+ retired GM Canada employees with zero security incidents.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
+                  <span>Built private Operations HUD (<code class="text-cyan-300">ops.durhamweb.design</code>) integrating real-time server vitals and live <strong>GitGuardian API secret scanner radar</strong>.</span>
+                </li>
+              </ul>
 
-					// If valid hash, scroll to it (fix for re-showing content)
-					if (hash) {
-						const target = document.querySelector(hash);
-						if (target) target.scrollIntoView({ behavior: "smooth" });
-					}
-				}
-			}
+              <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-slate-800/80 font-mono text-xs">
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Linux Hardening</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Nginx Reverse Proxy</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">GitGuardian API</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">MariaDB</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Ed25519 Cryptography</span>
+              </div>
+            </div>
+          </div>
 
-			// Listen for load and hash changes
-			window.addEventListener("load", checkRoute);
-			window.addEventListener("hashchange", checkRoute);
+          <!-- Role 4: CN Rail (Leadership & Operations) -->
+          <div class="relative pl-12 sm:pl-16 group">
+            <div class="absolute left-2.5 sm:left-4.5 -top-1 w-4 h-4 rounded-full bg-slate-600 group-hover:bg-cyan-400 ring-4 ring-slate-900 transition-all"></div>
+            
+            <div class="glass-panel p-6 sm:p-8 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
+              <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-bold text-white">Mechanical Supervisor <span class="text-slate-400 font-normal text-base">(Promoted from Technician)</span></h3>
+                  <div class="text-cyan-400 font-mono text-sm font-semibold">CN Rail &bull; MAC Yard, Vaughan, ON</div>
+                </div>
+                <div class="text-xs font-mono text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
+                  2013 &ndash; 2021
+                </div>
+              </div>
 
-			// Reconnect Button Logic
-			document
-				.getElementById("reconnect-btn")
-				.addEventListener("click", (e) => {
-					e.preventDefault();
-					// Clear hash without reload, then re-check route
-					history.pushState(
-						"",
-						document.title,
-						window.location.pathname + window.location.search,
-					);
-					checkRoute();
-				});
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Managed around-the-clock technical operations and preventive maintenance in a mission-critical, high-availability transport network.
+              </p>
 
-			// --- Smooth Scroll Script ---
-			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-				anchor.addEventListener("click", function (e) {
-					e.preventDefault();
-					const targetId = this.getAttribute("href");
-					const targetElement = document.querySelector(targetId);
+              <ul class="space-y-2.5 text-slate-300 text-sm">
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
+                  <span>Supervised and trained a technical crew of <strong>8 personnel</strong> in diagnostic workflows, ensuring operational compliance with strict federal safety and regulatory standards.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
+                  <span>Leveraged PLC-based telemetry systems and SAP analytics to track real-time hardware metrics, cutting unscheduled system downtime by <strong>20%</strong>.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
+                  <span>Built custom SQL reporting tools to extract and visualize maintenance KPIs, enhancing data transparency and executive decision-making.</span>
+                </li>
+              </ul>
 
-					if (targetElement) {
-						// Update URL hash manually so 404 logic doesn't break
-						history.pushState(null, null, targetId);
+              <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-slate-800/80 font-mono text-xs">
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Technical Leadership</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">PLC Systems</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">SAP Analytics</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">SQL Reporting</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Safety Compliance</span>
+              </div>
+            </div>
+          </div>
 
-						targetElement.scrollIntoView({
-							behavior: "smooth",
-						});
-					} else {
-						console.warn(`Target element ${targetId} not found.`);
-					}
-				});
-			});
+        </div>
 
-			// --- Mobile Menu Script ---
-			const btn = document.getElementById("mobile-menu-btn");
-			const menu = document.getElementById("mobile-menu");
-			const icon = btn.querySelector("i");
+      </div>
+    </section>
 
-			// Toggle menu on button click
-			btn.addEventListener("click", () => {
-				menu.classList.toggle("hidden");
-				// Toggle icon
-				if (menu.classList.contains("hidden")) {
-					icon.classList.remove("fa-times");
-					icon.classList.add("fa-bars");
-				} else {
-					icon.classList.remove("fa-bars");
-					icon.classList.add("fa-times");
-				}
-			});
+    <!-- ====================================================================
+         SECTION 2: EDUCATION & STUDIES
+         ==================================================================== -->
+    <section id="education" class="py-24 bg-slate-900/30 relative">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-			// Close menu when a link inside it is clicked
-			menu.querySelectorAll("a").forEach((link) => {
-				link.addEventListener("click", () => {
-					menu.classList.add("hidden");
-					icon.classList.remove("fa-times");
-					icon.classList.add("fa-bars");
-				});
-			});
-		</script>
-	</body>
+        <div class="flex items-center gap-4 mb-16">
+          <span class="font-mono text-cyan-400 text-xl font-bold">03.</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Education &amp; Studies</h2>
+          <span class="h-px bg-slate-800 flex-grow max-w-sm"></span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Athabasca University Card -->
+          <div class="glass-panel p-8 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition-all relative overflow-hidden group">
+            <div class="absolute -top-12 -right-12 w-36 h-36 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all"></div>
+            
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <div class="w-12 h-12 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-2xl">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <span class="cyber-badge px-3 py-1 rounded-full text-xs font-mono font-bold">
+                GPA 3.4 / 4.0
+              </span>
+            </div>
+
+            <div class="text-xs font-mono text-cyan-400 font-semibold mb-1">Bachelor of Science Degree</div>
+            <h3 class="text-xl font-bold text-white mb-2">Computing &amp; Information Systems</h3>
+            <div class="text-slate-400 text-sm mb-4">
+              <strong>Athabasca University</strong> &bull; 2021 &ndash; Present (Expected 2027)
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-800/60 border border-slate-700/60 text-xs text-slate-300 font-mono mb-4">
+              &bull; Academic Pathway: Bridged from <strong>University Certificate in Computing &amp; Information Systems</strong>
+            </div>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Rigorous computing curriculum combining theoretical foundations with advanced systems engineering, software development lifecycles, and database architectures.
+            </p>
+
+            <div class="space-y-2 text-xs text-slate-400 font-mono">
+              <div class="text-slate-200 font-semibold">Core Disciplines &amp; Coursework:</div>
+              <div class="grid grid-cols-2 gap-2 text-slate-300">
+                <div>&bull; Object-Oriented Software (Java/C++)</div>
+                <div>&bull; Database Management (SQL)</div>
+                <div>&bull; Computer Networks &amp; Protocols</div>
+                <div>&bull; Operating Systems Principles</div>
+                <div>&bull; Algorithms &amp; Complexity</div>
+                <div>&bull; Web Systems Architecture</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications & Defensive Training Card -->
+          <div class="glass-panel p-8 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition-all relative overflow-hidden group">
+            <div class="absolute -top-12 -right-12 w-36 h-36 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-all"></div>
+
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl">
+                <i class="fas fa-shield-halved"></i>
+              </div>
+              <span class="cyber-badge-emerald px-3 py-1 rounded-full text-xs font-mono font-bold">
+                ACTIVE CANDIDATE
+              </span>
+            </div>
+
+            <div class="text-xs font-mono text-emerald-400 font-semibold mb-1">Industry Professional Credential</div>
+            <h3 class="text-xl font-bold text-white mb-2">CompTIA Security+</h3>
+            <div class="text-slate-400 text-sm mb-4">
+              <strong>CompTIA</strong> &bull; Examination Preparation Track (In Progress)
+            </div>
+
+            <div class="p-3 rounded-lg bg-slate-800/60 border border-slate-700/60 text-xs text-slate-300 font-mono mb-4">
+              &bull; Comprehensive baseline security certification covering global threat landscapes and defensive controls
+            </div>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Focused on core cybersecurity domains: threat analysis, zero-trust implementation, cryptographic algorithms, network defense, identity governance, and incident remediation.
+            </p>
+
+            <div class="space-y-2 text-xs text-slate-400 font-mono">
+              <div class="text-slate-200 font-semibold">Exam Objectives &amp; Lab Focus:</div>
+              <div class="grid grid-cols-2 gap-2 text-slate-300">
+                <div>&bull; Threat Actors &amp; Vulnerabilities</div>
+                <div>&bull; Identity &amp; Access (IAM, RBAC)</div>
+                <div>&bull; Network Architecture &amp; Firewalls</div>
+                <div>&bull; Cryptography &amp; Public Key Infra</div>
+                <div>&bull; Security Operations &amp; Auditing</div>
+                <div>&bull; Incident Response &amp; Forensics</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: FEATURED PRODUCTION SYSTEMS
+         ==================================================================== -->
+    <section id="projects" class="py-24 relative">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="flex items-center gap-4 mb-16">
+          <span class="font-mono text-cyan-400 text-xl font-bold">04.</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Featured Systems &amp; Platforms</h2>
+          <span class="h-px bg-slate-800 flex-grow max-w-sm"></span>
+        </div>
+
+        <div class="space-y-12">
+
+          <!-- System 1: Cloud & Systems Architecture (Hetzner Node) -->
+          <div class="glass-panel p-8 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all">
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full cyber-badge text-xs font-mono font-semibold">
+                <i class="fas fa-server"></i> FULL-STACK CLOUD &amp; SYSTEMS
+              </div>
+              <div class="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Ashburn CPX11 &bull; 5.161.161.222 &bull; Active
+              </div>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white mb-3">Hardened Linux Production Cloud &amp; Multi-Tenant Node</h3>
+            
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Engineered high-concurrency Linux VPS environment hosting multiple live web properties, reverse proxies, and automated deployment scripts. Designed under defense-in-depth principles with kernel-level packet filtering and zero external database port exposure.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+              <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
+                <div class="text-xs text-slate-400 font-mono">Firewall Defense</div>
+                <div class="text-sm font-bold text-white mt-1">UFW Default-Drop</div>
+                <div class="text-xs text-slate-400 mt-1">Ports 22, 80, 443 strictly; Port 3306 localhost-bound</div>
+              </div>
+              <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
+                <div class="text-xs text-slate-400 font-mono">TLS Security</div>
+                <div class="text-sm font-bold text-white mt-1">Let's Encrypt ECDSA</div>
+                <div class="text-xs text-slate-400 mt-1">Multi-domain auto-renewal via systemd timers</div>
+              </div>
+              <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
+                <div class="text-xs text-slate-400 font-mono">Deployment CLI</div>
+                <div class="text-sm font-bold text-white mt-1">Zero-Downtime</div>
+                <div class="text-xs text-slate-400 mt-1">Custom <code class="text-cyan-300">deploy-site</code> bash suite with FPM reloads</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800 font-mono text-xs text-slate-400">
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-cyan-300">Ubuntu 24.04 LTS</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-cyan-300">Nginx 1.24</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-cyan-300">PHP 8.3-FPM</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-cyan-300">MariaDB 10.11</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-cyan-300">Ed25519 SSH</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-cyan-300">UFW Firewall</span>
+            </div>
+          </div>
+
+          <!-- System 2: Cybersecurity & Code Defense (GitGuardian Radar & Decoupled Secrets) -->
+          <div class="glass-panel p-8 rounded-xl border border-slate-800 hover:border-emerald-400 transition-all">
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full cyber-badge-emerald text-xs font-mono font-semibold">
+                <i class="fas fa-shield-alt"></i> CYBERSECURITY &amp; CODE DEFENSE
+              </div>
+              <div class="text-xs font-mono text-cyan-400">
+                REST API Integration &bull; Zero-Trust Secrets
+              </div>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white mb-3">GitGuardian Automated Secrets Radar &amp; Credential Decoupling</h3>
+            
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Architected a zero-leak code defense framework across multiple GitHub organizations. Built an authenticated GitGuardian API pipeline feeding real-time incident telemetry directly into an executive dashboard, paired with decoupled, untracked runtime credential injection.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+              <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
+                <div class="text-xs text-slate-400 font-mono">Incident Detection</div>
+                <div class="text-sm font-bold text-emerald-400 mt-1">Live API Radar</div>
+                <div class="text-xs text-slate-400 mt-1">Authenticated PAT integration with 120s disk caching</div>
+              </div>
+              <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
+                <div class="text-xs text-slate-400 font-mono">Secret Decoupling</div>
+                <div class="text-sm font-bold text-white mt-1">Zero-Git Creds</div>
+                <div class="text-xs text-slate-400 mt-1">Isolated <code class="text-cyan-300">mode 0640</code> injection outside Git tracking</div>
+              </div>
+              <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
+                <div class="text-xs text-slate-400 font-mono">Defense Hardening</div>
+                <div class="text-sm font-bold text-white mt-1">Monorepo .gitignore</div>
+                <div class="text-xs text-slate-400 mt-1">Standardized exclusion rules blocking keys, tokens &amp; env files</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800 font-mono text-xs text-slate-400">
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">GitGuardian API</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">Secret Scanning</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">OAuth2.0 / JWT</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">OWASP Top 10</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">RBAC</span>
+            </div>
+          </div>
+
+          <!-- System 3: Live Production Platforms (DWD & GMSRA) -->
+          <div class="glass-panel p-8 rounded-xl border border-slate-800 hover:border-amber-400 transition-all">
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full cyber-badge-amber text-xs font-mono font-semibold">
+                <i class="fas fa-globe"></i> LIVE PRODUCTION PLATFORMS
+              </div>
+              <div class="text-xs font-mono text-emerald-400 flex items-center gap-1">
+                <i class="fas fa-bolt text-xs"></i> 100/100 Core Web Vitals
+              </div>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white mb-3">Durham Web Design Flagship &amp; GMSRA Retiree Portal</h3>
+            
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Designed and built customer-facing web applications engineered for extreme speed, senior accessibility, and reliable conversion. Serving small businesses across Durham Region and over 1,000 retired General Motors Canada employees.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <div class="bg-slate-900/60 p-5 rounded-lg border border-slate-800">
+                <div class="flex items-center justify-between">
+                  <div class="font-bold text-white">Durham Web Design</div>
+                  <a href="https://durhamweb.design" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300 text-xs font-mono flex items-center gap-1">
+                    Visit Site <i class="fas fa-external-link-alt text-[10px]"></i>
+                  </a>
+                </div>
+                <div class="text-xs text-slate-400 mt-2 leading-relaxed">
+                  Flagship agency presence, interactive speed audit tool (<code class="text-cyan-300">/audit</code>), and intake pipeline built with vanilla semantic HTML5, modern CSS3, and JavaScript.
+                </div>
+              </div>
+
+              <div class="bg-slate-900/60 p-5 rounded-lg border border-slate-800">
+                <div class="flex items-center justify-between">
+                  <div class="font-bold text-white">GMSRA Retiree Portal</div>
+                  <a href="https://gmsalariedretirees.com" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300 text-xs font-mono flex items-center gap-1">
+                    Visit Site <i class="fas fa-external-link-alt text-[10px]"></i>
+                  </a>
+                </div>
+                <div class="text-xs text-slate-400 mt-2 leading-relaxed">
+                  Custom zero-dependency WordPress theme (<code class="text-cyan-300">gmsra-bespoke</code>) optimized for senior accessibility (WCAG AA), real-time Google Calendar sync, and GA4 analytics.
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800 font-mono text-xs text-slate-400">
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-amber-300">Semantic HTML5</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-amber-300">WCAG 2.1 AA</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-amber-300">Sub-Second LCP</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-amber-300">Bespoke WordPress</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-amber-300">GA4 Analytics</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: TECHNICAL ARSENAL
+         ==================================================================== -->
+    <section id="skills" class="py-24 bg-slate-900/30 relative">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="flex items-center gap-4 mb-16">
+          <span class="font-mono text-cyan-400 text-xl font-bold">05.</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Technical Arsenal</h2>
+          <span class="h-px bg-slate-800 flex-grow max-w-sm"></span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Card 1: Languages & Scripting -->
+          <div class="glass-panel p-6 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all">
+            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4">
+              <i class="fas fa-terminal"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Languages &amp; Scripting</h3>
+            <p class="text-xs text-slate-400 mb-4 font-mono">Scripting, systems, algorithms &amp; automation</p>
+            <ul class="space-y-2 text-sm text-slate-300 font-mono">
+              <li class="flex items-center justify-between"><span>Python</span> <span class="text-xs text-cyan-400">Automations &amp; Testing</span></li>
+              <li class="flex items-center justify-between"><span>JavaScript (ES6+)</span> <span class="text-xs text-cyan-400">Web &amp; Node</span></li>
+              <li class="flex items-center justify-between"><span>SQL</span> <span class="text-xs text-cyan-400">Queries &amp; Stored Procs</span></li>
+              <li class="flex items-center justify-between"><span>C# / .NET</span> <span class="text-xs text-slate-400">Enterprise Backend</span></li>
+              <li class="flex items-center justify-between"><span>Java &amp; C++</span> <span class="text-xs text-slate-400">University Studies</span></li>
+              <li class="flex items-center justify-between"><span>Bash / Shell</span> <span class="text-xs text-cyan-400">Linux CLI</span></li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Cloud, Systems & DevOps -->
+          <div class="glass-panel p-6 rounded-xl border border-slate-800 hover:border-emerald-400 transition-all">
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-4">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Cloud &amp; Infrastructure</h3>
+            <p class="text-xs text-slate-400 mb-4 font-mono">High-availability hosting &amp; deployment</p>
+            <ul class="space-y-2 text-sm text-slate-300 font-mono">
+              <li class="flex items-center justify-between"><span>Microsoft Azure</span> <span class="text-xs text-emerald-400">SaaS Hosting</span></li>
+              <li class="flex items-center justify-between"><span>Azure Key Vault</span> <span class="text-xs text-emerald-400">Secrets Governance</span></li>
+              <li class="flex items-center justify-between"><span>Linux (Ubuntu)</span> <span class="text-xs text-emerald-400">VPS Administration</span></li>
+              <li class="flex items-center justify-between"><span>Nginx Reverse Proxy</span> <span class="text-xs text-emerald-400">TLS &bull; Routing</span></li>
+              <li class="flex items-center justify-between"><span>Docker</span> <span class="text-xs text-slate-400">Containers</span></li>
+              <li class="flex items-center justify-between"><span>DNS Architecture</span> <span class="text-xs text-emerald-400">Multi-Domain</span></li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Defensive Cybersecurity -->
+          <div class="glass-panel p-6 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all">
+            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Cybersecurity &amp; Compliance</h3>
+            <p class="text-xs text-slate-400 mb-4 font-mono">Threat mitigation &amp; defensive controls</p>
+            <ul class="space-y-2 text-sm text-slate-300 font-mono">
+              <li class="flex items-center justify-between"><span>OAuth 2.0 &amp; JWT</span> <span class="text-xs text-cyan-400">API Authentication</span></li>
+              <li class="flex items-center justify-between"><span>GitGuardian API</span> <span class="text-xs text-cyan-400">Secrets Detection</span></li>
+              <li class="flex items-center justify-between"><span>OWASP Top 10</span> <span class="text-xs text-cyan-400">Pen Testing Fixes</span></li>
+              <li class="flex items-center justify-between"><span>Network Hardening</span> <span class="text-xs text-cyan-400">UFW &bull; Fail2ban</span></li>
+              <li class="flex items-center justify-between"><span>IAM &amp; RBAC</span> <span class="text-xs text-slate-400">Principle of Least Priv</span></li>
+              <li class="flex items-center justify-between"><span>SSL/TLS Encryption</span> <span class="text-xs text-cyan-400">Certbot Automation</span></li>
+            </ul>
+          </div>
+
+          <!-- Card 4: Databases & Persistence -->
+          <div class="glass-panel p-6 rounded-xl border border-slate-800 hover:border-amber-400 transition-all">
+            <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl mb-4">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Databases &amp; Storage</h3>
+            <p class="text-xs text-slate-400 mb-4 font-mono">Relational databases &amp; query tuning</p>
+            <ul class="space-y-2 text-sm text-slate-300 font-mono">
+              <li class="flex items-center justify-between"><span>MS SQL Server</span> <span class="text-xs text-amber-400">Enterprise SaaS</span></li>
+              <li class="flex items-center justify-between"><span>MariaDB / MySQL</span> <span class="text-xs text-amber-400">Production Linux</span></li>
+              <li class="flex items-center justify-between"><span>PostgreSQL</span> <span class="text-xs text-slate-400">Relational Modeling</span></li>
+              <li class="flex items-center justify-between"><span>Stored Procedures</span> <span class="text-xs text-amber-400">25% Speed Tuning</span></li>
+              <li class="flex items-center justify-between"><span>Database Hardening</span> <span class="text-xs text-amber-400">127.0.0.1 Binding</span></li>
+            </ul>
+          </div>
+
+          <!-- Card 5: Frontend & Application Frameworks -->
+          <div class="glass-panel p-6 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all">
+            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Web &amp; Frameworks</h3>
+            <p class="text-xs text-slate-400 mb-4 font-mono">Frontend architecture &amp; accessibility</p>
+            <ul class="space-y-2 text-sm text-slate-300 font-mono">
+              <li class="flex items-center justify-between"><span>React</span> <span class="text-xs text-cyan-400">SPA Architecture</span></li>
+              <li class="flex items-center justify-between"><span>Semantic HTML5</span> <span class="text-xs text-cyan-400">WCAG 2.1 AA</span></li>
+              <li class="flex items-center justify-between"><span>Tailwind CSS</span> <span class="text-xs text-cyan-400">Design Systems</span></li>
+              <li class="flex items-center justify-between"><span>RESTful APIs</span> <span class="text-xs text-cyan-400">Microservices</span></li>
+              <li class="flex items-center justify-between"><span>WordPress Theme</span> <span class="text-xs text-slate-400">Zero-Dependency</span></li>
+            </ul>
+          </div>
+
+          <!-- Card 6: Systems Leadership & Operations -->
+          <div class="glass-panel p-6 rounded-xl border border-slate-800 hover:border-emerald-400 transition-all">
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-4">
+              <i class="fas fa-users-gear"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Leadership &amp; Operations</h3>
+            <p class="text-xs text-slate-400 mb-4 font-mono">Mission-critical technical supervision</p>
+            <ul class="space-y-2 text-sm text-slate-300 font-mono">
+              <li class="flex items-center justify-between"><span>Team Leadership</span> <span class="text-xs text-emerald-400">Crew of 8 Supervised</span></li>
+              <li class="flex items-center justify-between"><span>PLC Monitoring</span> <span class="text-xs text-emerald-400">Telemetry Hardware</span></li>
+              <li class="flex items-center justify-between"><span>SAP Analytics</span> <span class="text-xs text-emerald-400">20% Downtime Cut</span></li>
+              <li class="flex items-center justify-between"><span>Regulatory Safety</span> <span class="text-xs text-slate-400">Compliance Audit</span></li>
+              <li class="flex items-center justify-between"><span>Incident Response</span> <span class="text-xs text-emerald-400">24/7 Reliability</span></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 5: CONTACT & CONNECT
+         ==================================================================== -->
+    <section id="contact" class="py-24 relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full cyber-badge text-xs font-mono font-semibold mb-6">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+          <span>INITIATE SECURE HANDSHAKE</span>
+        </div>
+
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+          Let's Build Something Resilient.
+        </h2>
+
+        <p class="text-slate-400 max-w-xl mx-auto text-base sm:text-lg mb-12">
+          Open to technical discussions regarding software deployment, cloud security, distributed systems, or enterprise engineering consulting.
+        </p>
+
+        <!-- Contact Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12 text-left">
+          
+          <!-- Email Card -->
+          <div class="glass-panel p-5 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all">
+            <div class="text-xs font-mono text-cyan-400 mb-1 flex items-center gap-2">
+              <i class="fas fa-envelope"></i> DIRECT EMAIL
+            </div>
+            <div class="font-bold text-white truncate text-sm">wattsd1985@gmail.com</div>
+            <div class="mt-3 flex items-center gap-2">
+              <a href="mailto:wattsd1985@gmail.com" class="px-3 py-1 rounded bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 text-xs font-mono font-semibold transition-colors">
+                Send Email
+              </a>
+              <button onclick="copyToClipboard('wattsd1985@gmail.com', this)" class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-mono transition-colors">
+                Copy
+              </button>
+            </div>
+          </div>
+
+          <!-- Phone Card -->
+          <div class="glass-panel p-5 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all">
+            <div class="text-xs font-mono text-emerald-400 mb-1 flex items-center gap-2">
+              <i class="fas fa-phone"></i> PHONE / MOBILE
+            </div>
+            <div class="font-bold text-white text-sm">289-928-9013</div>
+            <div class="mt-3 flex items-center gap-2">
+              <a href="tel:2899289013" class="px-3 py-1 rounded bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-mono font-semibold transition-colors">
+                Call Direct
+              </a>
+              <button onclick="copyToClipboard('289-928-9013', this)" class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-mono transition-colors">
+                Copy
+              </button>
+            </div>
+          </div>
+
+          <!-- Location Card -->
+          <div class="glass-panel p-5 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all sm:col-span-2 lg:col-span-1">
+            <div class="text-xs font-mono text-slate-400 mb-1 flex items-center gap-2">
+              <i class="fas fa-location-dot text-rose-400"></i> LOCATION
+            </div>
+            <div class="font-bold text-white text-sm">Oshawa, Ontario, Canada</div>
+            <div class="text-xs text-slate-400 mt-1">Greater Toronto &bull; Eastern Time (UTC-4/-5)</div>
+          </div>
+
+        </div>
+
+        <!-- Social Links & Action -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="/Dane Watts Resume 2025.pdf" target="_blank" class="px-6 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono font-bold text-sm transition-all shadow-[0_0_20px_rgba(0,229,255,0.3)] flex items-center gap-2">
+            <i class="fas fa-file-pdf"></i>
+            <span>Download Official Resume</span>
+          </a>
+          <a href="https://www.linkedin.com/in/dane-w-69a42313a/" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-lg glass-panel hover:border-cyan-400 text-slate-200 hover:text-cyan-400 font-mono text-sm transition-all flex items-center gap-2">
+            <i class="fab fa-linkedin-in text-cyan-400"></i>
+            <span>LinkedIn Profile</span>
+          </a>
+          <a href="https://github.com/Dane85" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-lg glass-panel hover:border-cyan-400 text-slate-200 hover:text-cyan-400 font-mono text-sm transition-all flex items-center gap-2">
+            <i class="fab fa-github text-cyan-400"></i>
+            <span>GitHub Repositories</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="py-10 border-t border-slate-800/80 bg-slate-950/80 font-mono text-xs text-slate-400 text-center">
+    <div class="max-w-5xl mx-auto px-4 space-y-3">
+      <div class="flex items-center justify-center gap-6 text-base text-slate-400">
+        <a href="mailto:wattsd1985@gmail.com" class="hover:text-cyan-400 transition-colors" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/dane-w-69a42313a/" target="_blank" rel="noopener" class="hover:text-cyan-400 transition-colors" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Dane85" target="_blank" rel="noopener" class="hover:text-cyan-400 transition-colors" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="tel:2899289013" class="hover:text-cyan-400 transition-colors" title="Phone"><i class="fas fa-phone"></i></a>
+      </div>
+      <div>
+        Designed &amp; Engineered by <span class="text-white font-bold">Dane Watts</span> &bull; Hosted on GitHub Pages Edge CDN
+      </div>
+      <div class="text-[11px] text-slate-500">
+        Athabasca University (BSc CIS &bull; GPA: 3.4) &bull; CompTIA Security+ Candidate &bull; Oshawa, ON
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification for Copy -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="glass-panel px-4 py-2.5 rounded-lg border border-cyan-400/50 text-cyan-400 text-xs font-mono font-semibold flex items-center gap-2 shadow-2xl">
+      <i class="fas fa-check-circle"></i>
+      <span id="toastMsg">Copied to clipboard!</span>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       JAVASCRIPT LOGIC
+       ==================================================================== -->
+  <script>
+    // Copy to clipboard helper
+    function copyToClipboard(text, btnElement) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(`Copied ${text} to clipboard!`);
+        if (btnElement) {
+          const original = btnElement.innerText;
+          btnElement.innerText = 'Copied!';
+          setTimeout(() => { btnElement.innerText = original; }, 2000);
+        }
+      }).catch(err => {
+        console.error('Copy failed', err);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      toastMsg.innerText = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenuIcon.classList.remove('fa-times');
+        mobileMenuIcon.classList.add('fa-bars');
+      } else {
+        mobileMenuIcon.classList.remove('fa-bars');
+        mobileMenuIcon.classList.add('fa-times');
+      }
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuIcon.classList.remove('fa-times');
+        mobileMenuIcon.classList.add('fa-bars');
+      });
+    });
+
+    // Interactive Terminal Logic
+    const terminalInput = document.getElementById('terminalInput');
+    const terminalOutput = document.getElementById('terminalOutput');
+    const terminalBody = document.getElementById('terminalBody');
+
+    const commands = {
+      'help': () => `
+        <div class="text-slate-300">
+          Available commands:<br>
+          &bull; <span class="text-cyan-400">whoami</span> - Identity, current role &amp; brief bio<br>
+          &bull; <span class="text-cyan-400">education</span> (or <span class="text-cyan-400">edu</span>) - Athabasca University &amp; CompTIA Security+<br>
+          &bull; <span class="text-cyan-400">experience</span> (or <span class="text-cyan-400">exp</span>) - Employment history (NSSL, Jonas Club, CN Rail)<br>
+          &bull; <span class="text-cyan-400">projects</span> (or <span class="text-cyan-400">proj</span>) - Production systems &amp; security radar<br>
+          &bull; <span class="text-cyan-400">skills</span> - Technical arsenal and tools<br>
+          &bull; <span class="text-cyan-400">contact</span> - Phone, email, socials<br>
+          &bull; <span class="text-cyan-400">clear</span> - Clear terminal output
+        </div>
+      `,
+      'whoami': () => `
+        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
+          <span class="text-white font-bold">Dane Watts</span> &bull; Software Developer &amp; Defensive Cybersecurity Specialist.<br>
+          Current: Software Deployment Engineer @ NSSL (2026 - Present)<br>
+          Location: Oshawa, ON, Canada &bull; GPA: 3.4
+        </div>
+      `,
+      'education': () => `
+        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
+          <div class="text-cyan-400 font-bold">🎓 Athabasca University (2021 - Present)</div>
+          <div>&bull; Bachelor of Science in Computing &amp; Information Systems (BSc CIS)</div>
+          <div>&bull; GPA: <span class="text-emerald-400 font-bold">3.4 / 4.0</span> (Graduating 2027)</div>
+          <div>&bull; Bridged from University Certificate in Computing &amp; Information Systems</div>
+          <div class="text-amber-400 font-bold mt-2">🛡️ CompTIA Security+ (In Progress)</div>
+          <div>&bull; Active certification track: Threat intelligence, IAM, PKI, Network Defense</div>
+        </div>
+      `,
+      'edu': () => commands['education'](),
+      'experience': () => `
+        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
+          <div><strong class="text-white">1. Software Deployment Engineer</strong> &bull; NSSL (2026 - Present)</div>
+          <div class="text-slate-400 pl-3">&bull; Automated cloud deployments, continuous release delivery &amp; reliability.</div>
+          <div class="mt-1"><strong class="text-white">2. Frontend Web Developer</strong> &bull; Jonas Club Software (2022 - 2026)</div>
+          <div class="text-slate-400 pl-3">&bull; 15+ SaaS apps on Azure, Python vulnerability automation (-40% QA), OAuth2.0 / RBAC, SQL tuning (+25%).</div>
+          <div class="mt-1"><strong class="text-white">3. Founder &amp; Systems Architect</strong> &bull; Epic Expressions (2024 - Present)</div>
+          <div class="text-slate-400 pl-3">&bull; Hardened Linux cloud node, Durham Web Design, GMSRA non-profit portal, GitGuardian HUD.</div>
+          <div class="mt-1"><strong class="text-white">4. Mechanical Supervisor</strong> &bull; CN Rail (2013 - 2021)</div>
+          <div class="text-slate-400 pl-3">&bull; Supervised crew of 8, PLC &amp; SAP telemetry (-20% downtime), SQL maintenance reporting.</div>
+        </div>
+      `,
+      'exp': () => commands['experience'](),
+      'projects': () => `
+        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
+          <div>&bull; <strong class="text-cyan-400">Hetzner Linux Node (5.161.161.222):</strong> UFW default-deny, Nginx, MariaDB, multi-domain Let's Encrypt ECDSA.</div>
+          <div>&bull; <strong class="text-emerald-400">GitGuardian API Radar:</strong> Real-time secrets scanning pipeline with decoupled 0640 runtime secrets.</div>
+          <div>&bull; <strong class="text-amber-400">GMSRA Retiree Portal:</strong> Bespoke senior-accessible WordPress theme serving 1,000+ retired GM Canada employees.</div>
+          <div>&bull; <strong class="text-cyan-400">Durham Web Design:</strong> Commercial agency platform &amp; custom sub-second speed audit tool.</div>
+        </div>
+      `,
+      'proj': () => commands['projects'](),
+      'skills': () => `
+        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
+          <div>&bull; <strong class="text-white">Languages:</strong> Python, JavaScript (ES6+), SQL, C#, Java, C++, HTML5, CSS3, Bash</div>
+          <div>&bull; <strong class="text-white">Cloud/DevOps:</strong> Microsoft Azure, Azure Key Vault, Linux (Ubuntu), Nginx, Docker, DNS</div>
+          <div>&bull; <strong class="text-white">Security:</strong> OAuth2.0, JWT, GitGuardian API, OWASP Top 10, UFW, Ed25519, IAM</div>
+          <div>&bull; <strong class="text-white">Databases:</strong> MS SQL Server, MariaDB, MySQL, PostgreSQL</div>
+        </div>
+      `,
+      'contact': () => `
+        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
+          <div>&bull; Email: <a href="mailto:wattsd1985@gmail.com" class="text-cyan-400 underline">wattsd1985@gmail.com</a></div>
+          <div>&bull; Phone: <a href="tel:2899289013" class="text-cyan-400 underline">289-928-9013</a></div>
+          <div>&bull; LinkedIn: <a href="https://www.linkedin.com/in/dane-w-69a42313a/" target="_blank" class="text-cyan-400 underline">linkedin.com/in/dane-w-69a42313a</a></div>
+          <div>&bull; GitHub: <a href="https://github.com/Dane85" target="_blank" class="text-cyan-400 underline">github.com/Dane85</a></div>
+          <div>&bull; Location: Oshawa, ON, Canada</div>
+        </div>
+      `,
+      'clear': () => {
+        terminalOutput.innerHTML = '';
+        return null;
+      }
+    };
+
+    function runCommand(cmdText) {
+      const cleanCmd = cmdText.trim().toLowerCase();
+      if (!cleanCmd) return;
+
+      const cmdEcho = document.createElement('div');
+      cmdEcho.innerHTML = `<span class="text-cyan-400 font-bold">dane@sec-ops:~$</span> <span class="text-white">${cleanCmd}</span>`;
+      terminalOutput.appendChild(cmdEcho);
+
+      if (commands[cleanCmd]) {
+        const result = commands[cleanCmd]();
+        if (result) {
+          const resDiv = document.createElement('div');
+          resDiv.innerHTML = result;
+          terminalOutput.appendChild(resDiv);
+        }
+      } else {
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'text-rose-400';
+        errorDiv.innerHTML = `command not found: ${cleanCmd}. Type <span class="text-cyan-300 underline cursor-pointer" onclick="runCommand('help')">help</span> for available commands.`;
+        terminalOutput.appendChild(errorDiv);
+      }
+
+      terminalBody.scrollTop = terminalBody.scrollHeight;
+      if (terminalInput) terminalInput.value = '';
+    }
+
+    if (terminalInput) {
+      terminalInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          runCommand(terminalInput.value);
+        }
+      });
+    }
+  </script>
+</body>
 </html>
