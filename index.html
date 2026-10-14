@@ -8,6 +8,10 @@
   <meta name="author" content="Dane Watts" />
   <title>Dane Watts | Software Developer &amp; Cybersecurity Specialist</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate icon" href="favicon.svg" />
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -472,14 +476,14 @@
                 </li>
                 <li class="flex items-start gap-3">
                   <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Built private Operations HUD (<code class="text-cyan-300">ops.durhamweb.design</code>) integrating real-time server vitals and live <strong>GitGuardian API secret scanner radar</strong>.</span>
+                  <span>Built private Operations HUD (<code class="text-cyan-300">ops.durhamweb.design</code>) integrating real-time server vitals, latency diagnostics, and automated security audit telemetry.</span>
                 </li>
               </ul>
 
               <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-slate-800/80 font-mono text-xs">
                 <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Linux Hardening</span>
                 <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Nginx Reverse Proxy</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">GitGuardian API</span>
+                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Security Telemetry</span>
                 <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">MariaDB</span>
                 <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Ed25519 Cryptography</span>
               </div>
@@ -547,86 +551,160 @@
           <span class="h-px bg-slate-800 flex-grow max-w-sm"></span>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
-          <!-- Athabasca University Card -->
-          <div class="glass-panel p-8 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition-all relative overflow-hidden group">
-            <div class="absolute -top-12 -right-12 w-36 h-36 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all"></div>
+          <!-- Athabasca University Card (Span 7 cols) -->
+          <div class="lg:col-span-7 glass-panel p-8 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition-all relative overflow-hidden group">
+            <div class="absolute -top-12 -right-12 w-48 h-48 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all"></div>
             
             <div class="flex items-start justify-between gap-4 mb-4">
               <div class="w-12 h-12 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-2xl">
                 <i class="fas fa-graduation-cap"></i>
               </div>
-              <span class="cyber-badge px-3 py-1 rounded-full text-xs font-mono font-bold">
-                GPA 3.4 / 4.0
-              </span>
+              <div class="flex items-center gap-2">
+                <span class="cyber-badge px-3 py-1 rounded-full text-xs font-mono font-bold">
+                  GPA 3.4 / 4.0
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700 text-cyan-300 text-xs font-mono">
+                  120 Credits
+                </span>
+              </div>
             </div>
 
             <div class="text-xs font-mono text-cyan-400 font-semibold mb-1">Bachelor of Science Degree</div>
-            <h3 class="text-xl font-bold text-white mb-2">Computing &amp; Information Systems</h3>
+            <h3 class="text-2xl font-bold text-white mb-1">Computing &amp; Information Systems</h3>
             <div class="text-slate-400 text-sm mb-4">
-              <strong>Athabasca University</strong> &bull; 2021 &ndash; Present (Expected 2027)
+              <strong>Athabasca University</strong> &bull; Faculty of Science &amp; Technology &bull; 2021 &ndash; Present (Expected 2027)
             </div>
 
-            <div class="p-3 rounded-lg bg-slate-800/60 border border-slate-700/60 text-xs text-slate-300 font-mono mb-4">
-              &bull; Academic Pathway: Bridged from <strong>University Certificate in Computing &amp; Information Systems</strong>
+            <!-- Pathway Highlight -->
+            <div class="p-3.5 rounded-lg bg-slate-800/60 border border-cyan-500/20 text-xs text-slate-300 font-mono mb-5 flex items-center gap-2.5">
+              <i class="fas fa-route text-cyan-400 text-sm flex-shrink-0"></i>
+              <span>Academic Pathway: Successfully bridged from the <strong>University Certificate in Computing &amp; Information Systems</strong> directly into the full 4-year Bachelor of Science degree.</span>
             </div>
 
-            <p class="text-slate-300 text-sm leading-relaxed mb-4">
-              Rigorous computing curriculum combining theoretical foundations with advanced systems engineering, software development lifecycles, and database architectures.
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              A comprehensive 120-credit curriculum designed to bridge computational science theory with practical enterprise information architecture. Synthesizes software engineering principles, complex algorithms, systems-level computing, and scalable database systems.
             </p>
 
-            <div class="space-y-2 text-xs text-slate-400 font-mono">
-              <div class="text-slate-200 font-semibold">Core Disciplines &amp; Coursework:</div>
-              <div class="grid grid-cols-2 gap-2 text-slate-300">
-                <div>&bull; Object-Oriented Software (Java/C++)</div>
-                <div>&bull; Database Management (SQL)</div>
-                <div>&bull; Computer Networks &amp; Protocols</div>
-                <div>&bull; Operating Systems Principles</div>
-                <div>&bull; Algorithms &amp; Complexity</div>
-                <div>&bull; Web Systems Architecture</div>
+            <!-- Dual-Pillar Framework Grid -->
+            <div class="space-y-4 mb-6">
+              <div class="text-xs font-mono uppercase tracking-wider text-slate-400 font-semibold flex items-center gap-2">
+                <i class="fas fa-layer-group text-cyan-400"></i> Dual-Pillar Curriculum Framework
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
+                <!-- Pillar 1: Computer Science -->
+                <div class="p-3.5 rounded-lg bg-slate-900/70 border border-slate-800">
+                  <div class="text-cyan-300 font-bold mb-2 flex items-center gap-1.5">
+                    <i class="fas fa-microchip text-[11px]"></i> Computer Science Core
+                  </div>
+                  <ul class="space-y-1.5 text-slate-400">
+                    <li>&bull; <strong class="text-slate-200">Data Structures &amp; Algorithms:</strong> Complexity, trees, search &amp; graph analysis</li>
+                    <li>&bull; <strong class="text-slate-200">Operating Systems:</strong> Kernel mechanisms, concurrency, memory &amp; POSIX</li>
+                    <li>&bull; <strong class="text-slate-200">Computer Networks:</strong> TCP/IP, OSI model, packet routing &amp; sockets</li>
+                    <li>&bull; <strong class="text-slate-200">Software Programming:</strong> Object-oriented design in Java, C++, and Python</li>
+                  </ul>
+                </div>
+
+                <!-- Pillar 2: Information Systems -->
+                <div class="p-3.5 rounded-lg bg-slate-900/70 border border-slate-800">
+                  <div class="text-emerald-300 font-bold mb-2 flex items-center gap-1.5">
+                    <i class="fas fa-network-wired text-[11px]"></i> Information Systems &amp; Arch
+                  </div>
+                  <ul class="space-y-1.5 text-slate-400">
+                    <li>&bull; <strong class="text-slate-200">Database Systems:</strong> Relational modeling, normalization &amp; SQL tuning</li>
+                    <li>&bull; <strong class="text-slate-200">Systems Analysis &amp; Design:</strong> Requirements engineering, UML &amp; SDLC</li>
+                    <li>&bull; <strong class="text-slate-200">Enterprise Computing:</strong> Cloud architecture, web services &amp; APIs</li>
+                    <li>&bull; <strong class="text-slate-200">Human-Computer Interaction:</strong> Usability metrics &amp; UI engineering</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Key Coursework Tags -->
+            <div class="pt-4 border-t border-slate-800/80">
+              <div class="text-[11px] font-mono text-slate-400 mb-2">Representative University Coursework:</div>
+              <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">COMP 272 Data Structures</span>
+                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">COMP 308 Operating Systems</span>
+                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">COMP 347 Computer Networks</span>
+                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">COMP 378 Database Systems</span>
+                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">COMP 361 Systems Analysis</span>
+                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">COMP 268 OOP (Java)</span>
+                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">COMP 306 C++</span>
               </div>
             </div>
           </div>
 
-          <!-- Certifications & Defensive Training Card -->
-          <div class="glass-panel p-8 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition-all relative overflow-hidden group">
-            <div class="absolute -top-12 -right-12 w-36 h-36 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-all"></div>
+          <!-- Certifications & Defensive Cybersecurity Card (Span 5 cols) -->
+          <div class="lg:col-span-5 glass-panel p-8 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition-all relative overflow-hidden group flex flex-col justify-between">
+            <div class="absolute -top-12 -right-12 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-all"></div>
 
-            <div class="flex items-start justify-between gap-4 mb-4">
-              <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl">
-                <i class="fas fa-shield-halved"></i>
+            <div>
+              <div class="flex items-start justify-between gap-4 mb-4">
+                <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl">
+                  <i class="fas fa-shield-halved"></i>
+                </div>
+                <span class="cyber-badge-emerald px-3 py-1 rounded-full text-xs font-mono font-bold">
+                  ACTIVE CANDIDATE
+                </span>
               </div>
-              <span class="cyber-badge-emerald px-3 py-1 rounded-full text-xs font-mono font-bold">
-                ACTIVE CANDIDATE
-              </span>
-            </div>
 
-            <div class="text-xs font-mono text-emerald-400 font-semibold mb-1">Industry Professional Credential</div>
-            <h3 class="text-xl font-bold text-white mb-2">CompTIA Security+</h3>
-            <div class="text-slate-400 text-sm mb-4">
-              <strong>CompTIA</strong> &bull; Examination Preparation Track (In Progress)
-            </div>
+              <div class="text-xs font-mono text-emerald-400 font-semibold mb-1">Industry Professional Credential</div>
+              <h3 class="text-2xl font-bold text-white mb-1">CompTIA Security+</h3>
+              <div class="text-slate-400 text-sm mb-4">
+                <strong>CompTIA</strong> &bull; Global Cybersecurity Certification Track
+              </div>
 
-            <div class="p-3 rounded-lg bg-slate-800/60 border border-slate-700/60 text-xs text-slate-300 font-mono mb-4">
-              &bull; Comprehensive baseline security certification covering global threat landscapes and defensive controls
-            </div>
+              <div class="p-3.5 rounded-lg bg-slate-800/60 border border-emerald-500/20 text-xs text-slate-300 font-mono mb-5">
+                &bull; Enterprise baseline validation for threat intelligence, cryptographic controls, zero-trust architectures, and network defense.
+              </div>
 
-            <p class="text-slate-300 text-sm leading-relaxed mb-4">
-              Focused on core cybersecurity domains: threat analysis, zero-trust implementation, cryptographic algorithms, network defense, identity governance, and incident remediation.
-            </p>
+              <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                Active examination preparation complementing formal university computing theory with industry-standard operational cybersecurity controls and vulnerability response procedures.
+              </p>
 
-            <div class="space-y-2 text-xs text-slate-400 font-mono">
-              <div class="text-slate-200 font-semibold">Exam Objectives &amp; Lab Focus:</div>
-              <div class="grid grid-cols-2 gap-2 text-slate-300">
-                <div>&bull; Threat Actors &amp; Vulnerabilities</div>
-                <div>&bull; Identity &amp; Access (IAM, RBAC)</div>
-                <div>&bull; Network Architecture &amp; Firewalls</div>
-                <div>&bull; Cryptography &amp; Public Key Infra</div>
-                <div>&bull; Security Operations &amp; Auditing</div>
-                <div>&bull; Incident Response &amp; Forensics</div>
+              <div class="space-y-2.5 text-xs text-slate-300 font-mono mb-6">
+                <div class="text-slate-200 font-semibold flex items-center gap-1.5">
+                  <i class="fas fa-bullseye text-emerald-400"></i> Core Examination Domains &amp; Labs:
+                </div>
+                <div class="space-y-1.5 pl-2 text-slate-300">
+                  <div class="flex items-start gap-2">
+                    <span class="text-emerald-400">&bull;</span>
+                    <span><strong>Threats &amp; Vulnerabilities:</strong> Attack vectors, threat actors, social engineering &amp; CVE analysis.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="text-emerald-400">&bull;</span>
+                    <span><strong>Architecture &amp; Design:</strong> Zero-trust network segmentation, secure cloud infra &amp; firewalling.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="text-emerald-400">&bull;</span>
+                    <span><strong>Implementation &amp; IAM:</strong> OAuth 2.0, PKI, MFA, RBAC &amp; cryptographic protocols.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="text-emerald-400">&bull;</span>
+                    <span><strong>Operations &amp; Forensics:</strong> Threat hunting, logging telemetry, incident triage &amp; BC/DR.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="text-emerald-400">&bull;</span>
+                    <span><strong>Governance &amp; Risk:</strong> Regulatory compliance, risk assessments &amp; privacy policies.</span>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <!-- Practical Lab Footprint -->
+            <div class="pt-4 border-t border-slate-800/80 font-mono text-xs">
+              <div class="text-slate-400 mb-2">Hands-on Lab &amp; System Application:</div>
+              <div class="flex flex-wrap gap-1.5 text-[11px]">
+                <span class="px-2 py-0.5 rounded bg-slate-800 text-emerald-300">Linux Node Hardening</span>
+                <span class="px-2 py-0.5 rounded bg-slate-800 text-emerald-300">UFW &amp; Fail2ban</span>
+                <span class="px-2 py-0.5 rounded bg-slate-800 text-emerald-300">OAuth 2.0 / JWT</span>
+                <span class="px-2 py-0.5 rounded bg-slate-800 text-emerald-300">Ed25519 &amp; ECDSA TLS</span>
+              </div>
+            </div>
+
           </div>
 
         </div>
@@ -694,47 +772,48 @@
             </div>
           </div>
 
-          <!-- System 2: Cybersecurity & Code Defense (GitGuardian Radar & Decoupled Secrets) -->
+          <!-- System 2: Enterprise API Security & Automated Vulnerability Testing -->
           <div class="glass-panel p-8 rounded-xl border border-slate-800 hover:border-emerald-400 transition-all">
             <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
               <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full cyber-badge-emerald text-xs font-mono font-semibold">
-                <i class="fas fa-shield-alt"></i> CYBERSECURITY &amp; CODE DEFENSE
+                <i class="fas fa-shield-alt"></i> CYBERSECURITY &amp; DEFENSIVE CONTROLS
               </div>
               <div class="text-xs font-mono text-cyan-400">
-                REST API Integration &bull; Zero-Trust Secrets
+                REST API Security &bull; Automated Test Suites
               </div>
             </div>
 
-            <h3 class="text-2xl font-bold text-white mb-3">GitGuardian Automated Secrets Radar &amp; Credential Decoupling</h3>
+            <h3 class="text-2xl font-bold text-white mb-3">Enterprise API Security &amp; Automated Vulnerability Testing Suite</h3>
             
             <p class="text-slate-300 text-sm leading-relaxed mb-6">
-              Architected a zero-leak code defense framework across multiple GitHub organizations. Built an authenticated GitGuardian API pipeline feeding real-time incident telemetry directly into an executive dashboard, paired with decoupled, untracked runtime credential injection.
+              Architected and deployed automated API vulnerability testing suites and defensive controls across production SaaS platforms. Automated endpoint security audits, enforced OAuth 2.0 and JWT token integrity, and integrated Azure Key Vault credential isolation to eliminate hardcoded secrets and reduce QA verification time by 40%.
             </p>
 
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
               <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
-                <div class="text-xs text-slate-400 font-mono">Incident Detection</div>
-                <div class="text-sm font-bold text-emerald-400 mt-1">Live API Radar</div>
-                <div class="text-xs text-slate-400 mt-1">Authenticated PAT integration with 120s disk caching</div>
+                <div class="text-xs text-slate-400 font-mono">Automated Auditing</div>
+                <div class="text-sm font-bold text-emerald-400 mt-1">40% QA Reduction</div>
+                <div class="text-xs text-slate-400 mt-1">Python test automation checking auth headers, expiration &amp; payloads</div>
               </div>
               <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
-                <div class="text-xs text-slate-400 font-mono">Secret Decoupling</div>
-                <div class="text-sm font-bold text-white mt-1">Zero-Git Creds</div>
-                <div class="text-xs text-slate-400 mt-1">Isolated <code class="text-cyan-300">mode 0640</code> injection outside Git tracking</div>
+                <div class="text-xs text-slate-400 font-mono">Zero-Trust Identity</div>
+                <div class="text-sm font-bold text-white mt-1">OAuth 2.0 &amp; RBAC</div>
+                <div class="text-xs text-slate-400 mt-1">Role-based access enforcement and strict JWT bearer token validation</div>
               </div>
               <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
-                <div class="text-xs text-slate-400 font-mono">Defense Hardening</div>
-                <div class="text-sm font-bold text-white mt-1">Monorepo .gitignore</div>
-                <div class="text-xs text-slate-400 mt-1">Standardized exclusion rules blocking keys, tokens &amp; env files</div>
+                <div class="text-xs text-slate-400 font-mono">Secrets Governance</div>
+                <div class="text-sm font-bold text-white mt-1">Decoupled Key Stores</div>
+                <div class="text-xs text-slate-400 mt-1">Azure Key Vault &amp; POSIX 0640 isolated runtime environment injection</div>
               </div>
             </div>
 
             <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800 font-mono text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">GitGuardian API</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">Secret Scanning</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">OAuth2.0 / JWT</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">Python Automation</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">OAuth 2.0 / JWT</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">Azure Key Vault</span>
               <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">OWASP Top 10</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">RBAC</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">RBAC Governance</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">API Security Testing</span>
             </div>
           </div>
 
@@ -852,7 +931,7 @@
             <p class="text-xs text-slate-400 mb-4 font-mono">Threat mitigation &amp; defensive controls</p>
             <ul class="space-y-2 text-sm text-slate-300 font-mono">
               <li class="flex items-center justify-between"><span>OAuth 2.0 &amp; JWT</span> <span class="text-xs text-cyan-400">API Authentication</span></li>
-              <li class="flex items-center justify-between"><span>GitGuardian API</span> <span class="text-xs text-cyan-400">Secrets Detection</span></li>
+              <li class="flex items-center justify-between"><span>API Security Testing</span> <span class="text-xs text-cyan-400">Automated QA &amp; PyTest</span></li>
               <li class="flex items-center justify-between"><span>OWASP Top 10</span> <span class="text-xs text-cyan-400">Pen Testing Fixes</span></li>
               <li class="flex items-center justify-between"><span>Network Hardening</span> <span class="text-xs text-cyan-400">UFW &bull; Fail2ban</span></li>
               <li class="flex items-center justify-between"><span>IAM &amp; RBAC</span> <span class="text-xs text-slate-400">Principle of Least Priv</span></li>
@@ -1106,11 +1185,12 @@
       'education': () => `
         <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
           <div class="text-cyan-400 font-bold">🎓 Athabasca University (2021 - Present)</div>
-          <div>&bull; Bachelor of Science in Computing &amp; Information Systems (BSc CIS)</div>
+          <div>&bull; Bachelor of Science in Computing &amp; Information Systems (BSc CIS &bull; 120 Credits)</div>
           <div>&bull; GPA: <span class="text-emerald-400 font-bold">3.4 / 4.0</span> (Graduating 2027)</div>
+          <div>&bull; Curriculum: Computer Science Core (OS, Networks, Algorithms) &amp; Information Systems Architecture</div>
           <div>&bull; Bridged from University Certificate in Computing &amp; Information Systems</div>
           <div class="text-amber-400 font-bold mt-2">🛡️ CompTIA Security+ (In Progress)</div>
-          <div>&bull; Active certification track: Threat intelligence, IAM, PKI, Network Defense</div>
+          <div>&bull; Active certification track: Threat intelligence, IAM, PKI, Network Defense, Security Operations</div>
         </div>
       `,
       'edu': () => commands['education'](),
@@ -1121,7 +1201,7 @@
           <div class="mt-1"><strong class="text-white">2. Frontend Web Developer</strong> &bull; Jonas Club Software (2022 - 2026)</div>
           <div class="text-slate-400 pl-3">&bull; 15+ SaaS apps on Azure, Python vulnerability automation (-40% QA), OAuth2.0 / RBAC, SQL tuning (+25%).</div>
           <div class="mt-1"><strong class="text-white">3. Founder &amp; Systems Architect</strong> &bull; Epic Expressions (2024 - Present)</div>
-          <div class="text-slate-400 pl-3">&bull; Hardened Linux cloud node, Durham Web Design, GMSRA non-profit portal, GitGuardian HUD.</div>
+          <div class="text-slate-400 pl-3">&bull; Hardened Linux cloud node, Durham Web Design, GMSRA non-profit portal, automated security &amp; telemetry HUD.</div>
           <div class="mt-1"><strong class="text-white">4. Mechanical Supervisor</strong> &bull; CN Rail (2013 - 2021)</div>
           <div class="text-slate-400 pl-3">&bull; Supervised crew of 8, PLC &amp; SAP telemetry (-20% downtime), SQL maintenance reporting.</div>
         </div>
@@ -1130,7 +1210,7 @@
       'projects': () => `
         <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
           <div>&bull; <strong class="text-cyan-400">Hetzner Linux Node (5.161.161.222):</strong> UFW default-deny, Nginx, MariaDB, multi-domain Let's Encrypt ECDSA.</div>
-          <div>&bull; <strong class="text-emerald-400">GitGuardian API Radar:</strong> Real-time secrets scanning pipeline with decoupled 0640 runtime secrets.</div>
+          <div>&bull; <strong class="text-emerald-400">Enterprise API Security:</strong> Automated vulnerability testing suite, OAuth 2.0 / JWT token validation, decoupled key stores.</div>
           <div>&bull; <strong class="text-amber-400">GMSRA Retiree Portal:</strong> Bespoke senior-accessible WordPress theme serving 1,000+ retired GM Canada employees.</div>
           <div>&bull; <strong class="text-cyan-400">Durham Web Design:</strong> Commercial agency platform &amp; custom sub-second speed audit tool.</div>
         </div>
@@ -1140,7 +1220,7 @@
         <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
           <div>&bull; <strong class="text-white">Languages:</strong> Python, JavaScript (ES6+), SQL, C#, Java, C++, HTML5, CSS3, Bash</div>
           <div>&bull; <strong class="text-white">Cloud/DevOps:</strong> Microsoft Azure, Azure Key Vault, Linux (Ubuntu), Nginx, Docker, DNS</div>
-          <div>&bull; <strong class="text-white">Security:</strong> OAuth2.0, JWT, GitGuardian API, OWASP Top 10, UFW, Ed25519, IAM</div>
+          <div>&bull; <strong class="text-white">Security:</strong> OAuth2.0, JWT, API Security Testing, OWASP Top 10, UFW, Ed25519, IAM</div>
           <div>&bull; <strong class="text-white">Databases:</strong> MS SQL Server, MariaDB, MySQL, PostgreSQL</div>
         </div>
       `,

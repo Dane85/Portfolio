@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="cyberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Container -->
+  <rect width="64" height="64" rx="14" fill="#080c14"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="url(#cyberGrad)" stroke-width="2.5" stroke-opacity="0.8"/>
+  
+  <!-- Monogram DW -->
+  <text x="13" y="42" font-family="'JetBrains Mono', monospace, -apple-system, sans-serif" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="-1">DW</text>
+  
+  <!-- Terminal Prompt Accent -->
+  <rect x="47" y="32" width="5" height="10" rx="1" fill="#00e5ff">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>
