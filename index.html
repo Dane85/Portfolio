@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dane Watts — Personal page, BJJ Black Belt, Software Engineer, Space & AI Enthusiast, and Athabasca University B.Sc. CIS student based in Oshawa, Ontario." />
-  <meta name="keywords" content="Dane Watts, BJJ Black Belt, Justin Bruckmann, Brazilian Jiu Jitsu, AI, SpaceX, Space Exploration, Athabasca University, Software Engineer, Oshawa Ontario" />
+  <meta name="description" content="Dane Watts — 1st Degree BJJ Black Belt (Professor Stripes), Software Engineer, Space & AI Enthusiast, and Athabasca University B.Sc. CIS student based in Oshawa, Ontario." />
+  <meta name="keywords" content="Dane Watts, 1st Degree BJJ Black Belt, Professor Stripes, Justin Bruckmann, Brazilian Jiu Jitsu, Oshawa Express, Toronto Sun, AI, SpaceX, Space Exploration, Athabasca University, Software Engineer, Oshawa Ontario" />
   <meta name="author" content="Dane Watts" />
-  <title>Dane Watts | Personal Site — BJJ Black Belt, Technologist &amp; Student</title>
+  <title>Dane Watts | 1st Degree BJJ Black Belt, Technologist &amp; Student</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -92,16 +92,6 @@
     .glow-amber {
       text-shadow: 0 0 25px rgba(245, 158, 11, 0.45);
     }
-    .terminal-cursor::after {
-      content: "█";
-      animation: blink 1s step-end infinite;
-      color: #00e5ff;
-      margin-left: 2px;
-    }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
     .badge-bjj {
       background: rgba(245, 158, 11, 0.12);
       border: 1px solid rgba(245, 158, 11, 0.35);
@@ -121,6 +111,11 @@
       background: rgba(139, 92, 246, 0.1);
       border: 1px solid rgba(139, 92, 246, 0.3);
       color: #c084fc;
+    }
+    .badge-news {
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #38bdf8;
     }
     ::-webkit-scrollbar {
       width: 8px;
@@ -159,23 +154,24 @@
           <div>
             <div class="font-bold text-white tracking-tight group-hover:text-cyan-400 transition-colors flex items-center gap-2">
               <span>Dane Watts</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black border border-amber-500/40 text-amber-400 font-bold">🥋 BJJ Black Belt</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black border border-amber-500/40 text-amber-300 font-bold">🥋 1st Degree Black Belt</span>
             </div>
             <div class="text-[11px] font-mono text-slate-400 flex items-center gap-1.5">
-              <span>Software Engineer &bull; Student &bull; Technologist</span>
+              <span>Professor Stripes &bull; Technologist &bull; Student</span>
             </div>
           </div>
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center gap-6 font-mono text-xs text-slate-300">
+        <nav class="hidden lg:flex items-center gap-5 font-mono text-xs text-slate-300">
           <a href="#about" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">01.</span> About</a>
           <a href="#bjj" class="hover:text-amber-400 transition-colors"><span class="text-amber-400">02.</span> BJJ</a>
           <a href="#interests" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">03.</span> Passions</a>
-          <a href="#education" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">04.</span> Education</a>
-          <a href="#work" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">05.</span> Work</a>
-          <a href="#books" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">06.</span> Books</a>
-          <a href="#contact" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">07.</span> Connect</a>
+          <a href="#news" class="hover:text-sky-400 transition-colors"><span class="text-sky-400">04.</span> In The News</a>
+          <a href="#education" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">05.</span> Education</a>
+          <a href="#work" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">06.</span> Work</a>
+          <a href="#books" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">07.</span> Books</a>
+          <a href="#contact" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">08.</span> Connect</a>
         </nav>
 
         <!-- Action Buttons -->
@@ -200,12 +196,13 @@
     <!-- Mobile Navigation Drawer -->
     <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-800 bg-[#080c14]/98 px-6 py-6 space-y-4 font-mono text-sm">
       <a href="#about" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">01.</span> About Me</a>
-      <a href="#bjj" class="mobile-link block text-slate-300 hover:text-amber-400 py-1.5"><span class="text-amber-400 mr-2">02.</span> Brazilian Jiu-Jitsu (Black Belt)</a>
+      <a href="#bjj" class="mobile-link block text-slate-300 hover:text-amber-400 py-1.5"><span class="text-amber-400 mr-2">02.</span> Brazilian Jiu-Jitsu (1st Degree Black Belt)</a>
       <a href="#interests" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">03.</span> Passions (AI, SpaceX &amp; Tech)</a>
-      <a href="#education" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">04.</span> Education (Athabasca BSc CIS)</a>
-      <a href="#work" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">05.</span> Work History</a>
-      <a href="#books" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">06.</span> Reading Vault</a>
-      <a href="#contact" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">07.</span> Direct Contact</a>
+      <a href="#news" class="mobile-link block text-slate-300 hover:text-sky-400 py-1.5"><span class="text-sky-400 mr-2">04.</span> In The News &amp; Community Impact</a>
+      <a href="#education" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">05.</span> Education (Athabasca BSc CIS)</a>
+      <a href="#work" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">06.</span> Work History</a>
+      <a href="#books" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">07.</span> Reading Vault</a>
+      <a href="#contact" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">08.</span> Direct Contact</a>
       <div class="pt-4 border-t border-slate-800 flex flex-col gap-2.5">
         <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" rel="noopener noreferrer" class="w-full text-center px-4 py-2.5 rounded-lg bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 font-bold flex items-center justify-center gap-2">
           <i class="fas fa-calendar-check"></i> Schedule an Appointment
@@ -243,33 +240,35 @@
             </div>
 
             <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-              This space is all about who I am outside of corporate slides. I am a software engineer, defensive security specialist, and lifelong student pursuing my <strong class="text-white">B.Sc. in Computing &amp; Information Systems</strong> at Athabasca University. In 2019, I achieved my <strong class="text-amber-300">Brazilian Jiu-Jitsu Black Belt</strong> under Canadian MMA pioneer Justin Bruckmann.
+              This space is all about who I am outside of corporate slides. I am a software engineer, defensive security specialist, and lifelong student pursuing my <strong class="text-white">B.Sc. in Computing &amp; Information Systems</strong> at Athabasca University. I hold a <strong class="text-amber-300">1st Degree Brazilian Jiu-Jitsu Black Belt with Professor Stripes</strong> awarded under Canadian MMA pioneer Justin Bruckmann.
             </p>
 
             <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl">
-              I spend my time exploring <span class="text-cyan-400 font-semibold">frontier AI architectures</span>, tracking <span class="text-violet-400 font-semibold">SpaceX rocket development</span>, reading deep technical and philosophical books, training on the mats, and building clean computer systems.
+              I spend my time exploring <span class="text-cyan-400 font-semibold">frontier AI architectures</span>, tracking <span class="text-violet-400 font-semibold">SpaceX rocketry</span>, building robust computer systems, mentoring on the mats, and showing up for my local community.
             </p>
 
             <!-- Quick Stat Badges -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
               <div class="glass-panel p-3.5 rounded-xl border border-amber-500/30">
                 <div class="text-amber-400 font-mono font-bold text-lg sm:text-xl flex items-center gap-1.5">
-                  <span>🥋 2019</span>
+                  <span>🥋 1st Deg</span>
                 </div>
                 <div class="text-slate-300 font-semibold text-xs mt-0.5">BJJ Black Belt</div>
-                <div class="text-[10px] text-slate-500">Justin Bruckmann</div>
+                <div class="text-[10px] text-amber-300/80">Professor Stripes</div>
+              </div>
+
+              <div class="glass-panel p-3.5 rounded-xl border border-sky-500/30">
+                <div class="text-sky-400 font-mono font-bold text-lg sm:text-xl flex items-center gap-1.5">
+                  <i class="fas fa-newspaper text-sm"></i> Press
+                </div>
+                <div class="text-slate-300 font-semibold text-xs mt-0.5">In The News</div>
+                <div class="text-[10px] text-slate-500">Community Impact</div>
               </div>
 
               <div class="glass-panel p-3.5 rounded-xl border border-cyan-500/30">
                 <div class="text-cyan-400 font-mono font-bold text-lg sm:text-xl">3.4 GPA</div>
                 <div class="text-slate-300 font-semibold text-xs mt-0.5">Athabasca BSc</div>
                 <div class="text-[10px] text-slate-500">Computing &amp; IS</div>
-              </div>
-
-              <div class="glass-panel p-3.5 rounded-xl border border-violet-500/30">
-                <div class="text-violet-400 font-mono font-bold text-lg sm:text-xl">AI &amp; Space</div>
-                <div class="text-slate-300 font-semibold text-xs mt-0.5">Frontier Obsession</div>
-                <div class="text-[10px] text-slate-500">LLMs &bull; SpaceX</div>
               </div>
 
               <div class="glass-panel p-3.5 rounded-xl border border-emerald-500/30">
@@ -284,6 +283,10 @@
               <a href="#bjj" class="px-5 py-3 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 font-mono font-bold text-xs transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(245,158,11,0.2)]">
                 <span>🥋 The BJJ Journey</span>
                 <i class="fas fa-arrow-down text-xs"></i>
+              </a>
+              <a href="#news" class="px-4 py-3 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 border border-sky-500/30 font-mono font-bold text-xs transition-all flex items-center gap-2">
+                <i class="fas fa-newspaper text-xs"></i>
+                <span>News &amp; Community</span>
               </a>
               <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 font-mono font-bold text-xs transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
                 <i class="fas fa-calendar-check"></i>
@@ -321,7 +324,7 @@
               <!-- Terminal Body / Interactive Console -->
               <div id="terminalBody" class="p-5 text-xs text-slate-300 space-y-3 min-h-[340px] max-h-[420px] overflow-y-auto">
                 <div class="text-slate-400">Welcome to Dane's personal terminal. Type commands to explore:</div>
-                <div class="text-cyan-300">Available: <span class="font-bold">whoami</span>, <span class="font-bold">bjj</span>, <span class="font-bold">interests</span>, <span class="font-bold">education</span>, <span class="font-bold">work</span>, <span class="font-bold">books</span>, <span class="font-bold">booking</span>, <span class="font-bold">contact</span>, <span class="font-bold">clear</span></div>
+                <div class="text-cyan-300">Available: <span class="font-bold">whoami</span>, <span class="font-bold">bjj</span>, <span class="font-bold">news</span>, <span class="font-bold">interests</span>, <span class="font-bold">education</span>, <span class="font-bold">work</span>, <span class="font-bold">books</span>, <span class="font-bold">booking</span>, <span class="font-bold">contact</span>, <span class="font-bold">clear</span></div>
                 
                 <div id="terminalOutput" class="space-y-3">
                   <!-- Dynamic command outputs will inject here -->
@@ -330,7 +333,7 @@
                 <!-- Input Prompt Line -->
                 <div class="flex items-center gap-2 pt-2">
                   <span class="text-cyan-400 font-bold">dane@personal:~$</span>
-                  <input type="text" id="terminalInput" aria-label="Terminal command prompt" placeholder="type 'bjj' or 'interests'..." class="bg-transparent border-none outline-none text-white w-full font-mono text-xs focus:ring-0 placeholder-slate-600" autocomplete="off" spellcheck="false">
+                  <input type="text" id="terminalInput" aria-label="Terminal command prompt" placeholder="type 'bjj' or 'news'..." class="bg-transparent border-none outline-none text-white w-full font-mono text-xs focus:ring-0 placeholder-slate-600" autocomplete="off" spellcheck="false">
                 </div>
               </div>
 
@@ -338,6 +341,7 @@
               <div class="bg-slate-900/60 px-4 py-2.5 border-t border-slate-800/80 flex flex-wrap gap-1.5 text-[11px]">
                 <span class="text-slate-500 self-center mr-1">Quick:</span>
                 <button onclick="runCommand('bjj')" class="px-2 py-0.5 rounded bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 transition cursor-pointer">bjj</button>
+                <button onclick="runCommand('news')" class="px-2 py-0.5 rounded bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 border border-sky-500/30 transition cursor-pointer">news</button>
                 <button onclick="runCommand('interests')" class="px-2 py-0.5 rounded bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition cursor-pointer">interests</button>
                 <button onclick="runCommand('education')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer">education</button>
                 <button onclick="runCommand('books')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer">books</button>
@@ -361,10 +365,13 @@
             <span>🥋 02 / The Gentle Art</span>
           </div>
           <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Brazilian Jiu-Jitsu Black Belt.
+            1st Degree BJJ Black Belt.
           </h2>
+          <div class="text-amber-400 font-mono text-sm font-semibold mt-1">
+            Professor Stripes &bull; Awarded by Canadian MMA Pioneer Justin Bruckmann
+          </div>
           <p class="text-slate-400 text-base max-w-2xl mt-2">
-            Earned in 2019 under Canadian MMA pioneer Justin Bruckmann. 15+ years of daily problem-solving, pressure testing, and physical chess on the mats.
+            Promoted to Black Belt in December 2019, followed by 1st Degree designation with Professor Stripes. 15+ years of live problem-solving, pressure testing, and physical chess on the mats.
           </p>
         </div>
 
@@ -374,11 +381,13 @@
 
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div class="lg:col-span-8 space-y-4">
-              <div class="flex items-center gap-2">
+              <div class="flex flex-wrap items-center gap-2">
                 <span class="px-2.5 py-1 rounded-lg bg-black border border-amber-500/50 text-amber-400 font-mono text-xs font-bold uppercase tracking-wider">
-                  Lineage: Carlson Gracie &bull; Bruckmann Martial Arts
+                  Lineage: Carlson Gracie &bull; Bruckmann Martial Arts &bull; Kalsamrit
                 </span>
-                <span class="text-slate-500 text-xs font-mono">Promoted December 2019</span>
+                <span class="px-2.5 py-1 rounded-lg bg-red-950/60 border border-red-500/40 text-red-300 font-mono text-xs font-semibold">
+                  1st Degree (Professor Stripes)
+                </span>
               </div>
 
               <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
@@ -386,22 +395,42 @@
               </h3>
 
               <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Earning a black belt in Brazilian Jiu-Jitsu is a grueling, 10-to-15 year crucible. Under Justin Bruckmann &mdash; one of Canada&rsquo;s most respected pioneer martial artists and former UFC competitor &mdash; nothing was given; every stripe and belt was forged through thousands of rounds of live sparring against elite practitioners.
+                Earning a black belt in Brazilian Jiu-Jitsu is a grueling, 10-to-15 year crucible. Under Justin Bruckmann &mdash; one of Canada&rsquo;s most revered martial arts pioneers, former professional fighter, and legendary coach &mdash; nothing was given; every stripe, degree, and belt was forged through thousands of rounds of live sparring against elite practitioners.
               </p>
 
               <p class="text-slate-400 text-sm leading-relaxed">
-                Jiu-jitsu is kinetic problem-solving under maximum physical pressure. It teaches you that panic is useless, that precision beats brute force, and that no matter how complex the bind, there is always an angle, a leverage point, and a path forward.
+                Reaching 1st Degree with <strong class="text-white">Professor Stripes</strong> (the white borders framing the red rank bar) represents not only years of post-black belt mastery, but the responsibility of mentorship: coaching teammates, refining technical nuance, and carrying forward the standards of the Carlson Gracie lineage.
               </p>
+
+              <div class="pt-2 flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400">
+                <div class="flex items-center gap-1.5">
+                  <i class="fas fa-certificate text-amber-400"></i>
+                  <span>Verified BJJ Beltchecker Competitor &amp; Coach</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <i class="fas fa-trophy text-amber-400"></i>
+                  <span>Ontario Regional &amp; Invitational Grappling</span>
+                </div>
+              </div>
             </div>
 
-            <!-- BJJ Key Metrics / Belt Emblem -->
+            <!-- BJJ Key Metrics / Belt Graphic -->
             <div class="lg:col-span-4 flex flex-col gap-3">
-              <div class="p-4 rounded-2xl bg-black/80 border border-amber-500/40 text-center">
-                <div class="h-6 w-full bg-black rounded border border-amber-500/50 flex items-center justify-end px-2 mb-2 relative">
-                  <div class="w-12 h-full bg-red-600 rounded-sm"></div>
+              <div class="p-5 rounded-2xl bg-black/90 border border-amber-500/40 text-center shadow-xl">
+                <!-- Visual Belt Representation: Black belt body + Red sleeve + White Professor Borders + 1st Degree Stripe -->
+                <div class="h-9 w-full bg-slate-950 rounded border border-amber-500/50 flex items-center justify-end px-3 mb-3 relative overflow-hidden shadow-inner">
+                  <!-- Belt Texture -->
+                  <div class="absolute inset-0 bg-gradient-to-r from-neutral-900 via-neutral-950 to-neutral-900"></div>
+                  <!-- Red Rank Bar with White Professor Stripes (Borders) and 1st Degree White Stripe -->
+                  <div class="relative z-10 h-full flex items-center bg-red-600 px-2 border-x-4 border-white shadow-lg gap-1.5">
+                    <!-- 1st Degree Stripe -->
+                    <div class="w-1.5 h-full bg-white shadow-sm" title="1st Degree Rank Stripe"></div>
+                  </div>
                 </div>
-                <div class="text-sm font-bold text-white uppercase tracking-wider">BJJ Black Belt</div>
-                <div class="text-xs text-amber-400 font-mono mt-0.5">Awarded 2019 &bull; Active Competitor &amp; Practitioner</div>
+
+                <div class="text-sm font-extrabold text-white uppercase tracking-wider">1st Degree Black Belt</div>
+                <div class="text-xs text-amber-400 font-mono mt-0.5 font-semibold">Professor Stripes &bull; Justin Bruckmann</div>
+                <div class="text-[11px] text-slate-400 font-mono mt-1">Black Belt Promoted Dec 2019</div>
               </div>
 
               <div class="grid grid-cols-2 gap-2 text-center text-xs font-mono">
@@ -410,8 +439,8 @@
                   <div class="text-slate-400 text-[10px]">On The Mats</div>
                 </div>
                 <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
-                  <div class="text-cyan-400 font-bold text-base">Kalsamrit</div>
-                  <div class="text-slate-400 text-[10px]">Training Home</div>
+                  <div class="text-cyan-400 font-bold text-base">BMA / Kalsamrit</div>
+                  <div class="text-slate-400 text-[10px]">Training Academy</div>
                 </div>
               </div>
             </div>
@@ -426,7 +455,7 @@
             </div>
             <h4 class="text-lg font-bold text-white">Composure Under Pressure</h4>
             <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-              When a 220lb heavyweight is crushing your chest, panic guarantees defeat. You learn to breathe, analyze your micro-frames, and calmly work out of the tightest spots. That same composure applies when production systems go down.
+              When a heavy, dangerous opponent is crushing your frames, panic guarantees immediate submission. You learn to breathe, regulate your heart rate, and methodically engineer your escape. That same iron calm carries over when critical production infrastructure faces unexpected turbulence.
             </p>
           </div>
 
@@ -436,7 +465,7 @@
             </div>
             <h4 class="text-lg font-bold text-white">Leverage &amp; Precision</h4>
             <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-              Helio Gracie designed BJJ so that a smaller, technically sound practitioner can overcome raw strength. In software architecture and life, finding the fulcrum and applying smart leverage solves problems brute force never can.
+              Jiu-jitsu was created so that precision and mechanical advantage defeat brute muscular force. In engineering, architecture, and personal challenges, searching for the fulcrum and applying technical leverage solves problems that raw effort alone cannot.
             </p>
           </div>
 
@@ -446,7 +475,7 @@
             </div>
             <h4 class="text-lg font-bold text-white">Perpetual White Belt Mindset</h4>
             <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-              A black belt is just a white belt who never quit. Even with 15+ years on the mats, there is always someone who can catch you and always a new detail to master. Ego has no place on the mats or in engineering.
+              The Professor stripes don't signify knowing everything &mdash; they signify committing to being a student for life. Every session brings a fresh perspective, an evolving counter, or an unexpected lesson. Ego has no place on the mats or in software development.
             </p>
           </div>
         </div>
@@ -588,6 +617,119 @@
     </section>
 
     <!-- ====================================================================
+         SECTION: IN THE NEWS & COMMUNITY IMPACT (NEW)
+         ==================================================================== -->
+    <section id="news" class="py-24 relative border-t border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-news text-xs font-mono font-bold uppercase tracking-wider mb-3">
+            <span>📰 04 / Media &amp; Community Leadership</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            In The News &amp; Community Action.
+          </h2>
+          <p class="text-slate-400 text-base max-w-2xl mt-2">
+            Stepping forward when tragedy hits close to home. Regional news coverage, grassroots advocacy, and community leadership in the Durham Region.
+          </p>
+        </div>
+
+        <!-- Featured Media Coverage Card: The Nichole McWatters Trust -->
+        <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-sky-500/30 mb-8 relative overflow-hidden">
+          <div class="absolute -right-10 -top-10 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-8 space-y-4">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-1 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 font-mono text-xs font-bold uppercase tracking-wider">
+                  <i class="fas fa-bullhorn mr-1.5"></i> Regional News Headline
+                </span>
+                <span class="text-slate-400 text-xs font-mono">July 2019 &bull; Durham Region, Ontario</span>
+              </div>
+
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+                Rallying Durham: Community Relief Campaign
+              </h3>
+
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                In July 2019, tragedy struck our local community when 33-year-old Oshawa resident <strong class="text-white">Nichole McWatters</strong> made the ultimate maternal sacrifice &mdash; swimming into the waters of Lake Ontario at Frenchman&rsquo;s Bay in Pickering to rescue her six-year-old son from drifting out on an inflatable toy. While her son was brought safely to shore, Nichole tragically lost her life.
+              </p>
+
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Recognizing the immediate heartbreak and long-term hardship faced by her young son, Dane Watts stepped up as a close friend and community organizer. Dane launched and spearheaded a regional crowdfunding trust to ensure the child was cared for and that educational funds were secured.
+              </p>
+
+              <p class="text-slate-400 text-sm leading-relaxed">
+                The campaign gained widespread regional attention, covered by major Ontario outlets including <strong class="text-white">The Oshawa Express</strong>, <strong class="text-white">The Toronto Sun</strong>, and <strong class="text-white">DurhamRegion.com</strong>, surging past its initial goal to raise over <strong>$18,000+</strong> in community solidarity.
+              </p>
+
+              <blockquote class="p-4 rounded-xl bg-slate-900/80 border-l-4 border-sky-400 text-slate-300 italic text-sm">
+                &ldquo;When sudden tragedy strikes our community, standing on the sidelines isn't an option. Stepping up to protect and secure a future for a child who lost his mother is a fundamental human duty.&rdquo;
+              </blockquote>
+            </div>
+
+            <!-- Media Outlets & Recognition Box -->
+            <div class="lg:col-span-4 flex flex-col gap-3">
+              <div class="p-5 rounded-2xl bg-black/80 border border-sky-500/40 space-y-3.5">
+                <div class="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider flex items-center gap-2">
+                  <i class="fas fa-newspaper"></i> Featured Outlets
+                </div>
+
+                <div class="space-y-2.5 text-xs">
+                  <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5">
+                    <div class="font-bold text-white flex items-center justify-between">
+                      <span>The Oshawa Express</span>
+                      <span class="text-[10px] text-sky-400 font-mono">Print &amp; Web</span>
+                    </div>
+                    <div class="text-slate-400 text-[11px] mt-0.5">
+                      Front-page coverage of community rallying around McWatters' son led by Dane Watts.
+                    </div>
+                  </div>
+
+                  <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5">
+                    <div class="font-bold text-white flex items-center justify-between">
+                      <span>The Toronto Sun</span>
+                      <span class="text-[10px] text-amber-400 font-mono">Metro Daily</span>
+                    </div>
+                    <div class="text-slate-400 text-[11px] mt-0.5">
+                      Hero mom drowning in Lake Ontario &amp; Dane Watts organizing support.
+                    </div>
+                  </div>
+
+                  <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5">
+                    <div class="font-bold text-white flex items-center justify-between">
+                      <span>DurhamRegion.com</span>
+                      <span class="text-[10px] text-emerald-400 font-mono">Regional News</span>
+                    </div>
+                    <div class="text-slate-400 text-[11px] mt-0.5">
+                      Grassroots fundraising and widespread Durham community response.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-2 border-t border-white/5 flex items-center justify-between text-xs font-mono">
+                  <span class="text-slate-400">Total Community Support:</span>
+                  <span class="text-emerald-400 font-bold">$18,000+ Raised</span>
+                </div>
+              </div>
+
+              <!-- Community Philosophy Card -->
+              <div class="p-4 rounded-xl bg-sky-950/20 border border-sky-500/20 text-xs text-slate-300 space-y-1 font-mono">
+                <div class="text-sky-300 font-bold flex items-center gap-1.5">
+                  <i class="fas fa-hands-holding-child"></i> Community Values
+                </div>
+                <div class="text-[11px] text-slate-400">
+                  Leadership isn't what you say on a resume; it's how you answer the call when real people need your help.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
          SECTION 3: EDUCATION & STUDIES
          ==================================================================== -->
     <section id="education" class="py-24 relative border-t border-slate-800/80">
@@ -595,7 +737,7 @@
         
         <div class="mb-14">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-emerald text-xs font-mono font-bold uppercase tracking-wider mb-3">
-            <span>🎓 04 / Academic Foundation</span>
+            <span>🎓 05 / Academic Foundation</span>
           </div>
           <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
             Education &amp; Lifelong Learning.
@@ -696,7 +838,7 @@
         
         <div class="mb-14">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-cyan text-xs font-mono font-bold uppercase tracking-wider mb-3">
-            <span>💼 05 / Professional Career</span>
+            <span>💼 06 / Professional Career</span>
           </div>
           <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
             Work History &amp; Experience.
@@ -789,7 +931,7 @@
         
         <div class="mb-14">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-violet text-xs font-mono font-bold uppercase tracking-wider mb-3">
-            <span>📚 06 / Reading Vault</span>
+            <span>📚 07 / Reading Vault</span>
           </div>
           <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
             Books I&rsquo;ve Read &amp; Recommend.
@@ -904,7 +1046,7 @@
         
         <div class="mb-12">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-cyan text-xs font-mono font-bold uppercase tracking-wider mb-3">
-            <span>💬 07 / Direct Connection</span>
+            <span>💬 08 / Direct Connection</span>
           </div>
           <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
             Let&rsquo;s Connect.
@@ -1007,7 +1149,7 @@
         Designed &amp; Hand-Coded by <span class="text-white font-bold">Dane Watts</span> &bull; Oshawa, Ontario, Canada
       </div>
       <div class="text-[11px] text-slate-500">
-        🥋 BJJ Black Belt (Justin Bruckmann, 2019) &bull; Athabasca University (B.Sc. CIS, GPA 3.4)
+        🥋 1st Degree BJJ Black Belt (Professor Stripes &bull; Justin Bruckmann) &bull; Athabasca University (B.Sc. CIS, GPA 3.4)
       </div>
     </div>
   </footer>
@@ -1082,7 +1224,8 @@
       'help': () => `
         <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
           <div><strong class="text-cyan-300">whoami</strong> &mdash; Bio and personal overview</div>
-          <div><strong class="text-amber-300">bjj</strong> &mdash; Brazilian Jiu-Jitsu Black Belt journey</div>
+          <div><strong class="text-amber-300">bjj</strong> &mdash; 1st Degree BJJ Black Belt &amp; Professor Stripes details</div>
+          <div><strong class="text-sky-300">news</strong> &mdash; Regional media coverage &amp; community relief leadership</div>
           <div><strong class="text-cyan-300">interests</strong> &mdash; AI, SpaceX, computers, hobbies</div>
           <div><strong class="text-emerald-300">education</strong> &mdash; Athabasca B.Sc. CIS credentials</div>
           <div><strong class="text-cyan-300">work</strong> &mdash; Career path (NSSL, Jonas, CN Rail)</div>
@@ -1095,17 +1238,27 @@
       'whoami': () => `
         <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
           <div><strong>Dane Watts</strong> &bull; Oshawa, Ontario, Canada</div>
-          <div class="text-slate-400 mt-1">Software Engineer, Defensive Security Specialist, BJJ Black Belt (2019), and B.Sc. CIS student at Athabasca University. Obsessed with Artificial Intelligence, SpaceX, space exploration, and building clean, fast systems.</div>
+          <div class="text-slate-400 mt-1">Software Engineer, Defensive Security Specialist, 1st Degree BJJ Black Belt with Professor Stripes (under Justin Bruckmann), and B.Sc. CIS student at Athabasca University. Featured in regional news (Oshawa Express, Toronto Sun) for grassroots community leadership.</div>
         </div>
       `,
       'bjj': () => `
         <div class="text-slate-300 pl-2 border-l-2 border-amber-400">
-          <div class="text-amber-300 font-bold">&bull; Brazilian Jiu-Jitsu Black Belt (Promoted Dec 2019)</div>
-          <div>&bull; Coach: <strong>Justin Bruckmann</strong> (UFC Vet &amp; Canadian MMA pioneer)</div>
+          <div class="text-amber-300 font-bold">&bull; 1st Degree Brazilian Jiu-Jitsu Black Belt (Professor Stripes)</div>
+          <div>&bull; Coach: <strong>Justin Bruckmann</strong> (Canadian MMA Pioneer &amp; UFC Veteran)</div>
           <div>&bull; Lineage: Carlson Gracie &bull; Bruckmann Martial Arts / Kalsamrit</div>
-          <div>&bull; 15+ years on the mats. High-pressure kinetic problem solving, flow state, and composure under fire.</div>
+          <div>&bull; Black Belt promoted December 2019; awarded 1st degree with Professor stripes for active mastery &amp; coaching.</div>
+          <div>&bull; 15+ years on the mats. Kinetic problem-solving, pressure management, and stoic discipline.</div>
         </div>
       `,
+      'news': () => `
+        <div class="text-slate-300 pl-2 border-l-2 border-sky-400">
+          <div class="text-sky-300 font-bold">&bull; In The News: Community Leadership &amp; Relief Campaign (July 2019)</div>
+          <div>&bull; Coverage: <em>The Oshawa Express</em>, <em>The Toronto Sun</em>, <em>DurhamRegion.com</em></div>
+          <div>&bull; Story: Following the tragic passing of Oshawa mother Nichole McWatters after rescuing her 6-year-old son in Lake Ontario, Dane stepped up as a close family friend to organize a community relief campaign.</div>
+          <div>&bull; Impact: Surpassed all initial goals, raising over <strong>$18,000+</strong> in community trust funds for the child's care and education.</div>
+        </div>
+      `,
+      'community': () => commands['news'](),
       'interests': () => `
         <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
           <div>&bull; <strong class="text-cyan-300">Artificial Intelligence:</strong> Autonomous agents, LLMs, neural tool use, cognitive augmentation.</div>
