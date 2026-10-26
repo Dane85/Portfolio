@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dane Watts — Software Developer & Cybersecurity Specialist based in Oshawa, Ontario. Expertise in Azure Cloud, Python automation, defensive systems, and full-stack software engineering." />
-  <meta name="keywords" content="Dane Watts, Software Developer, Cybersecurity Specialist, Athabasca University, Azure, Python, NSSL, Jonas Club Software, Oshawa, Cloud Infrastructure" />
+  <meta name="description" content="Dane Watts — Personal page, BJJ Black Belt, Software Engineer, Space & AI Enthusiast, and Athabasca University B.Sc. CIS student based in Oshawa, Ontario." />
+  <meta name="keywords" content="Dane Watts, BJJ Black Belt, Justin Bruckmann, Brazilian Jiu Jitsu, AI, SpaceX, Space Exploration, Athabasca University, Software Engineer, Oshawa Ontario" />
   <meta name="author" content="Dane Watts" />
-  <title>Dane Watts | Software Developer &amp; Cybersecurity Specialist</title>
+  <title>Dane Watts | Personal Site — BJJ Black Belt, Technologist &amp; Student</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -27,6 +27,7 @@
               emerald: '#10b981',
               amber: '#f59e0b',
               violet: '#8b5cf6',
+              rose: '#f43f5e',
               border: 'rgba(255, 255, 255, 0.08)',
               borderActive: 'rgba(0, 229, 255, 0.4)'
             }
@@ -43,7 +44,7 @@
   <!-- Google Fonts & FontAwesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
 
   <style>
@@ -51,6 +52,7 @@
       --bg-dark: #080c14;
       --accent-cyan: #00e5ff;
       --accent-emerald: #10b981;
+      --accent-amber: #f59e0b;
     }
     body {
       background-color: var(--bg-dark);
@@ -68,24 +70,27 @@
       border: 1px solid rgba(255, 255, 255, 0.07);
     }
     .glass-panel:hover {
-      border-color: rgba(0, 229, 255, 0.25);
+      border-color: rgba(0, 229, 255, 0.3);
     }
     .glass-nav {
-      background: rgba(8, 12, 20, 0.85);
+      background: rgba(8, 12, 20, 0.90);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
     .terminal-window {
       background: #090e18;
-      border: 1px solid rgba(0, 229, 255, 0.2);
-      box-shadow: 0 20px 50px -10px rgba(0, 229, 255, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      box-shadow: 0 20px 50px -10px rgba(0, 229, 255, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.05);
     }
     .glow-cyan {
-      text-shadow: 0 0 20px rgba(0, 229, 255, 0.45);
+      text-shadow: 0 0 25px rgba(0, 229, 255, 0.45);
     }
     .glow-emerald {
-      text-shadow: 0 0 20px rgba(16, 185, 129, 0.45);
+      text-shadow: 0 0 25px rgba(16, 185, 129, 0.45);
+    }
+    .glow-amber {
+      text-shadow: 0 0 25px rgba(245, 158, 11, 0.45);
     }
     .terminal-cursor::after {
       content: "█";
@@ -97,20 +102,25 @@
       0%, 100% { opacity: 1; }
       50% { opacity: 0; }
     }
-    .cyber-badge {
+    .badge-bjj {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #fbbf24;
+    }
+    .badge-cyan {
       background: rgba(0, 229, 255, 0.08);
       border: 1px solid rgba(0, 229, 255, 0.25);
       color: #00e5ff;
     }
-    .cyber-badge-emerald {
+    .badge-emerald {
       background: rgba(16, 185, 129, 0.08);
       border: 1px solid rgba(16, 185, 129, 0.25);
       color: #10b981;
     }
-    .cyber-badge-amber {
-      background: rgba(245, 158, 11, 0.08);
-      border: 1px solid rgba(245, 158, 11, 0.25);
-      color: #f59e0b;
+    .badge-violet {
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      color: #c084fc;
     }
     ::-webkit-scrollbar {
       width: 8px;
@@ -130,49 +140,53 @@
 <body class="selection:bg-cyan-500 selection:text-slate-900">
 
   <!-- Glow Background Accents -->
-  <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
-  <div class="fixed bottom-1/4 right-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
-  <div class="fixed top-1/2 right-10 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+  <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[130px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-1/4 right-1/4 w-[600px] h-[600px] bg-amber-500/8 rounded-full blur-[150px] pointer-events-none -z-10"></div>
+  <div class="fixed top-1/2 right-10 w-[450px] h-[450px] bg-violet-600/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
 
   <!-- ====================================================================
        STICKY TOP NAVIGATION
        ==================================================================== -->
   <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
-
+        
         <!-- Logo & Brand -->
         <a href="#about" class="flex items-center gap-3 group">
-          <div class="w-10 h-10 rounded-lg bg-slate-900 border border-cyan-500/40 flex items-center justify-center font-mono font-bold text-cyan-400 group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all">
-            DW<span class="text-xs text-emerald-400">_</span>
+          <div class="w-10 h-10 rounded-xl bg-slate-900 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-mono font-black text-lg group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all">
+            DW
           </div>
           <div>
-            <div class="font-bold text-white tracking-tight group-hover:text-cyan-400 transition-colors">Dane Watts</div>
+            <div class="font-bold text-white tracking-tight group-hover:text-cyan-400 transition-colors flex items-center gap-2">
+              <span>Dane Watts</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black border border-amber-500/40 text-amber-400 font-bold">🥋 BJJ Black Belt</span>
+            </div>
             <div class="text-[11px] font-mono text-slate-400 flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              NSSL &bull; Software Deployment Engineer
+              <span>Software Engineer &bull; Student &bull; Technologist</span>
             </div>
           </div>
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center gap-7 font-mono text-xs text-slate-300">
+        <nav class="hidden lg:flex items-center gap-6 font-mono text-xs text-slate-300">
           <a href="#about" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">01.</span> About</a>
-          <a href="#experience" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">02.</span> Experience</a>
-          <a href="#education" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">03.</span> Education</a>
-          <a href="#projects" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">04.</span> Systems</a>
-          <a href="#skills" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">05.</span> Arsenal</a>
-          <a href="#contact" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">06.</span> Contact</a>
+          <a href="#bjj" class="hover:text-amber-400 transition-colors"><span class="text-amber-400">02.</span> BJJ</a>
+          <a href="#interests" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">03.</span> Passions</a>
+          <a href="#education" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">04.</span> Education</a>
+          <a href="#work" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">05.</span> Work</a>
+          <a href="#books" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">06.</span> Books</a>
+          <a href="#contact" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">07.</span> Connect</a>
         </nav>
 
         <!-- Action Buttons -->
-        <div class="hidden sm:flex items-center gap-3">
-          <a href="/Dane Watts Resume 2025.pdf" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 hover:border-cyan-400 text-xs font-mono font-semibold transition-all flex items-center gap-2 hover:shadow-[0_0_15px_rgba(0,229,255,0.25)]">
-            <i class="fas fa-file-pdf"></i>
-            <span>Resume.pdf</span>
+        <div class="hidden sm:flex items-center gap-2.5">
+          <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-mono font-semibold transition-all flex items-center gap-1.5 hover:shadow-[0_0_15px_rgba(16,185,129,0.25)]">
+            <i class="fas fa-calendar-check text-xs"></i>
+            <span>Book Chat</span>
           </a>
-          <a href="#contact" class="px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-bold transition-all shadow-[0_0_20px_rgba(0,229,255,0.3)]">
-            Get In Touch
+          <a href="/Dane Watts Resume 2025.pdf" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 hover:border-cyan-400 text-xs font-mono font-semibold transition-all flex items-center gap-1.5 hover:shadow-[0_0_15px_rgba(0,229,255,0.25)]">
+            <i class="fas fa-file-pdf text-xs"></i>
+            <span>Resume</span>
           </a>
         </div>
 
@@ -185,15 +199,19 @@
 
     <!-- Mobile Navigation Drawer -->
     <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-800 bg-[#080c14]/98 px-6 py-6 space-y-4 font-mono text-sm">
-      <a href="#about" class="mobile-link block text-slate-300 hover:text-cyan-400 py-2"><span class="text-cyan-400 mr-2">01.</span> About</a>
-      <a href="#experience" class="mobile-link block text-slate-300 hover:text-cyan-400 py-2"><span class="text-cyan-400 mr-2">02.</span> Experience</a>
-      <a href="#education" class="mobile-link block text-slate-300 hover:text-cyan-400 py-2"><span class="text-cyan-400 mr-2">03.</span> Education &amp; Studies</a>
-      <a href="#projects" class="mobile-link block text-slate-300 hover:text-cyan-400 py-2"><span class="text-cyan-400 mr-2">04.</span> Featured Systems</a>
-      <a href="#skills" class="mobile-link block text-slate-300 hover:text-cyan-400 py-2"><span class="text-cyan-400 mr-2">05.</span> Technical Arsenal</a>
-      <a href="#contact" class="mobile-link block text-slate-300 hover:text-cyan-400 py-2"><span class="text-cyan-400 mr-2">06.</span> Direct Contact</a>
+      <a href="#about" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">01.</span> About Me</a>
+      <a href="#bjj" class="mobile-link block text-slate-300 hover:text-amber-400 py-1.5"><span class="text-amber-400 mr-2">02.</span> Brazilian Jiu-Jitsu (Black Belt)</a>
+      <a href="#interests" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">03.</span> Passions (AI, SpaceX &amp; Tech)</a>
+      <a href="#education" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">04.</span> Education (Athabasca BSc CIS)</a>
+      <a href="#work" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">05.</span> Work History</a>
+      <a href="#books" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">06.</span> Reading Vault</a>
+      <a href="#contact" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">07.</span> Direct Contact</a>
       <div class="pt-4 border-t border-slate-800 flex flex-col gap-2.5">
-        <a href="/Dane Watts Resume 2025.pdf" target="_blank" class="w-full text-center px-4 py-2.5 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-bold">
-          <i class="fas fa-file-pdf mr-2"></i>Download Resume (PDF)
+        <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" rel="noopener noreferrer" class="w-full text-center px-4 py-2.5 rounded-lg bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 font-bold flex items-center justify-center gap-2">
+          <i class="fas fa-calendar-check"></i> Schedule an Appointment
+        </a>
+        <a href="/Dane Watts Resume 2025.pdf" target="_blank" class="w-full text-center px-4 py-2.5 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-bold flex items-center justify-center gap-2">
+          <i class="fas fa-file-pdf"></i> Download Resume (PDF)
         </a>
       </div>
     </div>
@@ -209,116 +227,121 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <!-- Left Column: Bio & Title -->
           <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full cyber-badge text-xs font-mono tracking-wide">
-              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
-              <span>DEFENSIVE SECURITY &bull; DEPLOYMENT &bull; FULL-STACK</span>
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full badge-cyan text-xs font-mono tracking-wide">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+              <span>PERSONAL PROFILE &bull; OSHAWA, ONTARIO</span>
             </div>
 
             <div class="space-y-2">
-              <div class="font-mono text-cyan-400 text-sm tracking-wider">Hello, my name is</div>
+              <div class="font-mono text-cyan-400 text-sm tracking-wider">Hi, I'm</div>
               <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight glow-cyan">
                 Dane Watts.
               </h1>
-              <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-slate-400">
-                I build, deploy &amp; defend digital infrastructure.
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-400">
+                Builder, martial artist, and perpetual student.
               </h2>
             </div>
 
             <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-              Software Developer transitioning into <span class="text-cyan-400 font-semibold">Cybersecurity</span> with over 2 years of experience developing secure SaaS applications on Microsoft Azure, automated vulnerability testing, and 8 years of technical leadership in high-availability, mission-critical operations.
+              This space is all about who I am outside of corporate slides. I am a software engineer, defensive security specialist, and lifelong student pursuing my <strong class="text-white">B.Sc. in Computing &amp; Information Systems</strong> at Athabasca University. In 2019, I achieved my <strong class="text-amber-300">Brazilian Jiu-Jitsu Black Belt</strong> under Canadian MMA pioneer Justin Bruckmann.
+            </p>
+
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl">
+              I spend my time exploring <span class="text-cyan-400 font-semibold">frontier AI architectures</span>, tracking <span class="text-violet-400 font-semibold">SpaceX rocket development</span>, reading deep technical and philosophical books, training on the mats, and building clean computer systems.
             </p>
 
             <!-- Quick Stat Badges -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-              <div class="glass-panel p-3 rounded-lg border border-slate-800">
-                <div class="text-cyan-400 font-mono font-bold text-xl sm:text-2xl">NSSL</div>
-                <div class="text-slate-400 text-xs mt-0.5">Deployment Engineer</div>
+              <div class="glass-panel p-3.5 rounded-xl border border-amber-500/30">
+                <div class="text-amber-400 font-mono font-bold text-lg sm:text-xl flex items-center gap-1.5">
+                  <span>🥋 2019</span>
+                </div>
+                <div class="text-slate-300 font-semibold text-xs mt-0.5">BJJ Black Belt</div>
+                <div class="text-[10px] text-slate-500">Justin Bruckmann</div>
               </div>
-              <div class="glass-panel p-3 rounded-lg border border-slate-800">
-                <div class="text-emerald-400 font-mono font-bold text-xl sm:text-2xl">3.4 GPA</div>
-                <div class="text-slate-400 text-xs mt-0.5">Athabasca BSc CIS</div>
+
+              <div class="glass-panel p-3.5 rounded-xl border border-cyan-500/30">
+                <div class="text-cyan-400 font-mono font-bold text-lg sm:text-xl">3.4 GPA</div>
+                <div class="text-slate-300 font-semibold text-xs mt-0.5">Athabasca BSc</div>
+                <div class="text-[10px] text-slate-500">Computing &amp; IS</div>
               </div>
-              <div class="glass-panel p-3 rounded-lg border border-slate-800">
-                <div class="text-amber-400 font-mono font-bold text-xl sm:text-2xl">120 Cr</div>
-                <div class="text-slate-400 text-xs mt-0.5">BSc CIS Program</div>
+
+              <div class="glass-panel p-3.5 rounded-xl border border-violet-500/30">
+                <div class="text-violet-400 font-mono font-bold text-lg sm:text-xl">AI &amp; Space</div>
+                <div class="text-slate-300 font-semibold text-xs mt-0.5">Frontier Obsession</div>
+                <div class="text-[10px] text-slate-500">LLMs &bull; SpaceX</div>
               </div>
-              <div class="glass-panel p-3 rounded-lg border border-slate-800">
-                <div class="text-cyan-400 font-mono font-bold text-xl sm:text-2xl">8+ Yrs</div>
-                <div class="text-slate-400 text-xs mt-0.5">Leadership &amp; Systems</div>
+
+              <div class="glass-panel p-3.5 rounded-xl border border-emerald-500/30">
+                <div class="text-emerald-400 font-mono font-bold text-lg sm:text-xl">NSSL</div>
+                <div class="text-slate-300 font-semibold text-xs mt-0.5">Deployment Eng</div>
+                <div class="text-[10px] text-slate-500">Systems Reliability</div>
               </div>
             </div>
 
             <!-- CTA Button Group -->
-            <div class="flex flex-wrap items-center gap-4 pt-3">
-              <a href="#projects" class="px-6 py-3.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono font-bold text-sm transition-all shadow-[0_0_25px_rgba(0,229,255,0.35)] flex items-center gap-2">
-                <span>Inspect Systems</span>
+            <div class="flex flex-wrap items-center gap-3.5 pt-3">
+              <a href="#bjj" class="px-5 py-3 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 font-mono font-bold text-xs transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(245,158,11,0.2)]">
+                <span>🥋 The BJJ Journey</span>
                 <i class="fas fa-arrow-down text-xs"></i>
               </a>
-              <a href="/Dane Watts Resume 2025.pdf" target="_blank" class="px-6 py-3.5 rounded-lg glass-panel hover:border-cyan-400 text-slate-200 hover:text-cyan-400 font-mono text-sm transition-all flex items-center gap-2">
-                <i class="fas fa-file-download text-cyan-400"></i>
-                <span>Download Resume (PDF)</span>
+              <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 font-mono font-bold text-xs transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+                <i class="fas fa-calendar-check"></i>
+                <span>Book a Chat</span>
               </a>
-              <a href="https://github.com/Dane85" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-lg glass-panel text-slate-300 hover:text-cyan-400 hover:border-cyan-400 transition-all text-sm" title="GitHub Profile">
-                <i class="fab fa-github text-lg"></i>
+              <a href="/Dane Watts Resume 2025.pdf" target="_blank" class="px-4 py-3 rounded-xl glass-panel hover:border-cyan-400 text-slate-300 hover:text-cyan-400 font-mono text-xs transition-all flex items-center gap-1.5">
+                <i class="fas fa-file-pdf text-cyan-400"></i>
+                <span>Resume (PDF)</span>
               </a>
-              <a href="https://www.linkedin.com/in/dane-w-69a42313a/" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-lg glass-panel text-slate-300 hover:text-cyan-400 hover:border-cyan-400 transition-all text-sm" title="LinkedIn Profile">
-                <i class="fab fa-linkedin-in text-lg"></i>
-              </a>
+              <div class="flex items-center gap-2">
+                <a href="https://github.com/Dane85" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl glass-panel text-slate-300 hover:text-cyan-400 hover:border-cyan-400 transition-all text-sm" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/dane-w-69a42313a/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl glass-panel text-slate-300 hover:text-cyan-400 hover:border-cyan-400 transition-all text-sm" title="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
             </div>
           </div>
 
           <!-- Right Column: Interactive Terminal Widget -->
           <div class="lg:col-span-5">
-            <div class="terminal-window rounded-xl overflow-hidden font-mono shadow-2xl">
+            <div class="terminal-window rounded-2xl overflow-hidden font-mono shadow-2xl">
               <!-- Window Header -->
               <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
                 <div class="flex items-center gap-2">
-                  <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
-                  <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
-                  <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-                  <span class="ml-2 text-xs text-slate-400">dane@sec-ops:~ (bash)</span>
+                  <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                  <span class="text-xs text-slate-400 ml-2">dane@personal-hub:~</span>
                 </div>
-                <div class="text-[10px] text-cyan-400 uppercase tracking-widest px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-800/40">
-                  Interactive
-                </div>
+                <div class="text-[10px] text-cyan-400 font-bold">bash 5.2</div>
               </div>
 
               <!-- Terminal Body / Interactive Console -->
-              <div id="terminalBody" class="p-5 text-xs text-slate-300 space-y-3 min-h-[320px] max-h-[420px] overflow-y-auto">
-                <div>
-                  <span class="text-cyan-400 font-bold">dane@sec-ops:~$</span> <span class="text-white">whoami</span>
-                  <div class="text-slate-300 mt-1 pl-2 border-l-2 border-cyan-500/40">
-                    <div>&bull; Name: Dane Watts</div>
-                    <div>&bull; Current: Software Deployment Engineer @ NSSL</div>
-                    <div>&bull; Education: BSc CIS @ Athabasca University (GPA: 3.4)</div>
-                    <div>&bull; Focus: Defensive Cybersecurity &bull; Cloud Infrastructure &bull; Azure &bull; Linux</div>
-                  </div>
+              <div id="terminalBody" class="p-5 text-xs text-slate-300 space-y-3 min-h-[340px] max-h-[420px] overflow-y-auto">
+                <div class="text-slate-400">Welcome to Dane's personal terminal. Type commands to explore:</div>
+                <div class="text-cyan-300">Available: <span class="font-bold">whoami</span>, <span class="font-bold">bjj</span>, <span class="font-bold">interests</span>, <span class="font-bold">education</span>, <span class="font-bold">work</span>, <span class="font-bold">books</span>, <span class="font-bold">booking</span>, <span class="font-bold">contact</span>, <span class="font-bold">clear</span></div>
+                
+                <div id="terminalOutput" class="space-y-3">
+                  <!-- Dynamic command outputs will inject here -->
                 </div>
-
-                <div>
-                  <span class="text-cyan-400 font-bold">dane@sec-ops:~$</span> <span class="text-white">cat credentials.json</span>
-                  <div class="text-emerald-400 mt-1 pl-2 border-l-2 border-emerald-500/40">
-                    { "degree": "BSc Computing &amp; Info Systems", "faculty": "Science &amp; Technology", "credits": 120, "gpa": 3.4, "status": "Active" }
-                  </div>
-                </div>
-
-                <div id="terminalOutput"></div>
 
                 <!-- Input Prompt Line -->
                 <div class="flex items-center gap-2 pt-2">
-                  <span class="text-cyan-400 font-bold">dane@sec-ops:~$</span>
-                  <input type="text" id="terminalInput" autocomplete="off" spellcheck="false" placeholder="Type: help, edu, exp, proj, skills, clear" class="bg-transparent border-none outline-none text-white w-full text-xs font-mono focus:ring-0 p-0 placeholder-slate-600" />
+                  <span class="text-cyan-400 font-bold">dane@personal:~$</span>
+                  <input type="text" id="terminalInput" aria-label="Terminal command prompt" placeholder="type 'bjj' or 'interests'..." class="bg-transparent border-none outline-none text-white w-full font-mono text-xs focus:ring-0 placeholder-slate-600" autocomplete="off" spellcheck="false">
                 </div>
               </div>
 
               <!-- Terminal Quick Command Chips -->
               <div class="bg-slate-900/60 px-4 py-2.5 border-t border-slate-800/80 flex flex-wrap gap-1.5 text-[11px]">
                 <span class="text-slate-500 self-center mr-1">Quick:</span>
-                <button onclick="runCommand('education')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-cyan-950 hover:text-cyan-400 text-slate-300 transition-colors">education</button>
-                <button onclick="runCommand('experience')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-cyan-950 hover:text-cyan-400 text-slate-300 transition-colors">experience</button>
-                <button onclick="runCommand('projects')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-cyan-950 hover:text-cyan-400 text-slate-300 transition-colors">projects</button>
-                <button onclick="runCommand('skills')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-cyan-950 hover:text-cyan-400 text-slate-300 transition-colors">skills</button>
-                <button onclick="runCommand('clear')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-rose-950 hover:text-rose-400 text-slate-400 transition-colors">clear</button>
+                <button onclick="runCommand('bjj')" class="px-2 py-0.5 rounded bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 transition cursor-pointer">bjj</button>
+                <button onclick="runCommand('interests')" class="px-2 py-0.5 rounded bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition cursor-pointer">interests</button>
+                <button onclick="runCommand('education')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer">education</button>
+                <button onclick="runCommand('books')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer">books</button>
+                <button onclick="runCommand('booking')" class="px-2 py-0.5 rounded bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition cursor-pointer">booking</button>
               </div>
             </div>
           </div>
@@ -328,677 +351,235 @@
     </section>
 
     <!-- ====================================================================
-         SECTION 1: PROFESSIONAL EXPERIENCE
+         SECTION 1: BRAZILIAN JIU-JITSU (DEEP DIVE)
          ==================================================================== -->
-    <section id="experience" class="py-24 relative">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="bjj" class="py-24 relative border-t border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="flex items-center gap-4 mb-16">
-          <span class="font-mono text-cyan-400 text-xl font-bold">02.</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Work Experience</h2>
-          <span class="h-px bg-slate-800 flex-grow max-w-sm"></span>
+        <div class="mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-bjj text-xs font-mono font-bold uppercase tracking-wider mb-3">
+            <span>🥋 02 / The Gentle Art</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Brazilian Jiu-Jitsu Black Belt.
+          </h2>
+          <p class="text-slate-400 text-base max-w-2xl mt-2">
+            Earned in 2019 under Canadian MMA pioneer Justin Bruckmann. 15+ years of daily problem-solving, pressure testing, and physical chess on the mats.
+          </p>
         </div>
 
-        <div class="space-y-12 relative before:absolute before:inset-0 before:left-4 sm:before:left-6 before:w-0.5 before:bg-gradient-to-b before:from-cyan-500 before:via-slate-700 before:to-transparent">
+        <!-- BJJ Hero Feature Card -->
+        <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-amber-500/30 mb-8 relative overflow-hidden">
+          <div class="absolute -right-10 -bottom-10 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
-          <!-- Role 1: NSSL (Primary Current Role) -->
-          <div class="relative pl-12 sm:pl-16 group">
-            <div class="absolute left-2.5 sm:left-4.5 -top-1 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_12px_#00e5ff] ring-4 ring-slate-900 transition-all"></div>
-            
-            <div class="glass-panel p-6 sm:p-8 rounded-xl border border-cyan-500/30 hover:border-cyan-400 transition-all shadow-lg">
-              <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
-                <div>
-                  <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full cyber-badge text-xs font-mono font-semibold mb-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span> CURRENT PRIMARY ROLE
-                  </span>
-                  <h3 class="text-xl sm:text-2xl font-bold text-white">Software Deployment Engineer</h3>
-                  <div class="text-cyan-400 font-mono text-sm font-semibold">NSSL &bull; High-Availability Cloud &amp; Releases</div>
-                </div>
-                <div class="text-xs font-mono text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
-                  2026 &ndash; Present
-                </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-8 space-y-4">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-1 rounded-lg bg-black border border-amber-500/50 text-amber-400 font-mono text-xs font-bold uppercase tracking-wider">
+                  Lineage: Carlson Gracie &bull; Bruckmann Martial Arts
+                </span>
+                <span class="text-slate-500 text-xs font-mono">Promoted December 2019</span>
               </div>
 
-              <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                Spearheading software deployment strategies, continuous integration, production rollouts, and infrastructure reliability across high-availability environments.
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+                Under Coach Justin Bruckmann
+              </h3>
+
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Earning a black belt in Brazilian Jiu-Jitsu is a grueling, 10-to-15 year crucible. Under Justin Bruckmann &mdash; one of Canada&rsquo;s most respected pioneer martial artists and former UFC competitor &mdash; nothing was given; every stripe and belt was forged through thousands of rounds of live sparring against elite practitioners.
               </p>
 
-              <ul class="space-y-2.5 text-slate-300 text-sm">
-                <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Orchestrating automated deployment pipelines, verifying release integrity, and enforcing zero-downtime cutover protocols.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Monitoring distributed production services, identifying runtime bottlenecks, and optimizing deployment velocity and resilience.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Collaborating across cross-functional engineering teams to automate staging verification, rollbacks, and environment configuration management.</span>
-                </li>
-              </ul>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Jiu-jitsu is kinetic problem-solving under maximum physical pressure. It teaches you that panic is useless, that precision beats brute force, and that no matter how complex the bind, there is always an angle, a leverage point, and a path forward.
+              </p>
+            </div>
 
-              <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-slate-800/80 font-mono text-xs">
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Software Deployment</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">CI/CD Pipelines</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Release Engineering</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Environment Config</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Production Reliability</span>
+            <!-- BJJ Key Metrics / Belt Emblem -->
+            <div class="lg:col-span-4 flex flex-col gap-3">
+              <div class="p-4 rounded-2xl bg-black/80 border border-amber-500/40 text-center">
+                <div class="h-6 w-full bg-black rounded border border-amber-500/50 flex items-center justify-end px-2 mb-2 relative">
+                  <div class="w-12 h-full bg-red-600 rounded-sm"></div>
+                </div>
+                <div class="text-sm font-bold text-white uppercase tracking-wider">BJJ Black Belt</div>
+                <div class="text-xs text-amber-400 font-mono mt-0.5">Awarded 2019 &bull; Active Competitor &amp; Practitioner</div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2 text-center text-xs font-mono">
+                <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+                  <div class="text-amber-400 font-bold text-base">15+ Yrs</div>
+                  <div class="text-slate-400 text-[10px]">On The Mats</div>
+                </div>
+                <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+                  <div class="text-cyan-400 font-bold text-base">Kalsamrit</div>
+                  <div class="text-slate-400 text-[10px]">Training Home</div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Role 2: Jonas Club Software (Past Frontend SaaS Role) -->
-          <div class="relative pl-12 sm:pl-16 group">
-            <div class="absolute left-2.5 sm:left-4.5 -top-1 w-4 h-4 rounded-full bg-slate-600 group-hover:bg-cyan-400 ring-4 ring-slate-900 transition-all"></div>
-            
-            <div class="glass-panel p-6 sm:p-8 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
-              <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
-                <div>
-                  <h3 class="text-xl sm:text-2xl font-bold text-white">Frontend Web Developer</h3>
-                  <div class="text-cyan-400 font-mono text-sm font-semibold">Jonas Club Software &bull; Markham, ON</div>
-                </div>
-                <div class="text-xs font-mono text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
-                  2022 &ndash; 2026
-                </div>
-              </div>
-
-              <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                Engineered secure, high-traffic SaaS applications on Microsoft Azure serving global hospitality and private club enterprise clients.
-              </p>
-
-              <ul class="space-y-2.5 text-slate-300 text-sm">
-                <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Developed and maintained <strong>15+ secure SaaS web applications</strong> hosted on Microsoft Azure, implementing SSL/TLS encryption, Azure Key Vault secret management, and secure API endpoints to safeguard sensitive client data.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Created <strong>Python automation scripts</strong> to run vulnerability checks and automated API endpoint testing, slashing manual QA time by <strong>40%</strong>.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Integrated third-party APIs (Stripe payments, HubSpot CRM, internal RESTful services) using token-based authentication (OAuth2.0, JWT) and Role-Based Access Control (RBAC).</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Designed and tuned complex SQL queries and stored procedures for analytics dashboards, improving query performance by <strong>25%</strong>.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Led team initiative to refactor legacy front-end codebases in React with secure configuration management, improving application security posture and reliability.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Collaborated with cybersecurity and DevOps teams to execute <strong>penetration test remediation</strong> and apply <strong>OWASP Top 10</strong> secure coding best practices in production pipelines.</span>
-                </li>
-              </ul>
-
-              <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-slate-800/80 font-mono text-xs">
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Microsoft Azure</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Azure Key Vault</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Python Automation</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">React</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">SQL Server</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">OAuth 2.0 / JWT</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">OWASP Remediation</span>
-              </div>
+        <!-- 3 Pillars of BJJ Philosophy applied to Life & Engineering -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="glass-panel p-6 rounded-2xl border border-white/10 space-y-2.5">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-lg">
+              <i class="fas fa-brain"></i>
             </div>
+            <h4 class="text-lg font-bold text-white">Composure Under Pressure</h4>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              When a 220lb heavyweight is crushing your chest, panic guarantees defeat. You learn to breathe, analyze your micro-frames, and calmly work out of the tightest spots. That same composure applies when production systems go down.
+            </p>
           </div>
 
-          <!-- Role 3: Epic Expressions / Durham Web Design (Founder) -->
-          <div class="relative pl-12 sm:pl-16 group">
-            <div class="absolute left-2.5 sm:left-4.5 -top-1 w-4 h-4 rounded-full bg-slate-600 group-hover:bg-cyan-400 ring-4 ring-slate-900 transition-all"></div>
-            
-            <div class="glass-panel p-6 sm:p-8 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
-              <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
-                <div>
-                  <h3 class="text-xl sm:text-2xl font-bold text-white">Founder &amp; Principal Systems Engineer</h3>
-                  <div class="text-cyan-400 font-mono text-sm font-semibold">Epic Expressions &bull; Durham Web Design &bull; Oshawa, ON</div>
-                </div>
-                <div class="text-xs font-mono text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
-                  2024 &ndash; Present
-                </div>
-              </div>
-
-              <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                Designed, hardened, and deployed full-stack cloud infrastructure, client websites, and automated operations telemetry for regional businesses and community non-profits.
-              </p>
-
-              <ul class="space-y-2.5 text-slate-300 text-sm">
-                <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Engineered production Linux node architecture (Ubuntu 24.04, Nginx 1.24, PHP 8.3-FPM, MariaDB 10.11) with UFW default-deny firewall and automated Let's Encrypt ECDSA TLS.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Built senior-accessible, zero-dependency WordPress platform for <strong>GMSRA (General Motors Salaried Retirees Association)</strong> serving 1,000+ retired GM Canada employees with zero security incidents.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Built private Operations HUD (<code class="text-cyan-300">ops.durhamweb.design</code>) integrating real-time server vitals, latency diagnostics, and automated security audit telemetry.</span>
-                </li>
-              </ul>
-
-              <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-slate-800/80 font-mono text-xs">
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Linux Hardening</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Nginx Reverse Proxy</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Security Telemetry</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">MariaDB</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Ed25519 Cryptography</span>
-              </div>
+          <div class="glass-panel p-6 rounded-2xl border border-white/10 space-y-2.5">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg">
+              <i class="fas fa-chess"></i>
             </div>
+            <h4 class="text-lg font-bold text-white">Leverage &amp; Precision</h4>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Helio Gracie designed BJJ so that a smaller, technically sound practitioner can overcome raw strength. In software architecture and life, finding the fulcrum and applying smart leverage solves problems brute force never can.
+            </p>
           </div>
 
-          <!-- Role 4: CN Rail (Leadership & Operations) -->
-          <div class="relative pl-12 sm:pl-16 group">
-            <div class="absolute left-2.5 sm:left-4.5 -top-1 w-4 h-4 rounded-full bg-slate-600 group-hover:bg-cyan-400 ring-4 ring-slate-900 transition-all"></div>
-            
-            <div class="glass-panel p-6 sm:p-8 rounded-xl border border-slate-800 hover:border-slate-700 transition-all">
-              <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
-                <div>
-                  <h3 class="text-xl sm:text-2xl font-bold text-white">Mechanical Supervisor <span class="text-slate-400 font-normal text-base">(Promoted from Technician)</span></h3>
-                  <div class="text-cyan-400 font-mono text-sm font-semibold">CN Rail &bull; MAC Yard, Vaughan, ON</div>
-                </div>
-                <div class="text-xs font-mono text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
-                  2013 &ndash; 2021
-                </div>
-              </div>
-
-              <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                Managed around-the-clock technical operations and preventive maintenance in a mission-critical, high-availability transport network.
-              </p>
-
-              <ul class="space-y-2.5 text-slate-300 text-sm">
-                <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Supervised and trained a technical crew of <strong>8 personnel</strong> in diagnostic workflows, ensuring operational compliance with strict federal safety and regulatory standards.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Leveraged PLC-based telemetry systems and SAP analytics to track real-time hardware metrics, cutting unscheduled system downtime by <strong>20%</strong>.</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs"></i>
-                  <span>Built custom SQL reporting tools to extract and visualize maintenance KPIs, enhancing data transparency and executive decision-making.</span>
-                </li>
-              </ul>
-
-              <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-slate-800/80 font-mono text-xs">
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Technical Leadership</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">PLC Systems</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">SAP Analytics</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">SQL Reporting</span>
-                <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Safety Compliance</span>
-              </div>
+          <div class="glass-panel p-6 rounded-2xl border border-white/10 space-y-2.5">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
+              <i class="fas fa-rotate"></i>
             </div>
+            <h4 class="text-lg font-bold text-white">Perpetual White Belt Mindset</h4>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              A black belt is just a white belt who never quit. Even with 15+ years on the mats, there is always someone who can catch you and always a new detail to master. Ego has no place on the mats or in engineering.
+            </p>
           </div>
-
         </div>
 
       </div>
     </section>
 
     <!-- ====================================================================
-         SECTION 2: EDUCATION & STUDIES
+         SECTION 2: PASSIONS, HOBBIES & TECH
          ==================================================================== -->
-    <section id="education" class="py-24 bg-slate-900/30 relative">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <div class="flex items-center gap-4 mb-16">
-          <span class="font-mono text-cyan-400 text-xl font-bold">03.</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Education &amp; Studies</h2>
-          <span class="h-px bg-slate-800 flex-grow max-w-sm"></span>
-        </div>
-
-        <div class="space-y-8">
-          
-          <!-- Athabasca University Primary Credential Card -->
-          <div class="glass-panel p-8 sm:p-10 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition-all relative overflow-hidden group">
-            <div class="absolute -top-16 -right-16 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl group-hover:bg-cyan-500/20 transition-all"></div>
-            
-            <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
-              <div class="flex items-center gap-4">
-                <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-3xl shadow-lg">
-                  <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div>
-                  <div class="text-xs font-mono text-cyan-400 font-semibold mb-0.5">Faculty of Science &amp; Technology</div>
-                  <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Bachelor of Science &bull; Computing &amp; Information Systems</h3>
-                  <div class="text-slate-400 text-sm mt-0.5">
-                    <strong>Athabasca University</strong> &bull; 2021 &ndash; Present (Expected Graduation: 2027)
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex flex-wrap items-center gap-2">
-                <span class="cyber-badge px-3.5 py-1.5 rounded-full text-xs font-mono font-bold">
-                  GPA 3.4 / 4.0
-                </span>
-                <span class="px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-cyan-300 text-xs font-mono font-semibold">
-                  120 Credits Total
-                </span>
-                <span class="px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-emerald-400 text-xs font-mono font-semibold">
-                  4-Year Degree
-                </span>
-              </div>
-            </div>
-
-            <!-- Pathway Highlight Banner -->
-            <div class="p-4 rounded-lg bg-slate-800/60 border border-cyan-500/20 text-xs sm:text-sm text-slate-300 font-mono mb-6 flex items-center gap-3">
-              <i class="fas fa-route text-cyan-400 text-base flex-shrink-0"></i>
-              <div>
-                <strong>Academic Milestone &amp; Bridge:</strong> Successfully completed the <strong>University Certificate in Computing &amp; Information Systems</strong> (30 credits) and seamlessly transitioned directly into the full 120-credit Bachelor of Science degree program.
-              </div>
-            </div>
-
-            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
-              A comprehensive curriculum balancing the rigorous mathematical and theoretical foundations of <strong>Computer Science</strong> with the practical, architectonic principles of enterprise <strong>Information Systems</strong>. Designed to produce software engineers capable of mastering algorithmic complexity, operating systems internals, scalable relational database modeling, and distributed cloud computing systems.
-            </p>
-
-            <!-- Dual-Pillar Framework Grid (2 Large Cards) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              
-              <!-- Pillar 1: Computer Science & Systems Engineering -->
-              <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-cyan-500/40 transition-all">
-                <div class="flex items-center gap-2.5 text-cyan-400 font-mono font-bold text-base mb-4 pb-2 border-b border-slate-800">
-                  <i class="fas fa-microchip"></i>
-                  <span>Pillar 1: Computer Science Core</span>
-                </div>
-                <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
-                  <li class="flex items-start gap-2.5">
-                    <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs flex-shrink-0"></i>
-                    <div>
-                      <strong class="text-white">Data Structures &amp; Algorithmic Analysis:</strong>
-                      <span class="text-slate-400 block text-xs mt-0.5">Computational complexity (Big-O), balanced search trees, graph algorithms, hash indexing, and recursive design.</span>
-                    </div>
-                  </li>
-                  <li class="flex items-start gap-2.5">
-                    <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs flex-shrink-0"></i>
-                    <div>
-                      <strong class="text-white">Operating Systems Principles:</strong>
-                      <span class="text-slate-400 block text-xs mt-0.5">Process scheduling, threads &amp; concurrency synchronization, virtual memory management, page replacement, and POSIX file systems.</span>
-                    </div>
-                  </li>
-                  <li class="flex items-start gap-2.5">
-                    <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs flex-shrink-0"></i>
-                    <div>
-                      <strong class="text-white">Computer Networks &amp; Protocols:</strong>
-                      <span class="text-slate-400 block text-xs mt-0.5">TCP/IP network stack, OSI 7-layer model, socket programming, routing algorithms, and network transmission security.</span>
-                    </div>
-                  </li>
-                  <li class="flex items-start gap-2.5">
-                    <i class="fas fa-check-circle text-cyan-400 mt-1 text-xs flex-shrink-0"></i>
-                    <div>
-                      <strong class="text-white">Object-Oriented Software Design:</strong>
-                      <span class="text-slate-400 block text-xs mt-0.5">Polymorphism, abstraction, design patterns, and memory safety in Java, C++, and Python.</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Pillar 2: Enterprise Information Systems & Architecture -->
-              <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/40 transition-all">
-                <div class="flex items-center gap-2.5 text-emerald-400 font-mono font-bold text-base mb-4 pb-2 border-b border-slate-800">
-                  <i class="fas fa-network-wired"></i>
-                  <span>Pillar 2: Information Systems &amp; Arch</span>
-                </div>
-                <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
-                  <li class="flex items-start gap-2.5">
-                    <i class="fas fa-check-circle text-emerald-400 mt-1 text-xs flex-shrink-0"></i>
-                    <div>
-                      <strong class="text-white">Relational Database Management Systems:</strong>
-                      <span class="text-slate-400 block text-xs mt-0.5">Entity-Relationship modeling, 3NF/BCNF normalization, complex SQL joins, stored procedures, index tuning, and ACID transactions.</span>
-                    </div>
-                  </li>
-                  <li class="flex items-start gap-2.5">
-                    <i class="fas fa-check-circle text-emerald-400 mt-1 text-xs flex-shrink-0"></i>
-                    <div>
-                      <strong class="text-white">Systems Analysis &amp; Software Design:</strong>
-                      <span class="text-slate-400 block text-xs mt-0.5">Requirements engineering, UML diagrams (sequence, use case, component), agile delivery methodologies, and software quality assurance.</span>
-                    </div>
-                  </li>
-                  <li class="flex items-start gap-2.5">
-                    <i class="fas fa-check-circle text-emerald-400 mt-1 text-xs flex-shrink-0"></i>
-                    <div>
-                      <strong class="text-white">Enterprise Cloud &amp; Distributed Systems:</strong>
-                      <span class="text-slate-400 block text-xs mt-0.5">Multi-tier client-server architectures, RESTful microservices, containerization, and cloud infrastructure management.</span>
-                    </div>
-                  </li>
-                  <li class="flex items-start gap-2.5">
-                    <i class="fas fa-check-circle text-emerald-400 mt-1 text-xs flex-shrink-0"></i>
-                    <div>
-                      <strong class="text-white">Human-Computer Interaction (HCI):</strong>
-                      <span class="text-slate-400 block text-xs mt-0.5">User-centered UI engineering, accessibility compliance (WCAG 2.1 AA), usability testing, and interaction models.</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-
-            <!-- Key Representative Coursework Tag Directory -->
-            <div class="pt-6 border-t border-slate-800 font-mono">
-              <div class="text-xs text-slate-400 uppercase tracking-wider mb-3 font-semibold flex items-center justify-between">
-                <span>Representative Curriculum Coursework:</span>
-                <span class="text-cyan-400 text-[11px] lowercase">Athabasca University &bull; School of CIS</span>
-              </div>
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
-                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
-                  <div class="text-cyan-400 font-bold">COMP 272</div>
-                  <div class="text-[11px] text-slate-400">Data Structures &amp; Algorithms</div>
-                </div>
-                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
-                  <div class="text-cyan-400 font-bold">COMP 308</div>
-                  <div class="text-[11px] text-slate-400">Operating Systems Principles</div>
-                </div>
-                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
-                  <div class="text-cyan-400 font-bold">COMP 347</div>
-                  <div class="text-[11px] text-slate-400">Computer Networks &amp; Protocols</div>
-                </div>
-                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
-                  <div class="text-emerald-400 font-bold">COMP 378</div>
-                  <div class="text-[11px] text-slate-400">Database Management Systems</div>
-                </div>
-                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
-                  <div class="text-emerald-400 font-bold">COMP 361</div>
-                  <div class="text-[11px] text-slate-400">Systems Analysis &amp; Design</div>
-                </div>
-                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
-                  <div class="text-cyan-400 font-bold">COMP 268</div>
-                  <div class="text-[11px] text-slate-400">OOP with Java</div>
-                </div>
-                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
-                  <div class="text-cyan-400 font-bold">COMP 306</div>
-                  <div class="text-[11px] text-slate-400">C++ for Programmers</div>
-                </div>
-                <div class="p-2.5 rounded bg-slate-900/90 border border-slate-800/80 text-slate-300">
-                  <div class="text-emerald-400 font-bold">COMP 482</div>
-                  <div class="text-[11px] text-slate-400">Human-Computer Interaction</div>
-                </div>
-              </div>
-            </div>
-
+    <section id="interests" class="py-24 relative border-t border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-cyan text-xs font-mono font-bold uppercase tracking-wider mb-3">
+            <span>🚀 03 / What Drives Me</span>
           </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         SECTION 3: FEATURED PRODUCTION SYSTEMS
-         ==================================================================== -->
-    <section id="projects" class="py-24 relative">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <div class="flex items-center gap-4 mb-16">
-          <span class="font-mono text-cyan-400 text-xl font-bold">04.</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Featured Systems &amp; Platforms</h2>
-          <span class="h-px bg-slate-800 flex-grow max-w-sm"></span>
-        </div>
-
-        <div class="space-y-12">
-
-          <!-- System 1: Cloud & Systems Architecture (Hetzner Node) -->
-          <div class="glass-panel p-8 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all">
-            <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full cyber-badge text-xs font-mono font-semibold">
-                <i class="fas fa-server"></i> FULL-STACK CLOUD &amp; SYSTEMS
-              </div>
-              <div class="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                Ashburn CPX11 &bull; 5.161.161.222 &bull; Active
-              </div>
-            </div>
-
-            <h3 class="text-2xl font-bold text-white mb-3">Hardened Linux Production Cloud &amp; Multi-Tenant Node</h3>
-            
-            <p class="text-slate-300 text-sm leading-relaxed mb-6">
-              Engineered high-concurrency Linux VPS environment hosting multiple live web properties, reverse proxies, and automated deployment scripts. Designed under defense-in-depth principles with kernel-level packet filtering and zero external database port exposure.
-            </p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-              <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
-                <div class="text-xs text-slate-400 font-mono">Firewall Defense</div>
-                <div class="text-sm font-bold text-white mt-1">UFW Default-Drop</div>
-                <div class="text-xs text-slate-400 mt-1">Ports 22, 80, 443 strictly; Port 3306 localhost-bound</div>
-              </div>
-              <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
-                <div class="text-xs text-slate-400 font-mono">TLS Security</div>
-                <div class="text-sm font-bold text-white mt-1">Let's Encrypt ECDSA</div>
-                <div class="text-xs text-slate-400 mt-1">Multi-domain auto-renewal via systemd timers</div>
-              </div>
-              <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
-                <div class="text-xs text-slate-400 font-mono">Deployment CLI</div>
-                <div class="text-sm font-bold text-white mt-1">Zero-Downtime</div>
-                <div class="text-xs text-slate-400 mt-1">Custom <code class="text-cyan-300">deploy-site</code> bash suite with FPM reloads</div>
-              </div>
-            </div>
-
-            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800 font-mono text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-cyan-300">Ubuntu 24.04 LTS</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-cyan-300">Nginx 1.24</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-cyan-300">PHP 8.3-FPM</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-cyan-300">MariaDB 10.11</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-cyan-300">Ed25519 SSH</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-cyan-300">UFW Firewall</span>
-            </div>
-          </div>
-
-          <!-- System 2: Enterprise API Security & Automated Vulnerability Testing -->
-          <div class="glass-panel p-8 rounded-xl border border-slate-800 hover:border-emerald-400 transition-all">
-            <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full cyber-badge-emerald text-xs font-mono font-semibold">
-                <i class="fas fa-shield-alt"></i> CYBERSECURITY &amp; DEFENSIVE CONTROLS
-              </div>
-              <div class="text-xs font-mono text-cyan-400">
-                REST API Security &bull; Automated Test Suites
-              </div>
-            </div>
-
-            <h3 class="text-2xl font-bold text-white mb-3">Enterprise API Security &amp; Automated Vulnerability Testing Suite</h3>
-            
-            <p class="text-slate-300 text-sm leading-relaxed mb-6">
-              Architected and deployed automated API vulnerability testing suites and defensive controls across production SaaS platforms. Automated endpoint security audits, enforced OAuth 2.0 and JWT token integrity, and integrated Azure Key Vault credential isolation to eliminate hardcoded secrets and reduce QA verification time by 40%.
-            </p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-              <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
-                <div class="text-xs text-slate-400 font-mono">Automated Auditing</div>
-                <div class="text-sm font-bold text-emerald-400 mt-1">40% QA Reduction</div>
-                <div class="text-xs text-slate-400 mt-1">Python test automation checking auth headers, expiration &amp; payloads</div>
-              </div>
-              <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
-                <div class="text-xs text-slate-400 font-mono">Zero-Trust Identity</div>
-                <div class="text-sm font-bold text-white mt-1">OAuth 2.0 &amp; RBAC</div>
-                <div class="text-xs text-slate-400 mt-1">Role-based access enforcement and strict JWT bearer token validation</div>
-              </div>
-              <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800">
-                <div class="text-xs text-slate-400 font-mono">Secrets Governance</div>
-                <div class="text-sm font-bold text-white mt-1">Decoupled Key Stores</div>
-                <div class="text-xs text-slate-400 mt-1">Azure Key Vault &amp; POSIX 0640 isolated runtime environment injection</div>
-              </div>
-            </div>
-
-            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800 font-mono text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">Python Automation</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">OAuth 2.0 / JWT</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">Azure Key Vault</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">OWASP Top 10</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">RBAC Governance</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-emerald-300">API Security Testing</span>
-            </div>
-          </div>
-
-          <!-- System 3: Live Production Platforms (DWD & GMSRA) -->
-          <div class="glass-panel p-8 rounded-xl border border-slate-800 hover:border-amber-400 transition-all">
-            <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full cyber-badge-amber text-xs font-mono font-semibold">
-                <i class="fas fa-globe"></i> LIVE PRODUCTION PLATFORMS
-              </div>
-              <div class="text-xs font-mono text-emerald-400 flex items-center gap-1">
-                <i class="fas fa-bolt text-xs"></i> 100/100 Core Web Vitals
-              </div>
-            </div>
-
-            <h3 class="text-2xl font-bold text-white mb-3">Durham Web Design Flagship &amp; GMSRA Retiree Portal</h3>
-            
-            <p class="text-slate-300 text-sm leading-relaxed mb-6">
-              Designed and built customer-facing web applications engineered for extreme speed, senior accessibility, and reliable conversion. Serving small businesses across Durham Region and over 1,000 retired General Motors Canada employees.
-            </p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-              <div class="bg-slate-900/60 p-5 rounded-lg border border-slate-800">
-                <div class="flex items-center justify-between">
-                  <div class="font-bold text-white">Durham Web Design</div>
-                  <a href="https://durhamweb.design" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300 text-xs font-mono flex items-center gap-1">
-                    Visit Site <i class="fas fa-external-link-alt text-[10px]"></i>
-                  </a>
-                </div>
-                <div class="text-xs text-slate-400 mt-2 leading-relaxed">
-                  Flagship agency presence, interactive speed audit tool (<code class="text-cyan-300">/audit</code>), and intake pipeline built with vanilla semantic HTML5, modern CSS3, and JavaScript.
-                </div>
-              </div>
-
-              <div class="bg-slate-900/60 p-5 rounded-lg border border-slate-800">
-                <div class="flex items-center justify-between">
-                  <div class="font-bold text-white">GMSRA Retiree Portal</div>
-                  <a href="https://gmsalariedretirees.com" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300 text-xs font-mono flex items-center gap-1">
-                    Visit Site <i class="fas fa-external-link-alt text-[10px]"></i>
-                  </a>
-                </div>
-                <div class="text-xs text-slate-400 mt-2 leading-relaxed">
-                  Custom zero-dependency WordPress theme (<code class="text-cyan-300">gmsra-bespoke</code>) optimized for senior accessibility (WCAG AA), real-time Google Calendar sync, and GA4 analytics.
-                </div>
-              </div>
-            </div>
-
-            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800 font-mono text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-amber-300">Semantic HTML5</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-amber-300">WCAG 2.1 AA</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-amber-300">Sub-Second LCP</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-amber-300">Bespoke WordPress</span>
-              <span class="px-2.5 py-1 rounded bg-slate-800/80 text-amber-300">GA4 Analytics</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         SECTION 4: TECHNICAL ARSENAL
-         ==================================================================== -->
-    <section id="skills" class="py-24 bg-slate-900/30 relative">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <div class="flex items-center gap-4 mb-16">
-          <span class="font-mono text-cyan-400 text-xl font-bold">05.</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Technical Arsenal</h2>
-          <span class="h-px bg-slate-800 flex-grow max-w-sm"></span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Interests, Frontier Tech &amp; Hobbies.
+          </h2>
+          <p class="text-slate-400 text-base max-w-2xl mt-2">
+            The concepts, technologies, and frontiers that keep me up late reading, building, and thinking.
+          </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-          <!-- Card 1: Languages & Scripting -->
-          <div class="glass-panel p-6 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all">
-            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4">
-              <i class="fas fa-terminal"></i>
+          
+          <!-- Passion 1: Artificial Intelligence -->
+          <div class="glass-panel p-7 rounded-3xl border border-cyan-500/30 hover:border-cyan-400 transition-all flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-xl mb-4">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Artificial Intelligence</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Fascinated by Large Language Models, autonomous agentic loops, prompt distillation, and neural architectures. I spend substantial time integrating AI toolchains, local model experimentation, and exploring how cognitive intelligence augments human engineering.
+              </p>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Languages &amp; Scripting</h3>
-            <p class="text-xs text-slate-400 mb-4 font-mono">Scripting, systems, algorithms &amp; automation</p>
-            <ul class="space-y-2 text-sm text-slate-300 font-mono">
-              <li class="flex items-center justify-between"><span>Python</span> <span class="text-xs text-cyan-400">Automations &amp; Testing</span></li>
-              <li class="flex items-center justify-between"><span>JavaScript (ES6+)</span> <span class="text-xs text-cyan-400">Web &amp; Node</span></li>
-              <li class="flex items-center justify-between"><span>SQL</span> <span class="text-xs text-cyan-400">Queries &amp; Stored Procs</span></li>
-              <li class="flex items-center justify-between"><span>C# / .NET</span> <span class="text-xs text-slate-400">Enterprise Backend</span></li>
-              <li class="flex items-center justify-between"><span>Java &amp; C++</span> <span class="text-xs text-slate-400">University Studies</span></li>
-              <li class="flex items-center justify-between"><span>Bash / Shell</span> <span class="text-xs text-cyan-400">Linux CLI</span></li>
-            </ul>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-cyan-300 pt-2 border-t border-white/5">
+              <span class="px-2 py-0.5 rounded bg-cyan-500/10">Autonomous Agents</span>
+              <span class="px-2 py-0.5 rounded bg-cyan-500/10">LLM Tool Calling</span>
+              <span class="px-2 py-0.5 rounded bg-cyan-500/10">Cognitive Augmentation</span>
+            </div>
           </div>
 
-          <!-- Card 2: Cloud, Systems & DevOps -->
-          <div class="glass-panel p-6 rounded-xl border border-slate-800 hover:border-emerald-400 transition-all">
-            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-4">
-              <i class="fas fa-cloud"></i>
+          <!-- Passion 2: SpaceX & Space Exploration -->
+          <div class="glass-panel p-7 rounded-3xl border border-violet-500/30 hover:border-violet-400 transition-all flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-violet-500/10 border border-violet-500/30 text-violet-400 flex items-center justify-center text-xl mb-4">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">SpaceX &amp; Orbital Space</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                An avid follower of orbital mechanics, reusable rocketry, and the Starship development program in Starbase, TX. The engineering audacity required to catch a 20-story booster with mechanical arms represents the absolute pinnacle of human hardware and software control.
+              </p>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Cloud &amp; Infrastructure</h3>
-            <p class="text-xs text-slate-400 mb-4 font-mono">High-availability hosting &amp; deployment</p>
-            <ul class="space-y-2 text-sm text-slate-300 font-mono">
-              <li class="flex items-center justify-between"><span>Microsoft Azure</span> <span class="text-xs text-emerald-400">SaaS Hosting</span></li>
-              <li class="flex items-center justify-between"><span>Azure Key Vault</span> <span class="text-xs text-emerald-400">Secrets Governance</span></li>
-              <li class="flex items-center justify-between"><span>Linux (Ubuntu)</span> <span class="text-xs text-emerald-400">VPS Administration</span></li>
-              <li class="flex items-center justify-between"><span>Nginx Reverse Proxy</span> <span class="text-xs text-emerald-400">TLS &bull; Routing</span></li>
-              <li class="flex items-center justify-between"><span>Docker</span> <span class="text-xs text-slate-400">Containers</span></li>
-              <li class="flex items-center justify-between"><span>DNS Architecture</span> <span class="text-xs text-emerald-400">Multi-Domain</span></li>
-            </ul>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-violet-300 pt-2 border-t border-white/5">
+              <span class="px-2 py-0.5 rounded bg-violet-500/10">Starship / Super Heavy</span>
+              <span class="px-2 py-0.5 rounded bg-violet-500/10">Multiplanetary Life</span>
+              <span class="px-2 py-0.5 rounded bg-violet-500/10">Orbital Mechanics</span>
+            </div>
           </div>
 
-          <!-- Card 3: Defensive Cybersecurity -->
-          <div class="glass-panel p-6 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all">
-            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4">
-              <i class="fas fa-shield-alt"></i>
+          <!-- Passion 3: Computers & Technologies -->
+          <div class="glass-panel p-7 rounded-3xl border border-emerald-500/30 hover:border-emerald-400 transition-all flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl mb-4">
+                <i class="fas fa-microchip"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Computers &amp; Technologies</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                From bare-metal Linux servers and custom kernel tweaks to networking protocols, low-latency architectures, and defensive security. I love understanding how systems work from silicon up to high-level application runtime.
+              </p>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Cybersecurity &amp; Compliance</h3>
-            <p class="text-xs text-slate-400 mb-4 font-mono">Threat mitigation &amp; defensive controls</p>
-            <ul class="space-y-2 text-sm text-slate-300 font-mono">
-              <li class="flex items-center justify-between"><span>OAuth 2.0 &amp; JWT</span> <span class="text-xs text-cyan-400">API Authentication</span></li>
-              <li class="flex items-center justify-between"><span>API Security Testing</span> <span class="text-xs text-cyan-400">Automated QA &amp; PyTest</span></li>
-              <li class="flex items-center justify-between"><span>OWASP Top 10</span> <span class="text-xs text-cyan-400">Pen Testing Fixes</span></li>
-              <li class="flex items-center justify-between"><span>Network Hardening</span> <span class="text-xs text-cyan-400">UFW &bull; Fail2ban</span></li>
-              <li class="flex items-center justify-between"><span>IAM &amp; RBAC</span> <span class="text-xs text-slate-400">Principle of Least Priv</span></li>
-              <li class="flex items-center justify-between"><span>SSL/TLS Encryption</span> <span class="text-xs text-cyan-400">Certbot Automation</span></li>
-            </ul>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-emerald-300 pt-2 border-t border-white/5">
+              <span class="px-2 py-0.5 rounded bg-emerald-500/10">Linux (Ubuntu/Debian)</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/10">Defensive Cybersecurity</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/10">System Architecture</span>
+            </div>
           </div>
 
-          <!-- Card 4: Databases & Persistence -->
-          <div class="glass-panel p-6 rounded-xl border border-slate-800 hover:border-amber-400 transition-all">
-            <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl mb-4">
-              <i class="fas fa-database"></i>
+          <!-- Passion 4: Astronomy & Deep Cosmos -->
+          <div class="glass-panel p-7 rounded-3xl border border-white/10 hover:border-cyan-400 transition-all flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center text-xl mb-4">
+                <i class="fas fa-meteor"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Astronomy &amp; The Cosmos</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Passionate about astrophysics, cosmology, deep space photography, and astronomical observations. Supporting community organizations like the Durham Region Astronomical Association (DRAA) has been one of my favorite projects.
+              </p>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Databases &amp; Storage</h3>
-            <p class="text-xs text-slate-400 mb-4 font-mono">Relational databases &amp; query tuning</p>
-            <ul class="space-y-2 text-sm text-slate-300 font-mono">
-              <li class="flex items-center justify-between"><span>MS SQL Server</span> <span class="text-xs text-amber-400">Enterprise SaaS</span></li>
-              <li class="flex items-center justify-between"><span>MariaDB / MySQL</span> <span class="text-xs text-amber-400">Production Linux</span></li>
-              <li class="flex items-center justify-between"><span>PostgreSQL</span> <span class="text-xs text-slate-400">Relational Modeling</span></li>
-              <li class="flex items-center justify-between"><span>Stored Procedures</span> <span class="text-xs text-amber-400">25% Speed Tuning</span></li>
-              <li class="flex items-center justify-between"><span>Database Hardening</span> <span class="text-xs text-amber-400">127.0.0.1 Binding</span></li>
-            </ul>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-blue-300 pt-2 border-t border-white/5">
+              <span class="px-2 py-0.5 rounded bg-blue-500/10">Astrophysics</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500/10">James Webb &bull; Hubble</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500/10">Cosmic Perspective</span>
+            </div>
           </div>
 
-          <!-- Card 5: Frontend & Application Frameworks -->
-          <div class="glass-panel p-6 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all">
-            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4">
-              <i class="fas fa-code"></i>
+          <!-- Passion 5: Physical Conditioning & Fitness -->
+          <div class="glass-panel p-7 rounded-3xl border border-white/10 hover:border-amber-400 transition-all flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-xl mb-4">
+                <i class="fas fa-dumbbell"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Athletic Conditioning</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                High-intensity mat sessions, strength training, mobility work, and cold discipline. Maintaining physical sharpness directly feeds mental clarity, patience, and focus during long problem-solving and coding marathons.
+              </p>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Web &amp; Frameworks</h3>
-            <p class="text-xs text-slate-400 mb-4 font-mono">Frontend architecture &amp; accessibility</p>
-            <ul class="space-y-2 text-sm text-slate-300 font-mono">
-              <li class="flex items-center justify-between"><span>React</span> <span class="text-xs text-cyan-400">SPA Architecture</span></li>
-              <li class="flex items-center justify-between"><span>Semantic HTML5</span> <span class="text-xs text-cyan-400">WCAG 2.1 AA</span></li>
-              <li class="flex items-center justify-between"><span>Tailwind CSS</span> <span class="text-xs text-cyan-400">Design Systems</span></li>
-              <li class="flex items-center justify-between"><span>RESTful APIs</span> <span class="text-xs text-cyan-400">Microservices</span></li>
-              <li class="flex items-center justify-between"><span>WordPress Theme</span> <span class="text-xs text-slate-400">Zero-Dependency</span></li>
-            </ul>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-amber-300 pt-2 border-t border-white/5">
+              <span class="px-2 py-0.5 rounded bg-amber-500/10">Strength Training</span>
+              <span class="px-2 py-0.5 rounded bg-amber-500/10">Mobility &amp; Grip</span>
+              <span class="px-2 py-0.5 rounded bg-amber-500/10">Recovery &amp; Longevity</span>
+            </div>
           </div>
 
-          <!-- Card 6: Systems Leadership & Operations -->
-          <div class="glass-panel p-6 rounded-xl border border-slate-800 hover:border-emerald-400 transition-all">
-            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-4">
-              <i class="fas fa-users-gear"></i>
+          <!-- Passion 6: Open Source & Building -->
+          <div class="glass-panel p-7 rounded-3xl border border-white/10 hover:border-emerald-400 transition-all flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/30 text-rose-400 flex items-center justify-center text-xl mb-4">
+                <i class="fas fa-code-branch"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Software Craftsmanship</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Writing clean, reliable code with zero bloat. Whether crafting Bash automation scripts, Python microservices, or interactive web UIs, I take immense pride in building tools that are bulletproof, fast, and delightful to use.
+              </p>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Leadership &amp; Operations</h3>
-            <p class="text-xs text-slate-400 mb-4 font-mono">Mission-critical technical supervision</p>
-            <ul class="space-y-2 text-sm text-slate-300 font-mono">
-              <li class="flex items-center justify-between"><span>Team Leadership</span> <span class="text-xs text-emerald-400">Crew of 8 Supervised</span></li>
-              <li class="flex items-center justify-between"><span>PLC Monitoring</span> <span class="text-xs text-emerald-400">Telemetry Hardware</span></li>
-              <li class="flex items-center justify-between"><span>SAP Analytics</span> <span class="text-xs text-emerald-400">20% Downtime Cut</span></li>
-              <li class="flex items-center justify-between"><span>Regulatory Safety</span> <span class="text-xs text-slate-400">Compliance Audit</span></li>
-              <li class="flex items-center justify-between"><span>Incident Response</span> <span class="text-xs text-emerald-400">24/7 Reliability</span></li>
-            </ul>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-rose-300 pt-2 border-t border-white/5">
+              <span class="px-2 py-0.5 rounded bg-rose-500/10">Zero Bloat</span>
+              <span class="px-2 py-0.5 rounded bg-rose-500/10">Python &amp; JavaScript</span>
+              <span class="px-2 py-0.5 rounded bg-rose-500/10">Bash Automation</span>
+            </div>
           </div>
 
         </div>
@@ -1007,83 +588,402 @@
     </section>
 
     <!-- ====================================================================
-         SECTION 5: CONTACT & CONNECT
+         SECTION 3: EDUCATION & STUDIES
          ==================================================================== -->
-    <section id="contact" class="py-24 relative">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full cyber-badge text-xs font-mono font-semibold mb-6">
-          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
-          <span>INITIATE SECURE HANDSHAKE</span>
+    <section id="education" class="py-24 relative border-t border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-emerald text-xs font-mono font-bold uppercase tracking-wider mb-3">
+            <span>🎓 04 / Academic Foundation</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Education &amp; Lifelong Learning.
+          </h2>
+          <p class="text-slate-400 text-base max-w-2xl mt-2">
+            Rigorous undergraduate degree program balancing theoretical computing foundations with modern enterprise software architecture.
+          </p>
         </div>
 
-        <h2 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-          Let's Build Something Resilient.
-        </h2>
+        <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-cyan-500/30 relative overflow-hidden">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-white/10">
+            <div>
+              <div class="flex items-center gap-2 font-mono text-cyan-400 text-xs font-bold uppercase">
+                <span>Faculty of Science &amp; Technology</span>
+                <span>&bull;</span>
+                <span>Athabasca University</span>
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">
+                Bachelor of Science in Computing &amp; Information Systems
+              </h3>
+              <p class="text-slate-400 text-sm mt-1">
+                120-Credit Comprehensive Degree Program &bull; Bridged from 30-Credit CIS University Certificate
+              </p>
+            </div>
 
-        <p class="text-slate-400 max-w-xl mx-auto text-base sm:text-lg mb-12">
-          Open to technical discussions regarding software deployment, cloud security, distributed systems, or enterprise engineering consulting.
-        </p>
+            <div class="flex items-center gap-3">
+              <div class="p-4 rounded-2xl bg-black/60 border border-emerald-500/40 text-center">
+                <div class="text-2xl font-black text-emerald-400 font-mono">3.4</div>
+                <div class="text-[10px] text-slate-400 uppercase font-mono font-bold">Cumulative GPA</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-black/60 border border-cyan-500/40 text-center">
+                <div class="text-2xl font-black text-cyan-400 font-mono">120</div>
+                <div class="text-[10px] text-slate-400 uppercase font-mono font-bold">Total Credits</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic Pillars -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
+            <div class="space-y-3">
+              <h4 class="text-base font-bold text-white flex items-center gap-2 font-mono">
+                <span class="text-cyan-400">&gt;</span> Computer Science Core
+              </h4>
+              <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-cyan-400 mt-1 text-xs"></i>
+                  <span><strong>Data Structures &amp; Algorithms (COMP 272):</strong> Sorting, tree traversals, graphs, complexity analysis (Big-O).</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-cyan-400 mt-1 text-xs"></i>
+                  <span><strong>Operating Systems Principles (COMP 308):</strong> Concurrency, thread scheduling, memory paging, file systems.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-cyan-400 mt-1 text-xs"></i>
+                  <span><strong>Computer Networks &amp; Protocols (COMP 347):</strong> OSI stack, TCP/UDP sockets, routing algorithms, packets.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-cyan-400 mt-1 text-xs"></i>
+                  <span><strong>OOP in Java &amp; C++ (COMP 268 &amp; COMP 306):</strong> Memory management, pointers, polymorphism, inheritance.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="space-y-3">
+              <h4 class="text-base font-bold text-white flex items-center gap-2 font-mono">
+                <span class="text-emerald-400">&gt;</span> Systems &amp; Architecture Core
+              </h4>
+              <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-emerald-400 mt-1 text-xs"></i>
+                  <span><strong>Relational Databases &amp; SQL (COMP 378):</strong> Schema normalization (3NF), indexing, transaction ACID guarantees.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-emerald-400 mt-1 text-xs"></i>
+                  <span><strong>Systems Analysis &amp; Design (COMP 361):</strong> UML modeling, requirement elicitation, agile architecture.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-emerald-400 mt-1 text-xs"></i>
+                  <span><strong>Human-Computer Interaction (COMP 482):</strong> Cognitive accessibility, WCAG guidelines, user flow heuristics.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-emerald-400 mt-1 text-xs"></i>
+                  <span><strong>Continuous Self-Directed Mastery:</strong> Juggling university coursework alongside full-time engineering and family life.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: WORK HISTORY
+         ==================================================================== -->
+    <section id="work" class="py-24 relative border-t border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-cyan text-xs font-mono font-bold uppercase tracking-wider mb-3">
+            <span>💼 05 / Professional Career</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Work History &amp; Experience.
+          </h2>
+          <p class="text-slate-400 text-base max-w-2xl mt-2">
+            A diverse career path blending enterprise software development, automated cloud releases, and mission-critical operations leadership.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          
+          <!-- Role 1: NSSL -->
+          <div class="glass-panel p-7 sm:p-8 rounded-3xl border border-cyan-500/40 relative">
+            <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+              <div>
+                <span class="inline-block px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono font-bold uppercase tracking-wider mb-1.5">Current Role</span>
+                <h3 class="text-2xl font-extrabold text-white">Software Deployment Engineer</h3>
+                <div class="text-cyan-400 font-mono text-sm font-semibold">NSSL &bull; Canadian Cloud &amp; Systems</div>
+              </div>
+              <div class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1.5 rounded-xl border border-slate-800">
+                2026 &ndash; Present
+              </div>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Directing production software releases, automated environment provisioning, and cloud deployment pipelines ensuring 99.9%+ availability for enterprise client workflows.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-3 border-t border-white/5 font-mono text-xs text-slate-300">
+              <span class="px-2.5 py-1 rounded-lg bg-slate-800">Production Deployments</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-800">CI/CD Automation</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-800">Cloud Infrastructure</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-800">Reliability Engineering</span>
+            </div>
+          </div>
+
+          <!-- Role 2: Jonas Club Software -->
+          <div class="glass-panel p-7 sm:p-8 rounded-3xl border border-white/10 hover:border-cyan-500/30 transition-all">
+            <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-white">Frontend Web Developer</h3>
+                <div class="text-cyan-400 font-mono text-sm font-semibold">Jonas Club Software &bull; Markham, ON</div>
+              </div>
+              <div class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1.5 rounded-xl border border-slate-800">
+                2022 &ndash; 2026
+              </div>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Developed and maintained <strong>15+ secure SaaS web applications</strong> on Microsoft Azure. Created Python automation scripts to slash QA overhead by 40%, integrated token-based auth (OAuth2.0/JWT), tuned complex SQL queries, and partnered with cybersecurity leads on OWASP Top 10 remediation.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-3 border-t border-white/5 font-mono text-xs text-slate-300">
+              <span class="px-2.5 py-1 rounded-lg bg-slate-800">Microsoft Azure</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-800">Python Automation</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-800">React &bull; JavaScript</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-800">SQL Server &bull; RBAC</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-800">OWASP Security</span>
+            </div>
+          </div>
+
+          <!-- Role 3: CN Rail -->
+          <div class="glass-panel p-7 sm:p-8 rounded-3xl border border-white/10 hover:border-amber-500/30 transition-all">
+            <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-white">Mechanical Operations Supervisor</h3>
+                <div class="text-amber-400 font-mono text-sm font-semibold">Canadian National Railway (CN Rail) &bull; Ontario</div>
+              </div>
+              <div class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1.5 rounded-xl border border-slate-800">
+                2013 &ndash; 2021 (8 Years)
+              </div>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Led technical crews of skilled mechanics and technicians in 24/7 mission-critical rail and freight operations. Managed PLC telemetry systems, SAP enterprise maintenance data, and enforced strict zero-harm industrial safety standards.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-3 border-t border-white/5 font-mono text-xs text-slate-300">
+              <span class="px-2.5 py-1 rounded-lg bg-slate-800">8 Years Operational Leadership</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-800">Mission-Critical Safety</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-800">PLC Telemetry &bull; SAP</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-800">Crew Management</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 5: CURATED BOOKSHELF
+         ==================================================================== -->
+    <section id="books" class="py-24 relative border-t border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-violet text-xs font-mono font-bold uppercase tracking-wider mb-3">
+            <span>📚 06 / Reading Vault</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Books I&rsquo;ve Read &amp; Recommend.
+          </h2>
+          <p class="text-slate-400 text-base max-w-2xl mt-2">
+            A curated shelf of titles that have influenced my thinking across computer science, engineering, space, and mental models. We will expand this as we go!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Book 1 -->
+          <div class="glass-panel p-6 rounded-3xl border border-white/10 hover:border-cyan-400 transition-all flex flex-col justify-between space-y-3">
+            <div>
+              <div class="text-[10px] font-mono uppercase text-cyan-400 font-bold mb-1">Systems Architecture</div>
+              <h3 class="text-lg font-bold text-white leading-snug">Designing Data-Intensive Applications</h3>
+              <div class="text-xs text-slate-400 mb-3">by Martin Kleppmann</div>
+              <p class="text-slate-300 text-xs leading-relaxed">
+                The gold standard for understanding distributed data systems, reliability, replication, partitioning, transactions, and consensus protocols.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-cyan-300">
+              Key takeaway: Reliable architectures under network failure.
+            </div>
+          </div>
+
+          <!-- Book 2 -->
+          <div class="glass-panel p-6 rounded-3xl border border-white/10 hover:border-violet-400 transition-all flex flex-col justify-between space-y-3">
+            <div>
+              <div class="text-[10px] font-mono uppercase text-violet-400 font-bold mb-1">Aerospace &amp; SpaceX</div>
+              <h3 class="text-lg font-bold text-white leading-snug">Liftoff: Elon Musk and the Desperate Early Days</h3>
+              <div class="text-xs text-slate-400 mb-3">by Eric Berger</div>
+              <p class="text-slate-300 text-xs leading-relaxed">
+                The exhilarating account of Falcon 1's three failures on Kwajalein Atoll and the ragtag engineering crew that saved SpaceX from bankruptcy on launch 4.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-violet-300">
+              Key takeaway: Radical persistence when the stakes are existential.
+            </div>
+          </div>
+
+          <!-- Book 3 -->
+          <div class="glass-panel p-6 rounded-3xl border border-white/10 hover:border-emerald-400 transition-all flex flex-col justify-between space-y-3">
+            <div>
+              <div class="text-[10px] font-mono uppercase text-emerald-400 font-bold mb-1">Software Craftsmanship</div>
+              <h3 class="text-lg font-bold text-white leading-snug">The Pragmatic Programmer</h3>
+              <div class="text-xs text-slate-400 mb-3">by David Thomas &amp; Andrew Hunt</div>
+              <p class="text-slate-300 text-xs leading-relaxed">
+                Essential philosophy on DRY code, orthogonal systems, taking responsibility for your architecture, and being a continuous learner.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-emerald-300">
+              Key takeaway: Software is a craft of continuous refinement.
+            </div>
+          </div>
+
+          <!-- Book 4 -->
+          <div class="glass-panel p-6 rounded-3xl border border-white/10 hover:border-amber-400 transition-all flex flex-col justify-between space-y-3">
+            <div>
+              <div class="text-[10px] font-mono uppercase text-amber-400 font-bold mb-1">Mindset &amp; Habits</div>
+              <h3 class="text-lg font-bold text-white leading-snug">Atomic Habits</h3>
+              <div class="text-xs text-slate-400 mb-3">by James Clear</div>
+              <p class="text-slate-300 text-xs leading-relaxed">
+                How tiny 1% compound improvements accumulate into transformative mastery over years &mdash; the exact principle behind earning a BJJ black belt and completing a computer science degree.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-amber-300">
+              Key takeaway: Systems beat goals every single time.
+            </div>
+          </div>
+
+          <!-- Book 5 -->
+          <div class="glass-panel p-6 rounded-3xl border border-white/10 hover:border-rose-400 transition-all flex flex-col justify-between space-y-3">
+            <div>
+              <div class="text-[10px] font-mono uppercase text-rose-400 font-bold mb-1">Stoic Philosophy</div>
+              <h3 class="text-lg font-bold text-white leading-snug">Meditations</h3>
+              <div class="text-xs text-slate-400 mb-3">by Marcus Aurelius</div>
+              <p class="text-slate-300 text-xs leading-relaxed">
+                Timeless reflections on internal discipline, focusing strictly on what is in your control, and maintaining emotional equilibrium in high-friction environments.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-rose-300">
+              Key takeaway: The obstacle is the way.
+            </div>
+          </div>
+
+          <!-- Book 6 -->
+          <div class="glass-panel p-6 rounded-3xl border border-white/10 hover:border-blue-400 transition-all flex flex-col justify-between space-y-3">
+            <div>
+              <div class="text-[10px] font-mono uppercase text-blue-400 font-bold mb-1">Sci-Fi Epic</div>
+              <h3 class="text-lg font-bold text-white leading-snug">Dune</h3>
+              <div class="text-xs text-slate-400 mb-3">by Frank Herbert</div>
+              <p class="text-slate-300 text-xs leading-relaxed">
+                A masterpiece exploring ecology, human potential, prescience, and political intrigue on Arrakis. A foundational work of speculative imagination.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-blue-300">
+              Key takeaway: Fear is the mind-killer.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 6: CONTACT & CONNECT
+         ==================================================================== -->
+    <section id="contact" class="py-24 relative border-t border-slate-800/80">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="mb-12">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-cyan text-xs font-mono font-bold uppercase tracking-wider mb-3">
+            <span>💬 07 / Direct Connection</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Let&rsquo;s Connect.
+          </h2>
+          <p class="text-slate-400 text-base max-w-xl mx-auto mt-2">
+            Whether you want to discuss AI architectures, space exploration, train Jiu-Jitsu, talk books, or explore software systems &mdash; my door is open.
+          </p>
+        </div>
 
         <!-- Contact Cards Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12 text-left">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10 text-left">
           
+          <!-- Appointment Booking Card -->
+          <div class="glass-panel p-6 rounded-2xl border border-emerald-500/40 hover:border-emerald-400 transition-all">
+            <div class="text-xs font-mono text-emerald-400 mb-1 flex items-center gap-2 font-bold">
+              <i class="fas fa-calendar-check"></i> LIVE CALENDAR
+            </div>
+            <div class="font-bold text-white text-base">Book a 1-on-1 Chat</div>
+            <div class="text-xs text-slate-400 mt-1">Direct Google Appointment booking with Dane</div>
+            <div class="mt-4">
+              <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 text-xs font-mono font-bold inline-flex items-center gap-1.5 transition-colors">
+                <span>Book Appointment &rarr;</span>
+              </a>
+            </div>
+          </div>
+
           <!-- Email Card -->
-          <div class="glass-panel p-5 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all">
-            <div class="text-xs font-mono text-cyan-400 mb-1 flex items-center gap-2">
+          <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-cyan-400 transition-all">
+            <div class="text-xs font-mono text-cyan-400 mb-1 flex items-center gap-2 font-bold">
               <i class="fas fa-envelope"></i> DIRECT EMAIL
             </div>
-            <div class="font-bold text-white truncate text-sm">wattsd1985@gmail.com</div>
-            <div class="mt-3 flex items-center gap-2">
-              <a href="mailto:wattsd1985@gmail.com" class="px-3 py-1 rounded bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 text-xs font-mono font-semibold transition-colors">
+            <div class="font-bold text-white text-base truncate">wattsd1985@gmail.com</div>
+            <div class="text-xs text-slate-400 mt-1">Personal inbox</div>
+            <div class="mt-4 flex items-center gap-2">
+              <a href="mailto:wattsd1985@gmail.com" class="px-3 py-1.5 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 text-xs font-mono font-semibold transition-colors">
                 Send Email
               </a>
-              <button onclick="copyToClipboard('wattsd1985@gmail.com', this)" class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-mono transition-colors">
+              <button onclick="copyToClipboard('wattsd1985@gmail.com', this)" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-mono transition-colors cursor-pointer">
                 Copy
               </button>
             </div>
           </div>
 
           <!-- Phone Card -->
-          <div class="glass-panel p-5 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all">
-            <div class="text-xs font-mono text-emerald-400 mb-1 flex items-center gap-2">
-              <i class="fas fa-phone"></i> PHONE / MOBILE
+          <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-cyan-400 transition-all">
+            <div class="text-xs font-mono text-slate-400 mb-1 flex items-center gap-2 font-bold">
+              <i class="fas fa-phone text-emerald-400"></i> PHONE / MOBILE
             </div>
-            <div class="font-bold text-white text-sm">289-928-9013</div>
-            <div class="mt-3 flex items-center gap-2">
-              <a href="tel:2899289013" class="px-3 py-1 rounded bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-mono font-semibold transition-colors">
-                Call Direct
+            <div class="font-bold text-white text-base">289-928-9013</div>
+            <div class="text-xs text-slate-400 mt-1">Oshawa &bull; Eastern Time</div>
+            <div class="mt-4 flex items-center gap-2">
+              <a href="tel:2899289013" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-mono transition-colors">
+                Call
               </a>
-              <button onclick="copyToClipboard('289-928-9013', this)" class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-mono transition-colors">
+              <button onclick="copyToClipboard('289-928-9013', this)" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-mono transition-colors cursor-pointer">
                 Copy
               </button>
             </div>
           </div>
 
-          <!-- Location Card -->
-          <div class="glass-panel p-5 rounded-xl border border-slate-800 hover:border-cyan-400 transition-all sm:col-span-2 lg:col-span-1">
-            <div class="text-xs font-mono text-slate-400 mb-1 flex items-center gap-2">
-              <i class="fas fa-location-dot text-rose-400"></i> LOCATION
-            </div>
-            <div class="font-bold text-white text-sm">Oshawa, Ontario, Canada</div>
-            <div class="text-xs text-slate-400 mt-1">Greater Toronto &bull; Eastern Time (UTC-4/-5)</div>
-          </div>
-
         </div>
 
         <!-- Social Links & Action -->
-        <div class="flex flex-wrap items-center justify-center gap-4">
-          <a href="/Dane Watts Resume 2025.pdf" target="_blank" class="px-6 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono font-bold text-sm transition-all shadow-[0_0_20px_rgba(0,229,255,0.3)] flex items-center gap-2">
+        <div class="flex flex-wrap items-center justify-center gap-3.5">
+          <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-mono font-bold text-sm transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] flex items-center gap-2">
+            <i class="fas fa-calendar-check"></i>
+            <span>Schedule Appointment</span>
+          </a>
+          <a href="/Dane Watts Resume 2025.pdf" target="_blank" class="px-5 py-3 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-mono font-bold text-sm transition-all flex items-center gap-2">
             <i class="fas fa-file-pdf"></i>
-            <span>Download Official Resume</span>
+            <span>Official Resume</span>
           </a>
-          <a href="https://www.linkedin.com/in/dane-w-69a42313a/" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-lg glass-panel hover:border-cyan-400 text-slate-200 hover:text-cyan-400 font-mono text-sm transition-all flex items-center gap-2">
+          <a href="https://www.linkedin.com/in/dane-w-69a42313a/" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl glass-panel hover:border-cyan-400 text-slate-200 hover:text-cyan-400 font-mono text-sm transition-all flex items-center gap-2">
             <i class="fab fa-linkedin-in text-cyan-400"></i>
-            <span>LinkedIn Profile</span>
+            <span>LinkedIn</span>
           </a>
-          <a href="https://github.com/Dane85" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-lg glass-panel hover:border-cyan-400 text-slate-200 hover:text-cyan-400 font-mono text-sm transition-all flex items-center gap-2">
+          <a href="https://github.com/Dane85" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl glass-panel hover:border-cyan-400 text-slate-200 hover:text-cyan-400 font-mono text-sm transition-all flex items-center gap-2">
             <i class="fab fa-github text-cyan-400"></i>
-            <span>GitHub Repositories</span>
+            <span>GitHub</span>
           </a>
         </div>
 
@@ -1094,19 +994,20 @@
   <!-- ====================================================================
        FOOTER
        ==================================================================== -->
-  <footer class="py-10 border-t border-slate-800/80 bg-slate-950/80 font-mono text-xs text-slate-400 text-center">
+  <footer class="py-12 border-t border-slate-800/80 bg-slate-950 font-mono text-xs text-slate-400 text-center">
     <div class="max-w-5xl mx-auto px-4 space-y-3">
       <div class="flex items-center justify-center gap-6 text-base text-slate-400">
         <a href="mailto:wattsd1985@gmail.com" class="hover:text-cyan-400 transition-colors" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" class="hover:text-emerald-400 transition-colors" title="Calendar"><i class="fas fa-calendar-check"></i></a>
         <a href="https://www.linkedin.com/in/dane-w-69a42313a/" target="_blank" rel="noopener" class="hover:text-cyan-400 transition-colors" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/Dane85" target="_blank" rel="noopener" class="hover:text-cyan-400 transition-colors" title="GitHub"><i class="fab fa-github"></i></a>
         <a href="tel:2899289013" class="hover:text-cyan-400 transition-colors" title="Phone"><i class="fas fa-phone"></i></a>
       </div>
       <div>
-        Designed &amp; Engineered by <span class="text-white font-bold">Dane Watts</span> &bull; Hosted on GitHub Pages Edge CDN
+        Designed &amp; Hand-Coded by <span class="text-white font-bold">Dane Watts</span> &bull; Oshawa, Ontario, Canada
       </div>
       <div class="text-[11px] text-slate-500">
-        Athabasca University (BSc Computing &amp; Information Systems &bull; GPA: 3.4) &bull; Oshawa, ON
+        🥋 BJJ Black Belt (Justin Bruckmann, 2019) &bull; Athabasca University (B.Sc. CIS, GPA 3.4)
       </div>
     </div>
   </footer>
@@ -1152,24 +1053,25 @@
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileMenuIcon = document.getElementById('mobileMenuIcon');
 
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      if (mobileMenu.classList.contains('hidden')) {
-        mobileMenuIcon.classList.remove('fa-times');
-        mobileMenuIcon.classList.add('fa-bars');
-      } else {
-        mobileMenuIcon.classList.remove('fa-bars');
-        mobileMenuIcon.classList.add('fa-times');
-      }
-    });
-
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        mobileMenuIcon.classList.remove('fa-times');
-        mobileMenuIcon.classList.add('fa-bars');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        if (isOpen) {
+          mobileMenu.classList.add('hidden');
+          mobileMenuIcon.className = 'fas fa-bars text-xl';
+        } else {
+          mobileMenu.classList.remove('hidden');
+          mobileMenuIcon.className = 'fas fa-xmark text-xl';
+        }
       });
-    });
+
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenuIcon.className = 'fas fa-bars text-xl';
+        });
+      });
+    }
 
     // Interactive Terminal Logic
     const terminalInput = document.getElementById('terminalInput');
@@ -1178,71 +1080,77 @@
 
     const commands = {
       'help': () => `
-        <div class="text-slate-300">
-          Available commands:<br>
-          &bull; <span class="text-cyan-400">whoami</span> - Identity, current role &amp; brief bio<br>
-          &bull; <span class="text-cyan-400">education</span> (or <span class="text-cyan-400">edu</span>) - Athabasca University BSc CIS (120 Credits)<br>
-          &bull; <span class="text-cyan-400">experience</span> (or <span class="text-cyan-400">exp</span>) - Employment history (NSSL, Jonas Club, CN Rail)<br>
-          &bull; <span class="text-cyan-400">projects</span> (or <span class="text-cyan-400">proj</span>) - Production systems &amp; security suites<br>
-          &bull; <span class="text-cyan-400">skills</span> - Technical arsenal and tools<br>
-          &bull; <span class="text-cyan-400">contact</span> - Phone, email, socials<br>
-          &bull; <span class="text-cyan-400">clear</span> - Clear terminal output
+        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
+          <div><strong class="text-cyan-300">whoami</strong> &mdash; Bio and personal overview</div>
+          <div><strong class="text-amber-300">bjj</strong> &mdash; Brazilian Jiu-Jitsu Black Belt journey</div>
+          <div><strong class="text-cyan-300">interests</strong> &mdash; AI, SpaceX, computers, hobbies</div>
+          <div><strong class="text-emerald-300">education</strong> &mdash; Athabasca B.Sc. CIS credentials</div>
+          <div><strong class="text-cyan-300">work</strong> &mdash; Career path (NSSL, Jonas, CN Rail)</div>
+          <div><strong class="text-violet-300">books</strong> &mdash; Reading vault &amp; favorite books</div>
+          <div><strong class="text-emerald-300">booking</strong> &mdash; Direct Google Calendar appointment link</div>
+          <div><strong class="text-cyan-300">contact</strong> &mdash; Email, phone, socials</div>
+          <div><strong class="text-slate-400">clear</strong> &mdash; Clear terminal screen</div>
         </div>
       `,
       'whoami': () => `
         <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
-          <span class="text-white font-bold">Dane Watts</span> &bull; Software Developer &amp; Defensive Cybersecurity Specialist.<br>
-          Current: Software Deployment Engineer @ NSSL (2026 - Present)<br>
-          Location: Oshawa, ON, Canada &bull; GPA: 3.4
+          <div><strong>Dane Watts</strong> &bull; Oshawa, Ontario, Canada</div>
+          <div class="text-slate-400 mt-1">Software Engineer, Defensive Security Specialist, BJJ Black Belt (2019), and B.Sc. CIS student at Athabasca University. Obsessed with Artificial Intelligence, SpaceX, space exploration, and building clean, fast systems.</div>
+        </div>
+      `,
+      'bjj': () => `
+        <div class="text-slate-300 pl-2 border-l-2 border-amber-400">
+          <div class="text-amber-300 font-bold">&bull; Brazilian Jiu-Jitsu Black Belt (Promoted Dec 2019)</div>
+          <div>&bull; Coach: <strong>Justin Bruckmann</strong> (UFC Vet &amp; Canadian MMA pioneer)</div>
+          <div>&bull; Lineage: Carlson Gracie &bull; Bruckmann Martial Arts / Kalsamrit</div>
+          <div>&bull; 15+ years on the mats. High-pressure kinetic problem solving, flow state, and composure under fire.</div>
+        </div>
+      `,
+      'interests': () => `
+        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
+          <div>&bull; <strong class="text-cyan-300">Artificial Intelligence:</strong> Autonomous agents, LLMs, neural tool use, cognitive augmentation.</div>
+          <div>&bull; <strong class="text-violet-300">SpaceX &amp; Space:</strong> Starship orbital tests, multiplanetary life, rocketry mechanics.</div>
+          <div>&bull; <strong class="text-emerald-300">Computers &amp; Tech:</strong> Bare-metal Linux architecture, networking, security defense.</div>
+          <div>&bull; <strong class="text-amber-300">Martial Arts &amp; Fitness:</strong> Daily BJJ practice, strength training, athletic longevity.</div>
         </div>
       `,
       'education': () => `
-        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
-          <div class="text-cyan-400 font-bold">🎓 Athabasca University (2021 - Present)</div>
-          <div>&bull; Bachelor of Science in Computing &amp; Information Systems (BSc CIS &bull; 120 Credits)</div>
-          <div>&bull; Faculty of Science &amp; Technology &bull; GPA: <span class="text-emerald-400 font-bold">3.4 / 4.0</span> (Graduating 2027)</div>
-          <div>&bull; Academic Pathway: Bridged from University Certificate in Computing &amp; Information Systems</div>
-          <div>&bull; Dual-Pillar Framework: Computer Science Core (Data Structures, OS, Networks) &amp; Enterprise Information Systems (Databases, Systems Analysis, Cloud)</div>
+        <div class="text-slate-300 pl-2 border-l-2 border-emerald-400">
+          <div>&bull; <strong>Athabasca University</strong> &mdash; Bachelor of Science in Computing &amp; Information Systems</div>
+          <div>&bull; Standing: <strong>GPA 3.4 / 4.0</strong> (120 Total Credits)</div>
+          <div>&bull; Focus: Algorithms (COMP 272), Operating Systems (COMP 308), Networking (COMP 347), Relational Databases (COMP 378).</div>
         </div>
       `,
-      'edu': () => commands['education'](),
-      'experience': () => `
+      'work': () => `
         <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
-          <div><strong class="text-white">1. Software Deployment Engineer</strong> &bull; NSSL (2026 - Present)</div>
-          <div class="text-slate-400 pl-3">&bull; Automated cloud deployments, continuous release delivery &amp; reliability.</div>
-          <div class="mt-1"><strong class="text-white">2. Frontend Web Developer</strong> &bull; Jonas Club Software (2022 - 2026)</div>
-          <div class="text-slate-400 pl-3">&bull; 15+ SaaS apps on Azure, Python vulnerability automation (-40% QA), OAuth2.0 / RBAC, SQL tuning (+25%).</div>
-          <div class="mt-1"><strong class="text-white">3. Founder &amp; Systems Architect</strong> &bull; Epic Expressions (2024 - Present)</div>
-          <div class="text-slate-400 pl-3">&bull; Hardened Linux cloud node, Durham Web Design, GMSRA non-profit portal, automated security &amp; telemetry HUD.</div>
-          <div class="mt-1"><strong class="text-white">4. Mechanical Supervisor</strong> &bull; CN Rail (2013 - 2021)</div>
-          <div class="text-slate-400 pl-3">&bull; Supervised crew of 8, PLC &amp; SAP telemetry (-20% downtime), SQL maintenance reporting.</div>
+          <div>&bull; <strong>Software Deployment Engineer</strong> &mdash; NSSL (2026&ndash;Present)</div>
+          <div>&bull; <strong>Frontend Web Developer</strong> &mdash; Jonas Club Software (2022&ndash;2026)</div>
+          <div>&bull; <strong>Mechanical Operations Supervisor</strong> &mdash; CN Rail (2013&ndash;2021, 8 years)</div>
         </div>
       `,
-      'exp': () => commands['experience'](),
-      'projects': () => `
-        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
-          <div>&bull; <strong class="text-cyan-400">Hetzner Linux Node (5.161.161.222):</strong> UFW default-deny, Nginx, MariaDB, multi-domain Let's Encrypt ECDSA.</div>
-          <div>&bull; <strong class="text-emerald-400">Enterprise API Security:</strong> Automated vulnerability testing suite, OAuth 2.0 / JWT token validation, decoupled key stores.</div>
-          <div>&bull; <strong class="text-amber-400">GMSRA Retiree Portal:</strong> Bespoke senior-accessible WordPress theme serving 1,000+ retired GM Canada employees.</div>
-          <div>&bull; <strong class="text-cyan-400">Durham Web Design:</strong> Commercial agency platform &amp; custom sub-second speed audit tool.</div>
+      'books': () => `
+        <div class="text-slate-300 pl-2 border-l-2 border-violet-400">
+          <div>&bull; <em>Designing Data-Intensive Applications</em> &mdash; Martin Kleppmann</div>
+          <div>&bull; <em>Liftoff: Elon Musk &amp; the Early Days of SpaceX</em> &mdash; Eric Berger</div>
+          <div>&bull; <em>The Pragmatic Programmer</em> &mdash; Thomas &amp; Hunt</div>
+          <div>&bull; <em>Atomic Habits</em> &mdash; James Clear</div>
+          <div>&bull; <em>Meditations</em> &mdash; Marcus Aurelius</div>
+          <div>&bull; <em>Dune</em> &mdash; Frank Herbert</div>
         </div>
       `,
-      'proj': () => commands['projects'](),
-      'skills': () => `
-        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
-          <div>&bull; <strong class="text-white">Languages:</strong> Python, JavaScript (ES6+), SQL, C#, Java, C++, HTML5, CSS3, Bash</div>
-          <div>&bull; <strong class="text-white">Cloud/DevOps:</strong> Microsoft Azure, Azure Key Vault, Linux (Ubuntu), Nginx, Docker, DNS</div>
-          <div>&bull; <strong class="text-white">Security:</strong> OAuth2.0, JWT, API Security Testing, OWASP Top 10, UFW, Ed25519, IAM</div>
-          <div>&bull; <strong class="text-white">Databases:</strong> MS SQL Server, MariaDB, MySQL, PostgreSQL</div>
+      'booking': () => `
+        <div class="text-slate-300 pl-2 border-l-2 border-emerald-400">
+          <div>Book a direct 1-on-1 appointment on my Google Calendar:</div>
+          <div class="mt-1"><a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" class="text-emerald-400 underline font-bold">calendar.app.google/nbZSc4PuUv6BXNGJ7</a> &rarr;</div>
         </div>
       `,
       'contact': () => `
         <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
           <div>&bull; Email: <a href="mailto:wattsd1985@gmail.com" class="text-cyan-400 underline">wattsd1985@gmail.com</a></div>
           <div>&bull; Phone: <a href="tel:2899289013" class="text-cyan-400 underline">289-928-9013</a></div>
+          <div>&bull; Booking: <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" class="text-emerald-400 underline">Book 1-on-1 Chat</a></div>
           <div>&bull; LinkedIn: <a href="https://www.linkedin.com/in/dane-w-69a42313a/" target="_blank" class="text-cyan-400 underline">linkedin.com/in/dane-w-69a42313a</a></div>
           <div>&bull; GitHub: <a href="https://github.com/Dane85" target="_blank" class="text-cyan-400 underline">github.com/Dane85</a></div>
-          <div>&bull; Location: Oshawa, ON, Canada</div>
         </div>
       `,
       'clear': () => {
@@ -1256,7 +1164,7 @@
       if (!cleanCmd) return;
 
       const cmdEcho = document.createElement('div');
-      cmdEcho.innerHTML = `<span class="text-cyan-400 font-bold">dane@sec-ops:~$</span> <span class="text-white">${cleanCmd}</span>`;
+      cmdEcho.innerHTML = `<span class="text-cyan-400 font-bold">dane@personal:~$</span> <span class="text-white">${cleanCmd}</span>`;
       terminalOutput.appendChild(cmdEcho);
 
       if (commands[cleanCmd]) {
