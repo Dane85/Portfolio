@@ -1,1350 +1,506 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dane Watts — 1st Degree BJJ Black Belt (Professor Stripes), Software Engineer, Space & AI Enthusiast, and Athabasca University B.Sc. CIS student based in Oshawa, Ontario." />
-  <meta name="keywords" content="Dane Watts, 1st Degree BJJ Black Belt, Professor Stripes, Justin Bruckmann, Brazilian Jiu Jitsu, Oshawa Express, Toronto Sun, AI, SpaceX, Space Exploration, Athabasca University, Software Engineer, Oshawa Ontario" />
-  <meta name="author" content="Dane Watts" />
-  <title>Dane Watts | 1st Degree BJJ Black Belt, Technologist &amp; Student</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dane Watts</title>
+<meta name="description" content="Dane Watts — software developer focused on secure, reliable systems, founder of Durham Web Design, Athabasca University computing student and 1st degree Brazilian Jiu-Jitsu black belt in Oshawa, Ontario.">
+<meta property="og:title" content="Dane Watts">
+<meta property="og:description" content="Software developer, founder of Durham Web Design, computing student and BJJ black belt in Oshawa, Ontario.">
+<meta property="og:url" content="https://danewatts.com/">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#f5f3ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://danewatts.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f3ee;
+    --surface: #fffdf9;
+    --ink: #17171a;
+    --muted: #5d5b57;
+    --faint: #8a8781;
+    --line: #e2ded6;
+    --accent: #b42318;
+    --accent-ink: #ffffff;
+    --accent-soft: #f6e3e0;
+    --radius: 14px;
+    --max: 1080px;
+    --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111113; --surface: #19191c; --ink: #ecebe7; --muted: #a9a6a0; --faint: #7d7a75;
+      --line: #2a2a2e; --accent: #ff5d4f; --accent-ink: #1a0d0b; --accent-soft: #2b1715;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111113; --surface: #19191c; --ink: #ecebe7; --muted: #a9a6a0; --faint: #7d7a75;
+    --line: #2a2a2e; --accent: #ff5d4f; --accent-ink: #1a0d0b; --accent-soft: #2b1715;
+  }
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="alternate icon" href="favicon.svg" />
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 400 17px/1.65 var(--sans); -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  a:hover { color: var(--accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  img, svg { display: block; max-width: 100%; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
+  @media (min-width: 720px) { .wrap { padding: 0 32px; } }
+  .skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: var(--bg); padding: 8px 12px; border-radius: 8px; z-index: 50; }
+  .skip:focus { left: 8px; }
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            cyber: {
-              dark: '#080c14',
-              card: '#0f172a',
-              cardHover: '#131e36',
-              cyan: '#00e5ff',
-              emerald: '#10b981',
-              amber: '#f59e0b',
-              violet: '#8b5cf6',
-              rose: '#f43f5e',
-              border: 'rgba(255, 255, 255, 0.08)',
-              borderActive: 'rgba(0, 229, 255, 0.4)'
-            }
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace']
-          }
-        }
-      }
-    };
-  </script>
+  /* Header */
+  header.site {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; text-decoration: none; letter-spacing: -0.01em; }
+  .brand .belt { width: 26px; height: 10px; border-radius: 2px; background: var(--ink); position: relative; }
+  .brand .belt::after { content: ""; position: absolute; right: 4px; top: 0; bottom: 0; width: 9px; background: var(--accent); border-left: 2px solid var(--bg); border-right: 2px solid var(--bg); }
+  nav.main { display: none; gap: 22px; font-size: 15px; }
+  nav.main a { text-decoration: none; color: var(--muted); }
+  nav.main a:hover { color: var(--ink); }
+  .actions { display: flex; align-items: center; gap: 8px; }
+  .icon-btn {
+    width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface);
+    color: var(--ink); display: inline-grid; place-items: center; cursor: pointer;
+  }
+  .icon-btn svg { width: 18px; height: 18px; }
+  .menu-btn { display: inline-grid; }
+  @media (min-width: 900px) { nav.main { display: flex; } .menu-btn { display: none; } }
+  .drawer { display: none; border-top: 1px solid var(--line); padding: 8px 0 16px; }
+  .drawer.open { display: grid; }
+  .drawer a { padding: 10px 0; text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--line); }
+  @media (min-width: 900px) { .drawer, .drawer.open { display: none; } }
 
-  <!-- Google Fonts & FontAwesome Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 999px;
+    font: 600 15px/1 var(--sans); text-decoration: none; border: 1px solid var(--ink); cursor: pointer;
+  }
+  .btn-primary { background: var(--ink); color: var(--bg); }
+  .btn-primary:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  .btn-ghost { background: transparent; color: var(--ink); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .btn svg { width: 16px; height: 16px; }
 
-  <style>
-    :root {
-      --bg-dark: #080c14;
-      --accent-cyan: #00e5ff;
-      --accent-emerald: #10b981;
-      --accent-amber: #f59e0b;
-    }
-    body {
-      background-color: var(--bg-dark);
-      color: #e2e8f0;
-      font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
-    }
-    .font-mono {
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .glass-panel {
-      background: rgba(15, 23, 42, 0.72);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-    }
-    .glass-panel:hover {
-      border-color: rgba(0, 229, 255, 0.3);
-    }
-    .glass-nav {
-      background: rgba(8, 12, 20, 0.90);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .terminal-window {
-      background: #090e18;
-      border: 1px solid rgba(0, 229, 255, 0.25);
-      box-shadow: 0 20px 50px -10px rgba(0, 229, 255, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.05);
-    }
-    .glow-cyan {
-      text-shadow: 0 0 25px rgba(0, 229, 255, 0.45);
-    }
-    .glow-emerald {
-      text-shadow: 0 0 25px rgba(16, 185, 129, 0.45);
-    }
-    .glow-amber {
-      text-shadow: 0 0 25px rgba(245, 158, 11, 0.45);
-    }
-    .badge-bjj {
-      background: rgba(245, 158, 11, 0.12);
-      border: 1px solid rgba(245, 158, 11, 0.35);
-      color: #fbbf24;
-    }
-    .badge-cyan {
-      background: rgba(0, 229, 255, 0.08);
-      border: 1px solid rgba(0, 229, 255, 0.25);
-      color: #00e5ff;
-    }
-    .badge-emerald {
-      background: rgba(16, 185, 129, 0.08);
-      border: 1px solid rgba(16, 185, 129, 0.25);
-      color: #10b981;
-    }
-    .badge-violet {
-      background: rgba(139, 92, 246, 0.1);
-      border: 1px solid rgba(139, 92, 246, 0.3);
-      color: #c084fc;
-    }
-    .badge-news {
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      color: #38bdf8;
-    }
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #080c14;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #1e293b;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #00e5ff;
-    }
-  </style>
+  /* Hero */
+  .hero { padding: 56px 0 40px; }
+  @media (min-width: 900px) { .hero { padding: 96px 0 72px; } }
+  .hero-grid { display: grid; gap: 40px; }
+  @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.45fr 1fr; gap: 64px; align-items: end; } }
+  .kicker { font: 500 12px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin: 0 0 18px; }
+  h1 {
+    font: 400 clamp(56px, 11vw, 112px)/0.92 var(--serif); letter-spacing: -0.02em; margin: 0 0 22px;
+  }
+  h1 em { font-style: italic; color: var(--accent); }
+  .lede { font-size: clamp(19px, 2.4vw, 22px); line-height: 1.5; color: var(--muted); margin: 0 0 28px; max-width: 34ch; }
+  .lede strong { color: var(--ink); font-weight: 600; }
+  .cta { display: flex; flex-wrap: wrap; gap: 10px; }
+  .facts { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 6px 20px; margin: 0; }
+  .facts div { display: grid; grid-template-columns: 92px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .facts div:last-child { border-bottom: 0; }
+  .facts dt { font: 500 11px/1.9 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--faint); }
+  .facts dd { margin: 0; font-weight: 500; }
+  .facts dd span { display: block; color: var(--muted); font-weight: 400; font-size: 14px; }
+
+  /* Sections */
+  section.block { padding: 56px 0; border-top: 1px solid var(--line); }
+  @media (min-width: 900px) { section.block { padding: 88px 0; } }
+  .sec-head { display: grid; gap: 8px; margin-bottom: 36px; }
+  @media (min-width: 900px) { .sec-head { grid-template-columns: 220px 1fr; gap: 48px; align-items: baseline; } }
+  .sec-num { font: 500 12px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
+  h2 { font: 400 clamp(36px, 6vw, 56px)/1.02 var(--serif); letter-spacing: -0.015em; margin: 0; }
+  .sec-body { display: grid; gap: 0; }
+  @media (min-width: 900px) { .sec-body { grid-template-columns: 220px 1fr; gap: 48px; } .sec-body > .aside { padding-top: 6px; } }
+  .aside p { margin: 0; color: var(--muted); font-size: 15px; }
+  @media (max-width: 899px) { .sec-body > .aside { margin-bottom: 24px; } }
+  p { margin: 0 0 16px; }
+  .muted { color: var(--muted); }
+
+  /* Timeline */
+  .roles { list-style: none; margin: 0; padding: 0; }
+  .role { padding: 26px 0; border-bottom: 1px solid var(--line); display: grid; gap: 6px; }
+  .role:first-child { padding-top: 0; }
+  .role:last-child { border-bottom: 0; }
+  .role-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline; }
+  .role h3 { font: 600 20px/1.3 var(--sans); margin: 0; letter-spacing: -0.01em; }
+  .when { font: 500 13px/1 var(--mono); color: var(--faint); white-space: nowrap; }
+  .org { color: var(--muted); font-size: 15px; margin: 0 0 6px; }
+  .role ul { margin: 6px 0 0; padding-left: 18px; color: var(--ink); }
+  .role li { margin: 4px 0; }
+  .role li::marker { color: var(--accent); }
+  .now { display: inline-block; font: 600 11px/1 var(--sans); letter-spacing: 0.04em; text-transform: uppercase; background: var(--accent-soft); color: var(--accent); padding: 5px 8px; border-radius: 6px; margin-left: 8px; vertical-align: 3px; }
+
+  /* Cards */
+  .cards { display: grid; gap: 14px; }
+  @media (min-width: 720px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+  .card h3 { font: 600 18px/1.3 var(--sans); margin: 0; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .card .tag { font: 500 11px/1 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--faint); }
+  .card a.more { margin-top: auto; font-weight: 600; font-size: 15px; text-decoration: none; color: var(--accent); }
+  .card a.more:hover { text-decoration: underline; }
+
+  /* Education */
+  .degree { font: 600 20px/1.35 var(--sans); margin: 0 0 4px; }
+  .courses { display: grid; gap: 0; margin: 24px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+  @media (min-width: 720px) { .courses { grid-template-columns: 1fr 1fr; column-gap: 32px; } }
+  .courses li { display: grid; grid-template-columns: 88px 1fr; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .courses code { font: 500 13px/1.6 var(--mono); color: var(--faint); }
+  .courses .ip { color: var(--accent); font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .chips li { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 12px; font-size: 14px; }
+  .skill-groups { display: grid; gap: 22px; }
+  .skill-groups h3 { font: 500 12px/1 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--faint); margin: 0 0 10px; }
+
+  /* BJJ */
+  .rank { display: grid; gap: 24px; }
+  @media (min-width: 720px) { .rank { grid-template-columns: 1fr 1fr; } }
+  .beltbar { height: 22px; border-radius: 4px; background: #121214; position: relative; margin: 6px 0 18px; border: 1px solid var(--line); }
+  .beltbar i { position: absolute; top: 0; bottom: 0; right: 28px; width: 64px; background: #c8261b; border-left: 3px solid #f4f1ea; border-right: 3px solid #f4f1ea; }
+  .beltbar i::before { content: ""; position: absolute; left: 14px; top: 0; bottom: 0; width: 4px; background: #f4f1ea; }
+  .stats { align-self: start; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+  .stats div { padding: 16px; border-right: 1px solid var(--line); }
+  .stats div:last-child { border-right: 0; }
+  .stats b { display: block; font: 400 34px/1 var(--serif); }
+  .stats span { font-size: 13px; color: var(--muted); }
+  .lessons { display: grid; gap: 14px; margin-top: 28px; }
+  @media (min-width: 720px) { .lessons { grid-template-columns: repeat(3, 1fr); } }
+
+  /* Community */
+  .quote { font: 400 italic clamp(24px, 3.4vw, 32px)/1.3 var(--serif); margin: 0 0 22px; padding-left: 18px; border-left: 3px solid var(--accent); }
+  .outlets { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 18px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 15px; }
+  .outlets li::before { content: "— "; color: var(--accent); }
+
+  /* Books */
+  .books { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
+  @media (min-width: 720px) { .books { grid-template-columns: 1fr 1fr; column-gap: 32px; } }
+  .books li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .books b { font-weight: 600; }
+  .books span { color: var(--muted); font-size: 15px; }
+
+  /* Contact */
+  .contact { display: grid; gap: 14px; }
+  @media (min-width: 720px) { .contact { grid-template-columns: repeat(3, 1fr); } }
+  .contact .card { gap: 6px; }
+  .contact .value { font-size: 18px; font-weight: 600; word-break: break-word; text-decoration: none; }
+  .copy { background: none; border: 0; padding: 0; font: 600 14px var(--sans); color: var(--accent); cursor: pointer; align-self: flex-start; }
+
+  footer.site { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--faint); font-size: 14px; }
+  footer.site .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+  footer.site a { text-decoration: none; }
+</style>
 </head>
-<body class="selection:bg-cyan-500 selection:text-slate-900">
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-  <!-- Glow Background Accents -->
-  <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[130px] pointer-events-none -z-10"></div>
-  <div class="fixed bottom-1/4 right-1/4 w-[600px] h-[600px] bg-amber-500/8 rounded-full blur-[150px] pointer-events-none -z-10"></div>
-  <div class="fixed top-1/2 right-10 w-[450px] h-[450px] bg-violet-600/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
-
-  <!-- ====================================================================
-       STICKY TOP NAVIGATION
-       ==================================================================== -->
-  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        
-        <!-- Logo & Brand -->
-        <a href="#about" class="flex items-center gap-3 group">
-          <div class="w-10 h-10 rounded-xl bg-slate-900 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-mono font-black text-lg group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all">
-            DW
-          </div>
-          <div>
-            <div class="font-bold text-white tracking-tight group-hover:text-cyan-400 transition-colors flex items-center gap-2">
-              <span>Dane Watts</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black border border-amber-500/40 text-amber-300 font-bold">🥋 1st Degree Black Belt</span>
-            </div>
-            <div class="text-[11px] font-mono text-slate-400 flex items-center gap-1.5">
-              <span>Professor Stripes &bull; Technologist &bull; Student</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center gap-5 font-mono text-xs text-slate-300">
-          <a href="#about" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">01.</span> About</a>
-          <a href="#bjj" class="hover:text-amber-400 transition-colors"><span class="text-amber-400">02.</span> BJJ</a>
-          <a href="#interests" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">03.</span> Passions</a>
-          <a href="#news" class="hover:text-sky-400 transition-colors"><span class="text-sky-400">04.</span> In The News</a>
-          <a href="#education" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">05.</span> Education</a>
-          <a href="#work" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">06.</span> Work</a>
-          <a href="#books" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">07.</span> Books</a>
-          <a href="#contact" class="hover:text-cyan-400 transition-colors"><span class="text-cyan-400">08.</span> Connect</a>
-        </nav>
-
-        <!-- Action Buttons -->
-        <div class="hidden sm:flex items-center gap-2.5">
-          <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-mono font-semibold transition-all flex items-center gap-1.5 hover:shadow-[0_0_15px_rgba(16,185,129,0.25)]">
-            <i class="fas fa-calendar-check text-xs"></i>
-            <span>Book Chat</span>
-          </a>
-          <a href="/Dane Watts Resume 2025.pdf" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 hover:border-cyan-400 text-xs font-mono font-semibold transition-all flex items-center gap-1.5 hover:shadow-[0_0_15px_rgba(0,229,255,0.25)]">
-            <i class="fas fa-file-pdf text-xs"></i>
-            <span>Resume</span>
-          </a>
-        </div>
-
-        <!-- Mobile Menu Toggle Button -->
-        <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 focus:outline-none">
-          <i id="mobileMenuIcon" class="fas fa-bars text-xl"></i>
+<header class="site">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="#top" aria-label="Dane Watts, back to top"><span class="belt" aria-hidden="true"></span>Dane Watts</a>
+      <nav class="main" aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#building">Building</a>
+        <a href="#education">Education</a>
+        <a href="#jiujitsu">Jiu-Jitsu</a>
+        <a href="#community">Community</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch colour theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <a class="btn btn-primary" href="/Dane%20Watts%20Resume%202025.pdf" target="_blank" rel="noopener" style="height:40px;padding:0 14px">Résumé</a>
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </div>
-
-    <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-800 bg-[#080c14]/98 px-6 py-6 space-y-4 font-mono text-sm">
-      <a href="#about" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">01.</span> About Me</a>
-      <a href="#bjj" class="mobile-link block text-slate-300 hover:text-amber-400 py-1.5"><span class="text-amber-400 mr-2">02.</span> Brazilian Jiu-Jitsu (1st Degree Black Belt)</a>
-      <a href="#interests" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">03.</span> Passions (AI, SpaceX &amp; Tech)</a>
-      <a href="#news" class="mobile-link block text-slate-300 hover:text-sky-400 py-1.5"><span class="text-sky-400 mr-2">04.</span> In The News &amp; Community Impact</a>
-      <a href="#education" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">05.</span> Education (Athabasca BSc CIS)</a>
-      <a href="#work" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">06.</span> Work History</a>
-      <a href="#books" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">07.</span> Reading Vault</a>
-      <a href="#contact" class="mobile-link block text-slate-300 hover:text-cyan-400 py-1.5"><span class="text-cyan-400 mr-2">08.</span> Direct Contact</a>
-      <div class="pt-4 border-t border-slate-800 flex flex-col gap-2.5">
-        <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" rel="noopener noreferrer" class="w-full text-center px-4 py-2.5 rounded-lg bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 font-bold flex items-center justify-center gap-2">
-          <i class="fas fa-calendar-check"></i> Schedule an Appointment
-        </a>
-        <a href="/Dane Watts Resume 2025.pdf" target="_blank" class="w-full text-center px-4 py-2.5 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-bold flex items-center justify-center gap-2">
-          <i class="fas fa-file-pdf"></i> Download Resume (PDF)
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- ====================================================================
-       HERO / INTRO SECTION
-       ==================================================================== -->
-  <main id="main-content">
-    <section id="about" class="min-h-screen flex items-center justify-center pt-28 pb-16 relative">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <!-- Left Column: Bio & Title -->
-          <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full badge-cyan text-xs font-mono tracking-wide">
-              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-              <span>PERSONAL PROFILE &bull; OSHAWA, ONTARIO</span>
-            </div>
-
-            <div class="space-y-2">
-              <div class="font-mono text-cyan-400 text-sm tracking-wider">Hi, I'm</div>
-              <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight glow-cyan">
-                Dane Watts.
-              </h1>
-              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-400">
-                Builder, martial artist, and perpetual student.
-              </h2>
-            </div>
-
-            <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-              This space is all about who I am outside of corporate slides. I am a software engineer, defensive security specialist, and lifelong student pursuing my <strong class="text-white">B.Sc. in Computing &amp; Information Systems</strong> at Athabasca University. I hold a <strong class="text-amber-300">1st Degree Brazilian Jiu-Jitsu Black Belt with Professor Stripes</strong> awarded under Canadian MMA pioneer Justin Bruckmann.
-            </p>
-
-            <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl">
-              I spend my time exploring <span class="text-cyan-400 font-semibold">frontier AI architectures</span>, tracking <span class="text-violet-400 font-semibold">SpaceX rocketry</span>, building robust computer systems, mentoring on the mats, and showing up for my local community.
-            </p>
-
-            <!-- Quick Stat Badges -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-              <div class="glass-panel p-3.5 rounded-xl border border-amber-500/30">
-                <div class="text-amber-400 font-mono font-bold text-lg sm:text-xl flex items-center gap-1.5">
-                  <span>🥋 1st Deg</span>
-                </div>
-                <div class="text-slate-300 font-semibold text-xs mt-0.5">BJJ Black Belt</div>
-                <div class="text-[10px] text-amber-300/80">Professor Stripes</div>
-              </div>
-
-              <div class="glass-panel p-3.5 rounded-xl border border-sky-500/30">
-                <div class="text-sky-400 font-mono font-bold text-lg sm:text-xl flex items-center gap-1.5">
-                  <i class="fas fa-newspaper text-sm"></i> Press
-                </div>
-                <div class="text-slate-300 font-semibold text-xs mt-0.5">In The News</div>
-                <div class="text-[10px] text-slate-500">Community Impact</div>
-              </div>
-
-              <div class="glass-panel p-3.5 rounded-xl border border-cyan-500/30">
-                <div class="text-cyan-400 font-mono font-bold text-lg sm:text-xl">3.4 GPA</div>
-                <div class="text-slate-300 font-semibold text-xs mt-0.5">Athabasca BSc</div>
-                <div class="text-[10px] text-slate-500">Computing &amp; IS</div>
-              </div>
-
-              <div class="glass-panel p-3.5 rounded-xl border border-emerald-500/30">
-                <div class="text-emerald-400 font-mono font-bold text-lg sm:text-xl">NSSL</div>
-                <div class="text-slate-300 font-semibold text-xs mt-0.5">Deployment Eng</div>
-                <div class="text-[10px] text-slate-500">Systems Reliability</div>
-              </div>
-            </div>
-
-            <!-- CTA Button Group -->
-            <div class="flex flex-wrap items-center gap-3.5 pt-3">
-              <a href="#bjj" class="px-5 py-3 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 font-mono font-bold text-xs transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(245,158,11,0.2)]">
-                <span>🥋 The BJJ Journey</span>
-                <i class="fas fa-arrow-down text-xs"></i>
-              </a>
-              <a href="#news" class="px-4 py-3 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 border border-sky-500/30 font-mono font-bold text-xs transition-all flex items-center gap-2">
-                <i class="fas fa-newspaper text-xs"></i>
-                <span>News &amp; Community</span>
-              </a>
-              <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 font-mono font-bold text-xs transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
-                <i class="fas fa-calendar-check"></i>
-                <span>Book a Chat</span>
-              </a>
-              <a href="/Dane Watts Resume 2025.pdf" target="_blank" class="px-4 py-3 rounded-xl glass-panel hover:border-cyan-400 text-slate-300 hover:text-cyan-400 font-mono text-xs transition-all flex items-center gap-1.5">
-                <i class="fas fa-file-pdf text-cyan-400"></i>
-                <span>Resume (PDF)</span>
-              </a>
-              <div class="flex items-center gap-2">
-                <a href="https://github.com/Dane85" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl glass-panel text-slate-300 hover:text-cyan-400 hover:border-cyan-400 transition-all text-sm" title="GitHub">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/dane-w-69a42313a/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl glass-panel text-slate-300 hover:text-cyan-400 hover:border-cyan-400 transition-all text-sm" title="LinkedIn">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Column: Interactive Terminal Widget -->
-          <div class="lg:col-span-5">
-            <div class="terminal-window rounded-2xl overflow-hidden font-mono shadow-2xl">
-              <!-- Window Header -->
-              <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                  <div class="w-3 h-3 rounded-full bg-rose-500"></div>
-                  <div class="w-3 h-3 rounded-full bg-amber-500"></div>
-                  <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
-                  <span class="text-xs text-slate-400 ml-2">dane@personal-hub:~</span>
-                </div>
-                <div class="text-[10px] text-cyan-400 font-bold">bash 5.2</div>
-              </div>
-
-              <!-- Terminal Body / Interactive Console -->
-              <div id="terminalBody" class="p-5 text-xs text-slate-300 space-y-3 min-h-[340px] max-h-[420px] overflow-y-auto">
-                <div class="text-slate-400">Welcome to Dane's personal terminal. Type commands to explore:</div>
-                <div class="text-cyan-300">Available: <span class="font-bold">whoami</span>, <span class="font-bold">bjj</span>, <span class="font-bold">news</span>, <span class="font-bold">interests</span>, <span class="font-bold">education</span>, <span class="font-bold">work</span>, <span class="font-bold">books</span>, <span class="font-bold">booking</span>, <span class="font-bold">contact</span>, <span class="font-bold">clear</span></div>
-                
-                <div id="terminalOutput" class="space-y-3">
-                  <!-- Dynamic command outputs will inject here -->
-                </div>
-
-                <!-- Input Prompt Line -->
-                <div class="flex items-center gap-2 pt-2">
-                  <span class="text-cyan-400 font-bold">dane@personal:~$</span>
-                  <input type="text" id="terminalInput" aria-label="Terminal command prompt" placeholder="type 'bjj' or 'news'..." class="bg-transparent border-none outline-none text-white w-full font-mono text-xs focus:ring-0 placeholder-slate-600" autocomplete="off" spellcheck="false">
-                </div>
-              </div>
-
-              <!-- Terminal Quick Command Chips -->
-              <div class="bg-slate-900/60 px-4 py-2.5 border-t border-slate-800/80 flex flex-wrap gap-1.5 text-[11px]">
-                <span class="text-slate-500 self-center mr-1">Quick:</span>
-                <button onclick="runCommand('bjj')" class="px-2 py-0.5 rounded bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 transition cursor-pointer">bjj</button>
-                <button onclick="runCommand('news')" class="px-2 py-0.5 rounded bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 border border-sky-500/30 transition cursor-pointer">news</button>
-                <button onclick="runCommand('interests')" class="px-2 py-0.5 rounded bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition cursor-pointer">interests</button>
-                <button onclick="runCommand('education')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer">education</button>
-                <button onclick="runCommand('books')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer">books</button>
-                <button onclick="runCommand('booking')" class="px-2 py-0.5 rounded bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition cursor-pointer">booking</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         SECTION 1: BRAZILIAN JIU-JITSU (DEEP DIVE)
-         ==================================================================== -->
-    <section id="bjj" class="py-24 relative border-t border-slate-800/80">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="mb-14">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-bjj text-xs font-mono font-bold uppercase tracking-wider mb-3">
-            <span>🥋 02 / The Gentle Art</span>
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            1st Degree BJJ Black Belt.
-          </h2>
-          <div class="text-amber-400 font-mono text-sm font-semibold mt-1">
-            Professor Stripes &bull; Awarded by Canadian MMA Pioneer Justin Bruckmann
-          </div>
-          <p class="text-slate-400 text-base max-w-2xl mt-2">
-            Promoted to Black Belt in December 2019, followed by 1st Degree designation with Professor Stripes. 15+ years of live problem-solving, pressure testing, and physical chess on the mats.
-          </p>
-        </div>
-
-        <!-- BJJ Hero Feature Card -->
-        <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-amber-500/30 mb-8 relative overflow-hidden">
-          <div class="absolute -right-10 -bottom-10 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div class="lg:col-span-8 space-y-4">
-              <div class="flex flex-wrap items-center gap-2">
-                <span class="px-2.5 py-1 rounded-lg bg-black border border-amber-500/50 text-amber-400 font-mono text-xs font-bold uppercase tracking-wider">
-                  Lineage: Carlson Gracie &bull; Bruckmann Martial Arts &bull; Kalsamrit
-                </span>
-                <span class="px-2.5 py-1 rounded-lg bg-red-950/60 border border-red-500/40 text-red-300 font-mono text-xs font-semibold">
-                  1st Degree (Professor Stripes)
-                </span>
-              </div>
-
-              <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
-                Under Coach Justin Bruckmann
-              </h3>
-
-              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Earning a black belt in Brazilian Jiu-Jitsu is a grueling, 10-to-15 year crucible. Under Justin Bruckmann &mdash; one of Canada&rsquo;s most revered martial arts pioneers, former professional fighter, and legendary coach &mdash; nothing was given; every stripe, degree, and belt was forged through thousands of rounds of live sparring against elite practitioners.
-              </p>
-
-              <p class="text-slate-400 text-sm leading-relaxed">
-                Reaching 1st Degree with <strong class="text-white">Professor Stripes</strong> (the white borders framing the red rank bar) represents not only years of post-black belt mastery, but the responsibility of mentorship: coaching teammates, refining technical nuance, and carrying forward the standards of the Carlson Gracie lineage.
-              </p>
-
-              <div class="pt-2 flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400">
-                <div class="flex items-center gap-1.5">
-                  <i class="fas fa-certificate text-amber-400"></i>
-                  <span>Verified BJJ Beltchecker Competitor &amp; Coach</span>
-                </div>
-                <div class="flex items-center gap-1.5">
-                  <i class="fas fa-trophy text-amber-400"></i>
-                  <span>Ontario Regional &amp; Invitational Grappling</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- BJJ Key Metrics / Belt Graphic -->
-            <div class="lg:col-span-4 flex flex-col gap-3">
-              <div class="p-5 rounded-2xl bg-black/90 border border-amber-500/40 text-center shadow-xl">
-                <!-- Visual Belt Representation: Black belt body + Red sleeve + White Professor Borders + 1st Degree Stripe -->
-                <div class="h-9 w-full bg-slate-950 rounded border border-amber-500/50 flex items-center justify-end px-3 mb-3 relative overflow-hidden shadow-inner">
-                  <!-- Belt Texture -->
-                  <div class="absolute inset-0 bg-gradient-to-r from-neutral-900 via-neutral-950 to-neutral-900"></div>
-                  <!-- Red Rank Bar with White Professor Stripes (Borders) and 1st Degree White Stripe -->
-                  <div class="relative z-10 h-full flex items-center bg-red-600 px-2 border-x-4 border-white shadow-lg gap-1.5">
-                    <!-- 1st Degree Stripe -->
-                    <div class="w-1.5 h-full bg-white shadow-sm" title="1st Degree Rank Stripe"></div>
-                  </div>
-                </div>
-
-                <div class="text-sm font-extrabold text-white uppercase tracking-wider">1st Degree Black Belt</div>
-                <div class="text-xs text-amber-400 font-mono mt-0.5 font-semibold">Professor Stripes &bull; Justin Bruckmann</div>
-                <div class="text-[11px] text-slate-400 font-mono mt-1">Black Belt Promoted Dec 2019</div>
-              </div>
-
-              <div class="grid grid-cols-2 gap-2 text-center text-xs font-mono">
-                <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
-                  <div class="text-amber-400 font-bold text-base">15+ Yrs</div>
-                  <div class="text-slate-400 text-[10px]">On The Mats</div>
-                </div>
-                <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
-                  <div class="text-cyan-400 font-bold text-base">BMA / Kalsamrit</div>
-                  <div class="text-slate-400 text-[10px]">Training Academy</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3 Pillars of BJJ Philosophy applied to Life & Engineering -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div class="glass-panel p-6 rounded-2xl border border-white/10 space-y-2.5">
-            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-lg">
-              <i class="fas fa-brain"></i>
-            </div>
-            <h4 class="text-lg font-bold text-white">Composure Under Pressure</h4>
-            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-              When a heavy, dangerous opponent is crushing your frames, panic guarantees immediate submission. You learn to breathe, regulate your heart rate, and methodically engineer your escape. That same iron calm carries over when critical production infrastructure faces unexpected turbulence.
-            </p>
-          </div>
-
-          <div class="glass-panel p-6 rounded-2xl border border-white/10 space-y-2.5">
-            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg">
-              <i class="fas fa-chess"></i>
-            </div>
-            <h4 class="text-lg font-bold text-white">Leverage &amp; Precision</h4>
-            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-              Jiu-jitsu was created so that precision and mechanical advantage defeat brute muscular force. In engineering, architecture, and personal challenges, searching for the fulcrum and applying technical leverage solves problems that raw effort alone cannot.
-            </p>
-          </div>
-
-          <div class="glass-panel p-6 rounded-2xl border border-white/10 space-y-2.5">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
-              <i class="fas fa-rotate"></i>
-            </div>
-            <h4 class="text-lg font-bold text-white">Perpetual White Belt Mindset</h4>
-            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-              The Professor stripes don't signify knowing everything &mdash; they signify committing to being a student for life. Every session brings a fresh perspective, an evolving counter, or an unexpected lesson. Ego has no place on the mats or in software development.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         SECTION 2: PASSIONS, HOBBIES & TECH
-         ==================================================================== -->
-    <section id="interests" class="py-24 relative border-t border-slate-800/80">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="mb-14">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-cyan text-xs font-mono font-bold uppercase tracking-wider mb-3">
-            <span>🚀 03 / What Drives Me</span>
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Interests, Frontier Tech &amp; Hobbies.
-          </h2>
-          <p class="text-slate-400 text-base max-w-2xl mt-2">
-            The concepts, technologies, and frontiers that keep me up late reading, building, and thinking.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-          <!-- Passion 1: Artificial Intelligence -->
-          <div class="glass-panel p-7 rounded-3xl border border-cyan-500/30 hover:border-cyan-400 transition-all flex flex-col justify-between space-y-4">
-            <div>
-              <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-xl mb-4">
-                <i class="fas fa-robot"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Artificial Intelligence</h3>
-              <p class="text-slate-400 text-sm leading-relaxed">
-                Fascinated by Large Language Models, autonomous agentic loops, prompt distillation, and neural architectures. I spend substantial time integrating AI toolchains, local model experimentation, and exploring how cognitive intelligence augments human engineering.
-              </p>
-            </div>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-cyan-300 pt-2 border-t border-white/5">
-              <span class="px-2 py-0.5 rounded bg-cyan-500/10">Autonomous Agents</span>
-              <span class="px-2 py-0.5 rounded bg-cyan-500/10">LLM Tool Calling</span>
-              <span class="px-2 py-0.5 rounded bg-cyan-500/10">Cognitive Augmentation</span>
-            </div>
-          </div>
-
-          <!-- Passion 2: SpaceX & Space Exploration -->
-          <div class="glass-panel p-7 rounded-3xl border border-violet-500/30 hover:border-violet-400 transition-all flex flex-col justify-between space-y-4">
-            <div>
-              <div class="w-12 h-12 rounded-2xl bg-violet-500/10 border border-violet-500/30 text-violet-400 flex items-center justify-center text-xl mb-4">
-                <i class="fas fa-rocket"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">SpaceX &amp; Orbital Space</h3>
-              <p class="text-slate-400 text-sm leading-relaxed">
-                An avid follower of orbital mechanics, reusable rocketry, and the Starship development program in Starbase, TX. The engineering audacity required to catch a 20-story booster with mechanical arms represents the absolute pinnacle of human hardware and software control.
-              </p>
-            </div>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-violet-300 pt-2 border-t border-white/5">
-              <span class="px-2 py-0.5 rounded bg-violet-500/10">Starship / Super Heavy</span>
-              <span class="px-2 py-0.5 rounded bg-violet-500/10">Multiplanetary Life</span>
-              <span class="px-2 py-0.5 rounded bg-violet-500/10">Orbital Mechanics</span>
-            </div>
-          </div>
-
-          <!-- Passion 3: Computers & Technologies -->
-          <div class="glass-panel p-7 rounded-3xl border border-emerald-500/30 hover:border-emerald-400 transition-all flex flex-col justify-between space-y-4">
-            <div>
-              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl mb-4">
-                <i class="fas fa-microchip"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Computers &amp; Technologies</h3>
-              <p class="text-slate-400 text-sm leading-relaxed">
-                From bare-metal Linux servers and custom kernel tweaks to networking protocols, low-latency architectures, and defensive security. I love understanding how systems work from silicon up to high-level application runtime.
-              </p>
-            </div>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-emerald-300 pt-2 border-t border-white/5">
-              <span class="px-2 py-0.5 rounded bg-emerald-500/10">Linux (Ubuntu/Debian)</span>
-              <span class="px-2 py-0.5 rounded bg-emerald-500/10">Defensive Cybersecurity</span>
-              <span class="px-2 py-0.5 rounded bg-emerald-500/10">System Architecture</span>
-            </div>
-          </div>
-
-          <!-- Passion 4: Astronomy & Deep Cosmos -->
-          <div class="glass-panel p-7 rounded-3xl border border-white/10 hover:border-cyan-400 transition-all flex flex-col justify-between space-y-4">
-            <div>
-              <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center text-xl mb-4">
-                <i class="fas fa-meteor"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Astronomy &amp; The Cosmos</h3>
-              <p class="text-slate-400 text-sm leading-relaxed">
-                Passionate about astrophysics, cosmology, deep space photography, and astronomical observations. Supporting community organizations like the Durham Region Astronomical Association (DRAA) has been one of my favorite projects.
-              </p>
-            </div>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-blue-300 pt-2 border-t border-white/5">
-              <span class="px-2 py-0.5 rounded bg-blue-500/10">Astrophysics</span>
-              <span class="px-2 py-0.5 rounded bg-blue-500/10">James Webb &bull; Hubble</span>
-              <span class="px-2 py-0.5 rounded bg-blue-500/10">Cosmic Perspective</span>
-            </div>
-          </div>
-
-          <!-- Passion 5: Physical Conditioning & Fitness -->
-          <div class="glass-panel p-7 rounded-3xl border border-white/10 hover:border-amber-400 transition-all flex flex-col justify-between space-y-4">
-            <div>
-              <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-xl mb-4">
-                <i class="fas fa-dumbbell"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Athletic Conditioning</h3>
-              <p class="text-slate-400 text-sm leading-relaxed">
-                High-intensity mat sessions, strength training, mobility work, and cold discipline. Maintaining physical sharpness directly feeds mental clarity, patience, and focus during long problem-solving and coding marathons.
-              </p>
-            </div>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-amber-300 pt-2 border-t border-white/5">
-              <span class="px-2 py-0.5 rounded bg-amber-500/10">Strength Training</span>
-              <span class="px-2 py-0.5 rounded bg-amber-500/10">Mobility &amp; Grip</span>
-              <span class="px-2 py-0.5 rounded bg-amber-500/10">Recovery &amp; Longevity</span>
-            </div>
-          </div>
-
-          <!-- Passion 6: Open Source & Building -->
-          <div class="glass-panel p-7 rounded-3xl border border-white/10 hover:border-emerald-400 transition-all flex flex-col justify-between space-y-4">
-            <div>
-              <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/30 text-rose-400 flex items-center justify-center text-xl mb-4">
-                <i class="fas fa-code-branch"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2">Software Craftsmanship</h3>
-              <p class="text-slate-400 text-sm leading-relaxed">
-                Writing clean, reliable code with zero bloat. Whether crafting Bash automation scripts, Python microservices, or interactive web UIs, I take immense pride in building tools that are bulletproof, fast, and delightful to use.
-              </p>
-            </div>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-rose-300 pt-2 border-t border-white/5">
-              <span class="px-2 py-0.5 rounded bg-rose-500/10">Zero Bloat</span>
-              <span class="px-2 py-0.5 rounded bg-rose-500/10">Python &amp; JavaScript</span>
-              <span class="px-2 py-0.5 rounded bg-rose-500/10">Bash Automation</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         SECTION: IN THE NEWS & COMMUNITY IMPACT (NEW)
-         ==================================================================== -->
-    <section id="news" class="py-24 relative border-t border-slate-800/80">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="mb-14">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-news text-xs font-mono font-bold uppercase tracking-wider mb-3">
-            <span>📰 04 / Media &amp; Community Leadership</span>
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            In The News &amp; Community Action.
-          </h2>
-          <p class="text-slate-400 text-base max-w-2xl mt-2">
-            Stepping forward when tragedy hits close to home. Regional news coverage, grassroots advocacy, and community leadership in the Durham Region.
-          </p>
-        </div>
-
-        <!-- Featured Media Coverage Card: The Nichole McWatters Trust -->
-        <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-sky-500/30 mb-8 relative overflow-hidden">
-          <div class="absolute -right-10 -top-10 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl pointer-events-none"></div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div class="lg:col-span-8 space-y-4">
-              <div class="flex flex-wrap items-center gap-2">
-                <span class="px-2.5 py-1 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 font-mono text-xs font-bold uppercase tracking-wider">
-                  <i class="fas fa-bullhorn mr-1.5"></i> Regional News Headline
-                </span>
-                <span class="text-slate-400 text-xs font-mono">July 2019 &bull; Durham Region, Ontario</span>
-              </div>
-
-              <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
-                Rallying Durham: Community Relief Campaign
-              </h3>
-
-              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                In July 2019, tragedy struck our local community when 33-year-old Oshawa resident <strong class="text-white">Nichole McWatters</strong> made the ultimate maternal sacrifice &mdash; swimming into the waters of Lake Ontario at Frenchman&rsquo;s Bay in Pickering to rescue her six-year-old son from drifting out on an inflatable toy. While her son was brought safely to shore, Nichole tragically lost her life.
-              </p>
-
-              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Recognizing the immediate heartbreak and long-term hardship faced by her young son, Dane Watts stepped up as a close friend and community organizer. Dane launched and spearheaded a regional crowdfunding trust to ensure the child was cared for and that educational funds were secured.
-              </p>
-
-              <p class="text-slate-400 text-sm leading-relaxed">
-                The campaign gained widespread regional attention, covered by major Ontario outlets including <strong class="text-white">The Oshawa Express</strong>, <strong class="text-white">The Toronto Sun</strong>, and <strong class="text-white">DurhamRegion.com</strong>, surging past its initial goal to raise over <strong>$18,000+</strong> in community solidarity.
-              </p>
-
-              <blockquote class="p-4 rounded-xl bg-slate-900/80 border-l-4 border-sky-400 text-slate-300 italic text-sm">
-                &ldquo;When sudden tragedy strikes our community, standing on the sidelines isn't an option. Stepping up to protect and secure a future for a child who lost his mother is a fundamental human duty.&rdquo;
-              </blockquote>
-            </div>
-
-            <!-- Media Outlets & Recognition Box -->
-            <div class="lg:col-span-4 flex flex-col gap-3">
-              <div class="p-5 rounded-2xl bg-black/80 border border-sky-500/40 space-y-3.5">
-                <div class="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider flex items-center gap-2">
-                  <i class="fas fa-newspaper"></i> Featured Outlets
-                </div>
-
-                <div class="space-y-2.5 text-xs">
-                  <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                    <div class="font-bold text-white flex items-center justify-between">
-                      <span>The Oshawa Express</span>
-                      <span class="text-[10px] text-sky-400 font-mono">Print &amp; Web</span>
-                    </div>
-                    <div class="text-slate-400 text-[11px] mt-0.5">
-                      Front-page coverage of community rallying around McWatters' son led by Dane Watts.
-                    </div>
-                  </div>
-
-                  <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                    <div class="font-bold text-white flex items-center justify-between">
-                      <span>The Toronto Sun</span>
-                      <span class="text-[10px] text-amber-400 font-mono">Metro Daily</span>
-                    </div>
-                    <div class="text-slate-400 text-[11px] mt-0.5">
-                      Hero mom drowning in Lake Ontario &amp; Dane Watts organizing support.
-                    </div>
-                  </div>
-
-                  <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                    <div class="font-bold text-white flex items-center justify-between">
-                      <span>DurhamRegion.com</span>
-                      <span class="text-[10px] text-emerald-400 font-mono">Regional News</span>
-                    </div>
-                    <div class="text-slate-400 text-[11px] mt-0.5">
-                      Grassroots fundraising and widespread Durham community response.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="pt-2 border-t border-white/5 flex items-center justify-between text-xs font-mono">
-                  <span class="text-slate-400">Total Community Support:</span>
-                  <span class="text-emerald-400 font-bold">$18,000+ Raised</span>
-                </div>
-              </div>
-
-              <!-- Community Philosophy Card -->
-              <div class="p-4 rounded-xl bg-sky-950/20 border border-sky-500/20 text-xs text-slate-300 space-y-1 font-mono">
-                <div class="text-sky-300 font-bold flex items-center gap-1.5">
-                  <i class="fas fa-hands-holding-child"></i> Community Values
-                </div>
-                <div class="text-[11px] text-slate-400">
-                  Leadership isn't what you say on a resume; it's how you answer the call when real people need your help.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         SECTION 3: EDUCATION & STUDIES
-         ==================================================================== -->
-    <section id="education" class="py-24 relative border-t border-slate-800/80">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="mb-14">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-emerald text-xs font-mono font-bold uppercase tracking-wider mb-3">
-            <span>🎓 05 / Academic Foundation</span>
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Education &amp; Lifelong Learning.
-          </h2>
-          <p class="text-slate-400 text-base max-w-2xl mt-2">
-            Rigorous undergraduate degree program balancing theoretical computing foundations with modern enterprise software architecture.
-          </p>
-        </div>
-
-        <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-cyan-500/30 relative overflow-hidden">
-          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-white/10">
-            <div>
-              <div class="flex items-center gap-2 font-mono text-cyan-400 text-xs font-bold uppercase">
-                <span>Faculty of Science &amp; Technology</span>
-                <span>&bull;</span>
-                <span>Athabasca University</span>
-              </div>
-              <h3 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">
-                Bachelor of Science in Computing &amp; Information Systems
-              </h3>
-              <p class="text-slate-400 text-sm mt-1">
-                120-Credit Comprehensive Degree Program &bull; Bridged from 30-Credit CIS University Certificate
-              </p>
-            </div>
-
-            <div class="flex items-center gap-3">
-              <div class="p-4 rounded-2xl bg-black/60 border border-emerald-500/40 text-center">
-                <div class="text-2xl font-black text-emerald-400 font-mono">3.4</div>
-                <div class="text-[10px] text-slate-400 uppercase font-mono font-bold">Cumulative GPA</div>
-              </div>
-              <div class="p-4 rounded-2xl bg-black/60 border border-cyan-500/40 text-center">
-                <div class="text-2xl font-black text-cyan-400 font-mono">120</div>
-                <div class="text-[10px] text-slate-400 uppercase font-mono font-bold">Total Credits</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Academic Pillars -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
-            <div class="space-y-3">
-              <h4 class="text-base font-bold text-white flex items-center gap-2 font-mono">
-                <span class="text-cyan-400">&gt;</span> Computer Science Core
-              </h4>
-              <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
-                <li class="flex items-start gap-2">
-                  <i class="fas fa-check text-cyan-400 mt-1 text-xs"></i>
-                  <span><strong>Data Structures &amp; Algorithms (COMP 272):</strong> Sorting, tree traversals, graphs, complexity analysis (Big-O).</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fas fa-check text-cyan-400 mt-1 text-xs"></i>
-                  <span><strong>Operating Systems Principles (COMP 308):</strong> Concurrency, thread scheduling, memory paging, file systems.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fas fa-check text-cyan-400 mt-1 text-xs"></i>
-                  <span><strong>Computer Networks &amp; Protocols (COMP 347):</strong> OSI stack, TCP/UDP sockets, routing algorithms, packets.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fas fa-check text-cyan-400 mt-1 text-xs"></i>
-                  <span><strong>OOP in Java &amp; C++ (COMP 268 &amp; COMP 306):</strong> Memory management, pointers, polymorphism, inheritance.</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="space-y-3">
-              <h4 class="text-base font-bold text-white flex items-center gap-2 font-mono">
-                <span class="text-emerald-400">&gt;</span> Systems &amp; Architecture Core
-              </h4>
-              <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
-                <li class="flex items-start gap-2">
-                  <i class="fas fa-check text-emerald-400 mt-1 text-xs"></i>
-                  <span><strong>Relational Databases &amp; SQL (COMP 378):</strong> Schema normalization (3NF), indexing, transaction ACID guarantees.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fas fa-check text-emerald-400 mt-1 text-xs"></i>
-                  <span><strong>Systems Analysis &amp; Design (COMP 361):</strong> UML modeling, requirement elicitation, agile architecture.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fas fa-check text-emerald-400 mt-1 text-xs"></i>
-                  <span><strong>Human-Computer Interaction (COMP 482):</strong> Cognitive accessibility, WCAG guidelines, user flow heuristics.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fas fa-check text-emerald-400 mt-1 text-xs"></i>
-                  <span><strong>Continuous Self-Directed Mastery:</strong> Juggling university coursework alongside full-time engineering and family life.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         SECTION 4: WORK HISTORY
-         ==================================================================== -->
-    <section id="work" class="py-24 relative border-t border-slate-800/80">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="mb-14">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-cyan text-xs font-mono font-bold uppercase tracking-wider mb-3">
-            <span>💼 06 / Professional Career</span>
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Work History &amp; Experience.
-          </h2>
-          <p class="text-slate-400 text-base max-w-2xl mt-2">
-            A diverse career path blending enterprise software development, automated cloud releases, and mission-critical operations leadership.
-          </p>
-        </div>
-
-        <div class="space-y-6">
-          
-          <!-- Role 1: NSSL -->
-          <div class="glass-panel p-7 sm:p-8 rounded-3xl border border-cyan-500/40 relative">
-            <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
-              <div>
-                <span class="inline-block px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono font-bold uppercase tracking-wider mb-1.5">Current Role</span>
-                <h3 class="text-2xl font-extrabold text-white">Software Deployment Engineer</h3>
-                <div class="text-cyan-400 font-mono text-sm font-semibold">NSSL &bull; Canadian Cloud &amp; Systems</div>
-              </div>
-              <div class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1.5 rounded-xl border border-slate-800">
-                2026 &ndash; Present
-              </div>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed mb-4">
-              Directing production software releases, automated environment provisioning, and cloud deployment pipelines ensuring 99.9%+ availability for enterprise client workflows.
-            </p>
-            <div class="flex flex-wrap gap-2 pt-3 border-t border-white/5 font-mono text-xs text-slate-300">
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800">Production Deployments</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800">CI/CD Automation</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800">Cloud Infrastructure</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800">Reliability Engineering</span>
-            </div>
-          </div>
-
-          <!-- Role 2: Jonas Club Software -->
-          <div class="glass-panel p-7 sm:p-8 rounded-3xl border border-white/10 hover:border-cyan-500/30 transition-all">
-            <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
-              <div>
-                <h3 class="text-xl sm:text-2xl font-bold text-white">Frontend Web Developer</h3>
-                <div class="text-cyan-400 font-mono text-sm font-semibold">Jonas Club Software &bull; Markham, ON</div>
-              </div>
-              <div class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1.5 rounded-xl border border-slate-800">
-                2022 &ndash; 2026
-              </div>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed mb-4">
-              Developed and maintained <strong>15+ secure SaaS web applications</strong> on Microsoft Azure. Created Python automation scripts to slash QA overhead by 40%, integrated token-based auth (OAuth2.0/JWT), tuned complex SQL queries, and partnered with cybersecurity leads on OWASP Top 10 remediation.
-            </p>
-            <div class="flex flex-wrap gap-2 pt-3 border-t border-white/5 font-mono text-xs text-slate-300">
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800">Microsoft Azure</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800">Python Automation</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800">React &bull; JavaScript</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800">SQL Server &bull; RBAC</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800">OWASP Security</span>
-            </div>
-          </div>
-
-          <!-- Role 3: CN Rail -->
-          <div class="glass-panel p-7 sm:p-8 rounded-3xl border border-white/10 hover:border-amber-500/30 transition-all">
-            <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
-              <div>
-                <h3 class="text-xl sm:text-2xl font-bold text-white">Mechanical Operations Supervisor</h3>
-                <div class="text-amber-400 font-mono text-sm font-semibold">Canadian National Railway (CN Rail) &bull; Ontario</div>
-              </div>
-              <div class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1.5 rounded-xl border border-slate-800">
-                2013 &ndash; 2021 (8 Years)
-              </div>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed mb-4">
-              Led technical crews of skilled mechanics and technicians in 24/7 mission-critical rail and freight operations. Managed PLC telemetry systems, SAP enterprise maintenance data, and enforced strict zero-harm industrial safety standards.
-            </p>
-            <div class="flex flex-wrap gap-2 pt-3 border-t border-white/5 font-mono text-xs text-slate-300">
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800">8 Years Operational Leadership</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800">Mission-Critical Safety</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800">PLC Telemetry &bull; SAP</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800">Crew Management</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         SECTION 5: CURATED BOOKSHELF
-         ==================================================================== -->
-    <section id="books" class="py-24 relative border-t border-slate-800/80">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="mb-14">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-violet text-xs font-mono font-bold uppercase tracking-wider mb-3">
-            <span>📚 07 / Reading Vault</span>
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Books I&rsquo;ve Read &amp; Recommend.
-          </h2>
-          <p class="text-slate-400 text-base max-w-2xl mt-2">
-            A curated shelf of titles that have influenced my thinking across computer science, engineering, space, and mental models. We will expand this as we go!
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-          <!-- Book 1 -->
-          <div class="glass-panel p-6 rounded-3xl border border-white/10 hover:border-cyan-400 transition-all flex flex-col justify-between space-y-3">
-            <div>
-              <div class="text-[10px] font-mono uppercase text-cyan-400 font-bold mb-1">Systems Architecture</div>
-              <h3 class="text-lg font-bold text-white leading-snug">Designing Data-Intensive Applications</h3>
-              <div class="text-xs text-slate-400 mb-3">by Martin Kleppmann</div>
-              <p class="text-slate-300 text-xs leading-relaxed">
-                The gold standard for understanding distributed data systems, reliability, replication, partitioning, transactions, and consensus protocols.
-              </p>
-            </div>
-            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-cyan-300">
-              Key takeaway: Reliable architectures under network failure.
-            </div>
-          </div>
-
-          <!-- Book 2 -->
-          <div class="glass-panel p-6 rounded-3xl border border-white/10 hover:border-violet-400 transition-all flex flex-col justify-between space-y-3">
-            <div>
-              <div class="text-[10px] font-mono uppercase text-violet-400 font-bold mb-1">Aerospace &amp; SpaceX</div>
-              <h3 class="text-lg font-bold text-white leading-snug">Liftoff: Elon Musk and the Desperate Early Days</h3>
-              <div class="text-xs text-slate-400 mb-3">by Eric Berger</div>
-              <p class="text-slate-300 text-xs leading-relaxed">
-                The exhilarating account of Falcon 1's three failures on Kwajalein Atoll and the ragtag engineering crew that saved SpaceX from bankruptcy on launch 4.
-              </p>
-            </div>
-            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-violet-300">
-              Key takeaway: Radical persistence when the stakes are existential.
-            </div>
-          </div>
-
-          <!-- Book 3 -->
-          <div class="glass-panel p-6 rounded-3xl border border-white/10 hover:border-emerald-400 transition-all flex flex-col justify-between space-y-3">
-            <div>
-              <div class="text-[10px] font-mono uppercase text-emerald-400 font-bold mb-1">Software Craftsmanship</div>
-              <h3 class="text-lg font-bold text-white leading-snug">The Pragmatic Programmer</h3>
-              <div class="text-xs text-slate-400 mb-3">by David Thomas &amp; Andrew Hunt</div>
-              <p class="text-slate-300 text-xs leading-relaxed">
-                Essential philosophy on DRY code, orthogonal systems, taking responsibility for your architecture, and being a continuous learner.
-              </p>
-            </div>
-            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-emerald-300">
-              Key takeaway: Software is a craft of continuous refinement.
-            </div>
-          </div>
-
-          <!-- Book 4 -->
-          <div class="glass-panel p-6 rounded-3xl border border-white/10 hover:border-amber-400 transition-all flex flex-col justify-between space-y-3">
-            <div>
-              <div class="text-[10px] font-mono uppercase text-amber-400 font-bold mb-1">Mindset &amp; Habits</div>
-              <h3 class="text-lg font-bold text-white leading-snug">Atomic Habits</h3>
-              <div class="text-xs text-slate-400 mb-3">by James Clear</div>
-              <p class="text-slate-300 text-xs leading-relaxed">
-                How tiny 1% compound improvements accumulate into transformative mastery over years &mdash; the exact principle behind earning a BJJ black belt and completing a computer science degree.
-              </p>
-            </div>
-            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-amber-300">
-              Key takeaway: Systems beat goals every single time.
-            </div>
-          </div>
-
-          <!-- Book 5 -->
-          <div class="glass-panel p-6 rounded-3xl border border-white/10 hover:border-rose-400 transition-all flex flex-col justify-between space-y-3">
-            <div>
-              <div class="text-[10px] font-mono uppercase text-rose-400 font-bold mb-1">Stoic Philosophy</div>
-              <h3 class="text-lg font-bold text-white leading-snug">Meditations</h3>
-              <div class="text-xs text-slate-400 mb-3">by Marcus Aurelius</div>
-              <p class="text-slate-300 text-xs leading-relaxed">
-                Timeless reflections on internal discipline, focusing strictly on what is in your control, and maintaining emotional equilibrium in high-friction environments.
-              </p>
-            </div>
-            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-rose-300">
-              Key takeaway: The obstacle is the way.
-            </div>
-          </div>
-
-          <!-- Book 6 -->
-          <div class="glass-panel p-6 rounded-3xl border border-white/10 hover:border-blue-400 transition-all flex flex-col justify-between space-y-3">
-            <div>
-              <div class="text-[10px] font-mono uppercase text-blue-400 font-bold mb-1">Sci-Fi Epic</div>
-              <h3 class="text-lg font-bold text-white leading-snug">Dune</h3>
-              <div class="text-xs text-slate-400 mb-3">by Frank Herbert</div>
-              <p class="text-slate-300 text-xs leading-relaxed">
-                A masterpiece exploring ecology, human potential, prescience, and political intrigue on Arrakis. A foundational work of speculative imagination.
-              </p>
-            </div>
-            <div class="pt-3 border-t border-white/5 text-[11px] font-mono text-blue-300">
-              Key takeaway: Fear is the mind-killer.
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         SECTION 6: CONTACT & CONNECT
-         ==================================================================== -->
-    <section id="contact" class="py-24 relative border-t border-slate-800/80">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        
-        <div class="mb-12">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge-cyan text-xs font-mono font-bold uppercase tracking-wider mb-3">
-            <span>💬 08 / Direct Connection</span>
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Let&rsquo;s Connect.
-          </h2>
-          <p class="text-slate-400 text-base max-w-xl mx-auto mt-2">
-            Whether you want to discuss AI architectures, space exploration, train Jiu-Jitsu, talk books, or explore software systems &mdash; my door is open.
-          </p>
-        </div>
-
-        <!-- Contact Cards Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10 text-left">
-          
-          <!-- Appointment Booking Card -->
-          <div class="glass-panel p-6 rounded-2xl border border-emerald-500/40 hover:border-emerald-400 transition-all">
-            <div class="text-xs font-mono text-emerald-400 mb-1 flex items-center gap-2 font-bold">
-              <i class="fas fa-calendar-check"></i> LIVE CALENDAR
-            </div>
-            <div class="font-bold text-white text-base">Book a 1-on-1 Chat</div>
-            <div class="text-xs text-slate-400 mt-1">Direct Google Appointment booking with Dane</div>
-            <div class="mt-4">
-              <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 text-xs font-mono font-bold inline-flex items-center gap-1.5 transition-colors">
-                <span>Book Appointment &rarr;</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Email Card -->
-          <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-cyan-400 transition-all">
-            <div class="text-xs font-mono text-cyan-400 mb-1 flex items-center gap-2 font-bold">
-              <i class="fas fa-envelope"></i> DIRECT EMAIL
-            </div>
-            <div class="font-bold text-white text-base truncate">wattsd1985@gmail.com</div>
-            <div class="text-xs text-slate-400 mt-1">Personal inbox</div>
-            <div class="mt-4 flex items-center gap-2">
-              <a href="mailto:wattsd1985@gmail.com" class="px-3 py-1.5 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 text-xs font-mono font-semibold transition-colors">
-                Send Email
-              </a>
-              <button onclick="copyToClipboard('wattsd1985@gmail.com', this)" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-mono transition-colors cursor-pointer">
-                Copy
-              </button>
-            </div>
-          </div>
-
-          <!-- Phone Card -->
-          <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-cyan-400 transition-all">
-            <div class="text-xs font-mono text-slate-400 mb-1 flex items-center gap-2 font-bold">
-              <i class="fas fa-phone text-emerald-400"></i> PHONE / MOBILE
-            </div>
-            <div class="font-bold text-white text-base">289-928-9013</div>
-            <div class="text-xs text-slate-400 mt-1">Oshawa &bull; Eastern Time</div>
-            <div class="mt-4 flex items-center gap-2">
-              <a href="tel:2899289013" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-mono transition-colors">
-                Call
-              </a>
-              <button onclick="copyToClipboard('289-928-9013', this)" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-mono transition-colors cursor-pointer">
-                Copy
-              </button>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Social Links & Action -->
-        <div class="flex flex-wrap items-center justify-center gap-3.5">
-          <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-mono font-bold text-sm transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] flex items-center gap-2">
-            <i class="fas fa-calendar-check"></i>
-            <span>Schedule Appointment</span>
-          </a>
-          <a href="/Dane Watts Resume 2025.pdf" target="_blank" class="px-5 py-3 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-mono font-bold text-sm transition-all flex items-center gap-2">
-            <i class="fas fa-file-pdf"></i>
-            <span>Official Resume</span>
-          </a>
-          <a href="https://www.linkedin.com/in/dane-w-69a42313a/" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl glass-panel hover:border-cyan-400 text-slate-200 hover:text-cyan-400 font-mono text-sm transition-all flex items-center gap-2">
-            <i class="fab fa-linkedin-in text-cyan-400"></i>
-            <span>LinkedIn</span>
-          </a>
-          <a href="https://github.com/Dane85" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl glass-panel hover:border-cyan-400 text-slate-200 hover:text-cyan-400 font-mono text-sm transition-all flex items-center gap-2">
-            <i class="fab fa-github text-cyan-400"></i>
-            <span>GitHub</span>
-          </a>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <!-- ====================================================================
-       FOOTER
-       ==================================================================== -->
-  <footer class="py-12 border-t border-slate-800/80 bg-slate-950 font-mono text-xs text-slate-400 text-center">
-    <div class="max-w-5xl mx-auto px-4 space-y-3">
-      <div class="flex items-center justify-center gap-6 text-base text-slate-400">
-        <a href="mailto:wattsd1985@gmail.com" class="hover:text-cyan-400 transition-colors" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" class="hover:text-emerald-400 transition-colors" title="Calendar"><i class="fas fa-calendar-check"></i></a>
-        <a href="https://www.linkedin.com/in/dane-w-69a42313a/" target="_blank" rel="noopener" class="hover:text-cyan-400 transition-colors" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/Dane85" target="_blank" rel="noopener" class="hover:text-cyan-400 transition-colors" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="tel:2899289013" class="hover:text-cyan-400 transition-colors" title="Phone"><i class="fas fa-phone"></i></a>
-      </div>
-      <div>
-        Designed &amp; Hand-Coded by <span class="text-white font-bold">Dane Watts</span> &bull; Oshawa, Ontario, Canada
-      </div>
-      <div class="text-[11px] text-slate-500">
-        🥋 1st Degree BJJ Black Belt (Professor Stripes &bull; Justin Bruckmann) &bull; Athabasca University (B.Sc. CIS, GPA 3.4)
-      </div>
-    </div>
-  </footer>
-
-  <!-- Toast Notification for Copy -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
-    <div class="glass-panel px-4 py-2.5 rounded-lg border border-cyan-400/50 text-cyan-400 text-xs font-mono font-semibold flex items-center gap-2 shadow-2xl">
-      <i class="fas fa-check-circle"></i>
-      <span id="toastMsg">Copied to clipboard!</span>
-    </div>
+    <nav class="drawer" id="drawer" aria-label="Mobile">
+      <a href="#work">Work</a>
+      <a href="#building">Building</a>
+      <a href="#education">Education</a>
+      <a href="#jiujitsu">Jiu-Jitsu</a>
+      <a href="#community">Community</a>
+      <a href="#reading">Reading</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
+</header>
 
-  <!-- ====================================================================
-       JAVASCRIPT LOGIC
-       ==================================================================== -->
-  <script>
-    // Copy to clipboard helper
-    function copyToClipboard(text, btnElement) {
-      navigator.clipboard.writeText(text).then(() => {
-        showToast(`Copied ${text} to clipboard!`);
-        if (btnElement) {
-          const original = btnElement.innerText;
-          btnElement.innerText = 'Copied!';
-          setTimeout(() => { btnElement.innerText = original; }, 2000);
-        }
-      }).catch(err => {
-        console.error('Copy failed', err);
+<main id="main">
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Oshawa, Ontario</p>
+        <h1>Dane<br>Watts<em>.</em></h1>
+        <p class="lede">Builder, martial artist and perpetual student. I write <strong>secure, reliable software</strong>, run a small web agency, and coach on the mats.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+            Book a chat
+          </a>
+          <a class="btn btn-ghost" href="mailto:wattsd1985@gmail.com">Email me</a>
+        </div>
+      </div>
+      <dl class="facts">
+        <div><dt>Now</dt><dd>Software Deployment Engineer<span>NSSL · 2026 – present</span></dd></div>
+        <div><dt>Founder</dt><dd>Durham Web Design<span>Websites and hosting for local organizations</span></dd></div>
+        <div><dt>Studying</dt><dd>B.Sc. Computing &amp; Information Systems<span>Athabasca University · expected 2027</span></dd></div>
+        <div><dt>On the mats</dt><dd>1st Degree BJJ Black Belt<span>Under Justin Bruckmann</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section class="block" id="work">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">01 · Work</span><h2>Where I've worked</h2></div>
+      <div class="sec-body">
+        <div class="aside"><p>Software for a living since 2022, after eight years leading maintenance crews in 24/7 rail operations.</p></div>
+        <ol class="roles">
+          <li class="role">
+            <div class="role-top"><h3>Software Deployment Engineer <span class="now">Current</span></h3><span class="when">2026 – now</span></div>
+            <p class="org">NSSL</p>
+            <ul>
+              <li>Run production software releases and automated environment provisioning.</li>
+              <li>Build release workflows that cut over without downtime.</li>
+            </ul>
+          </li>
+          <li class="role">
+            <div class="role-top"><h3>Frontend Web Developer</h3><span class="when">2022 – 2026</span></div>
+            <p class="org">Jonas Club Software · Markham, ON</p>
+            <ul>
+              <li>Built and maintained 15+ SaaS web applications on Microsoft Azure, using Key Vault, TLS and secured API endpoints.</li>
+              <li>Wrote Python scripts that automate vulnerability checks and API testing, cutting manual QA time by 40%.</li>
+              <li>Integrated Stripe, HubSpot and internal REST services with token auth (OAuth 2.0, JWT) and role-based access.</li>
+              <li>Tuned SQL queries and stored procedures for reporting dashboards, improving performance by 25%.</li>
+              <li>Led a refactor of legacy front-end code to React and worked with security and DevOps on OWASP remediation.</li>
+            </ul>
+          </li>
+          <li class="role">
+            <div class="role-top"><h3>Founder</h3><span class="when">2024 – now</span></div>
+            <p class="org">Epic Expressions &amp; Durham Web Design · Oshawa, ON</p>
+            <ul>
+              <li>Design, build and host websites for local organizations on my own hardened Linux server.</li>
+              <li>Built the operations platform that runs the business: invoicing, tax records, monitoring and daily reports.</li>
+            </ul>
+          </li>
+          <li class="role">
+            <div class="role-top"><h3>Mechanical Supervisor</h3><span class="when">2013 – 2021</span></div>
+            <p class="org">CN Rail · MAC Yard, Vaughan, ON · promoted from Mechanical Technician</p>
+            <ul>
+              <li>Supervised and trained a team of 8 in diagnostics and preventive maintenance, to safety and regulatory standards.</li>
+              <li>Used PLC monitoring and SAP analytics to track equipment performance, reducing downtime by 20%.</li>
+              <li>Built SQL reporting tools for maintenance KPIs.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Building -->
+  <section class="block" id="building">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">02 · Building</span><h2>Things I've built</h2></div>
+      <div class="cards">
+        <article class="card">
+          <span class="tag">Agency</span>
+          <h3>Durham Web Design</h3>
+          <p>My web studio for small businesses and community groups in Durham Region: design, build, hosting and ongoing care.</p>
+          <a class="more" href="https://durhamweb.design" target="_blank" rel="noopener">durhamweb.design →</a>
+        </article>
+        <article class="card">
+          <span class="tag">Client site</span>
+          <h3>GM Salaried Retirees</h3>
+          <p>An accessible community site and meeting calendar for retired GM Canada salaried employees, built for older readers first.</p>
+          <a class="more" href="https://gmsalariedretirees.com" target="_blank" rel="noopener">gmsalariedretirees.com →</a>
+        </article>
+        <article class="card">
+          <span class="tag">Internal platform</span>
+          <h3>Epic OS</h3>
+          <p>A private operations system for my business: tax ledger, recurring bills, client billing, server monitoring and a 7 AM Slack report. Self-hosted, behind sign-in.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="block" id="education">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">03 · Education</span><h2>Always studying</h2></div>
+      <div class="sec-body">
+        <div class="aside"><p>Studying part-time alongside full-time work and family since 2020.</p></div>
+        <div>
+          <p class="degree">Bachelor of Science in Computing &amp; Information Systems</p>
+          <p class="muted">Athabasca University · 2021 – present, expected 2027 · bridged from the University Certificate in Computing &amp; Information Systems</p>
+          <ul class="courses" aria-label="Completed and current courses">
+            <li><code>COMP 378</code><span>Introduction to Database Management <span class="ip">· in progress</span></span></li>
+            <li><code>COMP 361</code><span>Systems Analysis &amp; Design</span></li>
+            <li><code>COMP 347</code><span>Computer Networks</span></li>
+            <li><code>COMP 314</code><span>Operating Systems</span></li>
+            <li><code>COMP 268</code><span>Introduction to Programming (Java)</span></li>
+            <li><code>COMP 266</code><span>Introduction to Web Programming</span></li>
+            <li><code>COMP 200</code><span>Introduction to Computer Systems</span></li>
+            <li><code>MATH 270</code><span>Linear Algebra</span></li>
+            <li><code>ENGL 255</code><span>Introductory Composition</span></li>
+          </ul>
+
+          <div class="skill-groups" style="margin-top:36px">
+            <div><h3>Languages</h3><ul class="chips"><li>Python</li><li>JavaScript</li><li>SQL</li><li>C#</li><li>Java</li><li>C++</li><li>HTML &amp; CSS</li><li>Bash</li></ul></div>
+            <div><h3>Frameworks &amp; tools</h3><ul class="chips"><li>React</li><li>.NET</li><li>Flask</li><li>REST APIs</li><li>Git</li><li>WordPress</li><li>Figma</li><li>SAP</li></ul></div>
+            <div><h3>Cloud, data &amp; security</h3><ul class="chips"><li>Microsoft Azure</li><li>Linux servers</li><li>PostgreSQL</li><li>MySQL / MariaDB</li><li>SQL Server</li><li>OAuth 2.0 &amp; JWT</li><li>IAM &amp; RBAC</li><li>TLS</li><li>OWASP</li><li>WCAG 2.1 AA</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jiu-Jitsu -->
+  <section class="block" id="jiujitsu">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">04 · Jiu-Jitsu</span><h2>The gentle art</h2></div>
+      <div class="rank">
+        <div>
+          <div class="beltbar" role="img" aria-label="Black belt with one degree stripe"><i></i></div>
+          <p><strong>1st Degree Brazilian Jiu-Jitsu Black Belt</strong>, promoted to black belt in December 2019 by Justin Bruckmann, a Canadian MMA pioneer, former professional fighter and coach.</p>
+          <p class="muted">Lineage: Carlson Gracie → Bruckmann Martial Arts. Nothing was handed out. Every stripe came from thousands of live rounds. These days the job is as much coaching teammates as training.</p>
+        </div>
+        <div class="stats" aria-label="Jiu-jitsu at a glance">
+          <div><b>15+</b><span>years on the mats</span></div>
+          <div><b>2019</b><span>black belt</span></div>
+          <div><b>1st</b><span>degree</span></div>
+        </div>
+      </div>
+      <div class="lessons">
+        <article class="card"><h3>Calm under pressure</h3><p>When someone heavy is crushing your frames, panic loses. You breathe and work the escape. That calm carries over when production systems misbehave.</p></article>
+        <article class="card"><h3>Leverage beats force</h3><p>Jiu-jitsu is built on finding the fulcrum. In engineering too, the right point of leverage solves what raw effort can't.</p></article>
+        <article class="card"><h3>Always a student</h3><p>Rank means committing to keep learning. Every session teaches something, and ego doesn't help on the mats or in code.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section class="block" id="community">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">05 · Community</span><h2>Showing up</h2></div>
+      <div class="sec-body">
+        <div class="aside"><p>Durham Region, July 2019.</p></div>
+        <div>
+          <p class="quote">When tragedy hits your community, standing on the sidelines isn't an option.</p>
+          <p>In July 2019, my friend Nichole McWatters of Oshawa lost her life at Frenchman's Bay in Pickering, after swimming out to save her six-year-old son, who was carried safely to shore. I organized a community fund to support her son's care and education. Durham Region rallied behind it, and it raised more than <strong>$18,000</strong>.</p>
+          <ul class="outlets" aria-label="Covered by">
+            <li>The Oshawa Express</li><li>Toronto Sun</li><li>DurhamRegion.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interests & reading -->
+  <section class="block" id="reading">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">06 · Off the clock</span><h2>Interests &amp; reading</h2></div>
+      <div class="sec-body">
+        <div class="aside">
+          <ul class="chips" aria-label="Interests">
+            <li>AI &amp; agents</li><li>SpaceX &amp; rocketry</li><li>Linux &amp; security</li><li>Astronomy</li><li>Strength &amp; mobility</li><li>Clean software</li>
+          </ul>
+        </div>
+        <ul class="books">
+          <li><b>Designing Data-Intensive Applications</b> <span>· Martin Kleppmann. Reliability when the network fails.</span></li>
+          <li><b>Liftoff</b> <span>· Eric Berger. SpaceX's early days and refusing to quit.</span></li>
+          <li><b>The Pragmatic Programmer</b> <span>· David Thomas &amp; Andrew Hunt. Software as a craft.</span></li>
+          <li><b>Atomic Habits</b> <span>· James Clear. Small gains, compounded. How belts and degrees get earned.</span></li>
+          <li><b>Meditations</b> <span>· Marcus Aurelius. Focus on what you control.</span></li>
+          <li><b>Dune</b> <span>· Frank Herbert. "Fear is the mind-killer."</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="block" id="contact">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">07 · Contact</span><h2>Let's talk</h2></div>
+      <p class="muted" style="max-width:60ch;margin-bottom:28px">Software, security, AI, space, books or a round on the mats, I'm happy to talk. The fastest way is to book a time.</p>
+      <div class="contact">
+        <div class="card">
+          <span class="tag">Calendar</span>
+          <a class="value" href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" rel="noopener">Book a 1-on-1 →</a>
+          <span class="muted" style="font-size:14px">Google appointment booking</span>
+        </div>
+        <div class="card">
+          <span class="tag">Email</span>
+          <a class="value" href="mailto:wattsd1985@gmail.com">wattsd1985@gmail.com</a>
+          <button class="copy" type="button" data-copy="wattsd1985@gmail.com">Copy address</button>
+        </div>
+        <div class="card">
+          <span class="tag">Phone</span>
+          <a class="value" href="tel:+12899289013">289-928-9013</a>
+          <span class="muted" style="font-size:14px">Oshawa · Eastern Time</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Dane Watts · Oshawa, Ontario</span>
+    <span>
+      <a href="https://www.linkedin.com/in/dane-w-69a42313a/" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="https://github.com/Dane85" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="/Dane%20Watts%20Resume%202025.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    try { var saved = localStorage.getItem('theme'); if (saved) root.setAttribute('data-theme', saved); } catch (e) {}
+    document.getElementById('themeBtn').addEventListener('click', function () {
+      var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+        : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var next = dark ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+    var btn = document.getElementById('menuBtn'), drawer = document.getElementById('drawer');
+    btn.addEventListener('click', function () {
+      var open = drawer.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    drawer.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') { drawer.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+    });
+    document.querySelectorAll('[data-copy]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var t = b.getAttribute('data-copy'), label = b.textContent;
+        (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () {
+          b.textContent = 'Copied ✓'; setTimeout(function () { b.textContent = label; }, 1600);
+        }, function () { window.location.href = 'mailto:' + t; });
       });
-    }
-
-    function showToast(msg) {
-      const toast = document.getElementById('toast');
-      const toastMsg = document.getElementById('toastMsg');
-      toastMsg.innerText = msg;
-      toast.classList.remove('translate-y-20', 'opacity-0');
-      setTimeout(() => {
-        toast.classList.add('translate-y-20', 'opacity-0');
-      }, 2500);
-    }
-
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileMenuIcon = document.getElementById('mobileMenuIcon');
-
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener('click', () => {
-        const isOpen = !mobileMenu.classList.contains('hidden');
-        if (isOpen) {
-          mobileMenu.classList.add('hidden');
-          mobileMenuIcon.className = 'fas fa-bars text-xl';
-        } else {
-          mobileMenu.classList.remove('hidden');
-          mobileMenuIcon.className = 'fas fa-xmark text-xl';
-        }
-      });
-
-      document.querySelectorAll('.mobile-link').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-          mobileMenuIcon.className = 'fas fa-bars text-xl';
-        });
-      });
-    }
-
-    // Interactive Terminal Logic
-    const terminalInput = document.getElementById('terminalInput');
-    const terminalOutput = document.getElementById('terminalOutput');
-    const terminalBody = document.getElementById('terminalBody');
-
-    const commands = {
-      'help': () => `
-        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
-          <div><strong class="text-cyan-300">whoami</strong> &mdash; Bio and personal overview</div>
-          <div><strong class="text-amber-300">bjj</strong> &mdash; 1st Degree BJJ Black Belt &amp; Professor Stripes details</div>
-          <div><strong class="text-sky-300">news</strong> &mdash; Regional media coverage &amp; community relief leadership</div>
-          <div><strong class="text-cyan-300">interests</strong> &mdash; AI, SpaceX, computers, hobbies</div>
-          <div><strong class="text-emerald-300">education</strong> &mdash; Athabasca B.Sc. CIS credentials</div>
-          <div><strong class="text-cyan-300">work</strong> &mdash; Career path (NSSL, Jonas, CN Rail)</div>
-          <div><strong class="text-violet-300">books</strong> &mdash; Reading vault &amp; favorite books</div>
-          <div><strong class="text-emerald-300">booking</strong> &mdash; Direct Google Calendar appointment link</div>
-          <div><strong class="text-cyan-300">contact</strong> &mdash; Email, phone, socials</div>
-          <div><strong class="text-slate-400">clear</strong> &mdash; Clear terminal screen</div>
-        </div>
-      `,
-      'whoami': () => `
-        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
-          <div><strong>Dane Watts</strong> &bull; Oshawa, Ontario, Canada</div>
-          <div class="text-slate-400 mt-1">Software Engineer, Defensive Security Specialist, 1st Degree BJJ Black Belt with Professor Stripes (under Justin Bruckmann), and B.Sc. CIS student at Athabasca University. Featured in regional news (Oshawa Express, Toronto Sun) for grassroots community leadership.</div>
-        </div>
-      `,
-      'bjj': () => `
-        <div class="text-slate-300 pl-2 border-l-2 border-amber-400">
-          <div class="text-amber-300 font-bold">&bull; 1st Degree Brazilian Jiu-Jitsu Black Belt (Professor Stripes)</div>
-          <div>&bull; Coach: <strong>Justin Bruckmann</strong> (Canadian MMA Pioneer &amp; UFC Veteran)</div>
-          <div>&bull; Lineage: Carlson Gracie &bull; Bruckmann Martial Arts / Kalsamrit</div>
-          <div>&bull; Black Belt promoted December 2019; awarded 1st degree with Professor stripes for active mastery &amp; coaching.</div>
-          <div>&bull; 15+ years on the mats. Kinetic problem-solving, pressure management, and stoic discipline.</div>
-        </div>
-      `,
-      'news': () => `
-        <div class="text-slate-300 pl-2 border-l-2 border-sky-400">
-          <div class="text-sky-300 font-bold">&bull; In The News: Community Leadership &amp; Relief Campaign (July 2019)</div>
-          <div>&bull; Coverage: <em>The Oshawa Express</em>, <em>The Toronto Sun</em>, <em>DurhamRegion.com</em></div>
-          <div>&bull; Story: Following the tragic passing of Oshawa mother Nichole McWatters after rescuing her 6-year-old son in Lake Ontario, Dane stepped up as a close family friend to organize a community relief campaign.</div>
-          <div>&bull; Impact: Surpassed all initial goals, raising over <strong>$18,000+</strong> in community trust funds for the child's care and education.</div>
-        </div>
-      `,
-      'community': () => commands['news'](),
-      'interests': () => `
-        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
-          <div>&bull; <strong class="text-cyan-300">Artificial Intelligence:</strong> Autonomous agents, LLMs, neural tool use, cognitive augmentation.</div>
-          <div>&bull; <strong class="text-violet-300">SpaceX &amp; Space:</strong> Starship orbital tests, multiplanetary life, rocketry mechanics.</div>
-          <div>&bull; <strong class="text-emerald-300">Computers &amp; Tech:</strong> Bare-metal Linux architecture, networking, security defense.</div>
-          <div>&bull; <strong class="text-amber-300">Martial Arts &amp; Fitness:</strong> Daily BJJ practice, strength training, athletic longevity.</div>
-        </div>
-      `,
-      'education': () => `
-        <div class="text-slate-300 pl-2 border-l-2 border-emerald-400">
-          <div>&bull; <strong>Athabasca University</strong> &mdash; Bachelor of Science in Computing &amp; Information Systems</div>
-          <div>&bull; Standing: <strong>GPA 3.4 / 4.0</strong> (120 Total Credits)</div>
-          <div>&bull; Focus: Algorithms (COMP 272), Operating Systems (COMP 308), Networking (COMP 347), Relational Databases (COMP 378).</div>
-        </div>
-      `,
-      'work': () => `
-        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
-          <div>&bull; <strong>Software Deployment Engineer</strong> &mdash; NSSL (2026&ndash;Present)</div>
-          <div>&bull; <strong>Frontend Web Developer</strong> &mdash; Jonas Club Software (2022&ndash;2026)</div>
-          <div>&bull; <strong>Mechanical Operations Supervisor</strong> &mdash; CN Rail (2013&ndash;2021, 8 years)</div>
-        </div>
-      `,
-      'books': () => `
-        <div class="text-slate-300 pl-2 border-l-2 border-violet-400">
-          <div>&bull; <em>Designing Data-Intensive Applications</em> &mdash; Martin Kleppmann</div>
-          <div>&bull; <em>Liftoff: Elon Musk &amp; the Early Days of SpaceX</em> &mdash; Eric Berger</div>
-          <div>&bull; <em>The Pragmatic Programmer</em> &mdash; Thomas &amp; Hunt</div>
-          <div>&bull; <em>Atomic Habits</em> &mdash; James Clear</div>
-          <div>&bull; <em>Meditations</em> &mdash; Marcus Aurelius</div>
-          <div>&bull; <em>Dune</em> &mdash; Frank Herbert</div>
-        </div>
-      `,
-      'booking': () => `
-        <div class="text-slate-300 pl-2 border-l-2 border-emerald-400">
-          <div>Book a direct 1-on-1 appointment on my Google Calendar:</div>
-          <div class="mt-1"><a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" class="text-emerald-400 underline font-bold">calendar.app.google/nbZSc4PuUv6BXNGJ7</a> &rarr;</div>
-        </div>
-      `,
-      'contact': () => `
-        <div class="text-slate-300 pl-2 border-l-2 border-cyan-400">
-          <div>&bull; Email: <a href="mailto:wattsd1985@gmail.com" class="text-cyan-400 underline">wattsd1985@gmail.com</a></div>
-          <div>&bull; Phone: <a href="tel:2899289013" class="text-cyan-400 underline">289-928-9013</a></div>
-          <div>&bull; Booking: <a href="https://calendar.app.google/nbZSc4PuUv6BXNGJ7" target="_blank" class="text-emerald-400 underline">Book 1-on-1 Chat</a></div>
-          <div>&bull; LinkedIn: <a href="https://www.linkedin.com/in/dane-w-69a42313a/" target="_blank" class="text-cyan-400 underline">linkedin.com/in/dane-w-69a42313a</a></div>
-          <div>&bull; GitHub: <a href="https://github.com/Dane85" target="_blank" class="text-cyan-400 underline">github.com/Dane85</a></div>
-        </div>
-      `,
-      'clear': () => {
-        terminalOutput.innerHTML = '';
-        return null;
-      }
-    };
-
-    function runCommand(cmdText) {
-      const cleanCmd = cmdText.trim().toLowerCase();
-      if (!cleanCmd) return;
-
-      const cmdEcho = document.createElement('div');
-      cmdEcho.innerHTML = `<span class="text-cyan-400 font-bold">dane@personal:~$</span> <span class="text-white">${cleanCmd}</span>`;
-      terminalOutput.appendChild(cmdEcho);
-
-      if (commands[cleanCmd]) {
-        const result = commands[cleanCmd]();
-        if (result) {
-          const resDiv = document.createElement('div');
-          resDiv.innerHTML = result;
-          terminalOutput.appendChild(resDiv);
-        }
-      } else {
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'text-rose-400';
-        errorDiv.innerHTML = `command not found: ${cleanCmd}. Type <span class="text-cyan-300 underline cursor-pointer" onclick="runCommand('help')">help</span> for available commands.`;
-        terminalOutput.appendChild(errorDiv);
-      }
-
-      terminalBody.scrollTop = terminalBody.scrollHeight;
-      if (terminalInput) terminalInput.value = '';
-    }
-
-    if (terminalInput) {
-      terminalInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-          runCommand(terminalInput.value);
-        }
-      });
-    }
-  </script>
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+</script>
 </body>
 </html>
