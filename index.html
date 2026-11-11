@@ -178,6 +178,10 @@
   .stats div:last-child { border-right: 0; }
   .stats b { display: block; font: 400 34px/1 var(--serif); }
   .stats span { font-size: 13px; color: var(--muted); }
+  .lineage { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 0; font-size: 14px; color: var(--muted); }
+  .lineage li { display: inline-flex; align-items: center; }
+  .lineage li + li::before { content: "→"; color: var(--accent); margin: 0 8px; }
+  .lineage strong { color: var(--ink); }
   .lessons { display: grid; gap: 14px; margin-top: 28px; }
   @media (min-width: 720px) { .lessons { grid-template-columns: repeat(3, 1fr); } }
 
@@ -380,7 +384,10 @@
         <div>
           <div class="beltbar" role="img" aria-label="Black belt with one degree stripe"><i></i></div>
           <p><strong>1st Degree Brazilian Jiu-Jitsu Black Belt</strong>, promoted to black belt in December 2019 by Justin Bruckmann, a Canadian MMA pioneer, former professional fighter and coach.</p>
-          <p class="muted">Lineage: Carlson Gracie → Bruckmann Martial Arts. Nothing was handed out. Every stripe came from thousands of live rounds. These days the job is as much coaching teammates as training.</p>
+          <p class="muted">Nothing was handed out. Every stripe came from thousands of live rounds. These days the job is as much coaching teammates as training.</p>
+          <ol class="lineage" aria-label="Black belt lineage">
+            <li>Mitsuyo Maeda</li><li>Carlos Gracie</li><li>Helio Gracie</li><li>Álvaro Barreto</li><li>Sylvio Behring</li><li>Shah Franco</li><li>Justin Bruckmann</li><li><strong>Dane Watts</strong></li>
+          </ol>
         </div>
         <div class="stats" aria-label="Jiu-jitsu at a glance">
           <div><b>15+</b><span>years on the mats</span></div>
